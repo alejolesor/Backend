@@ -1,0 +1,313 @@
+﻿
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, textarea, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+address, article, aside, audio, canvas, command, datalist,
+details, dialog, figure, figcaption, footer, header, hgroup,
+keygen, mark, meter, menu, nav, progress,
+ruby, section, time, video
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    vertical-align: baseline;
+}
+
+body
+{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Night Still Comes', 'Verdana', 'Tahoma' !important;
+    font-size: 15px !important;
+    text-align: left;
+    width: 100%;
+    border: 0;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
+{
+    font-family: 'Night Still Comes', 'Verdana', 'Tahoma' !important;
+}
+
+
+div#header, #content, #footer
+{
+    width: 100%;
+    display: table;
+}
+
+
+div#header
+{
+    height: 50px;
+    margin-bottom: 10px;
+    box-shadow: 0px 4px 4px #9aae04;
+    padding-top: 10px;
+}
+
+    div#header #logoEverPro
+    {
+        float: left;
+        margin-left: 20px;
+        width: 40%;
+    }
+
+        div#header #logoEverPro img
+        {
+            width: 20%;
+        }
+
+    div#header #logoEverisHeader
+    {
+        float: right;
+    }
+
+        div#header #logoEverisHeader img
+        {
+            width: 24%;
+            float: inherit;
+            margin-right: 12px;
+        }
+
+
+div#subHeader
+{
+    background-color: #E8E5E5;
+    height: 21px;
+    border: 1px solid dotted;
+    margin-left: 6px;
+    margin-right: 6px;
+    border-radius: 5px;
+}
+
+
+    div#subHeader div#divUserLogin
+    {
+        display: inline;
+        float: right;
+        margin-right: 20px;
+        text-align: right;
+        font-size: 1.3em;
+    }
+
+    div#subHeader #contentFecha
+    {
+        float: left;
+        display: inline;
+        margin-left: 20px;
+        font-size: 1.3em;
+        text-align: left;
+    }
+
+#content #contentLeft
+{
+    padding: 10px 10px 20px 10px;
+    min-height: 300px;
+    left: 0px;
+    top: 195px;
+    margin-right: 10px;
+    width: 18%;
+    float: left;
+    position: fixed;
+    margin-left: 20px;
+}
+
+#content #contentRigth
+{
+    border-radius: 10px;
+    min-height: 300px;
+    margin-left: 22%;
+    margin-top: 3%;
+    margin-right: 10px;
+    float: left;
+    width: 75%;
+}
+
+    #content #contentRigth fieldset.scheduler-border
+    {
+        border: 1px groove #ddd !important;
+        padding: 0 1.4em 1.4em 1.4em !important;
+        margin: 0 0.5em 1.5em 0 !important;
+        -webkit-box-shadow: 0px 0px 0px 0px #000 !important;
+        box-shadow: 0px 0px 0px 0px #000 !important;
+    }
+
+    #content #contentRigth legend.scheduler-border
+    {
+        font-size: 1.2em !important;
+        font-weight: bold !important;
+        text-align: left !important;
+    }
+
+#footer
+{
+    min-height: 50px;
+    clear: both;
+    display: table;
+    text-align: center;
+    margin-top: 50px;
+}
+
+ul
+{
+    list-style: none;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+#ulMenu
+{
+    width: auto;
+    height: auto;
+    -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,.73), 0px 0px 18px 0px rgba(0,0,0,.13);
+    -moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,.73), 0px 0px 18px 0px rgba(0,0,0,.13);
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,.73), 0px 0px 18px 0px rgba(0,0,0,.13);
+}
+
+    #ulMenu > li > a
+    {
+        background-color: #205390;
+        border-bottom: 1px solid #33373d;
+        -webkit-box-shadow: inset 0px 1px 0px 0px #878e98;
+        -moz-box-shadow: inset 0px 1px 0px 0px #878e98;
+        box-shadow: inset 0px 1px 0px 0px #878e98;
+        width: 100%;
+        height: 2.75em;
+        line-height: 2.75em;
+        text-indent: 2.75em;
+        display: block;
+        position: relative;
+        font-weight: 600;
+        color: #fff;
+        text-shadow: 0px 1px 0px rgba(0, 0, 0, .5);
+        background-image: linear-gradient(top, rgb(114, 122, 134), rgb(80, 88, 100));
+    }
+
+    #ulMenu > li > a
+    {
+        height: 2.75em; /* 36/13 ≈ 2.75*/
+        line-height: 2.75em; /* 36/13 ≈ 2.75*/
+        text-indent: 2.75em; /* 36/13 ≈ 2.75*/
+    }
+
+        #ulMenu > li > a > img
+        {
+            position: absolute;
+            margin-left: 147px;
+        }
+
+    #ulMenu ul li a
+    {
+        background: #fff;
+        border-bottom: 1px solid #205390;
+        width: 100%;
+        height: 2.75em;
+        line-height: 2.75em;
+        text-indent: 2.75em;
+        display: block;
+        position: relative;
+        font-size: 1em;
+        font-weight: 400;
+        color: #000000;
+    }
+
+
+        #ulMenu ul li a img
+        {
+            position: absolute;
+            margin-left: 155px;
+            width: 11%;
+            margin-top: 6px;
+        }
+
+    #ulMenu ul li:last-child a
+    {
+        border-bottom: 1px solid #33373d;
+    }
+
+    #ulMenu > li > a:hover,
+    #ulMenu > li > a.active
+    {
+        background-color: #e39f03;
+        border-bottom: 1px solid #103c56;
+        -webkit-box-shadow: inset 0px 1px 0px 0px #6ad2ef;
+        -moz-box-shadow: inset 0px 1px 0px 0px #6ad2ef;
+        box-shadow: inset 0px 1px 0px 0px #6ad2ef;
+        background-image: linear-gradient(top, rgb(69, 199, 235), rgb(38, 152, 219));
+    }
+
+    #ulMenu > li > a.active
+    {
+        border-bottom: 1px solid #205390;
+    }
+
+
+#ulBarraEventos
+{
+    background-image: url("../Imagenes/menuBarraEventos.fw.png");
+    background-repeat: no-repeat;
+    background-size: 35%;
+    height: 300px;
+    margin-top: 41px;
+}
+
+li[data-id=li_1]
+{
+    position: absolute!important;
+    margin-left: 17px!important;
+}
+
+    li[data-id=li_1] img
+    {
+        width: 41px;
+        float: left;
+        margin-top: -17px;
+    }
+
+li[data-id=li_2]
+{
+    position: absolute!important;
+    margin-left: 64px!important;
+    margin-top: 43px!important;
+}
+
+    li[data-id=li_2] img
+    {
+        width: 41px;
+        float: left;
+        margin-top: -15px;
+        margin-left: -12px;
+    }
+
+#ulBarraEventos > li:hover
+{
+    -webkit-transform: scale3d(1.2, 1.2, 1.2);
+    -moz-transform: scale3d(1.2, 1.2, 1.2);
+    -o-transform: scale3d(1.2, 1.2, 1.2);
+    -ms-transform: scale3d(1.2, 1.2, 1.2);
+    transform: scale3d(1.2, 1.2, 1.2);
+    cursor: pointer;
+}
+
+.scaleFija
+{
+    -webkit-transform: scale3d(1.2, 1.2, 1.2);
+    -moz-transform: scale3d(1.2, 1.2, 1.2);
+    -o-transform: scale3d(1.2, 1.2, 1.2);
+    -ms-transform: scale3d(1.2, 1.2, 1.2);
+    transform: scale3d(1.2, 1.2, 1.2);
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    cursor: pointer;
+}

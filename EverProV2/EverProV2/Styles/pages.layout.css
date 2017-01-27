@@ -1,0 +1,530 @@
+﻿body {
+    font-family: 'Night Still Comes', 'Verdana', 'Tahoma' !important;
+    font-size: 13px !important;
+}
+
+input[type="text"], input[type="password"], input[type="time"] {
+    width: 98%;
+    height: 1.3em;
+    border-radius: 5px;
+    border: solid 1px #999;
+    padding: 2px 3px 2px 3px;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+    font-family: inherit;
+    letter-spacing: 0.1ex;
+}
+
+label {
+    display: block !important;
+    margin: 3px 0px 4px 0px;
+}
+
+.ocultar {
+    display: none;
+}
+
+.visualizar {
+    display: block;
+}
+
+.alertaImg {
+    float: left;
+    position: absolute;
+    margin-left: -134px;
+    margin-top: 15px;
+}
+
+
+/*Login*/
+
+#loginBody {
+    background-image: url("../Imagenes/Login/fondo.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 20% 5%;
+    background-size: 100%;
+}
+
+.login {
+    display: block;
+    box-shadow: 4px 5px 25px 2px #999;
+    position: absolute;
+    width: 275px;
+    padding: 0em 1em;
+    margin: 10em 20%;
+    background: -webkit-linear-gradient(#9aae04, white); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#9aae04, white); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#9aae04, white); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#9aae04, white); /* Standard syntax (must be last) */
+}
+
+    .login #Login1 {
+        margin-left: auto;
+        margin-top: 30px;
+        margin-right: auto;
+    }
+
+#btnIngresar {
+    background-image: url(../Imagenes/Login/ingresar.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 1px solid transparent;
+    width: 60%;
+    height: 2em;
+    background-size: contain;
+}
+
+#textUsuario, #textContrasena {
+    width: 70%;
+    margin-left: 10%;
+}
+
+#ImagesBox {
+    width: 70%;
+    margin-left: 15%;
+}
+
+#logoEveris {
+    width: 22%;
+    position: relative;
+    top: 41em;
+    left: 72%;
+}
+/*_______________________________________________________ Recuperar constraseña ___________________________  */
+
+#body_RecuperarConraseña {
+    background-image: url("../Imagenes/Login/fondoRC.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 1% 2%;
+    background-position-y: 10%;
+}
+
+#logoEveris_RC {
+    width: 17%;
+    position: absolute;
+    top: 158px;
+    left: 86px;
+}
+
+#everpro_RC {
+    width: 9%;
+    float: right;
+    margin-top: -5%;
+    margin-right: 100px;
+}
+
+#body_RecuperarConraseña #loginBox {
+    display: block;
+    box-shadow: 4px 5px 25px 2px #999;
+    position: absolute;
+    width: 69em;
+    padding: 0em 1em;
+    margin: 8.5em 17% 0px;
+    height: 400px;
+}
+
+    #body_RecuperarConraseña #loginBox input {
+        width: 30%;
+    }
+
+#titulo_h3 {
+    margin-top: 15em;
+    margin-left: 33%;
+}
+
+#btnGuardar {
+    background-image: url(../Imagenes/Login/guardar.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 1px solid transparent;
+    width: 20% !important;
+    height: 2em;
+    background-size: contain;
+    box-shadow: 4px 4px 4px #9D9E99;
+    margin-left: 21%;
+}
+
+#img_Usuario {
+    width: 64px;
+    height: 64px;
+    float: left;
+    margin-left: 41px;
+}
+
+#img_Password, #img_PasswordRepetir {
+    width: 64px;
+    height: 54px;
+    float: left;
+    margin-left: 42px;
+}
+
+
+/*_________________________________________________________Recursos Humanos______________*/
+
+.contentFieldsetRigth {
+    float: right;
+    width: 40%;
+    margin-right: 140px;
+}
+
+.contentFieldsetLeft {
+    float: left;
+    width: 40%;
+    margin-left: 50px;
+}
+
+div#divContCampos_FormIngresoPersona div#contentDivCampo_0 {
+    position: absolute;
+    float: right;
+    right: -15%;
+    top: 22%;
+    width: 31%;
+}
+
+    div#divContCampos_FormIngresoPersona div#contentDivCampo_0 input[name='1'] {
+        background-color: rgba(154, 174, 4, 0.13);
+        text-align: center;
+        font-size: 15px !important;
+    }
+
+div#Content_PagesIngresoPersona #btnAgregar {
+    background-image: url(../Imagenes/agregar.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 1px solid transparent;
+    width: 14%;
+    height: 2em;
+    background-size: contain;
+    margin-top: 300px;
+    margin-left: -40%;
+    box-shadow: 4px 4px 4px #9D9E99;
+}
+
+div#Content_PagesIngresoPersona #btnEditar {
+    background-image: url(../Imagenes/editar.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 1px solid transparent;
+    width: 15%;
+    height: 2em;
+    background-size: contain;
+    box-shadow: 4px 4px 4px #9D9E99;
+    margin-top: 97px;
+    margin-left: -40%;
+}
+
+div#Content_PagesIngresoPersona #btnCancelar {
+    background-image: url(../Imagenes/cancelar.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 1px solid transparent;
+    width: 14%;
+    height: 2em;
+    background-size: contain;
+    box-shadow: 4px 4px 4px #9D9E99;
+}
+
+/*______________________________________________Editar y buscar persona_____________________*/
+
+#divContCampos_FormEditarBuscarPersona label {
+    display: inline !important;
+    margin-top: 6px;
+    margin-left: 5px;
+}
+
+#divContCampos_FormEditarBuscarPersona #filset_1 {
+    float: left;
+    width: 40%;
+}
+
+#divContCampos_FormEditarBuscarPersona #filset_2 {
+    float: left;
+    width: 45%;
+}
+
+    #divContCampos_FormEditarBuscarPersona #filset_2 #contentDivCampo_7,
+    #divContCampos_FormEditarBuscarPersona #filset_2 #contentDivCampo_8 {
+        float: left;
+        width: 48%;
+    }
+
+    #divContCampos_FormEditarBuscarPersona #filset_2 #contentDivCampo_8 {
+        margin-left: 15px;
+    }
+
+.imagesEditar {
+    position: relative;
+    top: -29px;
+    float: right;
+    margin-right: 5px;
+    width: 4%;
+}
+
+#content_EditarYBuscarPersonas #btnBuscar,
+#content_PersonaPorLider #btnBuscar {
+    background-image: url(../Imagenes/buscar.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 1px solid transparent;
+    width: 14%;
+    height: 2em;
+    background-size: contain;
+    box-shadow: 4px 4px 4px #9D9E99;
+}
+
+div#content_EditarYBuscarPersonas #btnLimpiar,
+#content_PersonaPorLider #btnLimpiar {
+    background-image: url(../Imagenes/limpiar.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 1px solid transparent;
+    width: 14%;
+    height: 2em;
+    background-size: contain;
+    box-shadow: 4px 4px 4px #9D9E99;
+}
+
+/*___________________________________ Actiivdad Diaria_______________________*/
+#imgInactivos {
+    width: 25px;
+    float: right;
+    margin-left: 39.5%;
+    position: absolute;
+    margin-top: -1%;
+}
+
+.imgRemoveRow {
+    width: 25px;
+    margin-left: 52%;
+}
+
+.pq-grid-header-table-div {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.pq-search-txt {
+    width: 30% !important;
+}
+
+
+div#content_ActividadesDiarias #btnRegistrar {
+    background-image: url(../Imagenes/registrar.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 1px solid transparent;
+    width: 14%;
+    height: 2em;
+    background-size: contain;
+    box-shadow: 4px 4px 4px #9D9E99;
+    margin-bottom: 12px;
+}
+
+div#content_ActividadesDiarias #btnActualizar {
+    background-image: url(../Imagenes/actualizar.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 1px solid transparent;
+    width: 14%;
+    height: 2em;
+    background-size: contain;
+    box-shadow: 4px 4px 4px #9D9E99;
+    margin-bottom: 12px;
+}
+
+#SubMenuTiempoLaboral {
+    float: right;
+    width: 34%;
+    margin-top: -43px;
+    border-left: double;
+    border-right: double;
+    border-bottom: double;
+    box-shadow: 4px 4px 4px 1px #9aae04;
+}
+
+    #SubMenuTiempoLaboral input[type='text'] {
+        width: 21.5% !important;
+        border: none !important;
+        font-size: 1em;
+    }
+
+    #SubMenuTiempoLaboral h3 {
+        width: 16%;
+        display: inline !important;
+        margin-left: 15px;
+        margin-right: 12px;
+    }
+
+#contentBtnLaboral {
+    float: right;
+}
+
+    #contentBtnLaboral #btnEntradaLaboral {
+        margin-top: 6px;
+        margin-right: 3px;
+        float: left;
+    }
+
+    #contentBtnLaboral #btnSalidaLaboral {
+        margin-top: 6px;
+        float: right;
+        margin-right: 12px;
+    }
+
+
+#dialogInfomativo #mensajeHorasExtras {
+    width: 40px;
+    height: 40px;
+    margin-left: -159px;
+}
+
+#dialogInfomativo #mansajeConfirmacion {
+    margin-left: 27px;
+}
+/*________________________________________________-Registro de horas laborales _______________*/
+#table_Malla input[type="text"] {
+    font-size: 12px !important;
+    width: 90%;
+}
+
+#table_Malla input[date-type="nombre"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+#Periodo_tiempo label {
+    display: inline !important;
+    margin-left: 5px;
+    font-size: large;
+}
+
+#Periodo_tiempo #txtPeriodo,
+#Periodo_tiempo #startDate,
+#Periodo_tiempo #endDate {
+    width: 12%;
+}
+
+#datosFuncionarios {
+    overflow: scroll;
+    overflow-style: move;
+}
+
+.plantillaDiariaDiv {
+    width: 115px;
+    float: left;
+    margin-left: 5px;
+    border: double 3px #9aae04;
+}
+
+    .plantillaDiariaDiv label[data-dia="dia"] {
+        text-align: center;
+        font-size: larger;
+        background-color: #9aae04;
+        margin-top: auto;
+    }
+
+    .plantillaDiariaDiv .horarioDivEntrada {
+        float: left;
+        width: 50px;
+        margin-left: 3.5px;
+    }
+
+    .plantillaDiariaDiv .horarioDivSalida {
+        float: left;
+        width: 50px;
+        margin-left: 10px;
+    }
+
+#plantillaHoraria #btnAplicarPlantilla {
+    background-image: url(../Imagenes/aplicarPlantilla.fw.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 1px solid transparent;
+    width: 20%;
+    height: 2em;
+    background-size: contain;
+    box-shadow: 4px 4px 4px #9D9E99;
+}
+
+#content_MallaTurnos #btnCancelar {
+    background-image: url(../Imagenes/cancelar.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 1px solid transparent;
+    width: 14%;
+    height: 2em;
+    background-size: contain;
+    box-shadow: 4px 4px 4px #9D9E99;
+}
+
+#content_MallaTurnos #btnAsignar {
+    background-image: url(../Imagenes/asignar.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 1px solid transparent;
+    width: 14%;
+    height: 2em;
+    background-size: contain;
+    box-shadow: 4px 4px 4px #9D9E99;
+}
+
+/*______________________________________Horas Extras ___________________________*/
+#table_Malla_Extras #table_Malla_Extras_header {
+    text-align: center;
+}
+
+#table_Malla_Extras input[type="text"] {
+    font-size: 12px !important;
+    width: 65%;
+}
+
+#table_Malla_Extras input[date-type="nombre"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+#Periodo_tiempo #btnBuscar {
+    background-image: url(../Imagenes/buscar.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 1px solid transparent;
+    width: 14%;
+    height: 2em;
+    background-size: contain;
+    box-shadow: 4px 4px 4px #9D9E99;
+}
+
+#contentBotonesExtras #btnCancelar {
+    background-image: url(../Imagenes/cancelar.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 1px solid transparent;
+    width: 14%;
+    height: 2em;
+    background-size: contain;
+    box-shadow: 4px 4px 4px #9D9E99;
+}
+
+#contentBotonesExtras #btnGuardar {
+    background-image: url(../Imagenes/Login/guardar.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 1px solid transparent;
+    width: 16% !important;
+    height: 2em;
+    background-size: contain;
+    box-shadow: 4px 4px 4px #9D9E99;
+}
+
+#contentBotonesExtras #btnExportaExcel {
+    background-image: url(../Imagenes/exportExcel.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 1px solid transparent;
+    width: 16% !important;
+    height: 2em;
+    background-size: contain;
+    box-shadow: 4px 4px 4px #9D9E99;
+}

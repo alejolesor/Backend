@@ -1,0 +1,2164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Asignador_SGDModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="Asignador_SGDEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Auditoria" EntityType="Asignador_SGDModel.Auditoria" />
+    <EntitySet Name="CodigosCampo" EntityType="Asignador_SGDModel.CodigosCampo" />
+    <EntitySet Name="Menu" EntityType="Asignador_SGDModel.Menu" />
+    <EntitySet Name="Parametros" EntityType="Asignador_SGDModel.Parametros" />
+    <EntitySet Name="Roles" EntityType="Asignador_SGDModel.Roles" />
+    <EntitySet Name="sysdiagrams" EntityType="Asignador_SGDModel.sysdiagrams" />
+    <EntitySet Name="tb_Formularios" EntityType="Asignador_SGDModel.tb_Formularios" />
+    <EntitySet Name="tbAreas" EntityType="Asignador_SGDModel.tbAreas" />
+    <EntitySet Name="tbHistorial" EntityType="Asignador_SGDModel.tbHistorial" />
+    <EntitySet Name="tbProcPorProducto" EntityType="Asignador_SGDModel.tbProcPorProducto" />
+    <EntitySet Name="tbProducto" EntityType="Asignador_SGDModel.tbProducto" />
+    <EntitySet Name="tbUsuariosPorLider" EntityType="Asignador_SGDModel.tbUsuariosPorLider" />
+    <EntitySet Name="TiposCampo" EntityType="Asignador_SGDModel.TiposCampo" />
+    <EntitySet Name="ts_Campos" EntityType="Asignador_SGDModel.ts_Campos" />
+    <EntitySet Name="Usuarios" EntityType="Asignador_SGDModel.Usuarios" />
+    <EntitySet Name="UsuariosBloqueados" EntityType="Asignador_SGDModel.UsuariosBloqueados" />
+    <EntitySet Name="UsuariosHistorico" EntityType="Asignador_SGDModel.UsuariosHistorico" />
+    <EntitySet Name="RolesMenu" EntityType="Asignador_SGDModel.RolesMenu" />
+    <EntitySet Name="tbClasificaNivFuncionario" EntityType="Asignador_SGDModel.tbClasificaNivFuncionario" />
+    <EntitySet Name="tbLider" EntityType="Asignador_SGDModel.tbLider" />
+    <AssociationSet Name="FK_Auditoria_Usuarios" Association="Asignador_SGDModel.FK_Auditoria_Usuarios">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Auditoria" EntitySet="Auditoria" />
+    </AssociationSet>
+    <AssociationSet Name="FK__RolesMenu__IdMen__3EDC53F0" Association="Asignador_SGDModel.FK__RolesMenu__IdMen__3EDC53F0">
+      <End Role="Menu" EntitySet="Menu" />
+      <End Role="RolesMenu" EntitySet="RolesMenu" />
+    </AssociationSet>
+    <AssociationSet Name="FK__RolesMenu__IdRol__40C49C62" Association="Asignador_SGDModel.FK__RolesMenu__IdRol__40C49C62">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="RolesMenu" EntitySet="RolesMenu" />
+    </AssociationSet>
+    <AssociationSet Name="FK__RolesMenu__IdRol__41B8C09B" Association="Asignador_SGDModel.FK__RolesMenu__IdRol__41B8C09B">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="RolesMenu" EntitySet="RolesMenu" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Usuarios__IdRol__42ACE4D4" Association="Asignador_SGDModel.FK__Usuarios__IdRol__42ACE4D4">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Usuarios" EntitySet="Usuarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbLider__idArea__36B12243" Association="Asignador_SGDModel.FK__tbLider__idArea__36B12243">
+      <End Role="tbAreas" EntitySet="tbAreas" />
+      <End Role="tbLider" EntitySet="tbLider" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbProcPor__idPro__37A5467C" Association="Asignador_SGDModel.FK__tbProcPor__idPro__37A5467C">
+      <End Role="tbProducto" EntitySet="tbProducto" />
+      <End Role="tbProcPorProducto" EntitySet="tbProcPorProducto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbClasificaNivFuncionario_tbUsuariosPorLider" Association="Asignador_SGDModel.FK_tbClasificaNivFuncionario_tbUsuariosPorLider">
+      <End Role="tbUsuariosPorLider" EntitySet="tbUsuariosPorLider" />
+      <End Role="tbClasificaNivFuncionario" EntitySet="tbClasificaNivFuncionario" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ts_Campos__idTip__4E88ABD4" Association="Asignador_SGDModel.FK__ts_Campos__idTip__4E88ABD4">
+      <End Role="TiposCampo" EntitySet="TiposCampo" />
+      <End Role="ts_Campos" EntitySet="ts_Campos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuariosBloqueados_Usuarios" Association="Asignador_SGDModel.FK_UsuariosBloqueados_Usuarios">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="UsuariosBloqueados" EntitySet="UsuariosBloqueados" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuariosHistorico_Usuarios" Association="Asignador_SGDModel.FK_UsuariosHistorico_Usuarios">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="UsuariosHistorico" EntitySet="UsuariosHistorico" />
+    </AssociationSet>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_CambioPassword">
+      <Parameter Name="usuario" Mode="In" Type="Int32" />
+      <Parameter Name="NuevoPass" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_GuardarNuevoUsuario" ReturnType="Collection(Asignador_SGDModel.sp_GuardarNuevoUsuario_Result)">
+      <Parameter Name="idUsuario" Mode="In" Type="Decimal" />
+      <Parameter Name="nombre" Mode="In" Type="String" />
+      <Parameter Name="rol" Mode="In" Type="Int32" />
+      <Parameter Name="activo" Mode="In" Type="Boolean" />
+      <Parameter Name="ContrasenaDefault" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(Asignador_SGDModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(Asignador_SGDModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <FunctionImport Name="sp_ValidarMobilePIN" ReturnType="Collection(Asignador_SGDModel.sp_ValidarMobilePIN_Result)">
+      <Parameter Name="idUsuario" Mode="In" Type="Decimal" />
+      <Parameter Name="Pin" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spCamposDelFormulario" ReturnType="Collection(Asignador_SGDModel.spCamposDelFormulario_Result)">
+      <Parameter Name="IdFormulario" Mode="In" Type="Int32" />
+      <Parameter Name="IdCampoCompuesto" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spCasoPrioritario" ReturnType="Collection(Asignador_SGDModel.spCasoPrioritario_Result)">
+      <Parameter Name="nomProceso" Mode="In" Type="String" />
+      <Parameter Name="noCaso" Mode="In" Type="Int32" />
+      <Parameter Name="nivel" Mode="In" Type="String" />
+      <Parameter Name="idLider" Mode="In" Type="String" />
+      <Parameter Name="idProceso" Mode="In" Type="Int32" />
+      <Parameter Name="monto" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spConsultarHijos" ReturnType="Collection(Asignador_SGDModel.spConsultarHijos_Result)">
+      <Parameter Name="idPadre" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spEliminarFunciApoyo">
+      <Parameter Name="identFuncionario" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spEliminarNivelFunc" ReturnType="Collection(Asignador_SGDModel.spEliminarNivelFunc_Result)">
+      <Parameter Name="identFuncionario" Mode="In" Type="String" />
+      <Parameter Name="NivelClasificacion" Mode="In" Type="String" />
+      <Parameter Name="proceso" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spFuncionarioApoyo" ReturnType="Collection(Asignador_SGDModel.spFuncionarioApoyo_Result)">
+      <Parameter Name="identLider" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spInsertaFuncionario" ReturnType="Collection(Asignador_SGDModel.spInsertaFuncionario_Result)">
+      <Parameter Name="idLider" Mode="In" Type="Int32" />
+      <Parameter Name="NombreCompleto" Mode="In" Type="String" />
+      <Parameter Name="Cedula" Mode="In" Type="String" />
+      <Parameter Name="idProceso" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spInsertNivelFunc" ReturnType="Collection(Asignador_SGDModel.spInsertNivelFunc_Result)">
+      <Parameter Name="identFuncionario" Mode="In" Type="String" />
+      <Parameter Name="NivelClasificacion" Mode="In" Type="String" />
+      <Parameter Name="proceso" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spObtenerLideres" ReturnType="Collection(Asignador_SGDModel.spObtenerLideres_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spObtenerMenuHijosPerfil" ReturnType="Collection(Asignador_SGDModel.spObtenerMenuHijosPerfil_Result)">
+      <Parameter Name="IdPadre" Mode="In" Type="Int32" />
+      <Parameter Name="Rol" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spObtenerMenuNietosPerfil" ReturnType="Collection(Asignador_SGDModel.spObtenerMenuNietosPerfil_Result)">
+      <Parameter Name="IdHijo" Mode="In" Type="Int32" />
+      <Parameter Name="Rol" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spObtenerMenuPadre" ReturnType="Collection(Asignador_SGDModel.spObtenerMenuPadre_Result)">
+      <Parameter Name="Usuario" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="spObtenerNombreUsu" ReturnType="Collection(Asignador_SGDModel.spObtenerNombreUsu_Result)">
+      <Parameter Name="Idusuario" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="spValidarUsuario" ReturnType="Collection(String)">
+      <Parameter Name="usuario" Mode="In" Type="String" />
+      <Parameter Name="clave" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spObtenerNombreProceso" ReturnType="Collection(Asignador_SGDModel.spObtenerNombreProceso_Result)">
+      <Parameter Name="idProcdeso" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spAsignacionAut" ReturnType="Collection(Asignador_SGDModel.spAsignacionAut_Result)">
+      <Parameter Name="idProceso" Mode="In" Type="Int32" />
+      <Parameter Name="identLider" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spAsignacionManual" ReturnType="Collection(Asignador_SGDModel.spAsignacionManual_Result)">
+      <Parameter Name="identFuncinario" Mode="In" Type="String" />
+      <Parameter Name="nCaso" Mode="In" Type="Int32" />
+      <Parameter Name="idProceso" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spCambiarEstadoUsuarioLive" ReturnType="Collection(String)">
+      <Parameter Name="ced" Mode="In" Type="Int32" />
+      <Parameter Name="estado" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spObtieneFuncXlider" ReturnType="Collection(Asignador_SGDModel.spObtieneFuncXlider_Result)">
+      <Parameter Name="identLider" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spLideresAasignar" ReturnType="Collection(Asignador_SGDModel.spLideresAasignar_Result)" />
+    <FunctionImport Name="spObtenerCasoUsuario" ReturnType="Collection(Int32)">
+      <Parameter Name="ced" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spObtenerEstadoUsuario" ReturnType="Collection(Asignador_SGDModel.spObtenerEstadoUsuario_Result)">
+      <Parameter Name="ced" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spPruebaAsigna" ReturnType="Collection(Asignador_SGDModel.spPruebaAsigna_Result)">
+      <Parameter Name="idProceso" Mode="In" Type="Int32" />
+      <Parameter Name="identLider" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="tbLibranza" EntityType="Asignador_SGDModel.tbLibranza" />
+    <EntitySet Name="tbFormalizacion" EntityType="Asignador_SGDModel.tbFormalizacion" />
+    <EntitySet Name="tbTipologiaConvenio" EntityType="Asignador_SGDModel.tbTipologiaConvenio" />
+    <AssociationSet Name="FK_tbClasificaNivFuncionario_tbTipologiaConvenio" Association="Asignador_SGDModel.FK_tbClasificaNivFuncionario_tbTipologiaConvenio">
+      <End Role="tbTipologiaConvenio" EntitySet="tbTipologiaConvenio" />
+      <End Role="tbClasificaNivFuncionario" EntitySet="tbClasificaNivFuncionario" />
+    </AssociationSet>
+    <FunctionImport Name="spCambiarEstadoCaso">
+      <Parameter Name="ced" Mode="In" Type="Int32" />
+      <Parameter Name="Ncaso" Mode="In" Type="Int32" />
+      <Parameter Name="estado" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spConsultarCasosSuspendidos" ReturnType="Collection(Int32)">
+      <Parameter Name="ced" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="Estados" EntityType="Asignador_SGDModel.Estados" />
+    <AssociationSet Name="FK_tbFormalizacion_Estados1" Association="Asignador_SGDModel.FK_tbFormalizacion_Estados1">
+      <End Role="Estados" EntitySet="Estados" />
+      <End Role="tbFormalizacion" EntitySet="tbFormalizacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbLibranza_Estados1" Association="Asignador_SGDModel.FK_tbLibranza_Estados1">
+      <End Role="Estados" EntitySet="Estados" />
+      <End Role="tbLibranza" EntitySet="tbLibranza" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbUsuariosPorLider_Estados" Association="Asignador_SGDModel.FK_tbUsuariosPorLider_Estados">
+      <End Role="Estados" EntitySet="Estados" />
+      <End Role="tbUsuariosPorLider" EntitySet="tbUsuariosPorLider" />
+    </AssociationSet>
+    <FunctionImport Name="spConsultarCasosEnCola" ReturnType="Collection(Asignador_SGDModel.spConsultarCasosEnCola_Result)">
+      <Parameter Name="ced" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="tbAns" EntityType="Asignador_SGDModel.tbAns" />
+    <EntitySet Name="tbParametrosServicio" EntityType="Asignador_SGDModel.tbParametrosServicio" />
+    <EntitySet Name="tbTipoAusentismo" EntityType="Asignador_SGDModel.tbTipoAusentismo" />
+    <EntitySet Name="tbAsignacionCasos" EntityType="Asignador_SGDModel.tbAsignacionCasos" />
+    <FunctionImport Name="spUsuariosAplicacion" ReturnType="Collection(Asignador_SGDModel.spUsuariosAplicacion_Result)" />
+    <FunctionImport Name="sp_ActualizarUsuario" ReturnType="Collection(Asignador_SGDModel.sp_ActualizarUsuario_Result)">
+      <Parameter Name="idUsuario" Mode="In" Type="Int32" />
+      <Parameter Name="nombre" Mode="In" Type="String" />
+      <Parameter Name="rol" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_EstadoUsuario" ReturnType="Collection(Asignador_SGDModel.sp_EstadoUsuario_Result)">
+      <Parameter Name="idUsuario" Mode="In" Type="Decimal" />
+      <Parameter Name="estado" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spObtenerRoles" ReturnType="Collection(Asignador_SGDModel.spObtenerRoles_Result)">
+      <Parameter Name="Activo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spUpdateRoles">
+      <Parameter Name="IdRol" Mode="In" Type="Int32" />
+      <Parameter Name="Activo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spCrearNuevoRol" ReturnType="Collection(Asignador_SGDModel.spCrearNuevoRol_Result)">
+      <Parameter Name="Rol" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_regitroauditconex">
+      <Parameter Name="IdUsuario" Mode="In" Type="String" />
+      <Parameter Name="IdEstado" Mode="In" Type="Int32" />
+      <Parameter Name="IdAusente" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spUpdateDescRol" ReturnType="Collection(Asignador_SGDModel.spUpdateDescRol_Result)">
+      <Parameter Name="IdRol" Mode="In" Type="Int32" />
+      <Parameter Name="DesRol" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spObtenerMenuRol" ReturnType="Collection(Asignador_SGDModel.spObtenerMenuRol_Result)">
+      <Parameter Name="RolId" Mode="In" Type="Int32" />
+      <Parameter Name="Estado" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="tbAuditoriaConexion" EntityType="Asignador_SGDModel.tbAuditoriaConexion" />
+    <FunctionImport Name="spActualizarMenuRol">
+      <Parameter Name="IdRol" Mode="In" Type="Int32" />
+      <Parameter Name="IdMenu" Mode="In" Type="Int32" />
+      <Parameter Name="Estado" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sptip_ausentismo" ReturnType="Collection(Asignador_SGDModel.sptip_ausentismo_Result)">
+      <Parameter Name="ced" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spResetearUsuario" ReturnType="Collection(Asignador_SGDModel.spResetearUsuario_Result)">
+      <Parameter Name="idUsuario" Mode="In" Type="Decimal" />
+      <Parameter Name="ContrasenaDefault" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spVerificaCaso" ReturnType="Collection(Asignador_SGDModel.spVerificaCaso_Result)">
+      <Parameter Name="Caso" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spObtenerNiveles" ReturnType="Collection(Asignador_SGDModel.spObtenerNiveles_Result)">
+      <Parameter Name="idproceso" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spObtenerNombreCaso" ReturnType="Collection(Asignador_SGDModel.spObtenerNombreCaso_Result)">
+      <Parameter Name="idproceso" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spRegistrarHoraFinCaso">
+      <Parameter Name="ced" Mode="In" Type="String" />
+      <Parameter Name="radicado" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spVerCasosEnCola" ReturnType="Collection(Asignador_SGDModel.spVerCasosEnCola_Result)">
+      <Parameter Name="idLider" Mode="In" Type="Int32" />
+      <Parameter Name="proceso" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="tbProcesosMasivos" EntityType="Asignador_SGDModel.tbProcesosMasivos" />
+    <AssociationSet Name="FK_tbProcesosMasivos_Estados" Association="Asignador_SGDModel.FK_tbProcesosMasivos_Estados">
+      <End Role="Estados" EntitySet="Estados" />
+      <End Role="tbProcesosMasivos" EntitySet="tbProcesosMasivos" />
+    </AssociationSet>
+    <FunctionImport Name="sp_ContadorTotalCasos" ReturnType="Collection(Int32)">
+      <Parameter Name="idusuario" Mode="In" Type="String" />
+      <Parameter Name="proceso" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spConsultaConexion" ReturnType="Collection(String)">
+      <Parameter Name="ced" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spConsultaLideresEverPro" ReturnType="Collection(Asignador_SGDModel.spConsultaLideresEverPro_Result)">
+      <Parameter Name="perfil" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spConsultaNivelEverPro" ReturnType="Collection(Asignador_SGDModel.spConsultaNivelEverPro_Result)">
+      <Parameter Name="idEmpresa" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spInsertaDatosPersonal" ReturnType="Collection(Asignador_SGDModel.spInsertaDatosPersonal_Result)">
+      <Parameter Name="Cedula" Mode="In" Type="Int32" />
+      <Parameter Name="NombreCompleto" Mode="In" Type="String" />
+      <Parameter Name="FechaNacimiento" Mode="In" Type="DateTime" />
+      <Parameter Name="Edad" Mode="In" Type="String" />
+      <Parameter Name="TelefonoCelular" Mode="In" Type="String" />
+      <Parameter Name="TelefonoContato" Mode="In" Type="String" />
+      <Parameter Name="Direccion" Mode="In" Type="String" />
+      <Parameter Name="IdMotivoIngreso" Mode="In" Type="Int32" />
+      <Parameter Name="IdTipoDocumento" Mode="In" Type="Int32" />
+      <Parameter Name="IdGenero" Mode="In" Type="Int32" />
+      <Parameter Name="IdCiudad" Mode="In" Type="Int32" />
+      <Parameter Name="IdLocalidad" Mode="In" Type="Int32" />
+      <Parameter Name="IdCarreraEducativa" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spInsertaModuloEverPro" ReturnType="Collection(Asignador_SGDModel.spInsertaModuloEverPro_Result)">
+      <Parameter Name="Cedula" Mode="In" Type="Int32" />
+      <Parameter Name="IdHC" Mode="In" Type="Int32" />
+      <Parameter Name="IdRol" Mode="In" Type="Int32" />
+      <Parameter Name="CodigoDeEmpleado" Mode="In" Type="Int32" />
+      <Parameter Name="CedJefe" Mode="In" Type="Int32" />
+      <Parameter Name="CedPsl" Mode="In" Type="Int32" />
+      <Parameter Name="CedPtl" Mode="In" Type="Int32" />
+      <Parameter Name="CedPsc" Mode="In" Type="Int32" />
+      <Parameter Name="IdArea" Mode="In" Type="Int32" />
+      <Parameter Name="IdProceso" Mode="In" Type="Int32" />
+      <Parameter Name="IdClasificacion" Mode="In" Type="Int32" />
+      <Parameter Name="IdLugarDeTrabajo" Mode="In" Type="Int32" />
+      <Parameter Name="IdTurno" Mode="In" Type="Int32" />
+      <Parameter Name="CedLiderSGD" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spObtenerEstadisticaCasos">
+      <Parameter Name="lider" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spObtenerlinkyTiempo" ReturnType="Collection(Asignador_SGDModel.spObtenerlinkyTiempo_Result)">
+      <Parameter Name="ced" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spObtenerSuspendidosAntara" ReturnType="Collection(Asignador_SGDModel.spObtenerSuspendidosAntara_Result)">
+      <Parameter Name="idLider" Mode="In" Type="Int32" />
+      <Parameter Name="idProceso" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spObtenerTipoIngreso" />
+    <FunctionImport Name="spValidaConexionesFunc" ReturnType="Collection(Asignador_SGDModel.spValidaConexionesFunc_Result)" />
+    <FunctionImport Name="spValidaEstadoCasoSGD" ReturnType="Collection(String)">
+      <Parameter Name="ced" Mode="In" Type="String" />
+      <Parameter Name="radicado" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spValidaEstadoCasoSuspendSGD" ReturnType="Collection(String)">
+      <Parameter Name="ced" Mode="In" Type="String" />
+      <Parameter Name="radicado" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_ObtenerConsecutivo">
+      <Parameter Name="ConCodigo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spDetalleListaDescripcion">
+      <Parameter Name="Detalles_ListaId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="Campos" EntityType="Asignador_SGDModel.Campos" />
+    <EntitySet Name="Campos_Listas" EntityType="Asignador_SGDModel.Campos_Listas" />
+    <EntitySet Name="Formulario_Campos" EntityType="Asignador_SGDModel.Formulario_Campos" />
+    <EntitySet Name="HistModuloEverProLideresRRHH" EntityType="Asignador_SGDModel.HistModuloEverProLideresRRHH" />
+    <AssociationSet Name="FK__Campos__IdTipoCa__7C6F7215" Association="Asignador_SGDModel.FK__Campos__IdTipoCa__7C6F7215">
+      <End Role="TiposCampo" EntitySet="TiposCampo" />
+      <End Role="Campos" EntitySet="Campos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Formulari__IdCam__08D548FA" Association="Asignador_SGDModel.FK__Formulari__IdCam__08D548FA">
+      <End Role="Campos" EntitySet="Campos" />
+      <End Role="Formulario_Campos" EntitySet="Formulario_Campos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Formulari__IdFor__09C96D33" Association="Asignador_SGDModel.FK__Formulari__IdFor__09C96D33">
+      <End Role="tb_Formularios" EntitySet="tb_Formularios" />
+      <End Role="Formulario_Campos" EntitySet="Formulario_Campos" />
+    </AssociationSet>
+    <FunctionImport Name="spInsertaModuloEveris" ReturnType="Collection(Asignador_SGDModel.spInsertaModuloEveris_Result)">
+      <Parameter Name="Cedula" Mode="In" Type="Int32" />
+      <Parameter Name="Empresa" Mode="In" Type="Int32" />
+      <Parameter Name="FecContratacionTemporal" Mode="In" Type="DateTime" />
+      <Parameter Name="FecContratacionEveris" Mode="In" Type="DateTime" />
+      <Parameter Name="SalarioEveris" Mode="In" Type="String" />
+      <Parameter Name="CsrGeco" Mode="In" Type="Int32" />
+      <Parameter Name="Pais" Mode="In" Type="Int32" />
+      <Parameter Name="Cliente" Mode="In" Type="Int32" />
+      <Parameter Name="Proyecto" Mode="In" Type="Int32" />
+      <Parameter Name="Cargo" Mode="In" Type="Int32" />
+      <Parameter Name="Categoria" Mode="In" Type="Int32" />
+      <Parameter Name="Nivel" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spConsultaLocalidades" ReturnType="Collection(Asignador_SGDModel.spConsultaLocalidades_Result)" />
+    <EntitySet Name="tbParamNivelConvenio" EntityType="Asignador_SGDModel.tbParamNivelConvenio" />
+    <FunctionImport Name="spClasificacionNivelPorFunc" ReturnType="Collection(Asignador_SGDModel.spClasificacionNivelPorFunc_Result)">
+      <Parameter Name="identFunc" Mode="In" Type="String" />
+      <Parameter Name="opcion" Mode="In" Type="Int32" />
+      <Parameter Name="proceso" Mode="In" Type="Int32" />
+      <Parameter Name="idLider" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="HistDatosPersonalesRRHH" EntityType="Asignador_SGDModel.HistDatosPersonalesRRHH" />
+    <EntitySet Name="ModuloEverisRRHH" EntityType="Asignador_SGDModel.ModuloEverisRRHH" />
+    <EntitySet Name="HistModuloEverisRRHH" EntityType="Asignador_SGDModel.HistModuloEverisRRHH" />
+    <FunctionImport Name="spConsultaModuloEveris" ReturnType="Collection(Asignador_SGDModel.spConsultaModuloEveris_Result)">
+      <Parameter Name="Cedfuncionario" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="OptenerProducto" ReturnType="Collection(Asignador_SGDModel.OptenerProducto_Result)">
+      <Parameter Name="CodigoPadre" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="LiderPorProducto" ReturnType="Collection(Asignador_SGDModel.LiderPorProducto_Result)">
+      <Parameter Name="CodProd" Mode="In" Type="Int32" />
+      <Parameter Name="CampList" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ObtenerNombFile" ReturnType="Collection(Asignador_SGDModel.ObtenerNombFile_Result)">
+      <Parameter Name="CodProd" Mode="In" Type="Int32" />
+      <Parameter Name="Camlist" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spListaColas" ReturnType="Collection(Asignador_SGDModel.spListaColas_Result)">
+      <Parameter Name="idProceso" Mode="In" Type="Int32" />
+      <Parameter Name="idLider" Mode="In" Type="String" />
+    </FunctionImport>
+    <AssociationSet Name="FK_tbProcMasi_Estados1" Association="Asignador_SGDModel.FK_tbProcMasi_Estados1">
+      <End Role="Estados" EntitySet="Estados" />
+      <End Role="tbProcesosMasivos" EntitySet="tbProcesosMasivos" />
+    </AssociationSet>
+    <FunctionImport Name="spObtenerItemsListaCampo" ReturnType="Collection(Asignador_SGDModel.spObtenerItemsListaCampo_Result)">
+      <Parameter Name="IdCampo" Mode="In" Type="Int32" />
+      <Parameter Name="IdCampo_Lista" Mode="In" Type="String" />
+      <Parameter Name="CuotaAnio" Mode="In" Type="String" />
+      <Parameter Name="Segmento" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="tbLiderProductoFile" EntityType="Asignador_SGDModel.tbLiderProductoFile" />
+    <FunctionImport Name="InsertarTiemposConexionSGD" />
+    <FunctionImport Name="spInsertarTiemposConexion" />
+    <EntitySet Name="tbProductos" EntityType="Asignador_SGDModel.tbProductos" />
+    <FunctionImport Name="BtnDactiloscopia" ReturnType="Collection(Asignador_SGDModel.BtnDactiloscopia_Result)">
+      <Parameter Name="idLider" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spConsultaModuloEverProLideres" ReturnType="Collection(Asignador_SGDModel.spConsultaModuloEverProLideres_Result)">
+      <Parameter Name="Cedfuncionario" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="trazaFuncCasos" ReturnType="Collection(Asignador_SGDModel.trazaFuncCasos_Result)">
+      <Parameter Name="identLider" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spConsultaFuncionariosEverPro" ReturnType="Collection(Asignador_SGDModel.spConsultaFuncionariosEverPro_Result)">
+      <Parameter Name="Cedfuncionario" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spActualizacionMasiva" ReturnType="Collection(Asignador_SGDModel.spActualizacionMasiva_Result)">
+      <Parameter Name="CedLiderSGDAct" Mode="In" Type="Int32" />
+      <Parameter Name="CedLiderSGDNuevo" Mode="In" Type="String" />
+      <Parameter Name="CedFunc" Mode="In" Type="Int32" />
+      <Parameter Name="NuevoSalario" Mode="In" Type="String" />
+      <Parameter Name="TipoActualizacion" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spActualizaDatosPersonal">
+      <Parameter Name="Cedula" Mode="In" Type="Int32" />
+      <Parameter Name="NombreCompleto" Mode="In" Type="String" />
+      <Parameter Name="FechaNacimiento" Mode="In" Type="DateTime" />
+      <Parameter Name="Edad" Mode="In" Type="String" />
+      <Parameter Name="TelefonoCelular" Mode="In" Type="String" />
+      <Parameter Name="TelefonoContato" Mode="In" Type="String" />
+      <Parameter Name="Direccion" Mode="In" Type="String" />
+      <Parameter Name="IdMotivoIngreso" Mode="In" Type="Int32" />
+      <Parameter Name="IdTipoDocumento" Mode="In" Type="Int32" />
+      <Parameter Name="IdGenero" Mode="In" Type="Int32" />
+      <Parameter Name="IdCiudad" Mode="In" Type="Int32" />
+      <Parameter Name="IdLocalidad" Mode="In" Type="Int32" />
+      <Parameter Name="IdCarreraEducativa" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spActualizaModuloEveris">
+      <Parameter Name="Cedula" Mode="In" Type="Int32" />
+      <Parameter Name="Empresa" Mode="In" Type="Int32" />
+      <Parameter Name="FecContratacionTemporal" Mode="In" Type="DateTime" />
+      <Parameter Name="FecContratacionEveris" Mode="In" Type="DateTime" />
+      <Parameter Name="SalarioEveris" Mode="In" Type="String" />
+      <Parameter Name="CsrGeco" Mode="In" Type="Int32" />
+      <Parameter Name="Pais" Mode="In" Type="Int32" />
+      <Parameter Name="Cliente" Mode="In" Type="Int32" />
+      <Parameter Name="Proyecto" Mode="In" Type="Int32" />
+      <Parameter Name="Cargo" Mode="In" Type="Int32" />
+      <Parameter Name="Categoria" Mode="In" Type="Int32" />
+      <Parameter Name="Nivel" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spBuscarFuncionarios" ReturnType="Collection(Asignador_SGDModel.spBuscarFuncionarios_Result)">
+      <Parameter Name="cedula" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spConsultaCategoriaEverPro" ReturnType="Collection(Asignador_SGDModel.spConsultaCategoriaEverPro_Result)">
+      <Parameter Name="idEmpresa" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spConsultaDatosPersonales" ReturnType="Collection(Asignador_SGDModel.spConsultaDatosPersonales_Result)">
+      <Parameter Name="Cedfuncionario" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spConsultaFuncMasivos" ReturnType="Collection(Asignador_SGDModel.spConsultaFuncMasivos_Result)">
+      <Parameter Name="Area" Mode="In" Type="Int32" />
+      <Parameter Name="CedLider" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CountFuncionariosEstado" ReturnType="Collection(Asignador_SGDModel.CountFuncionariosEstado_Result)">
+      <Parameter Name="IdLider" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ConteoCasos" ReturnType="Collection(Asignador_SGDModel.ConteoCasos_Result)">
+      <Parameter Name="idLider" Mode="In" Type="Int32" />
+      <Parameter Name="fechaIni" Mode="In" Type="String" />
+      <Parameter Name="fechaFin" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="FuncionariosMallaTurnos" ReturnType="Collection(Asignador_SGDModel.FuncionariosMallaTurnos_Result)">
+      <Parameter Name="idLider" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="MallaTurnos">
+      <Parameter Name="IdFuncionario" Mode="In" Type="Int32" />
+      <Parameter Name="Anio" Mode="In" Type="Int32" />
+      <Parameter Name="Mes" Mode="In" Type="Int32" />
+      <Parameter Name="Dia" Mode="In" Type="Int32" />
+      <Parameter Name="Hora" Mode="In" Type="Int32" />
+      <Parameter Name="IdLider" Mode="In" Type="Int32" />
+      <Parameter Name="turmo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="PintaTurno" ReturnType="Collection(Asignador_SGDModel.PintaTurno_Result)">
+      <Parameter Name="identFuncionario" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="PintaMallaTurnos" ReturnType="Collection(Asignador_SGDModel.PintaMallaTurnos_Result)">
+      <Parameter Name="IdLider" Mode="In" Type="Int32" />
+      <Parameter Name="Dia" Mode="In" Type="Int32" />
+      <Parameter Name="Mes" Mode="In" Type="Int32" />
+      <Parameter Name="Anio" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ProductividadDiaria" ReturnType="Collection(Asignador_SGDModel.ProductividadDiaria_Result)">
+      <Parameter Name="idLider" Mode="In" Type="Int32" />
+      <Parameter Name="fechaIni" Mode="In" Type="String" />
+      <Parameter Name="fechaFin" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ProgramacionMallaTurnos" ReturnType="Collection(Asignador_SGDModel.ProgramacionMallaTurnos_Result)" />
+    <FunctionImport Name="CrearProgramacionMallas">
+      <Parameter Name="IdFuncionario" Mode="In" Type="Int32" />
+      <Parameter Name="FechaDesde" Mode="In" Type="DateTime" />
+      <Parameter Name="FechaHasta" Mode="In" Type="DateTime" />
+      <Parameter Name="IdLider" Mode="In" Type="Int32" />
+      <Parameter Name="IdTurno" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="InfoTurnos" ReturnType="Collection(Asignador_SGDModel.InfoTurnos_Result)" />
+    <FunctionImport Name="PintaMalla1_3_4" ReturnType="Collection(Asignador_SGDModel.PintaMalla1_3_4_Result)">
+      <Parameter Name="FechaDesde" Mode="In" Type="DateTime" />
+      <Parameter Name="FechaHasta" Mode="In" Type="DateTime" />
+      <Parameter Name="IdLider" Mode="In" Type="Int32" />
+      <Parameter Name="IdTurno" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="PintaMalla5_6_8" ReturnType="Collection(Asignador_SGDModel.PintaMalla5_6_8_Result)">
+      <Parameter Name="FechaDesde" Mode="In" Type="DateTime" />
+      <Parameter Name="FechaHasta" Mode="In" Type="DateTime" />
+      <Parameter Name="IdLider" Mode="In" Type="Int32" />
+      <Parameter Name="IdTurno" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="PintaMalla_1" ReturnType="Collection(Asignador_SGDModel.PintaMalla_1_Result)">
+      <Parameter Name="FechaDesde" Mode="In" Type="DateTime" />
+      <Parameter Name="FechaHasta" Mode="In" Type="DateTime" />
+      <Parameter Name="IdLider" Mode="In" Type="Int32" />
+      <Parameter Name="IdTurno" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="PintaMalla_3" ReturnType="Collection(Asignador_SGDModel.PintaMalla_3_Result)">
+      <Parameter Name="FechaDesde" Mode="In" Type="DateTime" />
+      <Parameter Name="FechaHasta" Mode="In" Type="DateTime" />
+      <Parameter Name="IdLider" Mode="In" Type="Int32" />
+      <Parameter Name="IdTurno" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="PintaMalla_4" ReturnType="Collection(Asignador_SGDModel.PintaMalla_4_Result)">
+      <Parameter Name="FechaDesde" Mode="In" Type="DateTime" />
+      <Parameter Name="FechaHasta" Mode="In" Type="DateTime" />
+      <Parameter Name="IdLider" Mode="In" Type="Int32" />
+      <Parameter Name="IdTurno" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="PintaMalla_8" ReturnType="Collection(Asignador_SGDModel.PintaMalla_8_Result)">
+      <Parameter Name="FechaDesde" Mode="In" Type="DateTime" />
+      <Parameter Name="FechaHasta" Mode="In" Type="DateTime" />
+      <Parameter Name="IdLider" Mode="In" Type="Int32" />
+      <Parameter Name="IdTurno" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="PintaMalla2" ReturnType="Collection(Asignador_SGDModel.PintaMalla2_Result)">
+      <Parameter Name="FechaDesde" Mode="In" Type="DateTime" />
+      <Parameter Name="FechaHasta" Mode="In" Type="DateTime" />
+      <Parameter Name="IdLider" Mode="In" Type="Int32" />
+      <Parameter Name="IdTurno" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="PintaMalla_5" ReturnType="Collection(Asignador_SGDModel.PintaMalla_5_Result)">
+      <Parameter Name="FechaDesde" Mode="In" Type="DateTime" />
+      <Parameter Name="FechaHasta" Mode="In" Type="DateTime" />
+      <Parameter Name="IdLider" Mode="In" Type="Int32" />
+      <Parameter Name="IdTurno" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="PintaMalla_6" ReturnType="Collection(Asignador_SGDModel.PintaMalla_6_Result)">
+      <Parameter Name="FechaDesde" Mode="In" Type="DateTime" />
+      <Parameter Name="FechaHasta" Mode="In" Type="DateTime" />
+      <Parameter Name="IdLider" Mode="In" Type="Int32" />
+      <Parameter Name="IdTurno" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="PintaMalla9" ReturnType="Collection(Asignador_SGDModel.PintaMalla9_Result)">
+      <Parameter Name="FechaDesde" Mode="In" Type="DateTime" />
+      <Parameter Name="FechaHasta" Mode="In" Type="DateTime" />
+      <Parameter Name="IdLider" Mode="In" Type="Int32" />
+      <Parameter Name="IdTurno" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spListaColas2" ReturnType="Collection(Asignador_SGDModel.spListaColas2_Result)">
+      <Parameter Name="idProceso" Mode="In" Type="Int32" />
+      <Parameter Name="idLider" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="trazaFuncCasos2" ReturnType="Collection(Asignador_SGDModel.trazaFuncCasos2_Result)">
+      <Parameter Name="identLider" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SelectFuncionariosEstado" ReturnType="Collection(Asignador_SGDModel.SelectFuncionariosEstado_Result)">
+      <Parameter Name="IdLider" Mode="In" Type="Int32" />
+      <Parameter Name="Estado" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="MallaTurnos1">
+      <Parameter Name="IdFuncionario" Mode="In" Type="Int32" />
+      <Parameter Name="Anio" Mode="In" Type="Int32" />
+      <Parameter Name="Mes" Mode="In" Type="Int32" />
+      <Parameter Name="Dia" Mode="In" Type="Int32" />
+      <Parameter Name="Hora" Mode="In" Type="Int32" />
+      <Parameter Name="IdLider" Mode="In" Type="Int32" />
+      <Parameter Name="turmo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="TbMallaTurnos" EntityType="Asignador_SGDModel.TbMallaTurnos" />
+    <FunctionImport Name="spActualizaModuloEverProLideres">
+      <Parameter Name="Cedula" Mode="In" Type="Int32" />
+      <Parameter Name="IdHC" Mode="In" Type="Int32" />
+      <Parameter Name="IdRol" Mode="In" Type="Int32" />
+      <Parameter Name="CodigoDeEmpleado" Mode="In" Type="Int32" />
+      <Parameter Name="CedJefe" Mode="In" Type="Int32" />
+      <Parameter Name="CedPsl" Mode="In" Type="Int32" />
+      <Parameter Name="CedPtl" Mode="In" Type="Int32" />
+      <Parameter Name="CedPsc" Mode="In" Type="Int32" />
+      <Parameter Name="IdArea" Mode="In" Type="Int32" />
+      <Parameter Name="IdProceso" Mode="In" Type="Int32" />
+      <Parameter Name="IdClasificacion" Mode="In" Type="Int32" />
+      <Parameter Name="IdLugarDeTrabajo" Mode="In" Type="Int32" />
+      <Parameter Name="IdTurno" Mode="In" Type="Int32" />
+      <Parameter Name="CedLiderSGD" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spObtenerNombreLider" ReturnType="Collection(String)">
+      <Parameter Name="idLider" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spObtenerPersonasPorLiderSGD" ReturnType="Collection(Asignador_SGDModel.spObtenerPersonasPorLiderSGD_Result)">
+      <Parameter Name="Cedula" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="InsertarTiemposConexionSGD1" />
+    <FunctionImport Name="spCamposDelFormulario1" ReturnType="Collection(Asignador_SGDModel.spCamposDelFormulario1_Result)">
+      <Parameter Name="IdFormulario" Mode="In" Type="Int32" />
+      <Parameter Name="IdCampoCompuesto" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spInsertarTiemposConexion1" />
+    <EntitySet Name="ProgramacionTurnos" EntityType="Asignador_SGDModel.ProgramacionTurnos" />
+    <FunctionImport Name="spObtenerFunColas" ReturnType="Collection(Asignador_SGDModel.spObtenerFunColas_Result)">
+      <Parameter Name="identLider" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ConsultarEstadoSabans" ReturnType="Collection(Asignador_SGDModel.ConsultarEstadoSabans_Result)">
+      <Parameter Name="Proceso" Mode="In" Type="Int32" />
+      <Parameter Name="identLider" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="Auditoria">
+    <Key>
+      <PropertyRef Name="aud_id" />
+    </Key>
+    <Property Name="aud_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="aud_idUsuario" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="aud_fechaHora" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="aud_evento" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="aud_valorAnt" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="aud_vanorNuev" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="aud_observaciones" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Usuarios" Relationship="Asignador_SGDModel.FK_Auditoria_Usuarios" FromRole="Auditoria" ToRole="Usuarios" />
+  </EntityType>
+  <EntityType Name="CodigosCampo">
+    <Key>
+      <PropertyRef Name="CodCampId" />
+    </Key>
+    <Property Name="CodCampId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CodId" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CodDescripcion" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CampId" Type="Int64" />
+    <Property Name="CodOrden" Type="Int32" Nullable="false" />
+    <Property Name="Activo" Type="Boolean" />
+    <Property Name="CodPadre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Menu">
+    <Key>
+      <PropertyRef Name="IdMenu" />
+    </Key>
+    <Property Name="IdMenu" Type="Int32" Nullable="false" />
+    <Property Name="DescMenu" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IdPadre" Type="Int32" />
+    <Property Name="IdHijo" Type="Int32" />
+    <Property Name="Url" Type="String" MaxLength="500" FixedLength="true" Unicode="true" />
+    <Property Name="Orden" Type="Int32" />
+    <Property Name="Activo" Type="Boolean" />
+    <Property Name="UrlImage" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="RolesMenu" Relationship="Asignador_SGDModel.FK__RolesMenu__IdMen__3EDC53F0" FromRole="Menu" ToRole="RolesMenu" />
+  </EntityType>
+  <EntityType Name="Parametros">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="codigo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="valor" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="descripcion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="IdRol" />
+    </Key>
+    <Property Name="IdRol" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DescRol" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Activo" Type="Boolean" />
+    <NavigationProperty Name="RolesMenu" Relationship="Asignador_SGDModel.FK__RolesMenu__IdRol__40C49C62" FromRole="Roles" ToRole="RolesMenu" />
+    <NavigationProperty Name="RolesMenu1" Relationship="Asignador_SGDModel.FK__RolesMenu__IdRol__41B8C09B" FromRole="Roles" ToRole="RolesMenu" />
+    <NavigationProperty Name="Usuarios" Relationship="Asignador_SGDModel.FK__Usuarios__IdRol__42ACE4D4" FromRole="Roles" ToRole="Usuarios" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tb_Formularios">
+    <Key>
+      <PropertyRef Name="FormularioId" />
+    </Key>
+    <Property Name="FormularioId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Activo" Type="Boolean" />
+    <NavigationProperty Name="Formulario_Campos" Relationship="Asignador_SGDModel.FK__Formulari__IdFor__09C96D33" FromRole="tb_Formularios" ToRole="Formulario_Campos" />
+  </EntityType>
+  <EntityType Name="tbAreas">
+    <Key>
+      <PropertyRef Name="idArea" />
+    </Key>
+    <Property Name="idArea" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DescArea" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tbLider" Relationship="Asignador_SGDModel.FK__tbLider__idArea__36B12243" FromRole="tbAreas" ToRole="tbLider" />
+  </EntityType>
+  <EntityType Name="tbHistorial">
+    <Key>
+      <PropertyRef Name="idHistorial" />
+    </Key>
+    <Property Name="idHistorial" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idClasificacion" Type="Int32" Nullable="false" />
+    <Property Name="Area" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Lider" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Cedula" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NombreCompleto" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Nradicado" Type="Int32" Nullable="false" />
+    <Property Name="FechaAsignado" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="tbProcPorProducto">
+    <Key>
+      <PropertyRef Name="idProcPorProducto" />
+    </Key>
+    <Property Name="idProcPorProducto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idProducto" Type="Int32" Nullable="false" />
+    <Property Name="DresProceso" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tbProducto" Relationship="Asignador_SGDModel.FK__tbProcPor__idPro__37A5467C" FromRole="tbProcPorProducto" ToRole="tbProducto" />
+  </EntityType>
+  <EntityType Name="tbProducto">
+    <Key>
+      <PropertyRef Name="idProducto" />
+    </Key>
+    <Property Name="idProducto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DescProducto" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tbProcPorProducto" Relationship="Asignador_SGDModel.FK__tbProcPor__idPro__37A5467C" FromRole="tbProducto" ToRole="tbProcPorProducto" />
+  </EntityType>
+  <EntityType Name="tbUsuariosPorLider">
+    <Key>
+      <PropertyRef Name="Cedula" />
+    </Key>
+    <Property Name="idLider" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NombreCompleto" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Cedula" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Apoyo" Type="Boolean" />
+    <Property Name="Estado" Type="Int32" />
+    <NavigationProperty Name="tbClasificaNivFuncionario" Relationship="Asignador_SGDModel.FK_tbClasificaNivFuncionario_tbUsuariosPorLider" FromRole="tbUsuariosPorLider" ToRole="tbClasificaNivFuncionario" />
+    <NavigationProperty Name="Estados" Relationship="Asignador_SGDModel.FK_tbUsuariosPorLider_Estados" FromRole="tbUsuariosPorLider" ToRole="Estados" />
+  </EntityType>
+  <EntityType Name="TiposCampo">
+    <Key>
+      <PropertyRef Name="TcId" />
+    </Key>
+    <Property Name="TcId" Type="Int32" Nullable="false" />
+    <Property Name="TcDescripcion" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Activo" Type="Boolean" />
+    <NavigationProperty Name="ts_Campos" Relationship="Asignador_SGDModel.FK__ts_Campos__idTip__4E88ABD4" FromRole="TiposCampo" ToRole="ts_Campos" />
+    <NavigationProperty Name="Campos" Relationship="Asignador_SGDModel.FK__Campos__IdTipoCa__7C6F7215" FromRole="TiposCampo" ToRole="Campos" />
+  </EntityType>
+  <EntityType Name="ts_Campos">
+    <Key>
+      <PropertyRef Name="CampoId" />
+    </Key>
+    <Property Name="CampoId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DimensionAlto" Type="Int32" />
+    <Property Name="DimensionAncho" Type="Int32" />
+    <Property Name="LongMin" Type="Int32" />
+    <Property Name="LongMax" Type="Int32" />
+    <Property Name="FechaCreacion" Type="DateTime" Precision="3" />
+    <Property Name="idTipoCampo" Type="Int32" />
+    <Property Name="idPadre" Type="Int32" />
+    <Property Name="CampObligatorio" Type="Boolean" Nullable="false" />
+    <Property Name="CampDependiente" Type="Int32" />
+    <Property Name="CodFormulario" Type="Int32" />
+    <NavigationProperty Name="TiposCampo" Relationship="Asignador_SGDModel.FK__ts_Campos__idTip__4E88ABD4" FromRole="ts_Campos" ToRole="TiposCampo" />
+  </EntityType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="UsuarioDominio" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="NomUsuario" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PassCodeUsuario" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IdRol" Type="Int32" />
+    <Property Name="Activo" Type="Boolean" />
+    <Property Name="FecRegistro" Type="DateTime" Precision="3" />
+    <Property Name="FechaCaducidad" Type="DateTime" Precision="3" />
+    <Property Name="SecurityPin" Type="String" MaxLength="16" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Auditoria" Relationship="Asignador_SGDModel.FK_Auditoria_Usuarios" FromRole="Usuarios" ToRole="Auditoria" />
+    <NavigationProperty Name="Roles" Relationship="Asignador_SGDModel.FK__Usuarios__IdRol__42ACE4D4" FromRole="Usuarios" ToRole="Roles" />
+    <NavigationProperty Name="UsuariosBloqueados" Relationship="Asignador_SGDModel.FK_UsuariosBloqueados_Usuarios" FromRole="Usuarios" ToRole="UsuariosBloqueados" />
+    <NavigationProperty Name="UsuariosHistorico" Relationship="Asignador_SGDModel.FK_UsuariosHistorico_Usuarios" FromRole="Usuarios" ToRole="UsuariosHistorico" />
+  </EntityType>
+  <EntityType Name="UsuariosBloqueados">
+    <Key>
+      <PropertyRef Name="IdUsuarioBloqueado" />
+    </Key>
+    <Property Name="IdUsuarioBloqueado" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="IdUsuario" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="FechaBloqueo" Type="DateTime" Precision="3" />
+    <Property Name="Bloqueado" Type="Boolean" />
+    <NavigationProperty Name="Usuarios" Relationship="Asignador_SGDModel.FK_UsuariosBloqueados_Usuarios" FromRole="UsuariosBloqueados" ToRole="Usuarios" />
+  </EntityType>
+  <EntityType Name="UsuariosHistorico">
+    <Key>
+      <PropertyRef Name="IdHistorico" />
+    </Key>
+    <Property Name="IdHistorico" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdUsuario" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="PassCodeUsuario" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FechaCaducidad" Type="DateTime" Precision="3" />
+    <Property Name="Activo" Type="Boolean" />
+    <NavigationProperty Name="Usuarios" Relationship="Asignador_SGDModel.FK_UsuariosHistorico_Usuarios" FromRole="UsuariosHistorico" ToRole="Usuarios" />
+  </EntityType>
+  <EntityType Name="RolesMenu">
+    <Key>
+      <PropertyRef Name="IdRol" />
+      <PropertyRef Name="IdMenu" />
+      <PropertyRef Name="Activo" />
+    </Key>
+    <Property Name="IdRol" Type="Int32" Nullable="false" />
+    <Property Name="IdMenu" Type="Int32" Nullable="false" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Menu" Relationship="Asignador_SGDModel.FK__RolesMenu__IdMen__3EDC53F0" FromRole="RolesMenu" ToRole="Menu" />
+    <NavigationProperty Name="Roles" Relationship="Asignador_SGDModel.FK__RolesMenu__IdRol__40C49C62" FromRole="RolesMenu" ToRole="Roles" />
+    <NavigationProperty Name="Roles1" Relationship="Asignador_SGDModel.FK__RolesMenu__IdRol__41B8C09B" FromRole="RolesMenu" ToRole="Roles" />
+  </EntityType>
+  <EntityType Name="tbClasificaNivFuncionario">
+    <Key>
+      <PropertyRef Name="identFuncionario" />
+      <PropertyRef Name="Proceso" />
+    </Key>
+    <Property Name="identFuncionario" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NivelClasificacion" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="Proceso" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tbUsuariosPorLider" Relationship="Asignador_SGDModel.FK_tbClasificaNivFuncionario_tbUsuariosPorLider" FromRole="tbClasificaNivFuncionario" ToRole="tbUsuariosPorLider" />
+    <NavigationProperty Name="tbTipologiaConvenio" Relationship="Asignador_SGDModel.FK_tbClasificaNivFuncionario_tbTipologiaConvenio" FromRole="tbClasificaNivFuncionario" ToRole="tbTipologiaConvenio" />
+  </EntityType>
+  <EntityType Name="tbLider">
+    <Key>
+      <PropertyRef Name="NombreCompleto" />
+      <PropertyRef Name="Cedula" />
+    </Key>
+    <Property Name="NombreCompleto" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Cedula" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="idArea" Type="Int32" />
+    <NavigationProperty Name="tbAreas" Relationship="Asignador_SGDModel.FK__tbLider__idArea__36B12243" FromRole="tbLider" ToRole="tbAreas" />
+  </EntityType>
+  <Association Name="FK_Auditoria_Usuarios">
+    <End Type="Asignador_SGDModel.Usuarios" Role="Usuarios" Multiplicity="1" />
+    <End Type="Asignador_SGDModel.Auditoria" Role="Auditoria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Auditoria">
+        <PropertyRef Name="aud_idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__RolesMenu__IdMen__3EDC53F0">
+    <End Type="Asignador_SGDModel.Menu" Role="Menu" Multiplicity="1" />
+    <End Type="Asignador_SGDModel.RolesMenu" Role="RolesMenu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Menu">
+        <PropertyRef Name="IdMenu" />
+      </Principal>
+      <Dependent Role="RolesMenu">
+        <PropertyRef Name="IdMenu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__RolesMenu__IdRol__40C49C62">
+    <End Type="Asignador_SGDModel.Roles" Role="Roles" Multiplicity="1" />
+    <End Type="Asignador_SGDModel.RolesMenu" Role="RolesMenu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="IdRol" />
+      </Principal>
+      <Dependent Role="RolesMenu">
+        <PropertyRef Name="IdRol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__RolesMenu__IdRol__41B8C09B">
+    <End Type="Asignador_SGDModel.Roles" Role="Roles" Multiplicity="1" />
+    <End Type="Asignador_SGDModel.RolesMenu" Role="RolesMenu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="IdRol" />
+      </Principal>
+      <Dependent Role="RolesMenu">
+        <PropertyRef Name="IdRol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Usuarios__IdRol__42ACE4D4">
+    <End Type="Asignador_SGDModel.Roles" Role="Roles" Multiplicity="0..1" />
+    <End Type="Asignador_SGDModel.Usuarios" Role="Usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="IdRol" />
+      </Principal>
+      <Dependent Role="Usuarios">
+        <PropertyRef Name="IdRol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbLider__idArea__36B12243">
+    <End Type="Asignador_SGDModel.tbAreas" Role="tbAreas" Multiplicity="0..1" />
+    <End Type="Asignador_SGDModel.tbLider" Role="tbLider" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbAreas">
+        <PropertyRef Name="idArea" />
+      </Principal>
+      <Dependent Role="tbLider">
+        <PropertyRef Name="idArea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbProcPor__idPro__37A5467C">
+    <End Type="Asignador_SGDModel.tbProducto" Role="tbProducto" Multiplicity="1" />
+    <End Type="Asignador_SGDModel.tbProcPorProducto" Role="tbProcPorProducto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbProducto">
+        <PropertyRef Name="idProducto" />
+      </Principal>
+      <Dependent Role="tbProcPorProducto">
+        <PropertyRef Name="idProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbClasificaNivFuncionario_tbUsuariosPorLider">
+    <End Type="Asignador_SGDModel.tbUsuariosPorLider" Role="tbUsuariosPorLider" Multiplicity="1" />
+    <End Type="Asignador_SGDModel.tbClasificaNivFuncionario" Role="tbClasificaNivFuncionario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbUsuariosPorLider">
+        <PropertyRef Name="Cedula" />
+      </Principal>
+      <Dependent Role="tbClasificaNivFuncionario">
+        <PropertyRef Name="identFuncionario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ts_Campos__idTip__4E88ABD4">
+    <End Type="Asignador_SGDModel.TiposCampo" Role="TiposCampo" Multiplicity="0..1" />
+    <End Type="Asignador_SGDModel.ts_Campos" Role="ts_Campos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TiposCampo">
+        <PropertyRef Name="TcId" />
+      </Principal>
+      <Dependent Role="ts_Campos">
+        <PropertyRef Name="idTipoCampo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuariosBloqueados_Usuarios">
+    <End Type="Asignador_SGDModel.Usuarios" Role="Usuarios" Multiplicity="0..1" />
+    <End Type="Asignador_SGDModel.UsuariosBloqueados" Role="UsuariosBloqueados" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="UsuariosBloqueados">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuariosHistorico_Usuarios">
+    <End Type="Asignador_SGDModel.Usuarios" Role="Usuarios" Multiplicity="0..1" />
+    <End Type="Asignador_SGDModel.UsuariosHistorico" Role="UsuariosHistorico" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="UsuariosHistorico">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_ValidarMobilePIN_Result">
+    <Property Type="Int32" Name="Id" Nullable="true" />
+    <Property Type="Int32" Name="resultado" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spFuncionarioApoyo_Result">
+    <Property Type="String" Name="Cedula" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="NombreCompleto" Nullable="false" MaxLength="200" />
+  </ComplexType>
+  <ComplexType Name="spObtenerLideres_Result">
+    <Property Type="String" Name="NombreCompleto" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="Cedula" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="idArea" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spObtenerMenuHijosPerfil_Result">
+    <Property Type="Int32" Name="IdMenu" Nullable="false" />
+    <Property Type="String" Name="DescMenu" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Url" Nullable="true" MaxLength="500" />
+  </ComplexType>
+  <ComplexType Name="spObtenerMenuNietosPerfil_Result">
+    <Property Type="Int32" Name="IdMenu" Nullable="false" />
+    <Property Type="String" Name="DescMenu" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Url" Nullable="true" MaxLength="500" />
+  </ComplexType>
+  <ComplexType Name="spObtenerMenuPadre_Result">
+    <Property Type="Int32" Name="IdMenu" Nullable="false" />
+    <Property Type="String" Name="DescMenu" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Url" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="UrlImage" Nullable="true" MaxLength="200" />
+  </ComplexType>
+  <ComplexType Name="spObtenerNombreUsu_Result">
+    <Property Type="String" Name="NomUsuario" Nullable="false" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="spEliminarNivelFunc_Result">
+    <Property Type="String" Name="Mensaje" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spInsertaFuncionario_Result">
+    <Property Type="String" Name="Mensaje" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spConsultarHijos_Result">
+    <Property Type="Int64" Name="CampoId" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spInsertNivelFunc_Result">
+    <Property Type="String" Name="Mensaje" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spObtenerNombreProceso_Result">
+    <Property Type="String" Name="codDescripcion" Nullable="false" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="spAsignacionAut_Result" />
+  <ComplexType Name="spObtieneFuncXlider_Result">
+    <Property Type="String" Name="Cedula" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="NombreCompleto" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="Nivel" Nullable="true" MaxLength="5" />
+  </ComplexType>
+  <ComplexType Name="spAsignacionManual_Result">
+    <Property Type="String" Name="Mensaje" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spLideresAasignar_Result">
+    <Property Type="Int32" Name="proceso" Nullable="false" />
+    <Property Type="String" Name="idLider" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spObtenerEstadoUsuario_Result">
+    <Property Type="Int32" Name="Id_estado" Nullable="false" />
+    <Property Type="String" Name="Descrip_estado" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="spPruebaAsigna_Result">
+    <Property Type="Int32" Name="Column1" Nullable="true" />
+    <Property Type="String" Name="Column2" Nullable="true" MaxLength="5" />
+    <Property Type="DateTime" Name="Column3" Nullable="true" Precision="23" />
+  </ComplexType>
+  <EntityType Name="tbLibranza">
+    <Key>
+      <PropertyRef Name="idLibranza" />
+    </Key>
+    <Property Name="idLibranza" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="N" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="C" Type="Int32" Nullable="false" />
+    <Property Name="E" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="NV" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FI" Type="DateTime" Precision="3" />
+    <Property Name="FA" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="R" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Estado" Type="Int32" Nullable="false" />
+    <Property Name="idlider" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="idProceso" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Estados" Relationship="Asignador_SGDModel.FK_tbLibranza_Estados1" FromRole="tbLibranza" ToRole="Estados" />
+  </EntityType>
+  <EntityType Name="tbFormalizacion">
+    <Key>
+      <PropertyRef Name="idFormalizacion" />
+    </Key>
+    <Property Name="idFormalizacion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="N" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="C" Type="Int32" Nullable="false" />
+    <Property Name="E" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="NV" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FI" Type="DateTime" Precision="3" />
+    <Property Name="FA" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="R" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Estado" Type="Int32" Nullable="false" />
+    <Property Name="idlider" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="idProceso" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Estados" Relationship="Asignador_SGDModel.FK_tbFormalizacion_Estados1" FromRole="tbFormalizacion" ToRole="Estados" />
+  </EntityType>
+  <EntityType Name="tbTipologiaConvenio">
+    <Key>
+      <PropertyRef Name="NivelConvenio" />
+    </Key>
+    <Property Name="NivelConvenio" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="Complejidad" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Activo" Type="Boolean" />
+    <Property Name="Proceso" Type="Int32" />
+    <NavigationProperty Name="tbClasificaNivFuncionario" Relationship="Asignador_SGDModel.FK_tbClasificaNivFuncionario_tbTipologiaConvenio" FromRole="tbTipologiaConvenio" ToRole="tbClasificaNivFuncionario" />
+  </EntityType>
+  <Association Name="FK_tbClasificaNivFuncionario_tbTipologiaConvenio">
+    <End Type="Asignador_SGDModel.tbTipologiaConvenio" Role="tbTipologiaConvenio" Multiplicity="0..1" />
+    <End Type="Asignador_SGDModel.tbClasificaNivFuncionario" Role="tbClasificaNivFuncionario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbTipologiaConvenio">
+        <PropertyRef Name="NivelConvenio" />
+      </Principal>
+      <Dependent Role="tbClasificaNivFuncionario">
+        <PropertyRef Name="NivelClasificacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Estados">
+    <Key>
+      <PropertyRef Name="IdEstado" />
+    </Key>
+    <Property Name="IdEstado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Valor" Type="Int32" />
+    <NavigationProperty Name="tbFormalizacion" Relationship="Asignador_SGDModel.FK_tbFormalizacion_Estados1" FromRole="Estados" ToRole="tbFormalizacion" />
+    <NavigationProperty Name="tbLibranza" Relationship="Asignador_SGDModel.FK_tbLibranza_Estados1" FromRole="Estados" ToRole="tbLibranza" />
+    <NavigationProperty Name="tbUsuariosPorLider" Relationship="Asignador_SGDModel.FK_tbUsuariosPorLider_Estados" FromRole="Estados" ToRole="tbUsuariosPorLider" />
+    <NavigationProperty Name="tbProcesosMasivos" Relationship="Asignador_SGDModel.FK_tbProcesosMasivos_Estados" FromRole="Estados" ToRole="tbProcesosMasivos" />
+    <NavigationProperty Name="tbProcesosMasivos1" Relationship="Asignador_SGDModel.FK_tbProcMasi_Estados1" FromRole="Estados" ToRole="tbProcesosMasivos" />
+  </EntityType>
+  <Association Name="FK_tbFormalizacion_Estados1">
+    <End Type="Asignador_SGDModel.Estados" Role="Estados" Multiplicity="1" />
+    <End Type="Asignador_SGDModel.tbFormalizacion" Role="tbFormalizacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estados">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="tbFormalizacion">
+        <PropertyRef Name="Estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbLibranza_Estados1">
+    <End Type="Asignador_SGDModel.Estados" Role="Estados" Multiplicity="1" />
+    <End Type="Asignador_SGDModel.tbLibranza" Role="tbLibranza" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estados">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="tbLibranza">
+        <PropertyRef Name="Estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbUsuariosPorLider_Estados">
+    <End Type="Asignador_SGDModel.Estados" Role="Estados" Multiplicity="0..1" />
+    <End Type="Asignador_SGDModel.tbUsuariosPorLider" Role="tbUsuariosPorLider" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estados">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="tbUsuariosPorLider">
+        <PropertyRef Name="Estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="spConsultarCasosEnCola_Result">
+    <Property Type="Int32" Name="Ncaso" Nullable="false" />
+    <Property Type="Int32" Name="EstadoCaso" Nullable="false" />
+    <Property Type="DateTime" Name="FechaAsignacionCaso" Nullable="false" Precision="23" />
+    <Property Type="Time" Name="Horainicio" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="tbAns">
+    <Key>
+      <PropertyRef Name="idAns" />
+    </Key>
+    <Property Name="idAns" Type="Int32" Nullable="false" />
+    <Property Name="Area" Type="Int32" Nullable="false" />
+    <Property Name="Proceso" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IdActivida" Type="Int32" Nullable="false" />
+    <Property Name="Actividad" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Productos" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ProXHora" Type="Int32" Nullable="false" />
+    <Property Name="ProdAnsHora" Type="Int32" Nullable="false" />
+    <Property Name="EstandarAviso" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbParametrosServicio">
+    <Key>
+      <PropertyRef Name="idTiempo" />
+    </Key>
+    <Property Name="idTiempo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NombreServicio" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LLave" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Valor" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbTipoAusentismo">
+    <Key>
+      <PropertyRef Name="Id_ausentismo" />
+    </Key>
+    <Property Name="Id_ausentismo" Type="Int32" Nullable="false" />
+    <Property Name="Tipo_ausentismo" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Estado" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbAsignacionCasos">
+    <Key>
+      <PropertyRef Name="idAsigCasos" />
+      <PropertyRef Name="identFuncionario" />
+      <PropertyRef Name="FechaCreacionCaso" />
+      <PropertyRef Name="Ncaso" />
+      <PropertyRef Name="NivelClasif" />
+      <PropertyRef Name="EstadoCaso" />
+      <PropertyRef Name="FechaAsignacionCaso" />
+      <PropertyRef Name="Proceso" />
+      <PropertyRef Name="NombreCaso" />
+    </Key>
+    <Property Name="idAsigCasos" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="identFuncionario" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FechaCreacionCaso" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Ncaso" Type="Int32" Nullable="false" />
+    <Property Name="NivelClasif" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="EstadoCaso" Type="Int32" Nullable="false" />
+    <Property Name="FechaAsignacionCaso" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Proceso" Type="Int32" Nullable="false" />
+    <Property Name="Horainicio" Type="DateTime" Precision="3" />
+    <Property Name="HoraFin" Type="DateTime" Precision="3" />
+    <Property Name="NombreCaso" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <ComplexType Name="spUsuariosAplicacion_Result">
+    <Property Type="Decimal" Name="IdUsuario" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="String" Name="NomUsuario" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="DescRol" Nullable="false" MaxLength="200" />
+    <Property Type="Boolean" Name="Activo" Nullable="true" />
+    <Property Type="DateTime" Name="FecRegistro" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="FechaCaducidad" Nullable="true" Precision="23" />
+    <Property Type="String" Name="SecurityPin" Nullable="true" MaxLength="16" />
+    <Property Type="Int32" Name="IdRol" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_ActualizarUsuario_Result">
+    <Property Type="String" Name="Mensaje" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_GuardarNuevoUsuario_Result">
+    <Property Type="String" Name="Mensaje" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_EstadoUsuario_Result">
+    <Property Type="String" Name="Mensaje" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spObtenerRoles_Result">
+    <Property Type="Int32" Name="IdRol" Nullable="false" />
+    <Property Type="String" Name="DescRol" Nullable="false" MaxLength="200" />
+    <Property Type="Boolean" Name="Activo" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spCrearNuevoRol_Result">
+    <Property Type="String" Name="Mensaje" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spUpdateDescRol_Result">
+    <Property Type="String" Name="Mensaje" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spObtenerMenuRol_Result">
+    <Property Type="Int32" Name="IdMenu" Nullable="false" />
+    <Property Type="String" Name="DescMenu" Nullable="false" MaxLength="100" />
+    <Property Type="Boolean" Name="Activo" Nullable="false" />
+  </ComplexType>
+  <EntityType Name="tbAuditoriaConexion">
+    <Key>
+      <PropertyRef Name="IdAuditoria" />
+    </Key>
+    <Property Name="IdAuditoria" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdUsuario" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IdEstado" Type="Int32" Nullable="false" />
+    <Property Name="IdAusente" Type="Int32" />
+    <Property Name="FechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FechaFinRegistro" Type="DateTime" Precision="3" />
+  </EntityType>
+  <ComplexType Name="sptip_ausentismo_Result">
+    <Property Type="Int32" Name="Id_ausentismo" Nullable="true" />
+    <Property Type="String" Name="Tipo_ausentismo" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spResetearUsuario_Result">
+    <Property Type="Int32" Name="Mensaje" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spVerificaCaso_Result">
+    <Property Type="Int32" Name="CASO" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spCasoPrioritario_Result">
+    <Property Type="Int32" Name="Mensaje" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spObtenerNombreCaso_Result">
+    <Property Type="String" Name="Actividad" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="idAns" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spObtenerNiveles_Result">
+    <Property Type="String" Name="idAns" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="Actividad" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spVerCasosEnCola_Result">
+    <Property Type="String" Name="NombreCompleto" Nullable="false" MaxLength="200" />
+    <Property Type="Int32" Name="Ncaso" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Actividad" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Complejidad" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="identFuncionario" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <EntityType Name="tbProcesosMasivos">
+    <Key>
+      <PropertyRef Name="idProcMasivo" />
+    </Key>
+    <Property Name="idProcMasivo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="N" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="C" Type="Int32" Nullable="false" />
+    <Property Name="E" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="NV" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FI" Type="DateTime" Precision="0" />
+    <Property Name="FA" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="R" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Estado" Type="Int32" Nullable="false" />
+    <Property Name="idlider" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="idProceso" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Estados" Relationship="Asignador_SGDModel.FK_tbProcesosMasivos_Estados" FromRole="tbProcesosMasivos" ToRole="Estados" />
+    <NavigationProperty Name="Estados1" Relationship="Asignador_SGDModel.FK_tbProcMasi_Estados1" FromRole="tbProcesosMasivos" ToRole="Estados" />
+    <Property Name="UCE" Type="Int32" />
+  </EntityType>
+  <Association Name="FK_tbProcesosMasivos_Estados">
+    <End Type="Asignador_SGDModel.Estados" Role="Estados" Multiplicity="1" />
+    <End Type="Asignador_SGDModel.tbProcesosMasivos" Role="tbProcesosMasivos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estados">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="tbProcesosMasivos">
+        <PropertyRef Name="idProceso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="spConsultaLideresEverPro_Result">
+    <Property Type="Int32" Name="Cedula" Nullable="false" />
+    <Property Type="String" Name="NombreCompleto" Nullable="false" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="spConsultaNivelEverPro_Result">
+    <Property Type="String" Name="Codigo" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="spObtenerlinkyTiempo_Result">
+    <Property Type="String" Name="UsuarioDominio" Nullable="false" MaxLength="200" />
+    <Property Type="Decimal" Name="IdUsuario" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="String" Name="NomUsuario" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="DescRol" Nullable="false" MaxLength="200" />
+    <Property Type="Boolean" Name="Activo" Nullable="true" />
+    <Property Type="Int32" Name="IdMenu" Nullable="false" />
+    <Property Type="String" Name="DescMenu" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="Url" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="Ncaso" Nullable="false" />
+    <Property Type="Int32" Name="EstadoCaso" Nullable="false" />
+    <Property Type="String" Name="NombreCaso" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Actividad" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="ProdAnsHora" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spObtenerSuspendidosAntara_Result">
+    <Property Type="String" Name="NroCaso" Nullable="false" />
+    <Property Type="String" Name="Observaciones" Nullable="false" />
+    <Property Type="DateTime" Name="FechaProcesamiento" Nullable="false" Precision="23" />
+    <Property Type="String" Name="CodigoUsuario" Nullable="false" />
+    <Property Type="String" Name="NombreUsuario" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spValidaConexionesFunc_Result">
+    <Property Type="String" Name="idusuario" Nullable="true" />
+    <Property Type="DateTime" Name="fechaRegistro" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="FechaActual" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="Column1" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spInsertaDatosPersonal_Result">
+    <Property Type="String" Name="Mensaje" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="Campos">
+    <Key>
+      <PropertyRef Name="IdCampo" />
+    </Key>
+    <Property Name="IdCampo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IdPadre" Type="Int32" />
+    <Property Name="Orden" Type="Int32" />
+    <Property Name="DimensionAlto" Type="Int32" />
+    <Property Name="DimensionAncho" Type="Int32" />
+    <Property Name="Obligatorio" Type="Boolean" />
+    <Property Name="IdTipoCampo" Type="Int32" />
+    <Property Name="Editable" Type="Boolean" />
+    <Property Name="DobleCaptura" Type="Boolean" />
+    <Property Name="LongMin" Type="Int32" />
+    <Property Name="LongMax" Type="Int32" />
+    <Property Name="Evento" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FuncionValidacion" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MensajeError" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Activo" Type="Boolean" />
+    <NavigationProperty Name="TiposCampo" Relationship="Asignador_SGDModel.FK__Campos__IdTipoCa__7C6F7215" FromRole="Campos" ToRole="TiposCampo" />
+    <NavigationProperty Name="Formulario_Campos" Relationship="Asignador_SGDModel.FK__Formulari__IdCam__08D548FA" FromRole="Campos" ToRole="Formulario_Campos" />
+  </EntityType>
+  <EntityType Name="Campos_Listas">
+    <Key>
+      <PropertyRef Name="IdCampos_Listas" />
+    </Key>
+    <Property Name="IdCampos_Listas" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Codigo" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IdCampoPadre" Type="Int32" />
+    <Property Name="Orden" Type="Int32" />
+    <Property Name="CodigoPadre" Type="Int32" />
+    <Property Name="Activo" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Formulario_Campos">
+    <Key>
+      <PropertyRef Name="IdFormularioCampos" />
+    </Key>
+    <Property Name="IdFormularioCampos" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdFormulario" Type="Int32" />
+    <Property Name="IdCampos" Type="Int32" />
+    <Property Name="OrdenCampo" Type="Int32" />
+    <Property Name="Obligatorio" Type="Int32" />
+    <NavigationProperty Name="Campos" Relationship="Asignador_SGDModel.FK__Formulari__IdCam__08D548FA" FromRole="Formulario_Campos" ToRole="Campos" />
+    <NavigationProperty Name="tb_Formularios" Relationship="Asignador_SGDModel.FK__Formulari__IdFor__09C96D33" FromRole="Formulario_Campos" ToRole="tb_Formularios" />
+  </EntityType>
+  <EntityType Name="HistModuloEverProLideresRRHH">
+    <Key>
+      <PropertyRef Name="Cedula" />
+      <PropertyRef Name="IdHc" />
+      <PropertyRef Name="IdRol" />
+      <PropertyRef Name="CodigoDeEmpleado" />
+      <PropertyRef Name="CedJefe" />
+      <PropertyRef Name="CedPsl" />
+      <PropertyRef Name="CedPtl" />
+      <PropertyRef Name="CedPsc" />
+      <PropertyRef Name="IdArea" />
+      <PropertyRef Name="IdProceso" />
+      <PropertyRef Name="IdClasificacion" />
+      <PropertyRef Name="IdLugarDeTrabajo" />
+      <PropertyRef Name="IdTurno" />
+    </Key>
+    <Property Name="FechaActualizacion" Type="DateTime" Precision="3" />
+    <Property Name="Cedula" Type="Int32" Nullable="false" />
+    <Property Name="IdHc" Type="Int32" Nullable="false" />
+    <Property Name="IdRol" Type="Int32" Nullable="false" />
+    <Property Name="CodigoDeEmpleado" Type="Int32" Nullable="false" />
+    <Property Name="CedJefe" Type="Int32" Nullable="false" />
+    <Property Name="CedPsl" Type="Int32" Nullable="false" />
+    <Property Name="CedPtl" Type="Int32" Nullable="false" />
+    <Property Name="CedPsc" Type="Int32" Nullable="false" />
+    <Property Name="IdArea" Type="Int32" Nullable="false" />
+    <Property Name="IdProceso" Type="Int32" Nullable="false" />
+    <Property Name="IdClasificacion" Type="Int32" Nullable="false" />
+    <Property Name="IdLugarDeTrabajo" Type="Int32" Nullable="false" />
+    <Property Name="IdTurno" Type="Int32" Nullable="false" />
+    <Property Name="CedLiderSGD" Type="Int32" />
+  </EntityType>
+  <Association Name="FK__Campos__IdTipoCa__7C6F7215">
+    <End Type="Asignador_SGDModel.TiposCampo" Role="TiposCampo" Multiplicity="0..1" />
+    <End Type="Asignador_SGDModel.Campos" Role="Campos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TiposCampo">
+        <PropertyRef Name="TcId" />
+      </Principal>
+      <Dependent Role="Campos">
+        <PropertyRef Name="IdTipoCampo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Formulari__IdCam__08D548FA">
+    <End Type="Asignador_SGDModel.Campos" Role="Campos" Multiplicity="0..1" />
+    <End Type="Asignador_SGDModel.Formulario_Campos" Role="Formulario_Campos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Campos">
+        <PropertyRef Name="IdCampo" />
+      </Principal>
+      <Dependent Role="Formulario_Campos">
+        <PropertyRef Name="IdCampos" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Formulari__IdFor__09C96D33">
+    <End Type="Asignador_SGDModel.tb_Formularios" Role="tb_Formularios" Multiplicity="0..1" />
+    <End Type="Asignador_SGDModel.Formulario_Campos" Role="Formulario_Campos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Formularios">
+        <PropertyRef Name="FormularioId" />
+      </Principal>
+      <Dependent Role="Formulario_Campos">
+        <PropertyRef Name="IdFormulario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="spInsertaModuloEverPro_Result">
+    <Property Type="String" Name="Mensaje" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spInsertaModuloEveris_Result">
+    <Property Type="String" Name="Mensaje" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spCamposDelFormulario_Result">
+    <Property Type="Int32" Name="IdCampo" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="IdPadre" Nullable="true" />
+    <Property Type="Int32" Name="Orden" Nullable="true" />
+    <Property Type="Int32" Name="DimensionAlto" Nullable="true" />
+    <Property Type="Int32" Name="DimensionAncho" Nullable="true" />
+    <Property Type="Boolean" Name="Obligatorio" Nullable="true" />
+    <Property Type="Int32" Name="IdTipoCampo" Nullable="true" />
+    <Property Type="Boolean" Name="Editable" Nullable="true" />
+    <Property Type="Boolean" Name="DobleCaptura" Nullable="true" />
+    <Property Type="Int32" Name="LongMax" Nullable="true" />
+    <Property Type="Int32" Name="LongMin" Nullable="true" />
+    <Property Type="String" Name="Evento" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="FuncionValidacion" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="MensajeError" Nullable="true" MaxLength="100" />
+    <Property Type="Boolean" Name="Activo" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spConsultaLocalidades_Result">
+    <Property Type="Int64" Name="Codigo" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <EntityType Name="tbParamNivelConvenio">
+    <Key>
+      <PropertyRef Name="Area" />
+      <PropertyRef Name="Coordinador" />
+      <PropertyRef Name="Cedula" />
+      <PropertyRef Name="idNivelConvenio" />
+    </Key>
+    <Property Name="Area" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coordinador" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Cedula" Type="Int32" Nullable="false" />
+    <Property Name="idNivelConvenio" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <ComplexType Name="spClasificacionNivelPorFunc_Result">
+    <Property Type="String" Name="NivelConvenio" Nullable="true" MaxLength="5" />
+    <Property Type="String" Name="Complejidad" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <EntityType Name="HistDatosPersonalesRRHH">
+    <Key>
+      <PropertyRef Name="NombreCompleto" />
+      <PropertyRef Name="FechaNacimiento" />
+      <PropertyRef Name="Edad" />
+      <PropertyRef Name="TelefonoCelular" />
+      <PropertyRef Name="TelefonoContato" />
+      <PropertyRef Name="Direccion" />
+      <PropertyRef Name="IdMotivoIngreso" />
+      <PropertyRef Name="IdTipoDocumento" />
+      <PropertyRef Name="IdGenero" />
+      <PropertyRef Name="IdCiudad" />
+      <PropertyRef Name="IdLocalidad" />
+      <PropertyRef Name="IdCarreraEducativa" />
+    </Key>
+    <Property Name="FechaActualizacon" Type="DateTime" Precision="3" />
+    <Property Name="Cedula" Type="Int32" />
+    <Property Name="NombreCompleto" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FechaNacimiento" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Edad" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TelefonoCelular" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TelefonoContato" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Direccion" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IdMotivoIngreso" Type="Int32" Nullable="false" />
+    <Property Name="IdTipoDocumento" Type="Int32" Nullable="false" />
+    <Property Name="IdGenero" Type="Int32" Nullable="false" />
+    <Property Name="IdCiudad" Type="Int32" Nullable="false" />
+    <Property Name="IdLocalidad" Type="Int32" Nullable="false" />
+    <Property Name="IdCarreraEducativa" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ModuloEverisRRHH">
+    <Key>
+      <PropertyRef Name="Cedula" />
+    </Key>
+    <Property Name="Cedula" Type="Int32" Nullable="false" />
+    <Property Name="Empresa" Type="Int32" Nullable="false" />
+    <Property Name="FecContratacionTemporal" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FecContratacionEveris" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SalarioEveris" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CsrGeco" Type="Int32" Nullable="false" />
+    <Property Name="Pais" Type="Int32" Nullable="false" />
+    <Property Name="Cliente" Type="Int32" Nullable="false" />
+    <Property Name="Proyecto" Type="Int32" Nullable="false" />
+    <Property Name="Cargo" Type="Int32" Nullable="false" />
+    <Property Name="Categoria" Type="Int32" Nullable="false" />
+    <Property Name="Nivel" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HistModuloEverisRRHH">
+    <Key>
+      <PropertyRef Name="Cedula" />
+      <PropertyRef Name="Empresa" />
+      <PropertyRef Name="FecContratacionTemporal" />
+      <PropertyRef Name="FecContratacionEveris" />
+      <PropertyRef Name="CsrGeco" />
+      <PropertyRef Name="Pais" />
+      <PropertyRef Name="Cliente" />
+      <PropertyRef Name="Proyecto" />
+      <PropertyRef Name="Cargo" />
+      <PropertyRef Name="Categoria" />
+      <PropertyRef Name="Nivel" />
+    </Key>
+    <Property Name="FechaActualizacon" Type="DateTime" Precision="3" />
+    <Property Name="Cedula" Type="Int32" Nullable="false" />
+    <Property Name="Empresa" Type="Int32" Nullable="false" />
+    <Property Name="FecContratacionTemporal" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FecContratacionEveris" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SalarioEveris" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CsrGeco" Type="Int32" Nullable="false" />
+    <Property Name="Pais" Type="Int32" Nullable="false" />
+    <Property Name="Cliente" Type="Int32" Nullable="false" />
+    <Property Name="Proyecto" Type="Int32" Nullable="false" />
+    <Property Name="Cargo" Type="Int32" Nullable="false" />
+    <Property Name="Categoria" Type="Int32" Nullable="false" />
+    <Property Name="Nivel" Type="Int32" Nullable="false" />
+  </EntityType>
+  <ComplexType Name="spConsultaModuloEveris_Result">
+    <Property Type="Int32" Name="Cedula" Nullable="false" />
+    <Property Type="Int32" Name="Empresa" Nullable="false" />
+    <Property Type="DateTime" Name="FecContratacionTemporal" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="FecContratacionEveris" Nullable="false" Precision="23" />
+    <Property Type="String" Name="SalarioEveris" Nullable="true" />
+    <Property Type="Int32" Name="CsrGeco" Nullable="false" />
+    <Property Type="Int32" Name="Pais" Nullable="false" />
+    <Property Type="Int32" Name="Cliente" Nullable="false" />
+    <Property Type="Int32" Name="Proyecto" Nullable="false" />
+    <Property Type="Int32" Name="Cargo" Nullable="false" />
+    <Property Type="Int32" Name="Categoria" Nullable="false" />
+    <Property Type="Int32" Name="Nivel" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="OptenerProducto_Result">
+    <Property Type="Int32" Name="Value" Nullable="false" />
+    <Property Type="String" Name="Text" Nullable="false" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="LiderPorProducto_Result">
+    <Property Type="Int32" Name="Value" Nullable="true" />
+    <Property Type="String" Name="Text" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="ObtenerNombFile_Result">
+    <Property Type="String" Name="nomfile" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="spListaColas_Result">
+    <Property Type="String" Name="Actividad" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="C" Nullable="true" />
+    <Property Type="DateTime" Name="FA" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Complejidad" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <Association Name="FK_tbProcMasi_Estados1">
+    <End Type="Asignador_SGDModel.Estados" Role="Estados" Multiplicity="1" />
+    <End Type="Asignador_SGDModel.tbProcesosMasivos" Role="tbProcesosMasivos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estados">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="tbProcesosMasivos">
+        <PropertyRef Name="Estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="spObtenerItemsListaCampo_Result">
+    <Property Type="Int64" Name="IdCampos_Listas" Nullable="false" />
+    <Property Type="String" Name="Codigo" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="IdCampoPadre" Nullable="true" />
+    <Property Type="Int32" Name="Orden" Nullable="true" />
+    <Property Type="Int32" Name="CodigoPadre" Nullable="true" />
+    <Property Type="Boolean" Name="Activo" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="tbLiderProductoFile">
+    <Key>
+      <PropertyRef Name="IdLider" />
+    </Key>
+    <Property Name="IdLider" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Cedula" Type="Int32" />
+    <Property Name="NombreCompleto" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CodProduct" Type="Int32" />
+    <Property Name="CampoLista" Type="Int32" />
+    <Property Name="NomFile" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Activo" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbProductos">
+    <Key>
+      <PropertyRef Name="IdProducto" />
+    </Key>
+    <Property Name="IdProducto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Codigo" Type="Int32" Nullable="false" />
+    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Orden" Type="Int32" Nullable="false" />
+    <Property Name="IdArea" Type="Int32" Nullable="false" />
+    <Property Name="IdCamposLIst" Type="Int32" Nullable="false" />
+    <Property Name="Activo" Type="Int32" Nullable="false" />
+    <Property Name="BtDactiloscopia" Type="Int32" />
+  </EntityType>
+  <ComplexType Name="BtnDactiloscopia_Result">
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="spConsultaModuloEverProLideres_Result">
+    <Property Type="Int32" Name="Cedula" Nullable="false" />
+    <Property Type="Int32" Name="IdHc" Nullable="false" />
+    <Property Type="Int32" Name="IdRol" Nullable="false" />
+    <Property Type="Int32" Name="CodigoDeEmpleado" Nullable="false" />
+    <Property Type="Int32" Name="CedJefe" Nullable="false" />
+    <Property Type="Int32" Name="CedPsl" Nullable="false" />
+    <Property Type="Int32" Name="CedPtl" Nullable="false" />
+    <Property Type="Int32" Name="CedPsc" Nullable="false" />
+    <Property Type="Int32" Name="IdArea" Nullable="false" />
+    <Property Type="Int32" Name="IdProceso" Nullable="false" />
+    <Property Type="Int32" Name="IdClasificacion" Nullable="false" />
+    <Property Type="Int32" Name="IdLugarDeTrabajo" Nullable="false" />
+    <Property Type="Int32" Name="IdTurno" Nullable="false" />
+    <Property Type="Int32" Name="CedLiderSGD" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="trazaFuncCasos_Result">
+    <Property Type="String" Name="Proceso" Nullable="true" />
+    <Property Type="String" Name="Productos" Nullable="true" />
+    <Property Type="String" Name="Nivel" Nullable="true" />
+    <Property Type="String" Name="Estado" Nullable="true" />
+    <Property Type="String" Name="Cedula" Nullable="true" />
+    <Property Type="String" Name="NombreCompleto" Nullable="true" />
+    <Property Type="String" Name="Ans" Nullable="true" />
+    <Property Type="String" Name="Ncaso" Nullable="true" />
+    <Property Type="DateTime" Name="HoraInicio" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="CodeProces" Nullable="true" />
+    <Property Type="Int32" Name="Reprocesos" Nullable="true" />
+    <Property Type="String" Name="Monto" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spConsultaFuncionariosEverPro_Result">
+    <Property Type="Int32" Name="Cedula" Nullable="true" />
+    <Property Type="String" Name="NombreCompleto" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Cargo" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Area" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="spBuscarFuncionarios_Result">
+    <Property Type="String" Name="LIDER" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="NOMBREFUNCIONARIO" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="CEDULA" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spConsultaCategoriaEverPro_Result">
+    <Property Type="String" Name="Codigo" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="spConsultaDatosPersonales_Result">
+    <Property Type="Int32" Name="Cedula" Nullable="true" />
+    <Property Type="String" Name="NombreCompleto" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="FechaNacimiento" Nullable="false" />
+    <Property Type="String" Name="Edad" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TelefonoCelular" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TelefonoContato" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Direccion" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="IdMotivoIngreso" Nullable="false" />
+    <Property Type="Int32" Name="IdTipoDocumento" Nullable="false" />
+    <Property Type="Int32" Name="IdGenero" Nullable="false" />
+    <Property Type="Int32" Name="IdCiudad" Nullable="false" />
+    <Property Type="Int32" Name="IdLocalidad" Nullable="false" />
+    <Property Type="Int32" Name="IdCarreraEducativa" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spConsultaFuncMasivos_Result">
+    <Property Type="Int32" Name="Cedula" Nullable="true" />
+    <Property Type="String" Name="NombreCompleto" Nullable="false" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="spActualizacionMasiva_Result">
+    <Property Type="String" Name="Mensaje" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="CountFuncionariosEstado_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="Cedula" Nullable="true" MaxLength="30" />
+    <Property Type="Int32" Name="ESTADO" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="ConteoCasos_Result">
+    <Property Type="String" Name="DescripcionEstados" Nullable="true" />
+    <Property Type="Int32" Name="Cant" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="FuncionariosMallaTurnos_Result">
+    <Property Type="String" Name="NombreCompleto" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="Cedula" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="PintaTurno_Result">
+    <Property Type="Int32" Name="IdMalla" Nullable="false" />
+    <Property Type="Int32" Name="IdFuncionario" Nullable="false" />
+    <Property Type="Int32" Name="Anio" Nullable="false" />
+    <Property Type="Int32" Name="Mes" Nullable="false" />
+    <Property Type="Int32" Name="Dia" Nullable="false" />
+    <Property Type="String" Name="Hora" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="EstadoTurno" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="PintaMallaTurnos_Result">
+    <Property Type="String" Name="NombreCompleto" Nullable="false" MaxLength="200" />
+    <Property Type="Int32" Name="Dia" Nullable="true" />
+    <Property Type="Int32" Name="Mes" Nullable="true" />
+    <Property Type="Int32" Name="Anio" Nullable="true" />
+    <Property Type="Int32" Name="C08_00" Nullable="true" />
+    <Property Type="Int32" Name="C09_00" Nullable="true" />
+    <Property Type="Int32" Name="C10_00" Nullable="true" />
+    <Property Type="Int32" Name="C11_00" Nullable="true" />
+    <Property Type="Int32" Name="C12_00" Nullable="true" />
+    <Property Type="Int32" Name="C13_00" Nullable="true" />
+    <Property Type="Int32" Name="C14_00" Nullable="true" />
+    <Property Type="Int32" Name="C15_00" Nullable="true" />
+    <Property Type="Int32" Name="C16_00" Nullable="true" />
+    <Property Type="Int32" Name="C17_00" Nullable="true" />
+    <Property Type="Int32" Name="C18_00" Nullable="true" />
+    <Property Type="Int32" Name="C19_00" Nullable="true" />
+    <Property Type="Int32" Name="C20_00" Nullable="true" />
+    <Property Type="Int32" Name="C21_00" Nullable="true" />
+    <Property Type="Int32" Name="IdFuncionario" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="ProductividadDiaria_Result">
+    <Property Type="Int32" Name="cedula" Nullable="true" />
+    <Property Type="String" Name="nombre" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="cantCasos" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="ProgramacionMallaTurnos_Result">
+    <Property Type="Int32" Name="idTurnosMalla" Nullable="false" />
+    <Property Type="String" Name="CodigoTurno" Nullable="false" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="InfoTurnos_Result">
+    <Property Type="String" Name="CodeHorario" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Entrada" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Salida" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Sabado" Nullable="true" MaxLength="12" />
+    <Property Type="String" Name="Breack1" Nullable="true" MaxLength="12" />
+    <Property Type="String" Name="Breack2" Nullable="true" MaxLength="12" />
+    <Property Type="String" Name="HorasLabor" Nullable="true" MaxLength="12" />
+    <Property Type="String" Name="Justifi" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Almuerzo" Nullable="true" MaxLength="12" />
+  </ComplexType>
+  <ComplexType Name="PintaMalla1_3_4_Result">
+    <Property Type="Int32" Name="IdFuncionario" Nullable="false" />
+    <Property Type="String" Name="RangosDias" Nullable="false" MaxLength="25" />
+    <Property Type="Int32" Name="Mes" Nullable="false" />
+    <Property Type="Int32" Name="Anio" Nullable="false" />
+    <Property Type="Int32" Name="C7_00" Nullable="false" />
+    <Property Type="Int32" Name="C8_00" Nullable="false" />
+    <Property Type="Int32" Name="C9_00" Nullable="false" />
+    <Property Type="Int32" Name="C9_31" Nullable="false" />
+    <Property Type="Int32" Name="C10_00" Nullable="false" />
+    <Property Type="Int32" Name="C11_00" Nullable="false" />
+    <Property Type="Int32" Name="C12_00" Nullable="false" />
+    <Property Type="Int32" Name="C13_00" Nullable="false" />
+    <Property Type="Int32" Name="C14_00" Nullable="false" />
+    <Property Type="Int32" Name="C15_00" Nullable="false" />
+    <Property Type="Int32" Name="C16_00" Nullable="false" />
+    <Property Type="Int32" Name="C16_31" Nullable="false" />
+    <Property Type="Int32" Name="C17_00" Nullable="false" />
+    <Property Type="Int32" Name="C17_30" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="200" />
+    <Property Type="Int32" Name="idT" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="PintaMalla5_6_8_Result">
+    <Property Type="Int32" Name="IdFuncionario" Nullable="false" />
+    <Property Type="String" Name="RangosDias" Nullable="false" MaxLength="25" />
+    <Property Type="Int32" Name="Mes" Nullable="false" />
+    <Property Type="Int32" Name="Anio" Nullable="false" />
+    <Property Type="Int32" Name="C06_00" Nullable="false" />
+    <Property Type="Int32" Name="C07_00" Nullable="false" />
+    <Property Type="Int32" Name="C08_00" Nullable="false" />
+    <Property Type="Int32" Name="C09_00" Nullable="false" />
+    <Property Type="Int32" Name="C09_30" Nullable="false" />
+    <Property Type="Int32" Name="C10_00" Nullable="false" />
+    <Property Type="Int32" Name="C11_00" Nullable="false" />
+    <Property Type="Int32" Name="C12_00" Nullable="false" />
+    <Property Type="Int32" Name="C13_00" Nullable="false" />
+    <Property Type="Int32" Name="C14_00" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="PintaMalla_1_Result">
+    <Property Type="Int32" Name="IdFuncionario" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="RangosDias" Nullable="false" MaxLength="25" />
+    <Property Type="Int32" Name="Mes" Nullable="false" />
+    <Property Type="Int32" Name="Anio" Nullable="false" />
+    <Property Type="Int32" Name="C7_00" Nullable="false" />
+    <Property Type="Int32" Name="C8_00" Nullable="false" />
+    <Property Type="Int32" Name="C9_00" Nullable="false" />
+    <Property Type="Int32" Name="C9_31" Nullable="false" />
+    <Property Type="Int32" Name="C10_00" Nullable="false" />
+    <Property Type="Int32" Name="C11_00" Nullable="false" />
+    <Property Type="Int32" Name="C12_00" Nullable="false" />
+    <Property Type="Int32" Name="C13_00" Nullable="false" />
+    <Property Type="Int32" Name="C14_00" Nullable="false" />
+    <Property Type="Int32" Name="C15_00" Nullable="false" />
+    <Property Type="Int32" Name="C16_00" Nullable="false" />
+    <Property Type="Int32" Name="C16_31" Nullable="false" />
+    <Property Type="Int32" Name="C17_00" Nullable="false" />
+    <Property Type="Int32" Name="C17_30" Nullable="false" />
+    <Property Type="Int32" Name="idT" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="PintaMalla_3_Result">
+    <Property Type="Int32" Name="IdFuncionario" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="RangosDias" Nullable="false" MaxLength="25" />
+    <Property Type="Int32" Name="Mes" Nullable="false" />
+    <Property Type="Int32" Name="Anio" Nullable="false" />
+    <Property Type="Int32" Name="C9_00" Nullable="false" />
+    <Property Type="Int32" Name="C10_00" Nullable="false" />
+    <Property Type="Int32" Name="C11_00" Nullable="false" />
+    <Property Type="Int32" Name="C11_31" Nullable="false" />
+    <Property Type="Int32" Name="C12_00" Nullable="false" />
+    <Property Type="Int32" Name="C13_00" Nullable="false" />
+    <Property Type="Int32" Name="C14_00" Nullable="false" />
+    <Property Type="Int32" Name="C15_00" Nullable="false" />
+    <Property Type="Int32" Name="C16_00" Nullable="false" />
+    <Property Type="Int32" Name="C17_00" Nullable="false" />
+    <Property Type="Int32" Name="C17_31" Nullable="false" />
+    <Property Type="Int32" Name="C18_00" Nullable="false" />
+    <Property Type="Int32" Name="C19_00" Nullable="false" />
+    <Property Type="Int32" Name="C19_30" Nullable="false" />
+    <Property Type="Int32" Name="idT" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="PintaMalla_4_Result">
+    <Property Type="Int32" Name="IdFuncionario" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="RangosDias" Nullable="false" MaxLength="25" />
+    <Property Type="Int32" Name="Mes" Nullable="false" />
+    <Property Type="Int32" Name="Anio" Nullable="false" />
+    <Property Type="Int32" Name="C10_30" Nullable="false" />
+    <Property Type="Int32" Name="C11_00" Nullable="false" />
+    <Property Type="Int32" Name="C11_31" Nullable="false" />
+    <Property Type="Int32" Name="C12_00" Nullable="false" />
+    <Property Type="Int32" Name="C13_00" Nullable="false" />
+    <Property Type="Int32" Name="C14_00" Nullable="false" />
+    <Property Type="Int32" Name="C15_00" Nullable="false" />
+    <Property Type="Int32" Name="C16_00" Nullable="false" />
+    <Property Type="Int32" Name="C17_00" Nullable="false" />
+    <Property Type="Int32" Name="C17_31" Nullable="false" />
+    <Property Type="Int32" Name="C18_00" Nullable="false" />
+    <Property Type="Int32" Name="C19_00" Nullable="false" />
+    <Property Type="Int32" Name="C20_00" Nullable="false" />
+    <Property Type="Int32" Name="C21_00" Nullable="false" />
+    <Property Type="Int32" Name="idT" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="PintaMalla_8_Result">
+    <Property Type="Int32" Name="IdFuncionario" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="RangosDias" Nullable="false" MaxLength="25" />
+    <Property Type="Int32" Name="Mes" Nullable="false" />
+    <Property Type="Int32" Name="Anio" Nullable="false" />
+    <Property Type="Int32" Name="C8_00" Nullable="false" />
+    <Property Type="Int32" Name="C9_00" Nullable="false" />
+    <Property Type="Int32" Name="C10_00" Nullable="false" />
+    <Property Type="Int32" Name="C11_00" Nullable="false" />
+    <Property Type="Int32" Name="C12_00" Nullable="false" />
+    <Property Type="Int32" Name="C13_00" Nullable="false" />
+    <Property Type="Int32" Name="C14_00" Nullable="false" />
+    <Property Type="Int32" Name="C15_00" Nullable="false" />
+    <Property Type="Int32" Name="C16_00" Nullable="false" />
+    <Property Type="Int32" Name="C17_00" Nullable="false" />
+    <Property Type="Int32" Name="idT" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="PintaMalla2_Result">
+    <Property Type="Int32" Name="IdFuncionario" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="RangosDias" Nullable="false" MaxLength="25" />
+    <Property Type="Int32" Name="Mes" Nullable="false" />
+    <Property Type="Int32" Name="Anio" Nullable="false" />
+    <Property Type="Int32" Name="C8_00" Nullable="false" />
+    <Property Type="Int32" Name="C9_00" Nullable="false" />
+    <Property Type="Int32" Name="C9_31" Nullable="false" />
+    <Property Type="Int32" Name="C10_00" Nullable="false" />
+    <Property Type="Int32" Name="C11_00" Nullable="false" />
+    <Property Type="Int32" Name="C12_00" Nullable="false" />
+    <Property Type="Int32" Name="C13_00" Nullable="false" />
+    <Property Type="Int32" Name="C14_00" Nullable="false" />
+    <Property Type="Int32" Name="C15_00" Nullable="false" />
+    <Property Type="Int32" Name="C16_00" Nullable="false" />
+    <Property Type="Int32" Name="C16_31" Nullable="false" />
+    <Property Type="Int32" Name="C17_00" Nullable="false" />
+    <Property Type="Int32" Name="C18_00" Nullable="false" />
+    <Property Type="Int32" Name="C18_30" Nullable="false" />
+    <Property Type="Int32" Name="idT" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="PintaMalla_5_Result">
+    <Property Type="Int32" Name="IdFuncionario" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="RangosDias" Nullable="false" MaxLength="25" />
+    <Property Type="Int32" Name="Mes" Nullable="false" />
+    <Property Type="Int32" Name="Anio" Nullable="false" />
+    <Property Type="Int32" Name="C06_00" Nullable="false" />
+    <Property Type="Int32" Name="C07_00" Nullable="false" />
+    <Property Type="Int32" Name="C08_00" Nullable="false" />
+    <Property Type="Int32" Name="C09_00" Nullable="false" />
+    <Property Type="Int32" Name="C09_31" Nullable="false" />
+    <Property Type="Int32" Name="C10_00" Nullable="false" />
+    <Property Type="Int32" Name="C11_00" Nullable="false" />
+    <Property Type="Int32" Name="C12_00" Nullable="false" />
+    <Property Type="Int32" Name="C13_00" Nullable="false" />
+    <Property Type="Int32" Name="C14_00" Nullable="false" />
+    <Property Type="Int32" Name="idT" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="PintaMalla_6_Result">
+    <Property Type="Int32" Name="IdFuncionario" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="RangosDias" Nullable="false" MaxLength="25" />
+    <Property Type="Int32" Name="Mes" Nullable="false" />
+    <Property Type="Int32" Name="Anio" Nullable="false" />
+    <Property Type="Int32" Name="C13_00" Nullable="false" />
+    <Property Type="Int32" Name="C14_00" Nullable="false" />
+    <Property Type="Int32" Name="C15_00" Nullable="false" />
+    <Property Type="Int32" Name="C16_00" Nullable="false" />
+    <Property Type="Int32" Name="C16_31" Nullable="false" />
+    <Property Type="Int32" Name="C17_00" Nullable="false" />
+    <Property Type="Int32" Name="C18_00" Nullable="false" />
+    <Property Type="Int32" Name="C19_00" Nullable="false" />
+    <Property Type="Int32" Name="C20_00" Nullable="false" />
+    <Property Type="Int32" Name="C21_00" Nullable="false" />
+    <Property Type="Int32" Name="idT" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="PintaMalla9_Result">
+    <Property Type="Int32" Name="IdFuncionario" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="RangosDias" Nullable="false" MaxLength="25" />
+    <Property Type="Int32" Name="Mes" Nullable="false" />
+    <Property Type="Int32" Name="Anio" Nullable="false" />
+    <Property Type="Int32" Name="C9_31" Nullable="false" />
+    <Property Type="Int32" Name="C10_00" Nullable="false" />
+    <Property Type="Int32" Name="C11_00" Nullable="false" />
+    <Property Type="Int32" Name="C12_00" Nullable="false" />
+    <Property Type="Int32" Name="C13_00" Nullable="false" />
+    <Property Type="Int32" Name="C14_00" Nullable="false" />
+    <Property Type="Int32" Name="C15_00" Nullable="false" />
+    <Property Type="Int32" Name="C16_00" Nullable="false" />
+    <Property Type="Int32" Name="C17_00" Nullable="false" />
+    <Property Type="Int32" Name="C18_00" Nullable="false" />
+    <Property Type="Int32" Name="C19_00" Nullable="false" />
+    <Property Type="Int32" Name="idT" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spListaColas2_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="Int32" Name="CASO" Nullable="true" />
+    <Property Type="String" Name="ACTIVIDAD" Nullable="true" />
+    <Property Type="String" Name="CONVENIO" Nullable="true" />
+    <Property Type="String" Name="MONTO" Nullable="true" />
+    <Property Type="String" Name="SLA" Nullable="true" />
+    <Property Type="String" Name="NIVEL" Nullable="true" />
+    <Property Type="String" Name="PLAZO" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="trazaFuncCasos2_Result">
+    <Property Type="Int32" Name="CodeProces" Nullable="true" />
+    <Property Type="String" Name="Proceso" Nullable="true" />
+    <Property Type="String" Name="Productos" Nullable="true" />
+    <Property Type="String" Name="Nivel" Nullable="true" />
+    <Property Type="Int32" Name="Estado" Nullable="true" />
+    <Property Type="Int32" Name="Cedula" Nullable="true" />
+    <Property Type="String" Name="NombreCompleto" Nullable="true" />
+    <Property Type="String" Name="Ans" Nullable="true" />
+    <Property Type="Int32" Name="Ncaso" Nullable="true" />
+    <Property Type="Int32" Name="Reprocesos" Nullable="true" />
+    <Property Type="String" Name="Monto" Nullable="true" />
+    <Property Type="DateTime" Name="HoraInicio" Nullable="true" Precision="23" />
+    <Property Type="String" Name="CONVENIO" Nullable="true" />
+    <Property Type="String" Name="PLAZO" Nullable="true" />
+    <Property Type="DateTime" Name="ASL" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="dif" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SelectFuncionariosEstado_Result">
+    <Property Type="String" Name="Cedula" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="NombreCompleto" Nullable="false" MaxLength="200" />
+  </ComplexType>
+  <EntityType Name="TbMallaTurnos">
+    <Key>
+      <PropertyRef Name="IdMalla" />
+    </Key>
+    <Property Name="IdMalla" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdTurno" Type="Int32" Nullable="false" />
+    <Property Name="IdFuncionario" Type="Int32" />
+    <Property Name="Dia" Type="Int32" Nullable="false" />
+    <Property Name="Mes" Type="Int32" Nullable="false" />
+    <Property Name="Anio" Type="Int32" Nullable="false" />
+    <Property Name="Hdesde" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Hhasta" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Almuerzo" Type="Int32" Nullable="false" />
+    <Property Name="Breack" Type="Int32" Nullable="false" />
+    <Property Name="EstadoTurno" Type="Int32" Nullable="false" />
+    <Property Name="IdLider" Type="Int32" Nullable="false" />
+  </EntityType>
+  <ComplexType Name="spObtenerPersonasPorLiderSGD_Result">
+    <Property Type="String" Name="Cedula" Nullable="true" />
+    <Property Type="String" Name="NombreCompleto" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="CedPsc" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spCamposDelFormulario1_Result">
+    <Property Type="Int32" Name="IdCampo" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="IdPadre" Nullable="true" />
+    <Property Type="Int32" Name="Orden" Nullable="true" />
+    <Property Type="Int32" Name="DimensionAlto" Nullable="true" />
+    <Property Type="Int32" Name="DimensionAncho" Nullable="true" />
+    <Property Type="Boolean" Name="Obligatorio" Nullable="true" />
+    <Property Type="Int32" Name="IdTipoCampo" Nullable="true" />
+    <Property Type="Boolean" Name="Editable" Nullable="true" />
+    <Property Type="Boolean" Name="DobleCaptura" Nullable="true" />
+    <Property Type="Int32" Name="LongMax" Nullable="true" />
+    <Property Type="Int32" Name="LongMin" Nullable="true" />
+    <Property Type="String" Name="Evento" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="FuncionValidacion" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="MensajeError" Nullable="true" MaxLength="100" />
+    <Property Type="Boolean" Name="Activo" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="ProgramacionTurnos">
+    <Key>
+      <PropertyRef Name="idTurnosMalla" />
+    </Key>
+    <Property Name="idTurnosMalla" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CodigoTurno" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Entrada" Type="Int32" Nullable="false" />
+    <Property Name="MediosEntrada" Type="Int32" />
+    <Property Name="Salida" Type="Int32" Nullable="false" />
+    <Property Name="MediosSalida" Type="Int32" />
+    <Property Name="Sabado" Type="Int32" Nullable="false" />
+    <Property Name="MediosSabado" Type="Int32" />
+    <Property Name="Break1" Type="Int32" Nullable="false" />
+    <Property Name="MediosBreak1" Type="Int32" />
+    <Property Name="Break2" Type="Int32" Nullable="false" />
+    <Property Name="MediosBreak2" Type="Int32" />
+    <Property Name="HoraAlmuerzo" Type="Int32" Nullable="false" />
+    <Property Name="HorasLaborales" Type="Int32" />
+    <Property Name="MediosHorasLaborales" Type="Int32" />
+    <Property Name="Justificacion" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <ComplexType Name="spObtenerFunColas_Result">
+    <Property Type="Int32" Name="Estado" Nullable="true" />
+    <Property Type="String" Name="Cedula" Nullable="true" />
+    <Property Type="String" Name="NombreCompleto" Nullable="true" />
+    <Property Type="Int32" Name="Ncaso" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="ConsultarEstadoSabans_Result" />
+</Schema>

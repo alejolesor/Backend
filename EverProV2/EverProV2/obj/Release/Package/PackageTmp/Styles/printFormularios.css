@@ -1,0 +1,52 @@
+﻿body {
+    font-size: 10px !important;
+}
+
+.divContentLeftPrint {
+    float: left;
+    width: 49%; 
+    height: 3%;
+    margin: 3px 5px 5px 0px;
+}
+
+label {
+    padding: 2px 3px 2px 3px;
+    margin: 5px 10px 5px 0px;
+    display: inherit;
+    font-size: 10px!important;
+}
+
+.bs-example {
+    margin: 20px;
+}
+
+fieldset.scheduler-border {
+    border: 1px groove #ddd !important;
+    padding: 0 1.4em 1.4em 1.4em !important;
+    margin: 0 0 1.5em 0 !important;
+    -webkit-box-shadow: 0px 0px 0px 0px #000 !important;
+    box-shadow: 0px 0px 0px 0px #000 !important;
+    border-top: none !important;
+}
+
+legend.scheduler-border {
+    font-size: 0.9em !important;
+    font-weight: bold !important;
+    text-align: left !important;
+}
+
+#CAPACIDADDEDESCUENTO, #CUOTAPROYECTADA {
+    border: solid 2px #9aae04!important;
+}
+
+#resultado, #result1 {
+    background-color: rgba(220, 230, 241, 0.67)!important;
+}
+
+    #result1 input, #resultado input {
+        background-color: rgba(220, 230, 241, 0.67)!important;
+        width: 100%!important;
+        font-size: 1em!important;
+        font-family: inherit!important;
+        letter-spacing: 0.2ex!important;
+    }

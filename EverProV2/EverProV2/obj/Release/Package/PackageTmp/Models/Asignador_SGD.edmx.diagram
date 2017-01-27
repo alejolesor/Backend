@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="61c0bac1b4254bceb08db3922c136caa" Name="Diagram1" ZoomLevel="72">
+        <EntityTypeShape EntityType="Asignador_SGDModel.Auditoria" Width="1.5" PointX="5.25" PointY="7.25" />
+        <EntityTypeShape EntityType="Asignador_SGDModel.CodigosCampo" Width="1.5" PointX="2.75" PointY="2.25" />
+        <EntityTypeShape EntityType="Asignador_SGDModel.Menu" Width="1.5" PointX="0.75" PointY="3.125" />
+        <EntityTypeShape EntityType="Asignador_SGDModel.Parametros" Width="1.5" PointX="5.25" PointY="3.5" />
+        <EntityTypeShape EntityType="Asignador_SGDModel.Roles" Width="1.5" PointX="0.75" PointY="7.375" />
+        <EntityTypeShape EntityType="Asignador_SGDModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="14.25" />
+        <EntityTypeShape EntityType="Asignador_SGDModel.tb_Formularios" Width="1.5" PointX="12.75" PointY="9.25" />
+        <EntityTypeShape EntityType="Asignador_SGDModel.tbAreas" Width="1.5" PointX="7.75" PointY="9.5" />
+        <EntityTypeShape EntityType="Asignador_SGDModel.tbHistorial" Width="1.5" PointX="12.75" PointY="12.25" />
+        <EntityTypeShape EntityType="Asignador_SGDModel.tbProcPorProducto" Width="1.5" PointX="15" PointY="2.5" />
+        <EntityTypeShape EntityType="Asignador_SGDModel.tbProducto" Width="1.5" PointX="12.75" PointY="2.5" />
+        <EntityTypeShape EntityType="Asignador_SGDModel.tbUsuariosPorLider" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Asignador_SGDModel.TiposCampo" Width="1.5" PointX="7.75" PointY="13.375" />
+        <EntityTypeShape EntityType="Asignador_SGDModel.ts_Campos" Width="1.5" PointX="10" PointY="12.5" />
+        <EntityTypeShape EntityType="Asignador_SGDModel.Usuarios" Width="1.5" PointX="3" PointY="9.625" />
+        <EntityTypeShape EntityType="Asignador_SGDModel.UsuariosBloqueados" Width="1.5" PointX="5.25" PointY="10.625" />
+        <EntityTypeShape EntityType="Asignador_SGDModel.UsuariosHistorico" Width="1.5" PointX="5.25" PointY="13.375" />
+        <EntityTypeShape EntityType="Asignador_SGDModel.RolesMenu" Width="1.5" PointX="3" PointY="6.375" />
+        <EntityTypeShape EntityType="Asignador_SGDModel.tbClasificaNivFuncionario" Width="1.5" PointX="10" PointY="3.875" />
+        <EntityTypeShape EntityType="Asignador_SGDModel.tbLider" Width="1.5" PointX="10" PointY="9.5" />
+        <AssociationConnector Association="Asignador_SGDModel.FK_Auditoria_Usuarios" />
+        <AssociationConnector Association="Asignador_SGDModel.FK__RolesMenu__IdMen__3EDC53F0" />
+        <AssociationConnector Association="Asignador_SGDModel.FK__RolesMenu__IdRol__40C49C62" />
+        <AssociationConnector Association="Asignador_SGDModel.FK__RolesMenu__IdRol__41B8C09B" />
+        <AssociationConnector Association="Asignador_SGDModel.FK__Usuarios__IdRol__42ACE4D4" />
+        <AssociationConnector Association="Asignador_SGDModel.FK__tbLider__idArea__36B12243" />
+        <AssociationConnector Association="Asignador_SGDModel.FK__tbProcPor__idPro__37A5467C" />
+        <AssociationConnector Association="Asignador_SGDModel.FK_tbClasificaNivFuncionario_tbUsuariosPorLider" />
+        <AssociationConnector Association="Asignador_SGDModel.FK__ts_Campos__idTip__4E88ABD4" />
+        <AssociationConnector Association="Asignador_SGDModel.FK_UsuariosBloqueados_Usuarios" />
+        <AssociationConnector Association="Asignador_SGDModel.FK_UsuariosHistorico_Usuarios" />
+        <EntityTypeShape EntityType="Asignador_SGDModel.tbLibranza" Width="1.5" PointX="12.125" PointY="4.5" />
+        <EntityTypeShape EntityType="Asignador_SGDModel.tbFormalizacion" Width="1.5" PointX="13.875" PointY="4.5" />
+        <EntityTypeShape EntityType="Asignador_SGDModel.tbTipologiaConvenio" Width="1.5" PointX="7.75" PointY="5" />
+        <AssociationConnector Association="Asignador_SGDModel.FK_tbClasificaNivFuncionario_tbTipologiaConvenio" />
+        <EntityTypeShape EntityType="Asignador_SGDModel.Estados" Width="1.5" PointX="5.5" PointY="0.75" />
+        <AssociationConnector Association="Asignador_SGDModel.FK_tbFormalizacion_Estados1" />
+        <AssociationConnector Association="Asignador_SGDModel.FK_tbLibranza_Estados1" />
+        <AssociationConnector Association="Asignador_SGDModel.FK_tbUsuariosPorLider_Estados" />
+        <EntityTypeShape EntityType="Asignador_SGDModel.tbAns" Width="1.5" PointX="15.375" PointY="12.75" />
+        <EntityTypeShape EntityType="Asignador_SGDModel.tbParametrosServicio" Width="1.5" PointX="12.375" PointY="15.75" />
+        <EntityTypeShape EntityType="Asignador_SGDModel.tbTipoAusentismo" Width="1.5" PointX="3.375" PointY="16.75" />
+        <EntityTypeShape EntityType="Asignador_SGDModel.tbAsignacionCasos" Width="1.5" PointX="15.375" PointY="8.75" />
+        <EntityTypeShape EntityType="Asignador_SGDModel.tbAuditoriaConexion" Width="1.5" PointX="5.375" PointY="16.75" />
+        <EntityTypeShape EntityType="Asignador_SGDModel.tbProcesosMasivos" Width="1.5" PointX="15.625" PointY="4.5" />
+        <AssociationConnector Association="Asignador_SGDModel.FK_tbProcesosMasivos_Estados" />
+        <EntityTypeShape EntityType="Asignador_SGDModel.Campos" Width="1.5" PointX="10.375" PointY="17.125" />
+        <EntityTypeShape EntityType="Asignador_SGDModel.Campos_Listas" Width="1.5" PointX="17.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Asignador_SGDModel.Formulario_Campos" Width="1.5" PointX="15.375" PointY="16.25" />
+        <EntityTypeShape EntityType="Asignador_SGDModel.HistModuloEverProLideresRRHH" Width="2" PointX="17.75" PointY="18.75" />
+        <AssociationConnector Association="Asignador_SGDModel.FK__Campos__IdTipoCa__7C6F7215" />
+        <AssociationConnector Association="Asignador_SGDModel.FK__Formulari__IdCam__08D548FA" />
+        <AssociationConnector Association="Asignador_SGDModel.FK__Formulari__IdFor__09C96D33" />
+        <EntityTypeShape EntityType="Asignador_SGDModel.tbParamNivelConvenio" Width="1.5" PointX="7.375" PointY="17.75" />
+        <EntityTypeShape EntityType="Asignador_SGDModel.HistDatosPersonalesRRHH" Width="1.5" PointX="17.375" PointY="13.75" />
+        <EntityTypeShape EntityType="Asignador_SGDModel.ModuloEverisRRHH" Width="1.5" PointX="0.75" PointY="17.75" />
+        <EntityTypeShape EntityType="Asignador_SGDModel.HistModuloEverisRRHH" Width="1.5" PointX="12.75" PointY="18.75" />
+        <AssociationConnector Association="Asignador_SGDModel.FK_tbProcMasi_Estados1" />
+        <EntityTypeShape EntityType="Asignador_SGDModel.tbLiderProductoFile" Width="1.5" PointX="3.375" PointY="19.75" />
+        <EntityTypeShape EntityType="Asignador_SGDModel.tbProductos" Width="1.5" PointX="17.75" PointY="4.5" />
+        <EntityTypeShape EntityType="Asignador_SGDModel.TbMallaTurnos" Width="1.5" PointX="5.375" PointY="20.75" />
+        <EntityTypeShape EntityType="Asignador_SGDModel.ProgramacionTurnos" Width="1.5" PointX="19.375" PointY="11.75" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

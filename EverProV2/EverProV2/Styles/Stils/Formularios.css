@@ -1,0 +1,64 @@
+﻿/*_________________________________________________________CargueArchivo______________*/
+
+.contentFieldsetRigth {
+    float: right;
+    width: 40%;
+    margin-right: 140px;
+}
+
+.contentFieldsetLeft {
+    float: left;
+    width: 40%;
+    margin-left: 50px;
+}
+
+div#divContCampos_FormIngresoPersona div#contentDivCampo_0 {
+    position: absolute;
+    float: right;
+    right: -15%;
+    top: 22%;
+    width: 31%;
+}
+
+    div#divContCampos_FormIngresoPersona div#contentDivCampo_0 input[name='1'] {
+        background-color: rgba(154, 174, 4, 0.13);
+        text-align: center;
+        font-size: 15px !important;
+    }
+
+div#Content_PagesIngresoPersona #btnAgregar {
+    background-image: url(../Imagenes/agregar.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 1px solid transparent;
+    width: 14%;
+    height: 2em;
+    background-size: contain;
+    margin-top: 300px;
+    margin-left: -40%;
+    box-shadow: 4px 4px 4px #9D9E99;
+}
+
+div#Content_PagesIngresoPersona #btnEditar {
+    background-image: url(../Imagenes/editar.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 1px solid transparent;
+    width: 15%;
+    height: 2em;
+    background-size: contain;
+    box-shadow: 4px 4px 4px #9D9E99;
+    margin-top: 97px;
+    margin-left: -40%;
+}
+
+div#Content_PagesIngresoPersona #btnCancelar {
+    background-image: url(../Imagenes/cancelar.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 1px solid transparent;
+    width: 14%;
+    height: 2em;
+    background-size: contain;
+    box-shadow: 4px 4px 4px #9D9E99;
+}

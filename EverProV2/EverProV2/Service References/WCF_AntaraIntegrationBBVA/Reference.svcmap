@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="510f54a2-3dab-40cc-87d5-8e50846187fa" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.100.120.8:90/AntaraService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AntaraService4.xsd" MetadataType="Schema" ID="a8d1405d-e6d8-4182-a035-191f0fa63c9b" SourceId="1" SourceUrl="http://10.100.120.8:90/AntaraService.svc?xsd=xsd0" />
+    <MetadataFile FileName="AntaraService1.disco" MetadataType="Disco" ID="b689d1b2-043b-4d8e-b6db-31e93f69f89a" SourceId="1" SourceUrl="http://10.100.120.8:90/AntaraService.svc?disco" />
+    <MetadataFile FileName="AntaraService41.xsd" MetadataType="Schema" ID="2f2c082a-3ec9-4f8b-9561-96a242fd0e3a" SourceId="1" SourceUrl="http://10.100.120.8:90/AntaraService.svc?xsd=xsd1" />
+    <MetadataFile FileName="AntaraService1.wsdl" MetadataType="Wsdl" ID="53ab241b-02aa-49a3-94e2-2c2fb899cee0" SourceId="1" SourceUrl="http://10.100.120.8:90/AntaraService.svc?wsdl" />
+    <MetadataFile FileName="AntaraService42.xsd" MetadataType="Schema" ID="5b173050-c84a-4c24-a959-c2757d3c3cba" SourceId="1" SourceUrl="http://10.100.120.8:90/AntaraService.svc?xsd=xsd3" />
+    <MetadataFile FileName="AntaraService43.xsd" MetadataType="Schema" ID="c32bf244-2c53-4626-93d6-4d6a8fb3f706" SourceId="1" SourceUrl="http://10.100.120.8:90/AntaraService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

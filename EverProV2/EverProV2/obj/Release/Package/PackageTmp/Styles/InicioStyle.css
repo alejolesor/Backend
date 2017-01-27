@@ -1,0 +1,70 @@
+﻿
+/*Login*/
+
+#loginBody {
+    background-image: url("../Images/fondo.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 20% 5%;
+    background-size: 100%;
+}
+
+
+#loginBox { /*avi*/
+
+    width:250px;
+    height:270px;
+    position:absolute;
+    left:50%;
+    top:40%;
+    margin:-100px 0 0 -150px;
+   
+}
+
+#logoEveris { /*avi*/
+    width: 10%;
+    position: relative;
+    top: 35em;
+    left: 50%;
+}
+
+#LogoBbva{ /*avi*/
+    width: 10%;
+    position: relative;
+    top: 35em;
+    left: 55%;
+}
+
+#Antara{ /*avi*/
+    width: 21%;
+    position: relative;
+    top: 5em;
+    left: 5%;
+}
+
+#ImagesBox {
+
+    width: 70%;
+    margin-left: 15%;
+}
+
+
+
+.centrar{ /*avi*/
+    display: block;
+    box-shadow: 4px 5px 25px 2px #999;
+    position: absolute;
+    width: 275px;
+    padding: 0em 1em;
+    margin: 10em 20%;
+    background: -webkit-linear-gradient(white); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(white); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(white); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(white); /* Standard syntax (must be last) */
+    border: 1px solid #808080;
+    border-radius: 15px;
+    background: -webkit-linear-gradient(#ffffff,#ffffff,#ffffff, #798D44);  For Safari 5.1 to 6.0 
+    /*background: -o-linear-gradient(#ffffff,#ffffff,#9aae04, #9aae04);  For Opera 11.1 to 12.0 
+    background: -moz-linear-gradient(#ffffff,#ffffff,#BCD5F3, #37b531);  For Firefox 3.6 to 15 
+    background: linear-gradient(#ffffff,#ffffff,#BCD5F3, #51ac13);   Standard syntax (must be last) 
+}*/

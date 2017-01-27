@@ -1,0 +1,75 @@
+﻿input[type="search"] {
+    height: 10%;
+}
+
+dataTables_filter {
+    width: 30%;
+}
+
+#ListUsuarios_wrapper{
+    margin-left: 2%;
+}
+
+.divCrearUsers {
+    float: left;
+    width: 40%;
+    margin-left: 0px;
+}
+
+.divModificarUsers {
+    float: left;
+    width: 50%;
+    margin-left: 0px;
+}
+
+.custom-combobox-input {
+    margin: 0;
+    padding: 0.7em;
+    width: 90%;
+}
+
+.ui-autocomplete
+{
+    z-index: 1050 !important;
+}
+
+#ListUsuariosApoyo_length
+{
+    MARGIN-LEFT: 17PX;
+}
+
+#ulSubproductos, #ulSubproductosSelected {
+            list-style-type: none;
+            margin: 0;
+            padding: 0 0 2.5em;
+            float: left;
+            margin-right: 10px;
+            background-color: rgb(235, 235, 228);
+            border-radius: 5px;
+            margin: 7px 0px 0px 0px;
+            width: 150px;
+
+}
+
+#ulSubproductos li, #ulSubproductosSelected li {
+    margin: 5px 5px 5px 5px;
+    padding: 5px;
+    font-size: smaller;
+    width: 95%;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+}
+
+fieldset.scheduler-border {
+    border: 1px groove #ddd !important;
+    padding: 0 1.4em 1.4em 1.4em !important;
+    margin: 0 0 1.5em 0 !important;
+    -webkit-box-shadow:  0px 0px 0px 0px #000;
+            box-shadow:  0px 0px 0px 0px #000;
+}
+
+legend.scheduler-border {
+    font-size: 1.2em !important;
+    font-weight: bold !important;
+    text-align: left !important;
+
+}

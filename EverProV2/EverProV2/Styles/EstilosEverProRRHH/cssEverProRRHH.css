@@ -1,0 +1,27 @@
+﻿
+/*#btnCargar {
+
+    margin: -31% 88% 8% 10%;
+    float: right;
+}*/
+
+
+.divContentRRHH { 
+width: 31% !important; 
+float: left; 
+height: 30px !important; 
+margin: -1% 1% 5% 2%; 
+} 
+
+.custom-combobox, .custom-combobox-input{ 
+width: 286px; 
+height: 35px !important; 
+} 
+
+.divContentMasivos { 
+width: 94% !important; 
+float: none; 
+height: 60px !important; 
+margin: -1% 1% 5% 2%; 
+}
+

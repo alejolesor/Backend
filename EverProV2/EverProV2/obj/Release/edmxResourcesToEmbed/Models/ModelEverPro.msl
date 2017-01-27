@@ -1,0 +1,573 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EverisProduccionModelStoreContainer" CdmEntityContainer="EverisProduccionEntities">
+    <FunctionImportMapping FunctionName="EverisProduccionModel.Store.Split" FunctionImportName="Split">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EverisProduccionModel.Split_Result">
+          <ScalarProperty Name="Splitcolumn" ColumnName="Splitcolumn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="aspnet_AnyDataInTables" FunctionName="EverisProduccionModel.Store.aspnet_AnyDataInTables" />
+    <FunctionImportMapping FunctionImportName="aspnet_Applications_CreateApplication" FunctionName="EverisProduccionModel.Store.aspnet_Applications_CreateApplication" />
+    <FunctionImportMapping FunctionImportName="aspnet_CheckSchemaVersion" FunctionName="EverisProduccionModel.Store.aspnet_CheckSchemaVersion" />
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_ChangePasswordQuestionAndAnswer" FunctionName="EverisProduccionModel.Store.aspnet_Membership_ChangePasswordQuestionAndAnswer" />
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_CreateUser" FunctionName="EverisProduccionModel.Store.aspnet_Membership_CreateUser" />
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_FindUsersByEmail" FunctionName="EverisProduccionModel.Store.aspnet_Membership_FindUsersByEmail" />
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_FindUsersByName" FunctionName="EverisProduccionModel.Store.aspnet_Membership_FindUsersByName" />
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_GetAllUsers" FunctionName="EverisProduccionModel.Store.aspnet_Membership_GetAllUsers" />
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_GetNumberOfUsersOnline" FunctionName="EverisProduccionModel.Store.aspnet_Membership_GetNumberOfUsersOnline" />
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_GetPassword" FunctionName="EverisProduccionModel.Store.aspnet_Membership_GetPassword">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EverisProduccionModel.aspnet_Membership_GetPassword_Result">
+          <ScalarProperty Name="Column1" ColumnName="Column1" />
+          <ScalarProperty Name="Column2" ColumnName="Column2" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_GetPasswordWithFormat" FunctionName="EverisProduccionModel.Store.aspnet_Membership_GetPasswordWithFormat">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EverisProduccionModel.aspnet_Membership_GetPasswordWithFormat_Result">
+          <ScalarProperty Name="Column1" ColumnName="Column1" />
+          <ScalarProperty Name="Column2" ColumnName="Column2" />
+          <ScalarProperty Name="Column3" ColumnName="Column3" />
+          <ScalarProperty Name="Column4" ColumnName="Column4" />
+          <ScalarProperty Name="Column5" ColumnName="Column5" />
+          <ScalarProperty Name="Column6" ColumnName="Column6" />
+          <ScalarProperty Name="Column7" ColumnName="Column7" />
+          <ScalarProperty Name="Column8" ColumnName="Column8" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_GetUserByEmail" FunctionName="EverisProduccionModel.Store.aspnet_Membership_GetUserByEmail" />
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_GetUserByName" FunctionName="EverisProduccionModel.Store.aspnet_Membership_GetUserByName">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EverisProduccionModel.aspnet_Membership_GetUserByName_Result">
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PasswordQuestion" ColumnName="PasswordQuestion" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+          <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+          <ScalarProperty Name="LastPasswordChangedDate" ColumnName="LastPasswordChangedDate" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="IsLockedOut" ColumnName="IsLockedOut" />
+          <ScalarProperty Name="LastLockoutDate" ColumnName="LastLockoutDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_GetUserByUserId" FunctionName="EverisProduccionModel.Store.aspnet_Membership_GetUserByUserId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EverisProduccionModel.aspnet_Membership_GetUserByUserId_Result">
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PasswordQuestion" ColumnName="PasswordQuestion" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+          <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+          <ScalarProperty Name="LastPasswordChangedDate" ColumnName="LastPasswordChangedDate" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="IsLockedOut" ColumnName="IsLockedOut" />
+          <ScalarProperty Name="LastLockoutDate" ColumnName="LastLockoutDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_ResetPassword" FunctionName="EverisProduccionModel.Store.aspnet_Membership_ResetPassword" />
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_SetPassword" FunctionName="EverisProduccionModel.Store.aspnet_Membership_SetPassword" />
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_UnlockUser" FunctionName="EverisProduccionModel.Store.aspnet_Membership_UnlockUser" />
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_UpdateUser" FunctionName="EverisProduccionModel.Store.aspnet_Membership_UpdateUser" />
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_UpdateUserInfo" FunctionName="EverisProduccionModel.Store.aspnet_Membership_UpdateUserInfo" />
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_ValidMobilePIN" FunctionName="EverisProduccionModel.Store.aspnet_Membership_ValidMobilePIN">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EverisProduccionModel.aspnet_Membership_ValidMobilePIN_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="resultado" ColumnName="resultado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="aspnet_Paths_CreatePath" FunctionName="EverisProduccionModel.Store.aspnet_Paths_CreatePath" />
+    <FunctionImportMapping FunctionImportName="aspnet_Personalization_GetApplicationId" FunctionName="EverisProduccionModel.Store.aspnet_Personalization_GetApplicationId" />
+    <FunctionImportMapping FunctionImportName="aspnet_PersonalizationAdministration_DeleteAllState" FunctionName="EverisProduccionModel.Store.aspnet_PersonalizationAdministration_DeleteAllState" />
+    <FunctionImportMapping FunctionImportName="aspnet_PersonalizationAdministration_FindState" FunctionName="EverisProduccionModel.Store.aspnet_PersonalizationAdministration_FindState" />
+    <FunctionImportMapping FunctionImportName="aspnet_PersonalizationAdministration_GetCountOfState" FunctionName="EverisProduccionModel.Store.aspnet_PersonalizationAdministration_GetCountOfState" />
+    <FunctionImportMapping FunctionImportName="aspnet_PersonalizationAdministration_ResetSharedState" FunctionName="EverisProduccionModel.Store.aspnet_PersonalizationAdministration_ResetSharedState" />
+    <FunctionImportMapping FunctionImportName="aspnet_PersonalizationAdministration_ResetUserState" FunctionName="EverisProduccionModel.Store.aspnet_PersonalizationAdministration_ResetUserState" />
+    <FunctionImportMapping FunctionImportName="aspnet_PersonalizationAllUsers_GetPageSettings" FunctionName="EverisProduccionModel.Store.aspnet_PersonalizationAllUsers_GetPageSettings" />
+    <FunctionImportMapping FunctionImportName="aspnet_PersonalizationAllUsers_ResetPageSettings" FunctionName="EverisProduccionModel.Store.aspnet_PersonalizationAllUsers_ResetPageSettings" />
+    <FunctionImportMapping FunctionImportName="aspnet_PersonalizationAllUsers_SetPageSettings" FunctionName="EverisProduccionModel.Store.aspnet_PersonalizationAllUsers_SetPageSettings" />
+    <FunctionImportMapping FunctionImportName="aspnet_PersonalizationPerUser_GetPageSettings" FunctionName="EverisProduccionModel.Store.aspnet_PersonalizationPerUser_GetPageSettings" />
+    <FunctionImportMapping FunctionImportName="aspnet_PersonalizationPerUser_ResetPageSettings" FunctionName="EverisProduccionModel.Store.aspnet_PersonalizationPerUser_ResetPageSettings" />
+    <FunctionImportMapping FunctionImportName="aspnet_PersonalizationPerUser_SetPageSettings" FunctionName="EverisProduccionModel.Store.aspnet_PersonalizationPerUser_SetPageSettings" />
+    <FunctionImportMapping FunctionImportName="aspnet_Profile_DeleteInactiveProfiles" FunctionName="EverisProduccionModel.Store.aspnet_Profile_DeleteInactiveProfiles" />
+    <FunctionImportMapping FunctionImportName="aspnet_Profile_DeleteProfiles" FunctionName="EverisProduccionModel.Store.aspnet_Profile_DeleteProfiles" />
+    <FunctionImportMapping FunctionImportName="aspnet_Profile_GetNumberOfInactiveProfiles" FunctionName="EverisProduccionModel.Store.aspnet_Profile_GetNumberOfInactiveProfiles" />
+    <FunctionImportMapping FunctionImportName="aspnet_Profile_GetProfiles" FunctionName="EverisProduccionModel.Store.aspnet_Profile_GetProfiles" />
+    <FunctionImportMapping FunctionImportName="aspnet_Profile_GetProperties" FunctionName="EverisProduccionModel.Store.aspnet_Profile_GetProperties">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EverisProduccionModel.aspnet_Profile_GetProperties_Result">
+          <ScalarProperty Name="PropertyNames" ColumnName="PropertyNames" />
+          <ScalarProperty Name="PropertyValuesString" ColumnName="PropertyValuesString" />
+          <ScalarProperty Name="PropertyValuesBinary" ColumnName="PropertyValuesBinary" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="aspnet_Profile_SetProperties" FunctionName="EverisProduccionModel.Store.aspnet_Profile_SetProperties" />
+    <FunctionImportMapping FunctionImportName="aspnet_RegisterSchemaVersion" FunctionName="EverisProduccionModel.Store.aspnet_RegisterSchemaVersion" />
+    <FunctionImportMapping FunctionImportName="aspnet_Roles_CreateRole" FunctionName="EverisProduccionModel.Store.aspnet_Roles_CreateRole" />
+    <FunctionImportMapping FunctionImportName="aspnet_Roles_DeleteRole" FunctionName="EverisProduccionModel.Store.aspnet_Roles_DeleteRole" />
+    <FunctionImportMapping FunctionImportName="aspnet_Roles_GetAllRoles" FunctionName="EverisProduccionModel.Store.aspnet_Roles_GetAllRoles" />
+    <FunctionImportMapping FunctionImportName="aspnet_Roles_RoleExists" FunctionName="EverisProduccionModel.Store.aspnet_Roles_RoleExists" />
+    <FunctionImportMapping FunctionImportName="aspnet_Setup_RemoveAllRoleMembers" FunctionName="EverisProduccionModel.Store.aspnet_Setup_RemoveAllRoleMembers" />
+    <FunctionImportMapping FunctionImportName="aspnet_Setup_RestorePermissions" FunctionName="EverisProduccionModel.Store.aspnet_Setup_RestorePermissions" />
+    <FunctionImportMapping FunctionImportName="aspnet_UnRegisterSchemaVersion" FunctionName="EverisProduccionModel.Store.aspnet_UnRegisterSchemaVersion" />
+    <FunctionImportMapping FunctionImportName="aspnet_Users_CreateUser" FunctionName="EverisProduccionModel.Store.aspnet_Users_CreateUser" />
+    <FunctionImportMapping FunctionImportName="aspnet_Users_DeleteUser" FunctionName="EverisProduccionModel.Store.aspnet_Users_DeleteUser" />
+    <FunctionImportMapping FunctionImportName="aspnet_UsersInRoles_AddUsersToRoles" FunctionName="EverisProduccionModel.Store.aspnet_UsersInRoles_AddUsersToRoles" />
+    <FunctionImportMapping FunctionImportName="aspnet_UsersInRoles_FindUsersInRole" FunctionName="EverisProduccionModel.Store.aspnet_UsersInRoles_FindUsersInRole" />
+    <FunctionImportMapping FunctionImportName="aspnet_UsersInRoles_GetRolesForUser" FunctionName="EverisProduccionModel.Store.aspnet_UsersInRoles_GetRolesForUser" />
+    <FunctionImportMapping FunctionImportName="aspnet_UsersInRoles_GetUsersInRoles" FunctionName="EverisProduccionModel.Store.aspnet_UsersInRoles_GetUsersInRoles" />
+    <FunctionImportMapping FunctionImportName="aspnet_UsersInRoles_IsUserInRole" FunctionName="EverisProduccionModel.Store.aspnet_UsersInRoles_IsUserInRole" />
+    <FunctionImportMapping FunctionImportName="aspnet_UsersInRoles_RemoveUsersFromRoles" FunctionName="EverisProduccionModel.Store.aspnet_UsersInRoles_RemoveUsersFromRoles">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EverisProduccionModel.aspnet_UsersInRoles_RemoveUsersFromRoles_Result">
+          <ScalarProperty Name="Column1" ColumnName="Column1" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="aspnet_WebEvent_LogEvent" FunctionName="EverisProduccionModel.Store.aspnet_WebEvent_LogEvent" />
+    <FunctionImportMapping FunctionImportName="CambioMasivoDeLiderAEmpleados" FunctionName="EverisProduccionModel.Store.CambioMasivoDeLiderAEmpleados" />
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="EverisProduccionModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_CambioEstadoDiario" FunctionName="EverisProduccionModel.Store.sp_CambioEstadoDiario" />
+    <FunctionImportMapping FunctionImportName="sp_CambioEstadoMensual" FunctionName="EverisProduccionModel.Store.sp_CambioEstadoMensual" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="EverisProduccionModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="EverisProduccionModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="EverisProduccionModel.Store.sp_helpdiagramdefinition" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="EverisProduccionModel.Store.sp_helpdiagrams" />
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="EverisProduccionModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_SabanadeProduccion" FunctionName="EverisProduccionModel.Store.sp_SabanadeProduccion">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EverisProduccionModel.sp_SabanadeProduccion_Result">
+          <ScalarProperty Name="Column1" ColumnName="Column1" />
+          <ScalarProperty Name="Column2" ColumnName="Column2" />
+          <ScalarProperty Name="Column3" ColumnName="Column3" />
+          <ScalarProperty Name="Column4" ColumnName="Column4" />
+          <ScalarProperty Name="Column5" ColumnName="Column5" />
+          <ScalarProperty Name="Column6" ColumnName="Column6" />
+          <ScalarProperty Name="Column7" ColumnName="Column7" />
+          <ScalarProperty Name="Column8" ColumnName="Column8" />
+          <ScalarProperty Name="Column9" ColumnName="Column9" />
+          <ScalarProperty Name="Column10" ColumnName="Column10" />
+          <ScalarProperty Name="Column11" ColumnName="Column11" />
+          <ScalarProperty Name="Column12" ColumnName="Column12" />
+          <ScalarProperty Name="Column13" ColumnName="Column13" />
+          <ScalarProperty Name="Column14" ColumnName="Column14" />
+          <ScalarProperty Name="Column15" ColumnName="Column15" />
+          <ScalarProperty Name="Column16" ColumnName="Column16" />
+          <ScalarProperty Name="Column17" ColumnName="Column17" />
+          <ScalarProperty Name="Column18" ColumnName="Column18" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SabanadeProduccion1" FunctionName="EverisProduccionModel.Store.sp_SabanadeProduccion1" />
+    <FunctionImportMapping FunctionImportName="sp_SabanadeRH" FunctionName="EverisProduccionModel.Store.sp_SabanadeRH" />
+    <FunctionImportMapping FunctionImportName="sp_SabanadeRH_1" FunctionName="EverisProduccionModel.Store.sp_SabanadeRH_1" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="EverisProduccionModel.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="spActualizaInfoPrincipal" FunctionName="EverisProduccionModel.Store.spActualizaInfoPrincipal" />
+    <FunctionImportMapping FunctionImportName="spActualizaMasivo" FunctionName="EverisProduccionModel.Store.spActualizaMasivo" />
+    <FunctionImportMapping FunctionImportName="spActualizaRetiro" FunctionName="EverisProduccionModel.Store.spActualizaRetiro" />
+    <FunctionImportMapping FunctionImportName="spBuscarPersonal" FunctionName="EverisProduccionModel.Store.spBuscarPersonal" />
+    <FunctionImportMapping FunctionImportName="spCalcularHorasExtras" FunctionName="EverisProduccionModel.Store.spCalcularHorasExtras" />
+    <FunctionImportMapping FunctionImportName="spCalcularHorasExtrasNv" FunctionName="EverisProduccionModel.Store.spCalcularHorasExtrasNv">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EverisProduccionModel.spCalcularHorasExtrasNv_Result">
+          <ScalarProperty Name="ProgramacionLaboralId" ColumnName="ProgramacionLaboralId" />
+          <ScalarProperty Name="PersonaId" ColumnName="PersonaId" />
+          <ScalarProperty Name="Column1" ColumnName="Column1" />
+          <ScalarProperty Name="Column2" ColumnName="Column2" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spControlHorasExtras" FunctionName="EverisProduccionModel.Store.spControlHorasExtras" />
+    <FunctionImportMapping FunctionImportName="spEliminarActividadDiaria" FunctionName="EverisProduccionModel.Store.spEliminarActividadDiaria" />
+    <FunctionImportMapping FunctionImportName="spInsertarActividadDiaria" FunctionName="EverisProduccionModel.Store.spInsertarActividadDiaria" />
+    <FunctionImportMapping FunctionImportName="spInsertarProgramacionLaboral" FunctionName="EverisProduccionModel.Store.spInsertarProgramacionLaboral" />
+    <FunctionImportMapping FunctionImportName="spInsertExtrasAprobadas" FunctionName="EverisProduccionModel.Store.spInsertExtrasAprobadas" />
+    <FunctionImportMapping FunctionImportName="spLiderInsertaInactividad" FunctionName="EverisProduccionModel.Store.spLiderInsertaInactividad" />
+    <FunctionImportMapping FunctionImportName="spLoginUsuarios" FunctionName="EverisProduccionModel.Store.spLoginUsuarios" />
+    <FunctionImportMapping FunctionImportName="spObtenerActividadesDiariasPorUsDesHast" FunctionName="EverisProduccionModel.Store.spObtenerActividadesDiariasPorUsDesHast">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EverisProduccionModel.spObtenerActividadesDiariasPorUsDesHast_Result">
+          <ScalarProperty Name="ActividadDiariaId" ColumnName="ActividadDiariaId" />
+          <ScalarProperty Name="numActividad" ColumnName="numActividad" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="Procesos" ColumnName="Procesos" />
+          <ScalarProperty Name="Actividad" ColumnName="Actividad" />
+          <ScalarProperty Name="Producto" ColumnName="Producto" />
+          <ScalarProperty Name="Tiempo" ColumnName="Tiempo" />
+          <ScalarProperty Name="Productividad" ColumnName="Productividad" />
+          <ScalarProperty Name="tiempoInactividad" ColumnName="tiempoInactividad" />
+          <ScalarProperty Name="EstadoId" ColumnName="EstadoId" />
+          <ScalarProperty Name="fechaproductiva" ColumnName="fechaproductiva" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spObtenerActividadesDiariasPorUsuario" FunctionName="EverisProduccionModel.Store.spObtenerActividadesDiariasPorUsuario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EverisProduccionModel.spObtenerActividadesDiariasPorUsuario_Result">
+          <ScalarProperty Name="ActividadDiariaId" ColumnName="ActividadDiariaId" />
+          <ScalarProperty Name="numActividad" ColumnName="numActividad" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="Procesos" ColumnName="Procesos" />
+          <ScalarProperty Name="Actividad" ColumnName="Actividad" />
+          <ScalarProperty Name="Producto" ColumnName="Producto" />
+          <ScalarProperty Name="Tiempo" ColumnName="Tiempo" />
+          <ScalarProperty Name="Productividad" ColumnName="Productividad" />
+          <ScalarProperty Name="tiempoInactividad" ColumnName="tiempoInactividad" />
+          <ScalarProperty Name="EstadoId" ColumnName="EstadoId" />
+          <ScalarProperty Name="fechaproductiva" ColumnName="fechaproductiva" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spObtenerCamposFormulario" FunctionName="EverisProduccionModel.Store.spObtenerCamposFormulario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EverisProduccionModel.spObtenerCamposFormulario_Result">
+          <ScalarProperty Name="FormularioCampoId" ColumnName="FormularioCampoId" />
+          <ScalarProperty Name="FormularioId" ColumnName="FormularioId" />
+          <ScalarProperty Name="CampoId" ColumnName="CampoId" />
+          <ScalarProperty Name="Orden" ColumnName="Orden" />
+          <ScalarProperty Name="Editable" ColumnName="Editable" />
+          <ScalarProperty Name="Obligatorio" ColumnName="Obligatorio" />
+          <ScalarProperty Name="TipoCampoId" ColumnName="TipoCampoId" />
+          <ScalarProperty Name="PadreId" ColumnName="PadreId" />
+          <ScalarProperty Name="CampoIdDependiente" ColumnName="CampoIdDependiente" />
+          <ScalarProperty Name="DobleCaptura" ColumnName="DobleCaptura" />
+          <ScalarProperty Name="Evento" ColumnName="Evento" />
+          <ScalarProperty Name="Funcion" ColumnName="Funcion" />
+          <ScalarProperty Name="FuenteOrigen" ColumnName="FuenteOrigen" />
+          <ScalarProperty Name="FuenteParametros" ColumnName="FuenteParametros" />
+          <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="DimensionAlto" ColumnName="DimensionAlto" />
+          <ScalarProperty Name="DimensionAncho" ColumnName="DimensionAncho" />
+          <ScalarProperty Name="LongMin" ColumnName="LongMin" />
+          <ScalarProperty Name="LongMax" ColumnName="LongMax" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spObtenerCapturaEventos" FunctionName="EverisProduccionModel.Store.spObtenerCapturaEventos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EverisProduccionModel.spObtenerCapturaEventos_Result">
+          <ScalarProperty Name="CapturaEventoId" ColumnName="CapturaEventoId" />
+          <ScalarProperty Name="PersonaId" ColumnName="PersonaId" />
+          <ScalarProperty Name="BarraEventoId" ColumnName="BarraEventoId" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spObtenerClientes" FunctionName="EverisProduccionModel.Store.spObtenerClientes">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EverisProduccionModel.spObtenerClientes_Result">
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="text" ColumnName="text" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spObtenerClientesRoles" FunctionName="EverisProduccionModel.Store.spObtenerClientesRoles">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EverisProduccionModel.spObtenerClientesRoles_Result">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="LoweredRoleName" ColumnName="LoweredRoleName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ClienteId" ColumnName="ClienteId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spObtenerDatosPersonal" FunctionName="EverisProduccionModel.Store.spObtenerDatosPersonal">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EverisProduccionModel.spObtenerDatosPersonal_Result">
+          <ScalarProperty Name="DetallePersonaId" ColumnName="DetallePersonaId" />
+          <ScalarProperty Name="PersonaId" ColumnName="PersonaId" />
+          <ScalarProperty Name="FormularioCampoId" ColumnName="FormularioCampoId" />
+          <ScalarProperty Name="VALOR" ColumnName="VALOR" />
+          <ScalarProperty Name="NoCaptura" ColumnName="NoCaptura" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+          <ScalarProperty Name="TipoCampoId" ColumnName="TipoCampoId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spObtenerEstructuras" FunctionName="EverisProduccionModel.Store.spObtenerEstructuras">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EverisProduccionModel.spObtenerEstructuras_Result">
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="text" ColumnName="text" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spObtenerHorasExtras" FunctionName="EverisProduccionModel.Store.spObtenerHorasExtras">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EverisProduccionModel.spObtenerHorasExtras_Result">
+          <ScalarProperty Name="PersonaId" ColumnName="PersonaId" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Lunes" ColumnName="Lunes" />
+          <ScalarProperty Name="Martes" ColumnName="Martes" />
+          <ScalarProperty Name="Miercoles" ColumnName="Miercoles" />
+          <ScalarProperty Name="Jueves" ColumnName="Jueves" />
+          <ScalarProperty Name="Viernes" ColumnName="Viernes" />
+          <ScalarProperty Name="Sabado" ColumnName="Sabado" />
+          <ScalarProperty Name="Domingo" ColumnName="Domingo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spObtenerInactividadesPorActividad" FunctionName="EverisProduccionModel.Store.spObtenerInactividadesPorActividad">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EverisProduccionModel.spObtenerInactividadesPorActividad_Result">
+          <ScalarProperty Name="ActividadDiariaId" ColumnName="ActividadDiariaId" />
+          <ScalarProperty Name="NumActividad" ColumnName="NumActividad" />
+          <ScalarProperty Name="TipoInactividad" ColumnName="TipoInactividad" />
+          <ScalarProperty Name="Inactividad" ColumnName="Inactividad" />
+          <ScalarProperty Name="Tiempo" ColumnName="Tiempo" />
+          <ScalarProperty Name="EstadoId" ColumnName="EstadoId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spObtenerItemsListaCampos" FunctionName="EverisProduccionModel.Store.spObtenerItemsListaCampos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EverisProduccionModel.spObtenerItemsListaCampos_Result">
+          <ScalarProperty Name="ListaCampoId" ColumnName="ListaCampoId" />
+          <ScalarProperty Name="CampoId" ColumnName="CampoId" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="PadreId" ColumnName="PadreId" />
+          <ScalarProperty Name="Orden" ColumnName="Orden" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spObtenerItemsListaCamposCascada" FunctionName="EverisProduccionModel.Store.spObtenerItemsListaCamposCascada">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EverisProduccionModel.spObtenerItemsListaCamposCascada_Result">
+          <ScalarProperty Name="ListaCampoId" ColumnName="ListaCampoId" />
+          <ScalarProperty Name="CampoId" ColumnName="CampoId" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="PadreId" ColumnName="PadreId" />
+          <ScalarProperty Name="Orden" ColumnName="Orden" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spObtenerMenuHijos" FunctionName="EverisProduccionModel.Store.spObtenerMenuHijos" />
+    <FunctionImportMapping FunctionImportName="spObtenerMenuPadre" FunctionName="EverisProduccionModel.Store.spObtenerMenuPadre" />
+    <FunctionImportMapping FunctionImportName="spObtenerPersonasCargoEVERIS" FunctionName="EverisProduccionModel.Store.spObtenerPersonasCargoEVERIS">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EverisProduccionModel.spObtenerPersonasCargoEVERIS_Result">
+          <ScalarProperty Name="PersonaId" ColumnName="PersonaId" />
+          <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spObtenerPersonasPorLider" FunctionName="EverisProduccionModel.Store.spObtenerPersonasPorLider" />
+    <FunctionImportMapping FunctionImportName="spObtenerPersonIdPorUserId" FunctionName="EverisProduccionModel.Store.spObtenerPersonIdPorUserId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EverisProduccionModel.spObtenerPersonIdPorUserId_Result">
+          <ScalarProperty Name="PersonaId" ColumnName="PersonaId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="TipoDocumentoId" ColumnName="TipoDocumentoId" />
+          <ScalarProperty Name="Identificacion" ColumnName="Identificacion" />
+          <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="Genero" ColumnName="Genero" />
+          <ScalarProperty Name="CargoId" ColumnName="CargoId" />
+          <ScalarProperty Name="UserIdRegistro" ColumnName="UserIdRegistro" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spObtenerProgramcionLaboralPorFecha" FunctionName="EverisProduccionModel.Store.spObtenerProgramcionLaboralPorFecha" />
+    <FunctionImportMapping FunctionImportName="spObtenerProgramcionLaboralPorFecha1" FunctionName="EverisProduccionModel.Store.spObtenerProgramcionLaboralPorFecha1">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EverisProduccionModel.spObtenerProgramcionLaboralPorFecha1_Result">
+          <ScalarProperty Name="ProgramacionLaboralId" ColumnName="ProgramacionLaboralId" />
+          <ScalarProperty Name="PersonaId" ColumnName="PersonaId" />
+          <ScalarProperty Name="FechaTurno" ColumnName="FechaTurno" />
+          <ScalarProperty Name="HoraInicio" ColumnName="HoraInicio" />
+          <ScalarProperty Name="HoraFin" ColumnName="HoraFin" />
+          <ScalarProperty Name="PersonaIdRegistro" ColumnName="PersonaIdRegistro" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+          <ScalarProperty Name="HExtrasAprobadas" ColumnName="HExtrasAprobadas" />
+          <ScalarProperty Name="AprobarExtras" ColumnName="AprobarExtras" />
+          <ScalarProperty Name="FechaAprobacion" ColumnName="FechaAprobacion" />
+          <ScalarProperty Name="PersonaIdAprobador" ColumnName="PersonaIdAprobador" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="TurnoId" ColumnName="TurnoId" />
+          <ScalarProperty Name="HorasExtras" ColumnName="HorasExtras" />
+          <ScalarProperty Name="PERSONAID1" ColumnName="PERSONAID1" />
+          <ScalarProperty Name="LIDER" ColumnName="LIDER" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spObtenerProgramLaboralActualUser" FunctionName="EverisProduccionModel.Store.spObtenerProgramLaboralActualUser">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EverisProduccionModel.spObtenerProgramLaboralActualUser_Result">
+          <ScalarProperty Name="ProgramacionLaboralId" ColumnName="ProgramacionLaboralId" />
+          <ScalarProperty Name="PersonaId" ColumnName="PersonaId" />
+          <ScalarProperty Name="FechaTurno" ColumnName="FechaTurno" />
+          <ScalarProperty Name="HoraInicio" ColumnName="HoraInicio" />
+          <ScalarProperty Name="HoraFin" ColumnName="HoraFin" />
+          <ScalarProperty Name="PersonaIdRegistro" ColumnName="PersonaIdRegistro" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+          <ScalarProperty Name="HExtrasAprobadas" ColumnName="HExtrasAprobadas" />
+          <ScalarProperty Name="AprobarExtras" ColumnName="AprobarExtras" />
+          <ScalarProperty Name="FechaAprobacion" ColumnName="FechaAprobacion" />
+          <ScalarProperty Name="PersonaIdAprobador" ColumnName="PersonaIdAprobador" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="TurnoId" ColumnName="TurnoId" />
+          <ScalarProperty Name="HorasExtras" ColumnName="HorasExtras" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spObtenerRolUser" FunctionName="EverisProduccionModel.Store.spObtenerRolUser" />
+    <FunctionImportMapping FunctionImportName="spObtenerUserId" FunctionName="EverisProduccionModel.Store.spObtenerUserId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EverisProduccionModel.spObtenerUserId_Result">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="LoweredUserName" ColumnName="LoweredUserName" />
+          <ScalarProperty Name="MobileAlias" ColumnName="MobileAlias" />
+          <ScalarProperty Name="IsAnonymous" ColumnName="IsAnonymous" />
+          <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spObtieneProgramacionLabralPorDia" FunctionName="EverisProduccionModel.Store.spObtieneProgramacionLabralPorDia">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EverisProduccionModel.spObtieneProgramacionLabralPorDia_Result">
+          <ScalarProperty Name="ProgramacionLaboralId" ColumnName="ProgramacionLaboralId" />
+          <ScalarProperty Name="PersonaId" ColumnName="PersonaId" />
+          <ScalarProperty Name="FechaTurno" ColumnName="FechaTurno" />
+          <ScalarProperty Name="HoraInicio" ColumnName="HoraInicio" />
+          <ScalarProperty Name="HoraFin" ColumnName="HoraFin" />
+          <ScalarProperty Name="PersonaIdRegistro" ColumnName="PersonaIdRegistro" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+          <ScalarProperty Name="HExtrasAprobadas" ColumnName="HExtrasAprobadas" />
+          <ScalarProperty Name="AprobarExtras" ColumnName="AprobarExtras" />
+          <ScalarProperty Name="FechaAprobacion" ColumnName="FechaAprobacion" />
+          <ScalarProperty Name="PersonaIdAprobador" ColumnName="PersonaIdAprobador" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="TurnoId" ColumnName="TurnoId" />
+          <ScalarProperty Name="HorasExtras" ColumnName="HorasExtras" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spOptenerBarraEventos" FunctionName="EverisProduccionModel.Store.spOptenerBarraEventos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EverisProduccionModel.spOptenerBarraEventos_Result">
+          <ScalarProperty Name="BarraEventoId" ColumnName="BarraEventoId" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="EventoDependiente" ColumnName="EventoDependiente" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="UrlImagen" ColumnName="UrlImagen" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spReporteEntradaySalida" FunctionName="EverisProduccionModel.Store.spReporteEntradaySalida">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EverisProduccionModel.spReporteEntradaySalida_Result">
+          <ScalarProperty Name="Column1" ColumnName="Column1" />
+          <ScalarProperty Name="Column2" ColumnName="Column2" />
+          <ScalarProperty Name="Column3" ColumnName="Column3" />
+          <ScalarProperty Name="Column4" ColumnName="Column4" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spReporteEntradaySalida1" FunctionName="EverisProduccionModel.Store.spReporteEntradaySalida1">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EverisProduccionModel.spReporteEntradaySalida1_Result">
+          <ScalarProperty Name="Column1" ColumnName="Column1" />
+          <ScalarProperty Name="Column2" ColumnName="Column2" />
+          <ScalarProperty Name="Column3" ColumnName="Column3" />
+          <ScalarProperty Name="Column4" ColumnName="Column4" />
+          <ScalarProperty Name="Column5" ColumnName="Column5" />
+          <ScalarProperty Name="Column6" ColumnName="Column6" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spReporteHorasExtrasConsolidado" FunctionName="EverisProduccionModel.Store.spReporteHorasExtrasConsolidado">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EverisProduccionModel.spReporteHorasExtrasConsolidado_Result">
+          <ScalarProperty Name="Column1" ColumnName="Column1" />
+          <ScalarProperty Name="Column2" ColumnName="Column2" />
+          <ScalarProperty Name="Column3" ColumnName="Column3" />
+          <ScalarProperty Name="Column4" ColumnName="Column4" />
+          <ScalarProperty Name="Column5" ColumnName="Column5" />
+          <ScalarProperty Name="Column6" ColumnName="Column6" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spReporteHorasExtrasPorLider" FunctionName="EverisProduccionModel.Store.spReporteHorasExtrasPorLider">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EverisProduccionModel.spReporteHorasExtrasPorLider_Result">
+          <ScalarProperty Name="PersonaId" ColumnName="PersonaId" />
+          <ScalarProperty Name="Identificacion" ColumnName="Identificacion" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="Empresa" ColumnName="Empresa" />
+          <ScalarProperty Name="HorasExtras" ColumnName="HorasExtras" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spTiempoTotalActividadDiariaPorPersona" FunctionName="EverisProduccionModel.Store.spTiempoTotalActividadDiariaPorPersona">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EverisProduccionModel.spTiempoTotalActividadDiariaPorPersona_Result">
+          <ScalarProperty Name="PersonaId" ColumnName="PersonaId" />
+          <ScalarProperty Name="FechaProductiva" ColumnName="FechaProductiva" />
+          <ScalarProperty Name="Tiempo_Sumado" ColumnName="Tiempo_Sumado" />
+          <ScalarProperty Name="TiempoCapturaEvento" ColumnName="TiempoCapturaEvento" />
+          <ScalarProperty Name="Validacion" ColumnName="Validacion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spUpdateCapturaBarraEvento" FunctionName="EverisProduccionModel.Store.spUpdateCapturaBarraEvento" />
+    <FunctionImportMapping FunctionImportName="spValidaExisPers" FunctionName="EverisProduccionModel.Store.spValidaExisPers">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EverisProduccionModel.spValidaExisPers_Result">
+          <ScalarProperty Name="Identificacion" ColumnName="Identificacion" />
+          <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="UsersInRoles_AddUserToRole" FunctionName="EverisProduccionModel.Store.UsersInRoles_AddUserToRole" />
+    <FunctionImportMapping FunctionImportName="spObtenerNombreLider" FunctionName="EverisProduccionModel.Store.spObtenerNombreLider" />
+    <FunctionImportMapping FunctionImportName="spObtenerPersonasPorLiderSGD" FunctionName="EverisProduccionModel.Store.spObtenerPersonasPorLiderSGD">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EverisProduccionModel.spObtenerPersonasPorLiderSGD_Result">
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Desbloqueomasivousuarios" FunctionName="EverisProduccionModel.Store.Desbloqueomasivousuarios" />
+    <FunctionImportMapping FunctionImportName="Desbloqueousuarios1" FunctionName="EverisProduccionModel.Store.Desbloqueousuarios" />
+    <FunctionImportMapping FunctionImportName="sp_dias_habiles1" FunctionName="EverisProduccionModel.Store.sp_dias_habiles" />
+    <FunctionImportMapping FunctionImportName="spDeshabilitarusuario1" FunctionName="EverisProduccionModel.Store.spDeshabilitarusuario" />
+  </EntityContainerMapping>
+</Mapping>

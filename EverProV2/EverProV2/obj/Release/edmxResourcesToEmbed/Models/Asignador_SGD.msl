@@ -1,0 +1,1506 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Asignador_SGDModelStoreContainer" CdmEntityContainer="Asignador_SGDEntities">
+    <EntitySetMapping Name="Auditoria">
+      <EntityTypeMapping TypeName="Asignador_SGDModel.Auditoria">
+        <MappingFragment StoreEntitySet="Auditoria">
+          <ScalarProperty Name="aud_observaciones" ColumnName="aud_observaciones" />
+          <ScalarProperty Name="aud_vanorNuev" ColumnName="aud_vanorNuev" />
+          <ScalarProperty Name="aud_valorAnt" ColumnName="aud_valorAnt" />
+          <ScalarProperty Name="aud_evento" ColumnName="aud_evento" />
+          <ScalarProperty Name="aud_fechaHora" ColumnName="aud_fechaHora" />
+          <ScalarProperty Name="aud_idUsuario" ColumnName="aud_idUsuario" />
+          <ScalarProperty Name="aud_id" ColumnName="aud_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodigosCampo">
+      <EntityTypeMapping TypeName="Asignador_SGDModel.CodigosCampo">
+        <MappingFragment StoreEntitySet="CodigosCampo">
+          <ScalarProperty Name="CodPadre" ColumnName="CodPadre" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="CodOrden" ColumnName="CodOrden" />
+          <ScalarProperty Name="CampId" ColumnName="CampId" />
+          <ScalarProperty Name="CodDescripcion" ColumnName="CodDescripcion" />
+          <ScalarProperty Name="CodId" ColumnName="CodId" />
+          <ScalarProperty Name="CodCampId" ColumnName="CodCampId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Menu">
+      <EntityTypeMapping TypeName="Asignador_SGDModel.Menu">
+        <MappingFragment StoreEntitySet="Menu">
+          <ScalarProperty Name="UrlImage" ColumnName="UrlImage" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="Orden" ColumnName="Orden" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="IdHijo" ColumnName="IdHijo" />
+          <ScalarProperty Name="IdPadre" ColumnName="IdPadre" />
+          <ScalarProperty Name="DescMenu" ColumnName="DescMenu" />
+          <ScalarProperty Name="IdMenu" ColumnName="IdMenu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Parametros">
+      <EntityTypeMapping TypeName="Asignador_SGDModel.Parametros">
+        <MappingFragment StoreEntitySet="Parametros">
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="valor" ColumnName="valor" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="Asignador_SGDModel.Roles">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="DescRol" ColumnName="DescRol" />
+          <ScalarProperty Name="IdRol" ColumnName="IdRol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="Asignador_SGDModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_Formularios">
+      <EntityTypeMapping TypeName="Asignador_SGDModel.tb_Formularios">
+        <MappingFragment StoreEntitySet="tb_Formularios">
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="FormularioId" ColumnName="FormularioId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbAreas">
+      <EntityTypeMapping TypeName="Asignador_SGDModel.tbAreas">
+        <MappingFragment StoreEntitySet="tbAreas">
+          <ScalarProperty Name="DescArea" ColumnName="DescArea" />
+          <ScalarProperty Name="idArea" ColumnName="idArea" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbHistorial">
+      <EntityTypeMapping TypeName="Asignador_SGDModel.tbHistorial">
+        <MappingFragment StoreEntitySet="tbHistorial">
+          <ScalarProperty Name="FechaAsignado" ColumnName="FechaAsignado" />
+          <ScalarProperty Name="Nradicado" ColumnName="Nradicado" />
+          <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="Lider" ColumnName="Lider" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="idClasificacion" ColumnName="idClasificacion" />
+          <ScalarProperty Name="idHistorial" ColumnName="idHistorial" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbProcPorProducto">
+      <EntityTypeMapping TypeName="Asignador_SGDModel.tbProcPorProducto">
+        <MappingFragment StoreEntitySet="tbProcPorProducto">
+          <ScalarProperty Name="DresProceso" ColumnName="DresProceso" />
+          <ScalarProperty Name="idProducto" ColumnName="idProducto" />
+          <ScalarProperty Name="idProcPorProducto" ColumnName="idProcPorProducto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbProducto">
+      <EntityTypeMapping TypeName="Asignador_SGDModel.tbProducto">
+        <MappingFragment StoreEntitySet="tbProducto">
+          <ScalarProperty Name="DescProducto" ColumnName="DescProducto" />
+          <ScalarProperty Name="idProducto" ColumnName="idProducto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbUsuariosPorLider">
+      <EntityTypeMapping TypeName="Asignador_SGDModel.tbUsuariosPorLider">
+        <MappingFragment StoreEntitySet="tbUsuariosPorLider">
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Apoyo" ColumnName="Apoyo" />
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+          <ScalarProperty Name="idLider" ColumnName="idLider" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TiposCampo">
+      <EntityTypeMapping TypeName="Asignador_SGDModel.TiposCampo">
+        <MappingFragment StoreEntitySet="TiposCampo">
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="TcDescripcion" ColumnName="TcDescripcion" />
+          <ScalarProperty Name="TcId" ColumnName="TcId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ts_Campos">
+      <EntityTypeMapping TypeName="Asignador_SGDModel.ts_Campos">
+        <MappingFragment StoreEntitySet="ts_Campos">
+          <ScalarProperty Name="CodFormulario" ColumnName="CodFormulario" />
+          <ScalarProperty Name="CampDependiente" ColumnName="CampDependiente" />
+          <ScalarProperty Name="CampObligatorio" ColumnName="CampObligatorio" />
+          <ScalarProperty Name="idPadre" ColumnName="idPadre" />
+          <ScalarProperty Name="idTipoCampo" ColumnName="idTipoCampo" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="LongMax" ColumnName="LongMax" />
+          <ScalarProperty Name="LongMin" ColumnName="LongMin" />
+          <ScalarProperty Name="DimensionAncho" ColumnName="DimensionAncho" />
+          <ScalarProperty Name="DimensionAlto" ColumnName="DimensionAlto" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="CampoId" ColumnName="CampoId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="Asignador_SGDModel.Usuarios">
+        <MappingFragment StoreEntitySet="Usuarios">
+          <ScalarProperty Name="SecurityPin" ColumnName="SecurityPin" />
+          <ScalarProperty Name="FechaCaducidad" ColumnName="FechaCaducidad" />
+          <ScalarProperty Name="FecRegistro" ColumnName="FecRegistro" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="IdRol" ColumnName="IdRol" />
+          <ScalarProperty Name="PassCodeUsuario" ColumnName="PassCodeUsuario" />
+          <ScalarProperty Name="NomUsuario" ColumnName="NomUsuario" />
+          <ScalarProperty Name="UsuarioDominio" ColumnName="UsuarioDominio" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsuariosBloqueados">
+      <EntityTypeMapping TypeName="Asignador_SGDModel.UsuariosBloqueados">
+        <MappingFragment StoreEntitySet="UsuariosBloqueados">
+          <ScalarProperty Name="Bloqueado" ColumnName="Bloqueado" />
+          <ScalarProperty Name="FechaBloqueo" ColumnName="FechaBloqueo" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="IdUsuarioBloqueado" ColumnName="IdUsuarioBloqueado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsuariosHistorico">
+      <EntityTypeMapping TypeName="Asignador_SGDModel.UsuariosHistorico">
+        <MappingFragment StoreEntitySet="UsuariosHistorico">
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="FechaCaducidad" ColumnName="FechaCaducidad" />
+          <ScalarProperty Name="PassCodeUsuario" ColumnName="PassCodeUsuario" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="IdHistorico" ColumnName="IdHistorico" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RolesMenu">
+      <EntityTypeMapping TypeName="Asignador_SGDModel.RolesMenu">
+        <MappingFragment StoreEntitySet="RolesMenu">
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="IdMenu" ColumnName="IdMenu" />
+          <ScalarProperty Name="IdRol" ColumnName="IdRol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbClasificaNivFuncionario">
+      <EntityTypeMapping TypeName="Asignador_SGDModel.tbClasificaNivFuncionario">
+        <MappingFragment StoreEntitySet="tbClasificaNivFuncionario">
+          <ScalarProperty Name="Proceso" ColumnName="Proceso" />
+          <ScalarProperty Name="NivelClasificacion" ColumnName="NivelClasificacion" />
+          <ScalarProperty Name="identFuncionario" ColumnName="identFuncionario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbLider">
+      <EntityTypeMapping TypeName="Asignador_SGDModel.tbLider">
+        <MappingFragment StoreEntitySet="tbLider">
+          <ScalarProperty Name="idArea" ColumnName="idArea" />
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="Asignador_SGDModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_CambioPassword" FunctionName="Asignador_SGDModel.Store.sp_CambioPassword" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="Asignador_SGDModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="Asignador_SGDModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_GuardarNuevoUsuario" FunctionName="Asignador_SGDModel.Store.sp_GuardarNuevoUsuario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.sp_GuardarNuevoUsuario_Result">
+          <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="Asignador_SGDModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="Asignador_SGDModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="Asignador_SGDModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="Asignador_SGDModel.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="sp_ValidarMobilePIN" FunctionName="Asignador_SGDModel.Store.sp_ValidarMobilePIN">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.sp_ValidarMobilePIN_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="resultado" ColumnName="resultado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spCamposDelFormulario" FunctionName="Asignador_SGDModel.Store.spCamposDelFormulario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spCamposDelFormulario_Result">
+          <ScalarProperty Name="IdCampo" ColumnName="IdCampo" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="IdPadre" ColumnName="IdPadre" />
+          <ScalarProperty Name="Orden" ColumnName="Orden" />
+          <ScalarProperty Name="DimensionAlto" ColumnName="DimensionAlto" />
+          <ScalarProperty Name="DimensionAncho" ColumnName="DimensionAncho" />
+          <ScalarProperty Name="Obligatorio" ColumnName="Obligatorio" />
+          <ScalarProperty Name="IdTipoCampo" ColumnName="IdTipoCampo" />
+          <ScalarProperty Name="Editable" ColumnName="Editable" />
+          <ScalarProperty Name="DobleCaptura" ColumnName="DobleCaptura" />
+          <ScalarProperty Name="LongMax" ColumnName="LongMax" />
+          <ScalarProperty Name="LongMin" ColumnName="LongMin" />
+          <ScalarProperty Name="Evento" ColumnName="Evento" />
+          <ScalarProperty Name="FuncionValidacion" ColumnName="FuncionValidacion" />
+          <ScalarProperty Name="MensajeError" ColumnName="MensajeError" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spCasoPrioritario" FunctionName="Asignador_SGDModel.Store.spCasoPrioritario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spCasoPrioritario_Result">
+          <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spConsultarHijos" FunctionName="Asignador_SGDModel.Store.spConsultarHijos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spConsultarHijos_Result">
+          <ScalarProperty Name="CampoId" ColumnName="CampoId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spEliminarFunciApoyo" FunctionName="Asignador_SGDModel.Store.spEliminarFunciApoyo" />
+    <FunctionImportMapping FunctionImportName="spEliminarNivelFunc" FunctionName="Asignador_SGDModel.Store.spEliminarNivelFunc">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spEliminarNivelFunc_Result">
+          <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spFuncionarioApoyo" FunctionName="Asignador_SGDModel.Store.spFuncionarioApoyo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spFuncionarioApoyo_Result">
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spInsertaFuncionario" FunctionName="Asignador_SGDModel.Store.spInsertaFuncionario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spInsertaFuncionario_Result">
+          <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spInsertNivelFunc" FunctionName="Asignador_SGDModel.Store.spInsertNivelFunc">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spInsertNivelFunc_Result">
+          <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spObtenerLideres" FunctionName="Asignador_SGDModel.Store.spObtenerLideres">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spObtenerLideres_Result">
+          <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="idArea" ColumnName="idArea" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spObtenerMenuHijosPerfil" FunctionName="Asignador_SGDModel.Store.spObtenerMenuHijosPerfil">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spObtenerMenuHijosPerfil_Result">
+          <ScalarProperty Name="IdMenu" ColumnName="IdMenu" />
+          <ScalarProperty Name="DescMenu" ColumnName="DescMenu" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spObtenerMenuNietosPerfil" FunctionName="Asignador_SGDModel.Store.spObtenerMenuNietosPerfil">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spObtenerMenuNietosPerfil_Result">
+          <ScalarProperty Name="IdMenu" ColumnName="IdMenu" />
+          <ScalarProperty Name="DescMenu" ColumnName="DescMenu" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spObtenerMenuPadre" FunctionName="Asignador_SGDModel.Store.spObtenerMenuPadre">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spObtenerMenuPadre_Result">
+          <ScalarProperty Name="IdMenu" ColumnName="IdMenu" />
+          <ScalarProperty Name="DescMenu" ColumnName="DescMenu" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="UrlImage" ColumnName="UrlImage" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spObtenerNombreUsu" FunctionName="Asignador_SGDModel.Store.spObtenerNombreUsu">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spObtenerNombreUsu_Result">
+          <ScalarProperty Name="NomUsuario" ColumnName="NomUsuario" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spValidarUsuario" FunctionName="Asignador_SGDModel.Store.spValidarUsuario" />
+    <FunctionImportMapping FunctionImportName="spObtenerNombreProceso" FunctionName="Asignador_SGDModel.Store.spObtenerNombreProceso">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spObtenerNombreProceso_Result">
+          <ScalarProperty Name="codDescripcion" ColumnName="codDescripcion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spAsignacionAut" FunctionName="Asignador_SGDModel.Store.spAsignacionAut">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spAsignacionAut_Result" />
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spAsignacionManual" FunctionName="Asignador_SGDModel.Store.spAsignacionManual">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spAsignacionManual_Result">
+          <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spCambiarEstadoUsuarioLive" FunctionName="Asignador_SGDModel.Store.spCambiarEstadoUsuarioLive" />
+    <FunctionImportMapping FunctionImportName="spObtieneFuncXlider" FunctionName="Asignador_SGDModel.Store.spObtieneFuncXlider">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spObtieneFuncXlider_Result">
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+          <ScalarProperty Name="Nivel" ColumnName="Nivel" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spLideresAasignar" FunctionName="Asignador_SGDModel.Store.spLideresAasignar">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spLideresAasignar_Result">
+          <ScalarProperty Name="proceso" ColumnName="proceso" />
+          <ScalarProperty Name="idLider" ColumnName="idLider" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spObtenerCasoUsuario" FunctionName="Asignador_SGDModel.Store.spObtenerCasoUsuario" />
+    <FunctionImportMapping FunctionImportName="spObtenerEstadoUsuario" FunctionName="Asignador_SGDModel.Store.spObtenerEstadoUsuario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spObtenerEstadoUsuario_Result">
+          <ScalarProperty Name="Id_estado" ColumnName="Id_estado" />
+          <ScalarProperty Name="Descrip_estado" ColumnName="Descrip_estado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spPruebaAsigna" FunctionName="Asignador_SGDModel.Store.spPruebaAsigna">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spPruebaAsigna_Result">
+          <ScalarProperty Name="Column1" ColumnName="Column1" />
+          <ScalarProperty Name="Column2" ColumnName="Column2" />
+          <ScalarProperty Name="Column3" ColumnName="Column3" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="tbLibranza">
+      <EntityTypeMapping TypeName="Asignador_SGDModel.tbLibranza">
+        <MappingFragment StoreEntitySet="tbLibranza">
+          <ScalarProperty Name="idProceso" ColumnName="idProceso" />
+          <ScalarProperty Name="idlider" ColumnName="idlider" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="R" ColumnName="R" />
+          <ScalarProperty Name="FA" ColumnName="FA" />
+          <ScalarProperty Name="FI" ColumnName="FI" />
+          <ScalarProperty Name="NV" ColumnName="NV" />
+          <ScalarProperty Name="E" ColumnName="E" />
+          <ScalarProperty Name="C" ColumnName="C" />
+          <ScalarProperty Name="N" ColumnName="N" />
+          <ScalarProperty Name="idLibranza" ColumnName="idLibranza" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbFormalizacion">
+      <EntityTypeMapping TypeName="Asignador_SGDModel.tbFormalizacion">
+        <MappingFragment StoreEntitySet="tbFormalizacion">
+          <ScalarProperty Name="idProceso" ColumnName="idProceso" />
+          <ScalarProperty Name="idlider" ColumnName="idlider" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="R" ColumnName="R" />
+          <ScalarProperty Name="FA" ColumnName="FA" />
+          <ScalarProperty Name="FI" ColumnName="FI" />
+          <ScalarProperty Name="NV" ColumnName="NV" />
+          <ScalarProperty Name="E" ColumnName="E" />
+          <ScalarProperty Name="C" ColumnName="C" />
+          <ScalarProperty Name="N" ColumnName="N" />
+          <ScalarProperty Name="idFormalizacion" ColumnName="idFormalizacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbTipologiaConvenio">
+      <EntityTypeMapping TypeName="Asignador_SGDModel.tbTipologiaConvenio">
+        <MappingFragment StoreEntitySet="tbTipologiaConvenio">
+          <ScalarProperty Name="Proceso" ColumnName="Proceso" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="Complejidad" ColumnName="Complejidad" />
+          <ScalarProperty Name="NivelConvenio" ColumnName="NivelConvenio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spCambiarEstadoCaso" FunctionName="Asignador_SGDModel.Store.spCambiarEstadoCaso" />
+    <FunctionImportMapping FunctionImportName="spConsultarCasosSuspendidos" FunctionName="Asignador_SGDModel.Store.spConsultarCasosSuspendidos" />
+    <EntitySetMapping Name="Estados">
+      <EntityTypeMapping TypeName="Asignador_SGDModel.Estados">
+        <MappingFragment StoreEntitySet="Estados">
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spConsultarCasosEnCola" FunctionName="Asignador_SGDModel.Store.spConsultarCasosEnCola">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spConsultarCasosEnCola_Result">
+          <ScalarProperty Name="Ncaso" ColumnName="Ncaso" />
+          <ScalarProperty Name="EstadoCaso" ColumnName="EstadoCaso" />
+          <ScalarProperty Name="FechaAsignacionCaso" ColumnName="FechaAsignacionCaso" />
+          <ScalarProperty Name="Horainicio" ColumnName="Horainicio" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="tbAns">
+      <EntityTypeMapping TypeName="Asignador_SGDModel.tbAns">
+        <MappingFragment StoreEntitySet="tbAns">
+          <ScalarProperty Name="EstandarAviso" ColumnName="EstandarAviso" />
+          <ScalarProperty Name="ProdAnsHora" ColumnName="ProdAnsHora" />
+          <ScalarProperty Name="ProXHora" ColumnName="ProXHora" />
+          <ScalarProperty Name="Productos" ColumnName="Productos" />
+          <ScalarProperty Name="Actividad" ColumnName="Actividad" />
+          <ScalarProperty Name="IdActivida" ColumnName="IdActivida" />
+          <ScalarProperty Name="Proceso" ColumnName="Proceso" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="idAns" ColumnName="idAns" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbParametrosServicio">
+      <EntityTypeMapping TypeName="Asignador_SGDModel.tbParametrosServicio">
+        <MappingFragment StoreEntitySet="tbParametrosServicio">
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="LLave" ColumnName="LLave" />
+          <ScalarProperty Name="NombreServicio" ColumnName="NombreServicio" />
+          <ScalarProperty Name="idTiempo" ColumnName="idTiempo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbTipoAusentismo">
+      <EntityTypeMapping TypeName="Asignador_SGDModel.tbTipoAusentismo">
+        <MappingFragment StoreEntitySet="tbTipoAusentismo">
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Tipo_ausentismo" ColumnName="Tipo_ausentismo" />
+          <ScalarProperty Name="Id_ausentismo" ColumnName="Id_ausentismo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbAsignacionCasos">
+      <EntityTypeMapping TypeName="Asignador_SGDModel.tbAsignacionCasos">
+        <MappingFragment StoreEntitySet="tbAsignacionCasos">
+          <ScalarProperty Name="NombreCaso" ColumnName="NombreCaso" />
+          <ScalarProperty Name="HoraFin" ColumnName="HoraFin" />
+          <ScalarProperty Name="Horainicio" ColumnName="Horainicio" />
+          <ScalarProperty Name="Proceso" ColumnName="Proceso" />
+          <ScalarProperty Name="FechaAsignacionCaso" ColumnName="FechaAsignacionCaso" />
+          <ScalarProperty Name="EstadoCaso" ColumnName="EstadoCaso" />
+          <ScalarProperty Name="NivelClasif" ColumnName="NivelClasif" />
+          <ScalarProperty Name="Ncaso" ColumnName="Ncaso" />
+          <ScalarProperty Name="FechaCreacionCaso" ColumnName="FechaCreacionCaso" />
+          <ScalarProperty Name="identFuncionario" ColumnName="identFuncionario" />
+          <ScalarProperty Name="idAsigCasos" ColumnName="idAsigCasos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spUsuariosAplicacion" FunctionName="Asignador_SGDModel.Store.spUsuariosAplicacion">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spUsuariosAplicacion_Result">
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="NomUsuario" ColumnName="NomUsuario" />
+          <ScalarProperty Name="DescRol" ColumnName="DescRol" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="FecRegistro" ColumnName="FecRegistro" />
+          <ScalarProperty Name="FechaCaducidad" ColumnName="FechaCaducidad" />
+          <ScalarProperty Name="SecurityPin" ColumnName="SecurityPin" />
+          <ScalarProperty Name="IdRol" ColumnName="IdRol" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ActualizarUsuario" FunctionName="Asignador_SGDModel.Store.sp_ActualizarUsuario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.sp_ActualizarUsuario_Result">
+          <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_EstadoUsuario" FunctionName="Asignador_SGDModel.Store.sp_EstadoUsuario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.sp_EstadoUsuario_Result">
+          <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spObtenerRoles" FunctionName="Asignador_SGDModel.Store.spObtenerRoles">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spObtenerRoles_Result">
+          <ScalarProperty Name="IdRol" ColumnName="IdRol" />
+          <ScalarProperty Name="DescRol" ColumnName="DescRol" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spUpdateRoles" FunctionName="Asignador_SGDModel.Store.spUpdateRoles" />
+    <FunctionImportMapping FunctionImportName="spCrearNuevoRol" FunctionName="Asignador_SGDModel.Store.spCrearNuevoRol">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spCrearNuevoRol_Result">
+          <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_regitroauditconex" FunctionName="Asignador_SGDModel.Store.sp_regitroauditconex" />
+    <FunctionImportMapping FunctionImportName="spUpdateDescRol" FunctionName="Asignador_SGDModel.Store.spUpdateDescRol">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spUpdateDescRol_Result">
+          <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spObtenerMenuRol" FunctionName="Asignador_SGDModel.Store.spObtenerMenuRol">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spObtenerMenuRol_Result">
+          <ScalarProperty Name="IdMenu" ColumnName="IdMenu" />
+          <ScalarProperty Name="DescMenu" ColumnName="DescMenu" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="tbAuditoriaConexion">
+      <EntityTypeMapping TypeName="Asignador_SGDModel.tbAuditoriaConexion">
+        <MappingFragment StoreEntitySet="tbAuditoriaConexion">
+          <ScalarProperty Name="FechaFinRegistro" ColumnName="FechaFinRegistro" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+          <ScalarProperty Name="IdAusente" ColumnName="IdAusente" />
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="IdAuditoria" ColumnName="IdAuditoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spActualizarMenuRol" FunctionName="Asignador_SGDModel.Store.spActualizarMenuRol" />
+    <FunctionImportMapping FunctionImportName="sptip_ausentismo" FunctionName="Asignador_SGDModel.Store.sptip_ausentismo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.sptip_ausentismo_Result">
+          <ScalarProperty Name="Id_ausentismo" ColumnName="Id_ausentismo" />
+          <ScalarProperty Name="Tipo_ausentismo" ColumnName="Tipo_ausentismo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spResetearUsuario" FunctionName="Asignador_SGDModel.Store.spResetearUsuario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spResetearUsuario_Result">
+          <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spVerificaCaso" FunctionName="Asignador_SGDModel.Store.spVerificaCaso">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spVerificaCaso_Result">
+          <ScalarProperty Name="CASO" ColumnName="CASO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spObtenerNiveles" FunctionName="Asignador_SGDModel.Store.spObtenerNiveles">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spObtenerNiveles_Result">
+          <ScalarProperty Name="idAns" ColumnName="idAns" />
+          <ScalarProperty Name="Actividad" ColumnName="Actividad" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spObtenerNombreCaso" FunctionName="Asignador_SGDModel.Store.spObtenerNombreCaso">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spObtenerNombreCaso_Result">
+          <ScalarProperty Name="Actividad" ColumnName="Actividad" />
+          <ScalarProperty Name="idAns" ColumnName="idAns" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spRegistrarHoraFinCaso" FunctionName="Asignador_SGDModel.Store.spRegistrarHoraFinCaso" />
+    <FunctionImportMapping FunctionImportName="spVerCasosEnCola" FunctionName="Asignador_SGDModel.Store.spVerCasosEnCola">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spVerCasosEnCola_Result">
+          <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+          <ScalarProperty Name="Ncaso" ColumnName="Ncaso" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Actividad" ColumnName="Actividad" />
+          <ScalarProperty Name="Complejidad" ColumnName="Complejidad" />
+          <ScalarProperty Name="identFuncionario" ColumnName="identFuncionario" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="tbProcesosMasivos">
+      <EntityTypeMapping TypeName="Asignador_SGDModel.tbProcesosMasivos">
+        <MappingFragment StoreEntitySet="tbProcesosMasivos">
+          <ScalarProperty Name="UCE" ColumnName="UCE" />
+          <ScalarProperty Name="idProceso" ColumnName="idProceso" />
+          <ScalarProperty Name="idlider" ColumnName="idlider" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="R" ColumnName="R" />
+          <ScalarProperty Name="FA" ColumnName="FA" />
+          <ScalarProperty Name="FI" ColumnName="FI" />
+          <ScalarProperty Name="NV" ColumnName="NV" />
+          <ScalarProperty Name="E" ColumnName="E" />
+          <ScalarProperty Name="C" ColumnName="C" />
+          <ScalarProperty Name="N" ColumnName="N" />
+          <ScalarProperty Name="idProcMasivo" ColumnName="idProcMasivo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_ContadorTotalCasos" FunctionName="Asignador_SGDModel.Store.sp_ContadorTotalCasos" />
+    <FunctionImportMapping FunctionImportName="spConsultaConexion" FunctionName="Asignador_SGDModel.Store.spConsultaConexion" />
+    <FunctionImportMapping FunctionImportName="spObtenerlinkyTiempo" FunctionName="Asignador_SGDModel.Store.spObtenerlinkyTiempo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spObtenerlinkyTiempo_Result">
+          <ScalarProperty Name="UsuarioDominio" ColumnName="UsuarioDominio" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="NomUsuario" ColumnName="NomUsuario" />
+          <ScalarProperty Name="DescRol" ColumnName="DescRol" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="IdMenu" ColumnName="IdMenu" />
+          <ScalarProperty Name="DescMenu" ColumnName="DescMenu" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="Ncaso" ColumnName="Ncaso" />
+          <ScalarProperty Name="EstadoCaso" ColumnName="EstadoCaso" />
+          <ScalarProperty Name="NombreCaso" ColumnName="NombreCaso" />
+          <ScalarProperty Name="Actividad" ColumnName="Actividad" />
+          <ScalarProperty Name="ProdAnsHora" ColumnName="ProdAnsHora" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spObtenerSuspendidosAntara" FunctionName="Asignador_SGDModel.Store.spObtenerSuspendidosAntara">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spObtenerSuspendidosAntara_Result">
+          <ScalarProperty Name="NroCaso" ColumnName="NroCaso" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+          <ScalarProperty Name="FechaProcesamiento" ColumnName="FechaProcesamiento" />
+          <ScalarProperty Name="CodigoUsuario" ColumnName="CodigoUsuario" />
+          <ScalarProperty Name="NombreUsuario" ColumnName="NombreUsuario" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spValidaConexionesFunc" FunctionName="Asignador_SGDModel.Store.spValidaConexionesFunc">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spValidaConexionesFunc_Result">
+          <ScalarProperty Name="idusuario" ColumnName="idusuario" />
+          <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
+          <ScalarProperty Name="FechaActual" ColumnName="FechaActual" />
+          <ScalarProperty Name="Column1" ColumnName="Column1" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spValidaEstadoCasoSGD" FunctionName="Asignador_SGDModel.Store.spValidaEstadoCasoSGD" />
+    <FunctionImportMapping FunctionImportName="spValidaEstadoCasoSuspendSGD" FunctionName="Asignador_SGDModel.Store.spValidaEstadoCasoSuspendSGD" />
+    <EntitySetMapping Name="Campos">
+      <EntityTypeMapping TypeName="Asignador_SGDModel.Campos">
+        <MappingFragment StoreEntitySet="Campos">
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="MensajeError" ColumnName="MensajeError" />
+          <ScalarProperty Name="FuncionValidacion" ColumnName="FuncionValidacion" />
+          <ScalarProperty Name="Evento" ColumnName="Evento" />
+          <ScalarProperty Name="LongMax" ColumnName="LongMax" />
+          <ScalarProperty Name="LongMin" ColumnName="LongMin" />
+          <ScalarProperty Name="DobleCaptura" ColumnName="DobleCaptura" />
+          <ScalarProperty Name="Editable" ColumnName="Editable" />
+          <ScalarProperty Name="IdTipoCampo" ColumnName="IdTipoCampo" />
+          <ScalarProperty Name="Obligatorio" ColumnName="Obligatorio" />
+          <ScalarProperty Name="DimensionAncho" ColumnName="DimensionAncho" />
+          <ScalarProperty Name="DimensionAlto" ColumnName="DimensionAlto" />
+          <ScalarProperty Name="Orden" ColumnName="Orden" />
+          <ScalarProperty Name="IdPadre" ColumnName="IdPadre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="IdCampo" ColumnName="IdCampo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Campos_Listas">
+      <EntityTypeMapping TypeName="Asignador_SGDModel.Campos_Listas">
+        <MappingFragment StoreEntitySet="Campos_Listas">
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="CodigoPadre" ColumnName="CodigoPadre" />
+          <ScalarProperty Name="Orden" ColumnName="Orden" />
+          <ScalarProperty Name="IdCampoPadre" ColumnName="IdCampoPadre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="IdCampos_Listas" ColumnName="IdCampos_Listas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Formulario_Campos">
+      <EntityTypeMapping TypeName="Asignador_SGDModel.Formulario_Campos">
+        <MappingFragment StoreEntitySet="Formulario_Campos">
+          <ScalarProperty Name="Obligatorio" ColumnName="Obligatorio" />
+          <ScalarProperty Name="OrdenCampo" ColumnName="OrdenCampo" />
+          <ScalarProperty Name="IdCampos" ColumnName="IdCampos" />
+          <ScalarProperty Name="IdFormulario" ColumnName="IdFormulario" />
+          <ScalarProperty Name="IdFormularioCampos" ColumnName="IdFormularioCampos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HistModuloEverProLideresRRHH">
+      <EntityTypeMapping TypeName="Asignador_SGDModel.HistModuloEverProLideresRRHH">
+        <MappingFragment StoreEntitySet="HistModuloEverProLideresRRHH">
+          <ScalarProperty Name="CedLiderSGD" ColumnName="CedLiderSGD" />
+          <ScalarProperty Name="IdTurno" ColumnName="IdTurno" />
+          <ScalarProperty Name="IdLugarDeTrabajo" ColumnName="IdLugarDeTrabajo" />
+          <ScalarProperty Name="IdClasificacion" ColumnName="IdClasificacion" />
+          <ScalarProperty Name="IdProceso" ColumnName="IdProceso" />
+          <ScalarProperty Name="IdArea" ColumnName="IdArea" />
+          <ScalarProperty Name="CedPsc" ColumnName="CedPsc" />
+          <ScalarProperty Name="CedPtl" ColumnName="CedPtl" />
+          <ScalarProperty Name="CedPsl" ColumnName="CedPsl" />
+          <ScalarProperty Name="CedJefe" ColumnName="CedJefe" />
+          <ScalarProperty Name="CodigoDeEmpleado" ColumnName="CodigoDeEmpleado" />
+          <ScalarProperty Name="IdRol" ColumnName="IdRol" />
+          <ScalarProperty Name="IdHc" ColumnName="IdHc" />
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="FechaActualizacion" ColumnName="FechaActualizacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbParamNivelConvenio">
+      <EntityTypeMapping TypeName="Asignador_SGDModel.tbParamNivelConvenio">
+        <MappingFragment StoreEntitySet="tbParamNivelConvenio">
+          <ScalarProperty Name="idNivelConvenio" ColumnName="idNivelConvenio" />
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="Coordinador" ColumnName="Coordinador" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spClasificacionNivelPorFunc" FunctionName="Asignador_SGDModel.Store.spClasificacionNivelPorFunc">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spClasificacionNivelPorFunc_Result">
+          <ScalarProperty Name="NivelConvenio" ColumnName="NivelConvenio" />
+          <ScalarProperty Name="Complejidad" ColumnName="Complejidad" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="HistDatosPersonalesRRHH">
+      <EntityTypeMapping TypeName="Asignador_SGDModel.HistDatosPersonalesRRHH">
+        <MappingFragment StoreEntitySet="HistDatosPersonalesRRHH">
+          <ScalarProperty Name="IdCarreraEducativa" ColumnName="IdCarreraEducativa" />
+          <ScalarProperty Name="IdLocalidad" ColumnName="IdLocalidad" />
+          <ScalarProperty Name="IdCiudad" ColumnName="IdCiudad" />
+          <ScalarProperty Name="IdGenero" ColumnName="IdGenero" />
+          <ScalarProperty Name="IdTipoDocumento" ColumnName="IdTipoDocumento" />
+          <ScalarProperty Name="IdMotivoIngreso" ColumnName="IdMotivoIngreso" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="TelefonoContato" ColumnName="TelefonoContato" />
+          <ScalarProperty Name="TelefonoCelular" ColumnName="TelefonoCelular" />
+          <ScalarProperty Name="Edad" ColumnName="Edad" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="FechaActualizacon" ColumnName="FechaActualizacon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ModuloEverisRRHH">
+      <EntityTypeMapping TypeName="Asignador_SGDModel.ModuloEverisRRHH">
+        <MappingFragment StoreEntitySet="ModuloEverisRRHH">
+          <ScalarProperty Name="Nivel" ColumnName="Nivel" />
+          <ScalarProperty Name="Categoria" ColumnName="Categoria" />
+          <ScalarProperty Name="Cargo" ColumnName="Cargo" />
+          <ScalarProperty Name="Proyecto" ColumnName="Proyecto" />
+          <ScalarProperty Name="Cliente" ColumnName="Cliente" />
+          <ScalarProperty Name="Pais" ColumnName="Pais" />
+          <ScalarProperty Name="CsrGeco" ColumnName="CsrGeco" />
+          <ScalarProperty Name="SalarioEveris" ColumnName="SalarioEveris" />
+          <ScalarProperty Name="FecContratacionEveris" ColumnName="FecContratacionEveris" />
+          <ScalarProperty Name="FecContratacionTemporal" ColumnName="FecContratacionTemporal" />
+          <ScalarProperty Name="Empresa" ColumnName="Empresa" />
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HistModuloEverisRRHH">
+      <EntityTypeMapping TypeName="Asignador_SGDModel.HistModuloEverisRRHH">
+        <MappingFragment StoreEntitySet="HistModuloEverisRRHH">
+          <ScalarProperty Name="Nivel" ColumnName="Nivel" />
+          <ScalarProperty Name="Categoria" ColumnName="Categoria" />
+          <ScalarProperty Name="Cargo" ColumnName="Cargo" />
+          <ScalarProperty Name="Proyecto" ColumnName="Proyecto" />
+          <ScalarProperty Name="Cliente" ColumnName="Cliente" />
+          <ScalarProperty Name="Pais" ColumnName="Pais" />
+          <ScalarProperty Name="CsrGeco" ColumnName="CsrGeco" />
+          <ScalarProperty Name="SalarioEveris" ColumnName="SalarioEveris" />
+          <ScalarProperty Name="FecContratacionEveris" ColumnName="FecContratacionEveris" />
+          <ScalarProperty Name="FecContratacionTemporal" ColumnName="FecContratacionTemporal" />
+          <ScalarProperty Name="Empresa" ColumnName="Empresa" />
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="FechaActualizacon" ColumnName="FechaActualizacon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="OptenerProducto" FunctionName="Asignador_SGDModel.Store.OptenerProducto">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.OptenerProducto_Result">
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="LiderPorProducto" FunctionName="Asignador_SGDModel.Store.LiderPorProducto">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.LiderPorProducto_Result">
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ObtenerNombFile" FunctionName="Asignador_SGDModel.Store.ObtenerNombFile">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.ObtenerNombFile_Result">
+          <ScalarProperty Name="nomfile" ColumnName="nomfile" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spListaColas" FunctionName="Asignador_SGDModel.Store.spListaColas">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spListaColas_Result">
+          <ScalarProperty Name="Actividad" ColumnName="Actividad" />
+          <ScalarProperty Name="C" ColumnName="C" />
+          <ScalarProperty Name="FA" ColumnName="FA" />
+          <ScalarProperty Name="Complejidad" ColumnName="Complejidad" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spObtenerItemsListaCampo" FunctionName="Asignador_SGDModel.Store.spObtenerItemsListaCampo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spObtenerItemsListaCampo_Result">
+          <ScalarProperty Name="IdCampos_Listas" ColumnName="IdCampos_Listas" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="IdCampoPadre" ColumnName="IdCampoPadre" />
+          <ScalarProperty Name="Orden" ColumnName="Orden" />
+          <ScalarProperty Name="CodigoPadre" ColumnName="CodigoPadre" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="tbLiderProductoFile">
+      <EntityTypeMapping TypeName="Asignador_SGDModel.tbLiderProductoFile">
+        <MappingFragment StoreEntitySet="tbLiderProductoFile">
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="NomFile" ColumnName="NomFile" />
+          <ScalarProperty Name="CampoLista" ColumnName="CampoLista" />
+          <ScalarProperty Name="CodProduct" ColumnName="CodProduct" />
+          <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="IdLider" ColumnName="IdLider" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbProductos">
+      <EntityTypeMapping TypeName="Asignador_SGDModel.tbProductos">
+        <MappingFragment StoreEntitySet="tbProductos">
+          <ScalarProperty Name="BtDactiloscopia" ColumnName="BtDactiloscopia" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="IdCamposLIst" ColumnName="IdCamposLIst" />
+          <ScalarProperty Name="IdArea" ColumnName="IdArea" />
+          <ScalarProperty Name="Orden" ColumnName="Orden" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="BtnDactiloscopia" FunctionName="Asignador_SGDModel.Store.BtnDactiloscopia">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.BtnDactiloscopia_Result">
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="trazaFuncCasos" FunctionName="Asignador_SGDModel.Store.trazaFuncCasos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.trazaFuncCasos_Result">
+          <ScalarProperty Name="Proceso" ColumnName="Proceso" />
+          <ScalarProperty Name="Productos" ColumnName="Productos" />
+          <ScalarProperty Name="Nivel" ColumnName="Nivel" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+          <ScalarProperty Name="Ans" ColumnName="Ans" />
+          <ScalarProperty Name="Ncaso" ColumnName="Ncaso" />
+          <ScalarProperty Name="HoraInicio" ColumnName="HoraInicio" />
+          <ScalarProperty Name="CodeProces" ColumnName="CodeProces" />
+          <ScalarProperty Name="Reprocesos" ColumnName="Reprocesos" />
+          <ScalarProperty Name="Monto" ColumnName="Monto" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="CountFuncionariosEstado" FunctionName="Asignador_SGDModel.Store.CountFuncionariosEstado">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.CountFuncionariosEstado_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ConteoCasos" FunctionName="Asignador_SGDModel.Store.ConteoCasos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.ConteoCasos_Result">
+          <ScalarProperty Name="DescripcionEstados" ColumnName="DescripcionEstados" />
+          <ScalarProperty Name="Cant" ColumnName="Cant" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="FuncionariosMallaTurnos" FunctionName="Asignador_SGDModel.Store.FuncionariosMallaTurnos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.FuncionariosMallaTurnos_Result">
+          <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PintaMallaTurnos" FunctionName="Asignador_SGDModel.Store.PintaMallaTurnos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.PintaMallaTurnos_Result">
+          <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+          <ScalarProperty Name="Dia" ColumnName="Dia" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+          <ScalarProperty Name="Anio" ColumnName="Anio" />
+          <ScalarProperty Name="C08_00" ColumnName="08:00" />
+          <ScalarProperty Name="C09_00" ColumnName="09:00" />
+          <ScalarProperty Name="C10_00" ColumnName="10:00" />
+          <ScalarProperty Name="C11_00" ColumnName="11:00" />
+          <ScalarProperty Name="C12_00" ColumnName="12:00" />
+          <ScalarProperty Name="C13_00" ColumnName="13:00" />
+          <ScalarProperty Name="C14_00" ColumnName="14:00" />
+          <ScalarProperty Name="C15_00" ColumnName="15:00" />
+          <ScalarProperty Name="C16_00" ColumnName="16:00" />
+          <ScalarProperty Name="C17_00" ColumnName="17:00" />
+          <ScalarProperty Name="C18_00" ColumnName="18:00" />
+          <ScalarProperty Name="C19_00" ColumnName="19:00" />
+          <ScalarProperty Name="C20_00" ColumnName="20:00" />
+          <ScalarProperty Name="C21_00" ColumnName="21:00" />
+          <ScalarProperty Name="IdFuncionario" ColumnName="IdFuncionario" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ProductividadDiaria" FunctionName="Asignador_SGDModel.Store.ProductividadDiaria">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.ProductividadDiaria_Result">
+          <ScalarProperty Name="cedula" ColumnName="cedula" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="cantCasos" ColumnName="cantCasos" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ProgramacionMallaTurnos" FunctionName="Asignador_SGDModel.Store.ProgramacionMallaTurnos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.ProgramacionMallaTurnos_Result">
+          <ScalarProperty Name="idTurnosMalla" ColumnName="idTurnosMalla" />
+          <ScalarProperty Name="CodigoTurno" ColumnName="CodigoTurno" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="CrearProgramacionMallas" FunctionName="Asignador_SGDModel.Store.CrearProgramacionMallas" />
+    <FunctionImportMapping FunctionImportName="InfoTurnos" FunctionName="Asignador_SGDModel.Store.InfoTurnos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.InfoTurnos_Result">
+          <ScalarProperty Name="CodeHorario" ColumnName="CodeHorario" />
+          <ScalarProperty Name="Entrada" ColumnName="Entrada" />
+          <ScalarProperty Name="Salida" ColumnName="Salida" />
+          <ScalarProperty Name="Sabado" ColumnName="Sabado" />
+          <ScalarProperty Name="Breack1" ColumnName="Breack1" />
+          <ScalarProperty Name="Breack2" ColumnName="Breack2" />
+          <ScalarProperty Name="HorasLabor" ColumnName="HorasLabor" />
+          <ScalarProperty Name="Justifi" ColumnName="Justifi" />
+          <ScalarProperty Name="Almuerzo" ColumnName="Almuerzo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PintaMalla_1" FunctionName="Asignador_SGDModel.Store.PintaMalla_1">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.PintaMalla_1_Result">
+          <ScalarProperty Name="IdFuncionario" ColumnName="IdFuncionario" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="RangosDias" ColumnName="RangosDias" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+          <ScalarProperty Name="Anio" ColumnName="Anio" />
+          <ScalarProperty Name="C7_00" ColumnName="7:00" />
+          <ScalarProperty Name="C8_00" ColumnName="8:00" />
+          <ScalarProperty Name="C9_00" ColumnName="9:00" />
+          <ScalarProperty Name="C9_31" ColumnName="9:31" />
+          <ScalarProperty Name="C10_00" ColumnName="10:00" />
+          <ScalarProperty Name="C11_00" ColumnName="11:00" />
+          <ScalarProperty Name="C12_00" ColumnName="12:00" />
+          <ScalarProperty Name="C13_00" ColumnName="13:00" />
+          <ScalarProperty Name="C14_00" ColumnName="14:00" />
+          <ScalarProperty Name="C15_00" ColumnName="15:00" />
+          <ScalarProperty Name="C16_00" ColumnName="16:00" />
+          <ScalarProperty Name="C16_31" ColumnName="16:31" />
+          <ScalarProperty Name="C17_00" ColumnName="17:00" />
+          <ScalarProperty Name="C17_30" ColumnName="17:30" />
+          <ScalarProperty Name="idT" ColumnName="idT" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PintaMalla_3" FunctionName="Asignador_SGDModel.Store.PintaMalla_3">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.PintaMalla_3_Result">
+          <ScalarProperty Name="IdFuncionario" ColumnName="IdFuncionario" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="RangosDias" ColumnName="RangosDias" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+          <ScalarProperty Name="Anio" ColumnName="Anio" />
+          <ScalarProperty Name="C9_00" ColumnName="9:00" />
+          <ScalarProperty Name="C10_00" ColumnName="10:00" />
+          <ScalarProperty Name="C11_00" ColumnName="11:00" />
+          <ScalarProperty Name="C11_31" ColumnName="11:31" />
+          <ScalarProperty Name="C12_00" ColumnName="12:00" />
+          <ScalarProperty Name="C13_00" ColumnName="13:00" />
+          <ScalarProperty Name="C14_00" ColumnName="14:00" />
+          <ScalarProperty Name="C15_00" ColumnName="15:00" />
+          <ScalarProperty Name="C16_00" ColumnName="16:00" />
+          <ScalarProperty Name="C17_00" ColumnName="17:00" />
+          <ScalarProperty Name="C17_31" ColumnName="17:31" />
+          <ScalarProperty Name="C18_00" ColumnName="18:00" />
+          <ScalarProperty Name="C19_00" ColumnName="19:00" />
+          <ScalarProperty Name="C19_30" ColumnName="19:30" />
+          <ScalarProperty Name="idT" ColumnName="idT" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PintaMalla_4" FunctionName="Asignador_SGDModel.Store.PintaMalla_4">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.PintaMalla_4_Result">
+          <ScalarProperty Name="IdFuncionario" ColumnName="IdFuncionario" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="RangosDias" ColumnName="RangosDias" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+          <ScalarProperty Name="Anio" ColumnName="Anio" />
+          <ScalarProperty Name="C10_30" ColumnName="10:30" />
+          <ScalarProperty Name="C11_00" ColumnName="11:00" />
+          <ScalarProperty Name="C11_31" ColumnName="11:31" />
+          <ScalarProperty Name="C12_00" ColumnName="12:00" />
+          <ScalarProperty Name="C13_00" ColumnName="13:00" />
+          <ScalarProperty Name="C14_00" ColumnName="14:00" />
+          <ScalarProperty Name="C15_00" ColumnName="15:00" />
+          <ScalarProperty Name="C16_00" ColumnName="16:00" />
+          <ScalarProperty Name="C17_00" ColumnName="17:00" />
+          <ScalarProperty Name="C17_31" ColumnName="17:31" />
+          <ScalarProperty Name="C18_00" ColumnName="18:00" />
+          <ScalarProperty Name="C19_00" ColumnName="19:00" />
+          <ScalarProperty Name="C20_00" ColumnName="20:00" />
+          <ScalarProperty Name="C21_00" ColumnName="21:00" />
+          <ScalarProperty Name="idT" ColumnName="idT" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PintaMalla_8" FunctionName="Asignador_SGDModel.Store.PintaMalla_8">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.PintaMalla_8_Result">
+          <ScalarProperty Name="IdFuncionario" ColumnName="IdFuncionario" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="RangosDias" ColumnName="RangosDias" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+          <ScalarProperty Name="Anio" ColumnName="Anio" />
+          <ScalarProperty Name="C8_00" ColumnName="8:00" />
+          <ScalarProperty Name="C9_00" ColumnName="9:00" />
+          <ScalarProperty Name="C10_00" ColumnName="10:00" />
+          <ScalarProperty Name="C11_00" ColumnName="11:00" />
+          <ScalarProperty Name="C12_00" ColumnName="12:00" />
+          <ScalarProperty Name="C13_00" ColumnName="13:00" />
+          <ScalarProperty Name="C14_00" ColumnName="14:00" />
+          <ScalarProperty Name="C15_00" ColumnName="15:00" />
+          <ScalarProperty Name="C16_00" ColumnName="16:00" />
+          <ScalarProperty Name="C17_00" ColumnName="17:00" />
+          <ScalarProperty Name="idT" ColumnName="idT" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PintaMalla2" FunctionName="Asignador_SGDModel.Store.PintaMalla2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.PintaMalla2_Result">
+          <ScalarProperty Name="IdFuncionario" ColumnName="IdFuncionario" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="RangosDias" ColumnName="RangosDias" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+          <ScalarProperty Name="Anio" ColumnName="Anio" />
+          <ScalarProperty Name="C8_00" ColumnName="8:00" />
+          <ScalarProperty Name="C9_00" ColumnName="9:00" />
+          <ScalarProperty Name="C9_31" ColumnName="9:31" />
+          <ScalarProperty Name="C10_00" ColumnName="10:00" />
+          <ScalarProperty Name="C11_00" ColumnName="11:00" />
+          <ScalarProperty Name="C12_00" ColumnName="12:00" />
+          <ScalarProperty Name="C13_00" ColumnName="13:00" />
+          <ScalarProperty Name="C14_00" ColumnName="14:00" />
+          <ScalarProperty Name="C15_00" ColumnName="15:00" />
+          <ScalarProperty Name="C16_00" ColumnName="16:00" />
+          <ScalarProperty Name="C16_31" ColumnName="16:31" />
+          <ScalarProperty Name="C17_00" ColumnName="17:00" />
+          <ScalarProperty Name="C18_00" ColumnName="18:00" />
+          <ScalarProperty Name="C18_30" ColumnName="18:30" />
+          <ScalarProperty Name="idT" ColumnName="idT" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PintaMalla_5" FunctionName="Asignador_SGDModel.Store.PintaMalla_5">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.PintaMalla_5_Result">
+          <ScalarProperty Name="IdFuncionario" ColumnName="IdFuncionario" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="RangosDias" ColumnName="RangosDias" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+          <ScalarProperty Name="Anio" ColumnName="Anio" />
+          <ScalarProperty Name="C06_00" ColumnName="06:00" />
+          <ScalarProperty Name="C07_00" ColumnName="07:00" />
+          <ScalarProperty Name="C08_00" ColumnName="08:00" />
+          <ScalarProperty Name="C09_00" ColumnName="09:00" />
+          <ScalarProperty Name="C09_31" ColumnName="09:31" />
+          <ScalarProperty Name="C10_00" ColumnName="10:00" />
+          <ScalarProperty Name="C11_00" ColumnName="11:00" />
+          <ScalarProperty Name="C12_00" ColumnName="12:00" />
+          <ScalarProperty Name="C13_00" ColumnName="13:00" />
+          <ScalarProperty Name="C14_00" ColumnName="14:00" />
+          <ScalarProperty Name="idT" ColumnName="idT" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PintaMalla_6" FunctionName="Asignador_SGDModel.Store.PintaMalla_6">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.PintaMalla_6_Result">
+          <ScalarProperty Name="IdFuncionario" ColumnName="IdFuncionario" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="RangosDias" ColumnName="RangosDias" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+          <ScalarProperty Name="Anio" ColumnName="Anio" />
+          <ScalarProperty Name="C13_00" ColumnName="13:00" />
+          <ScalarProperty Name="C14_00" ColumnName="14:00" />
+          <ScalarProperty Name="C15_00" ColumnName="15:00" />
+          <ScalarProperty Name="C16_00" ColumnName="16:00" />
+          <ScalarProperty Name="C16_31" ColumnName="16:31" />
+          <ScalarProperty Name="C17_00" ColumnName="17:00" />
+          <ScalarProperty Name="C18_00" ColumnName="18:00" />
+          <ScalarProperty Name="C19_00" ColumnName="19:00" />
+          <ScalarProperty Name="C20_00" ColumnName="20:00" />
+          <ScalarProperty Name="C21_00" ColumnName="21:00" />
+          <ScalarProperty Name="idT" ColumnName="idT" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PintaMalla9" FunctionName="Asignador_SGDModel.Store.PintaMalla9">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.PintaMalla9_Result">
+          <ScalarProperty Name="IdFuncionario" ColumnName="IdFuncionario" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="RangosDias" ColumnName="RangosDias" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+          <ScalarProperty Name="Anio" ColumnName="Anio" />
+          <ScalarProperty Name="C9_31" ColumnName="9:31" />
+          <ScalarProperty Name="C10_00" ColumnName="10:00" />
+          <ScalarProperty Name="C11_00" ColumnName="11:00" />
+          <ScalarProperty Name="C12_00" ColumnName="12:00" />
+          <ScalarProperty Name="C13_00" ColumnName="13:00" />
+          <ScalarProperty Name="C14_00" ColumnName="14:00" />
+          <ScalarProperty Name="C15_00" ColumnName="15:00" />
+          <ScalarProperty Name="C16_00" ColumnName="16:00" />
+          <ScalarProperty Name="C17_00" ColumnName="17:00" />
+          <ScalarProperty Name="C18_00" ColumnName="18:00" />
+          <ScalarProperty Name="C19_00" ColumnName="19:00" />
+          <ScalarProperty Name="idT" ColumnName="idT" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spListaColas2" FunctionName="Asignador_SGDModel.Store.spListaColas2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spListaColas2_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="CASO" ColumnName="CASO" />
+          <ScalarProperty Name="ACTIVIDAD" ColumnName="ACTIVIDAD" />
+          <ScalarProperty Name="CONVENIO" ColumnName="CONVENIO" />
+          <ScalarProperty Name="MONTO" ColumnName="MONTO" />
+          <ScalarProperty Name="SLA" ColumnName="SLA" />
+          <ScalarProperty Name="NIVEL" ColumnName="NIVEL" />
+          <ScalarProperty Name="PLAZO" ColumnName="PLAZO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="trazaFuncCasos2" FunctionName="Asignador_SGDModel.Store.trazaFuncCasos2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.trazaFuncCasos2_Result">
+          <ScalarProperty Name="CodeProces" ColumnName="CodeProces" />
+          <ScalarProperty Name="Proceso" ColumnName="Proceso" />
+          <ScalarProperty Name="Productos" ColumnName="Productos" />
+          <ScalarProperty Name="Nivel" ColumnName="Nivel" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+          <ScalarProperty Name="Ans" ColumnName="Ans" />
+          <ScalarProperty Name="Ncaso" ColumnName="Ncaso" />
+          <ScalarProperty Name="Reprocesos" ColumnName="Reprocesos" />
+          <ScalarProperty Name="Monto" ColumnName="Monto" />
+          <ScalarProperty Name="HoraInicio" ColumnName="HoraInicio" />
+          <ScalarProperty Name="CONVENIO" ColumnName="CONVENIO" />
+          <ScalarProperty Name="PLAZO" ColumnName="PLAZO" />
+          <ScalarProperty Name="ASL" ColumnName="ASL" />
+          <ScalarProperty Name="dif" ColumnName="dif" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectFuncionariosEstado" FunctionName="Asignador_SGDModel.Store.SelectFuncionariosEstado">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.SelectFuncionariosEstado_Result">
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="TbMallaTurnos">
+      <EntityTypeMapping TypeName="Asignador_SGDModel.TbMallaTurnos">
+        <MappingFragment StoreEntitySet="TbMallaTurnos">
+          <ScalarProperty Name="IdLider" ColumnName="IdLider" />
+          <ScalarProperty Name="EstadoTurno" ColumnName="EstadoTurno" />
+          <ScalarProperty Name="Breack" ColumnName="Breack" />
+          <ScalarProperty Name="Almuerzo" ColumnName="Almuerzo" />
+          <ScalarProperty Name="Hhasta" ColumnName="Hhasta" />
+          <ScalarProperty Name="Hdesde" ColumnName="Hdesde" />
+          <ScalarProperty Name="Anio" ColumnName="Anio" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+          <ScalarProperty Name="Dia" ColumnName="Dia" />
+          <ScalarProperty Name="IdFuncionario" ColumnName="IdFuncionario" />
+          <ScalarProperty Name="IdTurno" ColumnName="IdTurno" />
+          <ScalarProperty Name="IdMalla" ColumnName="IdMalla" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spConsultaFuncionariosEverPro" FunctionName="Asignador_SGDModel.Store.spConsultaFuncionariosEverPro">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spConsultaFuncionariosEverPro_Result">
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+          <ScalarProperty Name="Cargo" ColumnName="Cargo" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spConsultaLideresEverPro" FunctionName="Asignador_SGDModel.Store.spConsultaLideresEverPro">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spConsultaLideresEverPro_Result">
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spActualizacionMasiva" FunctionName="Asignador_SGDModel.Store.spActualizacionMasiva">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spActualizacionMasiva_Result">
+          <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spBuscarFuncionarios" FunctionName="Asignador_SGDModel.Store.spBuscarFuncionarios">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spBuscarFuncionarios_Result">
+          <ScalarProperty Name="LIDER" ColumnName="LIDER" />
+          <ScalarProperty Name="NOMBREFUNCIONARIO" ColumnName="NOMBREFUNCIONARIO" />
+          <ScalarProperty Name="CEDULA" ColumnName="CEDULA" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spConsultaCategoriaEverPro" FunctionName="Asignador_SGDModel.Store.spConsultaCategoriaEverPro">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spConsultaCategoriaEverPro_Result">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spConsultaDatosPersonales" FunctionName="Asignador_SGDModel.Store.spConsultaDatosPersonales">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spConsultaDatosPersonales_Result">
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="Edad" ColumnName="Edad" />
+          <ScalarProperty Name="TelefonoCelular" ColumnName="TelefonoCelular" />
+          <ScalarProperty Name="TelefonoContato" ColumnName="TelefonoContato" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="IdMotivoIngreso" ColumnName="IdMotivoIngreso" />
+          <ScalarProperty Name="IdTipoDocumento" ColumnName="IdTipoDocumento" />
+          <ScalarProperty Name="IdGenero" ColumnName="IdGenero" />
+          <ScalarProperty Name="IdCiudad" ColumnName="IdCiudad" />
+          <ScalarProperty Name="IdLocalidad" ColumnName="IdLocalidad" />
+          <ScalarProperty Name="IdCarreraEducativa" ColumnName="IdCarreraEducativa" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spConsultaFuncMasivos" FunctionName="Asignador_SGDModel.Store.spConsultaFuncMasivos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spConsultaFuncMasivos_Result">
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spConsultaLocalidades" FunctionName="Asignador_SGDModel.Store.spConsultaLocalidades">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spConsultaLocalidades_Result">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spConsultaModuloEveris" FunctionName="Asignador_SGDModel.Store.spConsultaModuloEveris">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spConsultaModuloEveris_Result">
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="Empresa" ColumnName="Empresa" />
+          <ScalarProperty Name="FecContratacionTemporal" ColumnName="FecContratacionTemporal" />
+          <ScalarProperty Name="FecContratacionEveris" ColumnName="FecContratacionEveris" />
+          <ScalarProperty Name="SalarioEveris" ColumnName="SalarioEveris" />
+          <ScalarProperty Name="CsrGeco" ColumnName="CsrGeco" />
+          <ScalarProperty Name="Pais" ColumnName="Pais" />
+          <ScalarProperty Name="Cliente" ColumnName="Cliente" />
+          <ScalarProperty Name="Proyecto" ColumnName="Proyecto" />
+          <ScalarProperty Name="Cargo" ColumnName="Cargo" />
+          <ScalarProperty Name="Categoria" ColumnName="Categoria" />
+          <ScalarProperty Name="Nivel" ColumnName="Nivel" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spConsultaModuloEverProLideres" FunctionName="Asignador_SGDModel.Store.spConsultaModuloEverProLideres">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spConsultaModuloEverProLideres_Result">
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="IdHc" ColumnName="IdHc" />
+          <ScalarProperty Name="IdRol" ColumnName="IdRol" />
+          <ScalarProperty Name="CodigoDeEmpleado" ColumnName="CodigoDeEmpleado" />
+          <ScalarProperty Name="CedJefe" ColumnName="CedJefe" />
+          <ScalarProperty Name="CedPsl" ColumnName="CedPsl" />
+          <ScalarProperty Name="CedPtl" ColumnName="CedPtl" />
+          <ScalarProperty Name="CedPsc" ColumnName="CedPsc" />
+          <ScalarProperty Name="IdArea" ColumnName="IdArea" />
+          <ScalarProperty Name="IdProceso" ColumnName="IdProceso" />
+          <ScalarProperty Name="IdClasificacion" ColumnName="IdClasificacion" />
+          <ScalarProperty Name="IdLugarDeTrabajo" ColumnName="IdLugarDeTrabajo" />
+          <ScalarProperty Name="IdTurno" ColumnName="IdTurno" />
+          <ScalarProperty Name="CedLiderSGD" ColumnName="CedLiderSGD" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spConsultaNivelEverPro" FunctionName="Asignador_SGDModel.Store.spConsultaNivelEverPro">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spConsultaNivelEverPro_Result">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spInsertaDatosPersonal" FunctionName="Asignador_SGDModel.Store.spInsertaDatosPersonal">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spInsertaDatosPersonal_Result">
+          <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spInsertaModuloEveris" FunctionName="Asignador_SGDModel.Store.spInsertaModuloEveris">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spInsertaModuloEveris_Result">
+          <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spInsertaModuloEverPro" FunctionName="Asignador_SGDModel.Store.spInsertaModuloEverPro">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spInsertaModuloEverPro_Result">
+          <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spActualizaDatosPersonal" FunctionName="Asignador_SGDModel.Store.spActualizaDatosPersonal" />
+    <FunctionImportMapping FunctionImportName="spActualizaModuloEveris" FunctionName="Asignador_SGDModel.Store.spActualizaModuloEveris" />
+    <FunctionImportMapping FunctionImportName="spActualizaModuloEverProLideres" FunctionName="Asignador_SGDModel.Store.spActualizaModuloEverProLideres" />
+    <FunctionImportMapping FunctionImportName="spObtenerNombreLider" FunctionName="Asignador_SGDModel.Store.spObtenerNombreLider" />
+    <FunctionImportMapping FunctionImportName="spObtenerPersonasPorLiderSGD" FunctionName="Asignador_SGDModel.Store.spObtenerPersonasPorLiderSGD">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spObtenerPersonasPorLiderSGD_Result">
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+          <ScalarProperty Name="CedPsc" ColumnName="CedPsc" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="ProgramacionTurnos">
+      <EntityTypeMapping TypeName="Asignador_SGDModel.ProgramacionTurnos">
+        <MappingFragment StoreEntitySet="ProgramacionTurnos">
+          <ScalarProperty Name="Justificacion" ColumnName="Justificacion" />
+          <ScalarProperty Name="MediosHorasLaborales" ColumnName="MediosHorasLaborales" />
+          <ScalarProperty Name="HorasLaborales" ColumnName="HorasLaborales" />
+          <ScalarProperty Name="HoraAlmuerzo" ColumnName="HoraAlmuerzo" />
+          <ScalarProperty Name="MediosBreak2" ColumnName="MediosBreak2" />
+          <ScalarProperty Name="Break2" ColumnName="Break2" />
+          <ScalarProperty Name="MediosBreak1" ColumnName="MediosBreak1" />
+          <ScalarProperty Name="Break1" ColumnName="Break1" />
+          <ScalarProperty Name="MediosSabado" ColumnName="MediosSabado" />
+          <ScalarProperty Name="Sabado" ColumnName="Sabado" />
+          <ScalarProperty Name="MediosSalida" ColumnName="MediosSalida" />
+          <ScalarProperty Name="Salida" ColumnName="Salida" />
+          <ScalarProperty Name="MediosEntrada" ColumnName="MediosEntrada" />
+          <ScalarProperty Name="Entrada" ColumnName="Entrada" />
+          <ScalarProperty Name="CodigoTurno" ColumnName="CodigoTurno" />
+          <ScalarProperty Name="idTurnosMalla" ColumnName="idTurnosMalla" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spObtenerFunColas" FunctionName="Asignador_SGDModel.Store.spObtenerFunColas">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.spObtenerFunColas_Result">
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+          <ScalarProperty Name="Ncaso" ColumnName="Ncaso" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ConsultarEstadoSabans" FunctionName="Asignador_SGDModel.Store.ConsultarEstadoSabans">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Asignador_SGDModel.ConsultarEstadoSabans_Result" />
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

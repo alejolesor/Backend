@@ -1,0 +1,158 @@
+﻿fieldset {
+    width: 50%;
+    float: left;
+}
+
+.divContentLeft {
+    width: 45% !important;
+    height: 55px !important;
+}
+
+th {
+    text-align: center;
+    width: 1%;
+    background-color: white;
+    border: none;
+}
+
+#mensajeAlerta {
+    color: red;
+}
+
+#filObservaciones {
+    width: 100% !important;
+    float: none !important;
+}
+
+#tiularUno_divCampos3, #tiularUno_divCampos3 #divContentCampo_Form11_tiularUno_20,
+#tiularDos_divCampos3, #tiularDos_divCampos3 #divContentCampo_Form11_tiularDos_20 {
+    width: 100% !important;
+}
+
+
+    #tiularUno_divCampos3, #tiularUno_divCampos3 #divContentCampo_Form11_tiularUno_21,
+    #tiularDos_divCampos3, #tiularDos_divCampos3 #divContentCampo_Form11_tiularDos_21,
+    #tiularUno_divCampos3, #tiularUno_divCampos3 #divContentCampo_Form11_tiularUno_22,
+    #tiularDos_divCampos3, #tiularDos_divCampos3 #divContentCampo_Form11_tiularDos_22 {
+        margin-top: 2%;
+    }
+
+#tblPrincipla_POSICIONESINFORMACIONFINANCIERA, #tblPrincipla_POSICIONESINFORMACIONFINANCIERA_2, tfoot input, #divCamposQuemados fieldset {
+    width: 100%;
+}
+
+#HIPOTECA, #ARRIENDO, #VIVIENDA,
+#HIPOTECA_2, #ARRIENDO_2, #VIVIENDA_2,
+#tiularDos_divCampos1, #tiularDos_divCampos2, #tiularDos_divCampos3 {
+    display: none;
+}
+
+#tr_POSICIONESINFORMACIONFINANCIERA tbody input, #tr_POSICIONESINFORMACIONFINANCIERA_2 tbody input {
+    width: 85%;
+}
+
+#divGrillaInfoUno table, #divGrillaInfoDos table {
+    border: double #9AAE04;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+#divGrillaInfoUno, #divGrillaInfoDos {
+    height: 61px !important;
+}
+
+.divDialog {
+    float: left;
+    width: 50%;
+    height: 64px;
+}
+
+    .divDialog .custom-combobox {
+        width: 80% !important;
+    }
+
+#dialgoCalculadora {
+    position: relative;
+    left: -794px;
+    top: -291px;
+    display: none;
+    font-size: 1.3em;
+    height: 100px;
+}
+
+#divBotones {
+    position: absolute;
+    top: 156%;
+}
+
+#stgMensajeAlerta {
+    font-size: 20px;
+}
+
+#filObservaciones {
+    width: 100% !important;
+    float: none !important;
+}
+
+#divContentCampo_Form11_tiularUno_20,
+#divContentCampo_Form11_tiularDos_20 {
+    /*border: 1px solid black;*/
+    width: 100%;
+    height: auto;
+}
+
+
+fieldset#scheduler-border {
+    border: 1px groove #ddd !important;
+    padding: 0 1.4em 1.4em 1.4em !important;
+    margin: 0 0 1.5em 0 !important;
+    -webkit-box-shadow: 0px 0px 0px 0px #000;
+    box-shadow: 0px 0px 0px 0px #000;
+    width: auto;
+}
+
+
+
+legend#scheduler-border {
+    font-size: 1.3em !important;
+    font-weight: bold !important;
+    text-align: left !important;
+}
+
+legend#scheduler-border_2 {
+    font-size: 1.8em !important;
+    font-weight: bold !important;
+    text-align: left !important;
+}
+
+
+#contentCamposPaso3 p {
+    font-size: 1.3em !important;
+    font-weight: bold !important;
+}
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    z-index: 99;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    -moz-opacity: 0.8;
+    min-height: 100%;
+    width: 100%;
+}
+
+.loading {
+    font-family: Arial;
+    font-size: 10pt;
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.53);
+    z-index: 999;
+    margin-top: 7%;
+}

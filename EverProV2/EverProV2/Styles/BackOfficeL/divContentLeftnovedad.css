@@ -1,0 +1,88 @@
+﻿/**********Cargue Cheques*****************/
+
+.divContentLeftCheques {
+    float: left;
+    width: 30%;
+    height: 7%;
+    margin: 10px -70px 5px 15px;
+}
+
+.divGuardar {
+    margin: 3% 0% 1% 0%;
+}
+
+#Guardar {
+    width: 10% !important;
+}
+
+.legend {
+    font-size: 1.2em !important;
+    font-weight: bold !important;
+    text-align: left !important;
+}
+
+#FilterListCheques {
+    height: 20px;
+}
+
+.divCargaCheque {
+    float: left;
+    width: 50%;
+    margin-left: -1%;
+    padding-left: 2%;
+}
+/**********Radicacion*****************/
+
+.divContentLeftRadicacion {
+    width: 32% !important;
+    float: left;
+    height: 55px !important;
+    margin: -1% 0% 2% 2%;
+    position: relative;
+    top: 10px;
+}
+
+.divContentLefnovedad {
+    width: 32% !important;
+    float: left;
+    height: 55px !important;
+    margin: -1% 0% 2% 1%;
+    position: relative;
+    top: 42px;
+}
+
+.novedades {
+    width: 32% !important;
+    float: left;
+    height: 55px !important;
+    margin: -1% 0% 2% 1%;
+    position: relative;
+    top: 42px;
+}
+.novedades2 {
+    width: 32% !important;
+    float: left;
+    height: 55px !important;
+    margin: -1% 0% 2% 1%;
+    position: relative;
+    top: 42px;
+}
+
+
+.divContentLeftnovedadB {
+    width: 63%;
+    float: left;
+}
+
+.divContentLeftRadicacionCamp1 {
+    width: 32% !important;
+    float: left;
+    height: 55px !important;
+    margin: -1% -1% 2% 2%;
+}
+
+.custom-combobox-input {
+    width: 74% !important;
+}
+
+/**********Giros**********************/

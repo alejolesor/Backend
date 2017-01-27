@@ -1,0 +1,1516 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Asignador_SGDModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Auditoria">
+    <Key>
+      <PropertyRef Name="aud_id" />
+    </Key>
+    <Property Name="aud_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="aud_idUsuario" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="aud_fechaHora" Type="datetime" Nullable="false" />
+    <Property Name="aud_evento" Type="varchar" MaxLength="500" />
+    <Property Name="aud_valorAnt" Type="varchar" MaxLength="50" />
+    <Property Name="aud_vanorNuev" Type="varchar" MaxLength="50" />
+    <Property Name="aud_observaciones" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Campos">
+    <Key>
+      <PropertyRef Name="IdCampo" />
+    </Key>
+    <Property Name="IdCampo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="50" />
+    <Property Name="IdPadre" Type="int" />
+    <Property Name="Orden" Type="int" />
+    <Property Name="DimensionAlto" Type="int" />
+    <Property Name="DimensionAncho" Type="int" />
+    <Property Name="Obligatorio" Type="bit" />
+    <Property Name="IdTipoCampo" Type="int" />
+    <Property Name="Editable" Type="bit" />
+    <Property Name="DobleCaptura" Type="bit" />
+    <Property Name="LongMin" Type="int" />
+    <Property Name="LongMax" Type="int" />
+    <Property Name="Evento" Type="nvarchar" MaxLength="50" />
+    <Property Name="FuncionValidacion" Type="nvarchar" MaxLength="100" />
+    <Property Name="MensajeError" Type="nvarchar" MaxLength="100" />
+    <Property Name="Activo" Type="bit" />
+  </EntityType>
+  <EntityType Name="Campos_Listas">
+    <Key>
+      <PropertyRef Name="IdCampos_Listas" />
+    </Key>
+    <Property Name="IdCampos_Listas" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Codigo" Type="nvarchar" MaxLength="200" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="100" />
+    <Property Name="IdCampoPadre" Type="int" />
+    <Property Name="Orden" Type="int" />
+    <Property Name="CodigoPadre" Type="int" />
+    <Property Name="Activo" Type="bit" />
+  </EntityType>
+  <EntityType Name="CodigosCampo">
+    <Key>
+      <PropertyRef Name="CodCampId" />
+    </Key>
+    <Property Name="CodCampId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CodId" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CodDescripcion" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CampId" Type="bigint" />
+    <Property Name="CodOrden" Type="int" Nullable="false" />
+    <Property Name="Activo" Type="bit" />
+    <Property Name="CodPadre" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Estados">
+    <Key>
+      <PropertyRef Name="IdEstado" />
+    </Key>
+    <Property Name="IdEstado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="100" />
+    <Property Name="Valor" Type="int" />
+  </EntityType>
+  <EntityType Name="Formulario_Campos">
+    <Key>
+      <PropertyRef Name="IdFormularioCampos" />
+    </Key>
+    <Property Name="IdFormularioCampos" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdFormulario" Type="int" />
+    <Property Name="IdCampos" Type="int" />
+    <Property Name="OrdenCampo" Type="int" />
+    <Property Name="Obligatorio" Type="int" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'Asignador_SGD.dbo.HistDatosPersonalesRRHH' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="HistDatosPersonalesRRHH">
+    <Key>
+      <PropertyRef Name="NombreCompleto" />
+      <PropertyRef Name="FechaNacimiento" />
+      <PropertyRef Name="Edad" />
+      <PropertyRef Name="TelefonoCelular" />
+      <PropertyRef Name="TelefonoContato" />
+      <PropertyRef Name="Direccion" />
+      <PropertyRef Name="IdMotivoIngreso" />
+      <PropertyRef Name="IdTipoDocumento" />
+      <PropertyRef Name="IdGenero" />
+      <PropertyRef Name="IdCiudad" />
+      <PropertyRef Name="IdLocalidad" />
+      <PropertyRef Name="IdCarreraEducativa" />
+    </Key>
+    <Property Name="FechaActualizacon" Type="datetime" />
+    <Property Name="Cedula" Type="int" />
+    <Property Name="NombreCompleto" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="FechaNacimiento" Type="datetime" Nullable="false" />
+    <Property Name="Edad" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TelefonoCelular" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TelefonoContato" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Direccion" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IdMotivoIngreso" Type="int" Nullable="false" />
+    <Property Name="IdTipoDocumento" Type="int" Nullable="false" />
+    <Property Name="IdGenero" Type="int" Nullable="false" />
+    <Property Name="IdCiudad" Type="int" Nullable="false" />
+    <Property Name="IdLocalidad" Type="int" Nullable="false" />
+    <Property Name="IdCarreraEducativa" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'Asignador_SGD.dbo.HistModuloEverisRRHH' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="HistModuloEverisRRHH">
+    <Key>
+      <PropertyRef Name="Cedula" />
+      <PropertyRef Name="Empresa" />
+      <PropertyRef Name="FecContratacionTemporal" />
+      <PropertyRef Name="FecContratacionEveris" />
+      <PropertyRef Name="CsrGeco" />
+      <PropertyRef Name="Pais" />
+      <PropertyRef Name="Cliente" />
+      <PropertyRef Name="Proyecto" />
+      <PropertyRef Name="Cargo" />
+      <PropertyRef Name="Categoria" />
+      <PropertyRef Name="Nivel" />
+    </Key>
+    <Property Name="FechaActualizacon" Type="datetime" />
+    <Property Name="Cedula" Type="int" Nullable="false" />
+    <Property Name="Empresa" Type="int" Nullable="false" />
+    <Property Name="FecContratacionTemporal" Type="datetime" Nullable="false" />
+    <Property Name="FecContratacionEveris" Type="datetime" Nullable="false" />
+    <Property Name="SalarioEveris" Type="varchar(max)" />
+    <Property Name="CsrGeco" Type="int" Nullable="false" />
+    <Property Name="Pais" Type="int" Nullable="false" />
+    <Property Name="Cliente" Type="int" Nullable="false" />
+    <Property Name="Proyecto" Type="int" Nullable="false" />
+    <Property Name="Cargo" Type="int" Nullable="false" />
+    <Property Name="Categoria" Type="int" Nullable="false" />
+    <Property Name="Nivel" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'Asignador_SGD.dbo.HistModuloEverProLideresRRHH' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="HistModuloEverProLideresRRHH">
+    <Key>
+      <PropertyRef Name="Cedula" />
+      <PropertyRef Name="IdHc" />
+      <PropertyRef Name="IdRol" />
+      <PropertyRef Name="CodigoDeEmpleado" />
+      <PropertyRef Name="CedJefe" />
+      <PropertyRef Name="CedPsl" />
+      <PropertyRef Name="CedPtl" />
+      <PropertyRef Name="CedPsc" />
+      <PropertyRef Name="IdArea" />
+      <PropertyRef Name="IdProceso" />
+      <PropertyRef Name="IdClasificacion" />
+      <PropertyRef Name="IdLugarDeTrabajo" />
+      <PropertyRef Name="IdTurno" />
+    </Key>
+    <Property Name="FechaActualizacion" Type="datetime" />
+    <Property Name="Cedula" Type="int" Nullable="false" />
+    <Property Name="IdHc" Type="int" Nullable="false" />
+    <Property Name="IdRol" Type="int" Nullable="false" />
+    <Property Name="CodigoDeEmpleado" Type="int" Nullable="false" />
+    <Property Name="CedJefe" Type="int" Nullable="false" />
+    <Property Name="CedPsl" Type="int" Nullable="false" />
+    <Property Name="CedPtl" Type="int" Nullable="false" />
+    <Property Name="CedPsc" Type="int" Nullable="false" />
+    <Property Name="IdArea" Type="int" Nullable="false" />
+    <Property Name="IdProceso" Type="int" Nullable="false" />
+    <Property Name="IdClasificacion" Type="int" Nullable="false" />
+    <Property Name="IdLugarDeTrabajo" Type="int" Nullable="false" />
+    <Property Name="IdTurno" Type="int" Nullable="false" />
+    <Property Name="CedLiderSGD" Type="int" />
+  </EntityType>
+  <EntityType Name="Menu">
+    <Key>
+      <PropertyRef Name="IdMenu" />
+    </Key>
+    <Property Name="IdMenu" Type="int" Nullable="false" />
+    <Property Name="DescMenu" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="IdPadre" Type="int" />
+    <Property Name="IdHijo" Type="int" />
+    <Property Name="Url" Type="nchar" MaxLength="500" />
+    <Property Name="Orden" Type="int" />
+    <Property Name="Activo" Type="bit" />
+    <Property Name="UrlImage" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="ModuloEverisRRHH">
+    <Key>
+      <PropertyRef Name="Cedula" />
+    </Key>
+    <Property Name="Cedula" Type="int" Nullable="false" />
+    <Property Name="Empresa" Type="int" Nullable="false" />
+    <Property Name="FecContratacionTemporal" Type="datetime" Nullable="false" />
+    <Property Name="FecContratacionEveris" Type="datetime" Nullable="false" />
+    <Property Name="SalarioEveris" Type="varchar(max)" />
+    <Property Name="CsrGeco" Type="int" Nullable="false" />
+    <Property Name="Pais" Type="int" Nullable="false" />
+    <Property Name="Cliente" Type="int" Nullable="false" />
+    <Property Name="Proyecto" Type="int" Nullable="false" />
+    <Property Name="Cargo" Type="int" Nullable="false" />
+    <Property Name="Categoria" Type="int" Nullable="false" />
+    <Property Name="Nivel" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Parametros">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="codigo" Type="varchar" MaxLength="50" />
+    <Property Name="valor" Type="varchar" MaxLength="200" />
+    <Property Name="descripcion" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="ProgramacionTurnos">
+    <Key>
+      <PropertyRef Name="idTurnosMalla" />
+    </Key>
+    <Property Name="idTurnosMalla" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CodigoTurno" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Entrada" Type="int" Nullable="false" />
+    <Property Name="MediosEntrada" Type="int" />
+    <Property Name="Salida" Type="int" Nullable="false" />
+    <Property Name="MediosSalida" Type="int" />
+    <Property Name="Sabado" Type="int" Nullable="false" />
+    <Property Name="MediosSabado" Type="int" />
+    <Property Name="Break1" Type="int" Nullable="false" />
+    <Property Name="MediosBreak1" Type="int" />
+    <Property Name="Break2" Type="int" Nullable="false" />
+    <Property Name="MediosBreak2" Type="int" />
+    <Property Name="HoraAlmuerzo" Type="int" Nullable="false" />
+    <Property Name="MediosHorasLaborales" Type="int" />
+    <Property Name="Justificacion" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="HorasLaborales" Type="numeric" Precision="2" Scale="1" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="IdRol" />
+    </Key>
+    <Property Name="IdRol" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DescRol" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Activo" Type="bit" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'Asignador_SGD.dbo.RolesMenu' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="RolesMenu">
+    <Key>
+      <PropertyRef Name="IdRol" />
+      <PropertyRef Name="IdMenu" />
+      <PropertyRef Name="Activo" />
+    </Key>
+    <Property Name="IdRol" Type="int" Nullable="false" />
+    <Property Name="IdMenu" Type="int" Nullable="false" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="tb_Formularios">
+    <Key>
+      <PropertyRef Name="FormularioId" />
+    </Key>
+    <Property Name="FormularioId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="150" />
+    <Property Name="Activo" Type="bit" />
+  </EntityType>
+  <EntityType Name="tbAns">
+    <Key>
+      <PropertyRef Name="idAns" />
+    </Key>
+    <Property Name="idAns" Type="int" Nullable="false" />
+    <Property Name="Area" Type="int" Nullable="false" />
+    <Property Name="Proceso" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IdActivida" Type="int" Nullable="false" />
+    <Property Name="Actividad" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Productos" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ProXHora" Type="int" Nullable="false" />
+    <Property Name="ProdAnsHora" Type="int" Nullable="false" />
+    <Property Name="EstandarAviso" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbAreas">
+    <Key>
+      <PropertyRef Name="idArea" />
+    </Key>
+    <Property Name="idArea" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DescArea" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'Asignador_SGD.dbo.tbAsignacionCasos' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="tbAsignacionCasos">
+    <Key>
+      <PropertyRef Name="idAsigCasos" />
+      <PropertyRef Name="identFuncionario" />
+      <PropertyRef Name="FechaCreacionCaso" />
+      <PropertyRef Name="Ncaso" />
+      <PropertyRef Name="NombreCaso" />
+      <PropertyRef Name="NivelClasif" />
+      <PropertyRef Name="EstadoCaso" />
+      <PropertyRef Name="FechaAsignacionCaso" />
+      <PropertyRef Name="Proceso" />
+    </Key>
+    <Property Name="idAsigCasos" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="identFuncionario" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FechaCreacionCaso" Type="datetime" Nullable="false" />
+    <Property Name="Ncaso" Type="int" Nullable="false" />
+    <Property Name="NombreCaso" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="NivelClasif" Type="nvarchar" MaxLength="5" Nullable="false" />
+    <Property Name="EstadoCaso" Type="int" Nullable="false" />
+    <Property Name="FechaAsignacionCaso" Type="datetime" Nullable="false" />
+    <Property Name="Proceso" Type="int" Nullable="false" />
+    <Property Name="Horainicio" Type="datetime" />
+    <Property Name="HoraFin" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbAuditoriaConexion">
+    <Key>
+      <PropertyRef Name="IdAuditoria" />
+    </Key>
+    <Property Name="IdAuditoria" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdUsuario" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+    <Property Name="IdAusente" Type="int" />
+    <Property Name="FechaRegistro" Type="datetime" Nullable="false" />
+    <Property Name="FechaFinRegistro" Type="datetime" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'Asignador_SGD.dbo.tbClasificaNivFuncionario' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="tbClasificaNivFuncionario">
+    <Key>
+      <PropertyRef Name="identFuncionario" />
+      <PropertyRef Name="Proceso" />
+    </Key>
+    <Property Name="identFuncionario" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="NivelClasificacion" Type="nvarchar" MaxLength="5" />
+    <Property Name="Proceso" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbFormalizacion">
+    <Key>
+      <PropertyRef Name="idFormalizacion" />
+    </Key>
+    <Property Name="idFormalizacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="N" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="C" Type="int" Nullable="false" />
+    <Property Name="E" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="NV" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="FI" Type="datetime" />
+    <Property Name="FA" Type="datetime" Nullable="false" />
+    <Property Name="R" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Estado" Type="int" Nullable="false" />
+    <Property Name="idlider" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="idProceso" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbHistorial">
+    <Key>
+      <PropertyRef Name="idHistorial" />
+    </Key>
+    <Property Name="idHistorial" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idClasificacion" Type="int" Nullable="false" />
+    <Property Name="Area" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Lider" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Cedula" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="NombreCompleto" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Nradicado" Type="int" Nullable="false" />
+    <Property Name="FechaAsignado" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbLibranza">
+    <Key>
+      <PropertyRef Name="idLibranza" />
+    </Key>
+    <Property Name="idLibranza" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="N" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="C" Type="int" Nullable="false" />
+    <Property Name="E" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="NV" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="FI" Type="datetime" />
+    <Property Name="FA" Type="datetime" Nullable="false" />
+    <Property Name="R" Type="varchar" MaxLength="50" />
+    <Property Name="Estado" Type="int" Nullable="false" />
+    <Property Name="idlider" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="idProceso" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'Asignador_SGD.dbo.tbLider' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="tbLider">
+    <Key>
+      <PropertyRef Name="NombreCompleto" />
+      <PropertyRef Name="Cedula" />
+    </Key>
+    <Property Name="NombreCompleto" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Cedula" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="idArea" Type="int" />
+  </EntityType>
+  <EntityType Name="tbLiderProductoFile">
+    <Key>
+      <PropertyRef Name="IdLider" />
+    </Key>
+    <Property Name="IdLider" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Cedula" Type="int" />
+    <Property Name="NombreCompleto" Type="varchar" MaxLength="100" />
+    <Property Name="CodProduct" Type="int" />
+    <Property Name="CampoLista" Type="int" />
+    <Property Name="NomFile" Type="varchar" MaxLength="100" />
+    <Property Name="Activo" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TbMallaTurnos">
+    <Key>
+      <PropertyRef Name="IdMalla" />
+    </Key>
+    <Property Name="IdMalla" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdTurno" Type="int" Nullable="false" />
+    <Property Name="IdFuncionario" Type="int" />
+    <Property Name="Dia" Type="int" Nullable="false" />
+    <Property Name="Mes" Type="int" Nullable="false" />
+    <Property Name="Anio" Type="int" Nullable="false" />
+    <Property Name="Hdesde" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Hhasta" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Almuerzo" Type="int" Nullable="false" />
+    <Property Name="Breack" Type="int" Nullable="false" />
+    <Property Name="EstadoTurno" Type="int" Nullable="false" />
+    <Property Name="IdLider" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbParametrosServicio">
+    <Key>
+      <PropertyRef Name="idTiempo" />
+    </Key>
+    <Property Name="idTiempo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NombreServicio" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LLave" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Valor" Type="nchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'Asignador_SGD.dbo.tbParamNivelConvenio' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="tbParamNivelConvenio">
+    <Key>
+      <PropertyRef Name="Area" />
+      <PropertyRef Name="Coordinador" />
+      <PropertyRef Name="Cedula" />
+      <PropertyRef Name="idNivelConvenio" />
+    </Key>
+    <Property Name="Area" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Coordinador" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Cedula" Type="int" Nullable="false" />
+    <Property Name="idNivelConvenio" Type="nvarchar" MaxLength="5" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbProcesosMasivos">
+    <Key>
+      <PropertyRef Name="idProcMasivo" />
+    </Key>
+    <Property Name="idProcMasivo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="N" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="C" Type="int" Nullable="false" />
+    <Property Name="E" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="NV" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="FI" Type="date" />
+    <Property Name="UCE" Type="int" />
+    <Property Name="FA" Type="datetime" Nullable="false" />
+    <Property Name="R" Type="varchar" MaxLength="50" />
+    <Property Name="Estado" Type="int" Nullable="false" />
+    <Property Name="idlider" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="idProceso" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbProcPorProducto">
+    <Key>
+      <PropertyRef Name="idProcPorProducto" />
+    </Key>
+    <Property Name="idProcPorProducto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idProducto" Type="int" Nullable="false" />
+    <Property Name="DresProceso" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbProducto">
+    <Key>
+      <PropertyRef Name="idProducto" />
+    </Key>
+    <Property Name="idProducto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DescProducto" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbProductos">
+    <Key>
+      <PropertyRef Name="IdProducto" />
+    </Key>
+    <Property Name="IdProducto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Codigo" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Orden" Type="int" Nullable="false" />
+    <Property Name="IdArea" Type="int" Nullable="false" />
+    <Property Name="IdCamposLIst" Type="int" Nullable="false" />
+    <Property Name="Activo" Type="int" Nullable="false" />
+    <Property Name="BtDactiloscopia" Type="int" />
+  </EntityType>
+  <EntityType Name="tbTipoAusentismo">
+    <Key>
+      <PropertyRef Name="Id_ausentismo" />
+    </Key>
+    <Property Name="Id_ausentismo" Type="int" Nullable="false" />
+    <Property Name="Tipo_ausentismo" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Estado" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbTipologiaConvenio">
+    <Key>
+      <PropertyRef Name="NivelConvenio" />
+    </Key>
+    <Property Name="NivelConvenio" Type="nvarchar" MaxLength="5" Nullable="false" />
+    <Property Name="Complejidad" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Activo" Type="bit" />
+    <Property Name="Proceso" Type="int" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'Asignador_SGD.dbo.tbUsuariosPorLider' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="tbUsuariosPorLider">
+    <Key>
+      <PropertyRef Name="Cedula" />
+    </Key>
+    <Property Name="idLider" Type="varchar" MaxLength="50" />
+    <Property Name="NombreCompleto" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Cedula" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Apoyo" Type="bit" />
+    <Property Name="Estado" Type="int" />
+  </EntityType>
+  <EntityType Name="TiposCampo">
+    <Key>
+      <PropertyRef Name="TcId" />
+    </Key>
+    <Property Name="TcId" Type="int" Nullable="false" />
+    <Property Name="TcDescripcion" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Activo" Type="bit" />
+  </EntityType>
+  <EntityType Name="ts_Campos">
+    <Key>
+      <PropertyRef Name="CampoId" />
+    </Key>
+    <Property Name="CampoId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="50" />
+    <Property Name="DimensionAlto" Type="int" />
+    <Property Name="DimensionAncho" Type="int" />
+    <Property Name="LongMin" Type="int" />
+    <Property Name="LongMax" Type="int" />
+    <Property Name="FechaCreacion" Type="datetime" />
+    <Property Name="idTipoCampo" Type="int" />
+    <Property Name="idPadre" Type="int" />
+    <Property Name="CampObligatorio" Type="bit" Nullable="false" />
+    <Property Name="CampDependiente" Type="int" />
+    <Property Name="CodFormulario" Type="int" />
+  </EntityType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="UsuarioDominio" Type="varchar" MaxLength="100" />
+    <Property Name="NomUsuario" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="PassCodeUsuario" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IdRol" Type="int" />
+    <Property Name="Activo" Type="bit" />
+    <Property Name="FecRegistro" Type="datetime" />
+    <Property Name="FechaCaducidad" Type="datetime" />
+    <Property Name="SecurityPin" Type="nchar" MaxLength="16" />
+  </EntityType>
+  <EntityType Name="UsuariosBloqueados">
+    <Key>
+      <PropertyRef Name="IdUsuarioBloqueado" />
+    </Key>
+    <Property Name="IdUsuarioBloqueado" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="IdUsuario" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="FechaBloqueo" Type="datetime" />
+    <Property Name="Bloqueado" Type="bit" />
+  </EntityType>
+  <EntityType Name="UsuariosHistorico">
+    <Key>
+      <PropertyRef Name="IdHistorico" />
+    </Key>
+    <Property Name="IdHistorico" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdUsuario" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="PassCodeUsuario" Type="varchar" MaxLength="100" />
+    <Property Name="FechaCaducidad" Type="datetime" />
+    <Property Name="Activo" Type="bit" />
+  </EntityType>
+  <Association Name="FK__Campos__IdTipoCa__7C6F7215">
+    <End Role="TiposCampo" Type="Self.TiposCampo" Multiplicity="0..1" />
+    <End Role="Campos" Type="Self.Campos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TiposCampo">
+        <PropertyRef Name="TcId" />
+      </Principal>
+      <Dependent Role="Campos">
+        <PropertyRef Name="IdTipoCampo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Formulari__IdCam__08D548FA">
+    <End Role="Campos" Type="Self.Campos" Multiplicity="0..1" />
+    <End Role="Formulario_Campos" Type="Self.Formulario_Campos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Campos">
+        <PropertyRef Name="IdCampo" />
+      </Principal>
+      <Dependent Role="Formulario_Campos">
+        <PropertyRef Name="IdCampos" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Formulari__IdFor__09C96D33">
+    <End Role="tb_Formularios" Type="Self.tb_Formularios" Multiplicity="0..1" />
+    <End Role="Formulario_Campos" Type="Self.Formulario_Campos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Formularios">
+        <PropertyRef Name="FormularioId" />
+      </Principal>
+      <Dependent Role="Formulario_Campos">
+        <PropertyRef Name="IdFormulario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__RolesMenu__IdMen__3EDC53F0">
+    <End Role="Menu" Type="Self.Menu" Multiplicity="1" />
+    <End Role="RolesMenu" Type="Self.RolesMenu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Menu">
+        <PropertyRef Name="IdMenu" />
+      </Principal>
+      <Dependent Role="RolesMenu">
+        <PropertyRef Name="IdMenu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__RolesMenu__IdRol__40C49C62">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
+    <End Role="RolesMenu" Type="Self.RolesMenu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="IdRol" />
+      </Principal>
+      <Dependent Role="RolesMenu">
+        <PropertyRef Name="IdRol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__RolesMenu__IdRol__41B8C09B">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
+    <End Role="RolesMenu" Type="Self.RolesMenu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="IdRol" />
+      </Principal>
+      <Dependent Role="RolesMenu">
+        <PropertyRef Name="IdRol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbLider__idArea__36B12243">
+    <End Role="tbAreas" Type="Self.tbAreas" Multiplicity="0..1" />
+    <End Role="tbLider" Type="Self.tbLider" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbAreas">
+        <PropertyRef Name="idArea" />
+      </Principal>
+      <Dependent Role="tbLider">
+        <PropertyRef Name="idArea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbProcPor__idPro__37A5467C">
+    <End Role="tbProducto" Type="Self.tbProducto" Multiplicity="1" />
+    <End Role="tbProcPorProducto" Type="Self.tbProcPorProducto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbProducto">
+        <PropertyRef Name="idProducto" />
+      </Principal>
+      <Dependent Role="tbProcPorProducto">
+        <PropertyRef Name="idProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ts_Campos__idTip__4E88ABD4">
+    <End Role="TiposCampo" Type="Self.TiposCampo" Multiplicity="0..1" />
+    <End Role="ts_Campos" Type="Self.ts_Campos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TiposCampo">
+        <PropertyRef Name="TcId" />
+      </Principal>
+      <Dependent Role="ts_Campos">
+        <PropertyRef Name="idTipoCampo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Usuarios__IdRol__42ACE4D4">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="0..1" />
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="IdRol" />
+      </Principal>
+      <Dependent Role="Usuarios">
+        <PropertyRef Name="IdRol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Auditoria_Usuarios">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
+    <End Role="Auditoria" Type="Self.Auditoria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Auditoria">
+        <PropertyRef Name="aud_idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbClasificaNivFuncionario_tbTipologiaConvenio">
+    <End Role="tbTipologiaConvenio" Type="Self.tbTipologiaConvenio" Multiplicity="0..1" />
+    <End Role="tbClasificaNivFuncionario" Type="Self.tbClasificaNivFuncionario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbTipologiaConvenio">
+        <PropertyRef Name="NivelConvenio" />
+      </Principal>
+      <Dependent Role="tbClasificaNivFuncionario">
+        <PropertyRef Name="NivelClasificacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbFormalizacion_Estados1">
+    <End Role="Estados" Type="Self.Estados" Multiplicity="1" />
+    <End Role="tbFormalizacion" Type="Self.tbFormalizacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estados">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="tbFormalizacion">
+        <PropertyRef Name="Estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbLibranza_Estados1">
+    <End Role="Estados" Type="Self.Estados" Multiplicity="1" />
+    <End Role="tbLibranza" Type="Self.tbLibranza" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estados">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="tbLibranza">
+        <PropertyRef Name="Estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbProcesosMasivos_Estados">
+    <End Role="Estados" Type="Self.Estados" Multiplicity="1" />
+    <End Role="tbProcesosMasivos" Type="Self.tbProcesosMasivos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estados">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="tbProcesosMasivos">
+        <PropertyRef Name="idProceso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbUsuariosPorLider_Estados">
+    <End Role="Estados" Type="Self.Estados" Multiplicity="0..1" />
+    <End Role="tbUsuariosPorLider" Type="Self.tbUsuariosPorLider" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estados">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="tbUsuariosPorLider">
+        <PropertyRef Name="Estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuariosBloqueados_Usuarios">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
+    <End Role="UsuariosBloqueados" Type="Self.UsuariosBloqueados" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="UsuariosBloqueados">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuariosHistorico_Usuarios">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
+    <End Role="UsuariosHistorico" Type="Self.UsuariosHistorico" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="UsuariosHistorico">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="BtnDactiloscopia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idLider" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ConsultarEstadoSabans" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Proceso" Type="int" Mode="In" />
+    <Parameter Name="identLider" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="ConteoCasos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idLider" Type="int" Mode="In" />
+    <Parameter Name="fechaIni" Type="varchar" Mode="In" />
+    <Parameter Name="fechaFin" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="CountFuncionariosEstado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdLider" Type="int" Mode="In" />
+  </Function>
+  <Function Name="CrearProgramacionMallas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdFuncionario" Type="int" Mode="In" />
+    <Parameter Name="FechaDesde" Type="datetime" Mode="In" />
+    <Parameter Name="FechaHasta" Type="datetime" Mode="In" />
+    <Parameter Name="IdLider" Type="int" Mode="In" />
+    <Parameter Name="IdTurno" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DiasEnMes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+    <Parameter Name="fecha" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="encriptar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar(max)">
+    <Parameter Name="Str" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="FuncionariosMallaTurnos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idLider" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InfoTurnos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="LiderPorProducto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CodProd" Type="int" Mode="In" />
+    <Parameter Name="CampList" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ObtenerNombFile" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CodProd" Type="int" Mode="In" />
+    <Parameter Name="Camlist" Type="int" Mode="In" />
+  </Function>
+  <Function Name="OptenerProducto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CodigoPadre" Type="int" Mode="In" />
+  </Function>
+  <Function Name="PintaMalla_1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FechaDesde" Type="datetime" Mode="In" />
+    <Parameter Name="FechaHasta" Type="datetime" Mode="In" />
+    <Parameter Name="IdLider" Type="int" Mode="In" />
+    <Parameter Name="IdTurno" Type="int" Mode="In" />
+  </Function>
+  <Function Name="PintaMalla_3" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FechaDesde" Type="datetime" Mode="In" />
+    <Parameter Name="FechaHasta" Type="datetime" Mode="In" />
+    <Parameter Name="IdLider" Type="int" Mode="In" />
+    <Parameter Name="IdTurno" Type="int" Mode="In" />
+  </Function>
+  <Function Name="PintaMalla_4" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FechaDesde" Type="datetime" Mode="In" />
+    <Parameter Name="FechaHasta" Type="datetime" Mode="In" />
+    <Parameter Name="IdLider" Type="int" Mode="In" />
+    <Parameter Name="IdTurno" Type="int" Mode="In" />
+  </Function>
+  <Function Name="PintaMalla_5" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FechaDesde" Type="datetime" Mode="In" />
+    <Parameter Name="FechaHasta" Type="datetime" Mode="In" />
+    <Parameter Name="IdLider" Type="int" Mode="In" />
+    <Parameter Name="IdTurno" Type="int" Mode="In" />
+  </Function>
+  <Function Name="PintaMalla_6" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FechaDesde" Type="datetime" Mode="In" />
+    <Parameter Name="FechaHasta" Type="datetime" Mode="In" />
+    <Parameter Name="IdLider" Type="int" Mode="In" />
+    <Parameter Name="IdTurno" Type="int" Mode="In" />
+  </Function>
+  <Function Name="PintaMalla_8" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FechaDesde" Type="datetime" Mode="In" />
+    <Parameter Name="FechaHasta" Type="datetime" Mode="In" />
+    <Parameter Name="IdLider" Type="int" Mode="In" />
+    <Parameter Name="IdTurno" Type="int" Mode="In" />
+  </Function>
+  <Function Name="PintaMalla2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FechaDesde" Type="datetime" Mode="In" />
+    <Parameter Name="FechaHasta" Type="datetime" Mode="In" />
+    <Parameter Name="IdLider" Type="int" Mode="In" />
+    <Parameter Name="IdTurno" Type="int" Mode="In" />
+  </Function>
+  <Function Name="PintaMalla9" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FechaDesde" Type="datetime" Mode="In" />
+    <Parameter Name="FechaHasta" Type="datetime" Mode="In" />
+    <Parameter Name="IdLider" Type="int" Mode="In" />
+    <Parameter Name="IdTurno" Type="int" Mode="In" />
+  </Function>
+  <Function Name="PintaMallaTurnos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdLider" Type="int" Mode="In" />
+    <Parameter Name="Dia" Type="int" Mode="In" />
+    <Parameter Name="Mes" Type="int" Mode="In" />
+    <Parameter Name="Anio" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ProductividadDiaria" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idLider" Type="int" Mode="In" />
+    <Parameter Name="fechaIni" Type="varchar" Mode="In" />
+    <Parameter Name="fechaFin" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="ProgramacionMallaTurnos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="RetornarTiempo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="time">
+    <Parameter Name="fechaIni" Type="datetime" Mode="In" />
+    <Parameter Name="fechaFin" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="SelectFuncionariosEstado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdLider" Type="int" Mode="In" />
+    <Parameter Name="Estado" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_ActualizarUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idUsuario" Type="int" Mode="In" />
+    <Parameter Name="nombre" Type="varchar" Mode="In" />
+    <Parameter Name="rol" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_CambioPassword" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="usuario" Type="int" Mode="In" />
+    <Parameter Name="NuevoPass" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_ContadorTotalCasos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idusuario" Type="varchar(max)" Mode="In" />
+    <Parameter Name="proceso" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_EstadoUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idUsuario" Type="numeric" Mode="In" />
+    <Parameter Name="estado" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="sp_GuardarNuevoUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idUsuario" Type="numeric" Mode="In" />
+    <Parameter Name="nombre" Type="nvarchar" Mode="In" />
+    <Parameter Name="rol" Type="int" Mode="In" />
+    <Parameter Name="activo" Type="bit" Mode="In" />
+    <Parameter Name="ContrasenaDefault" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_regitroauditconex" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdUsuario" Type="varchar" Mode="In" />
+    <Parameter Name="IdEstado" Type="int" Mode="In" />
+    <Parameter Name="IdAusente" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_ValidarMobilePIN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idUsuario" Type="numeric" Mode="In" />
+    <Parameter Name="Pin" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spActualizacionMasiva" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CedLiderSGDAct" Type="int" Mode="In" />
+    <Parameter Name="CedLiderSGDNuevo" Type="varchar(max)" Mode="In" />
+    <Parameter Name="CedFunc" Type="int" Mode="In" />
+    <Parameter Name="NuevoSalario" Type="varchar(max)" Mode="In" />
+    <Parameter Name="TipoActualizacion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spActualizaDatosPersonal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Cedula" Type="int" Mode="In" />
+    <Parameter Name="NombreCompleto" Type="varchar(max)" Mode="In" />
+    <Parameter Name="FechaNacimiento" Type="date" Mode="In" />
+    <Parameter Name="Edad" Type="varchar(max)" Mode="In" />
+    <Parameter Name="TelefonoCelular" Type="varchar(max)" Mode="In" />
+    <Parameter Name="TelefonoContato" Type="varchar(max)" Mode="In" />
+    <Parameter Name="Direccion" Type="varchar(max)" Mode="In" />
+    <Parameter Name="IdMotivoIngreso" Type="int" Mode="In" />
+    <Parameter Name="IdTipoDocumento" Type="int" Mode="In" />
+    <Parameter Name="IdGenero" Type="int" Mode="In" />
+    <Parameter Name="IdCiudad" Type="int" Mode="In" />
+    <Parameter Name="IdLocalidad" Type="int" Mode="In" />
+    <Parameter Name="IdCarreraEducativa" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spActualizaModuloEveris" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Cedula" Type="int" Mode="In" />
+    <Parameter Name="Empresa" Type="int" Mode="In" />
+    <Parameter Name="FecContratacionTemporal" Type="datetime" Mode="In" />
+    <Parameter Name="FecContratacionEveris" Type="datetime" Mode="In" />
+    <Parameter Name="SalarioEveris" Type="varchar(max)" Mode="In" />
+    <Parameter Name="CsrGeco" Type="int" Mode="In" />
+    <Parameter Name="Pais" Type="int" Mode="In" />
+    <Parameter Name="Cliente" Type="int" Mode="In" />
+    <Parameter Name="Proyecto" Type="int" Mode="In" />
+    <Parameter Name="Cargo" Type="int" Mode="In" />
+    <Parameter Name="Categoria" Type="int" Mode="In" />
+    <Parameter Name="Nivel" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spActualizaModuloEverProLideres" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Cedula" Type="int" Mode="In" />
+    <Parameter Name="IdHC" Type="int" Mode="In" />
+    <Parameter Name="IdRol" Type="int" Mode="In" />
+    <Parameter Name="CodigoDeEmpleado" Type="int" Mode="In" />
+    <Parameter Name="CedJefe" Type="int" Mode="In" />
+    <Parameter Name="CedPsl" Type="int" Mode="In" />
+    <Parameter Name="CedPtl" Type="int" Mode="In" />
+    <Parameter Name="CedPsc" Type="int" Mode="In" />
+    <Parameter Name="IdArea" Type="int" Mode="In" />
+    <Parameter Name="IdProceso" Type="int" Mode="In" />
+    <Parameter Name="IdClasificacion" Type="int" Mode="In" />
+    <Parameter Name="IdLugarDeTrabajo" Type="int" Mode="In" />
+    <Parameter Name="IdTurno" Type="int" Mode="In" />
+    <Parameter Name="CedLiderSGD" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spActualizarMenuRol" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdRol" Type="int" Mode="In" />
+    <Parameter Name="IdMenu" Type="int" Mode="In" />
+    <Parameter Name="Estado" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spAsignacionAut" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idProceso" Type="int" Mode="In" />
+    <Parameter Name="identLider" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spAsignacionManual" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="identFuncinario" Type="varchar" Mode="In" />
+    <Parameter Name="nCaso" Type="int" Mode="In" />
+    <Parameter Name="idProceso" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spBuscarFuncionarios" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cedula" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spCambiarEstadoCaso" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ced" Type="int" Mode="In" />
+    <Parameter Name="Ncaso" Type="int" Mode="In" />
+    <Parameter Name="estado" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spCambiarEstadoUsuarioLive" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ced" Type="int" Mode="In" />
+    <Parameter Name="estado" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spCamposDelFormulario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdFormulario" Type="int" Mode="In" />
+    <Parameter Name="IdCampoCompuesto" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spCasoPrioritario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nomProceso" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="noCaso" Type="int" Mode="In" />
+    <Parameter Name="nivel" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="idLider" Type="varchar" Mode="In" />
+    <Parameter Name="idProceso" Type="int" Mode="In" />
+    <Parameter Name="monto" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spClasificacionNivelPorFunc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="identFunc" Type="varchar" Mode="In" />
+    <Parameter Name="opcion" Type="int" Mode="In" />
+    <Parameter Name="proceso" Type="int" Mode="In" />
+    <Parameter Name="idLider" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spConsultaCategoriaEverPro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idEmpresa" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spConsultaConexion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ced" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spConsultaDatosPersonales" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Cedfuncionario" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spConsultaFuncionariosEverPro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Cedfuncionario" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spConsultaFuncMasivos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Area" Type="int" Mode="In" />
+    <Parameter Name="CedLider" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spConsultaLideresEverPro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="perfil" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spConsultaLocalidades" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spConsultaModuloEveris" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Cedfuncionario" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spConsultaModuloEverProLideres" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Cedfuncionario" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spConsultaNivelEverPro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idEmpresa" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spConsultarCasosEnCola" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ced" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spConsultarCasosSuspendidos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ced" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spConsultarHijos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idPadre" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spCrearNuevoRol" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Rol" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spDetalleListaDescripcion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Detalles_ListaId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spEliminarFunciApoyo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="identFuncionario" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spEliminarNivelFunc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="identFuncionario" Type="varchar" Mode="In" />
+    <Parameter Name="NivelClasificacion" Type="varchar" Mode="In" />
+    <Parameter Name="proceso" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spFuncionarioApoyo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="identLider" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spInsertaDatosPersonal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Cedula" Type="int" Mode="In" />
+    <Parameter Name="NombreCompleto" Type="varchar(max)" Mode="In" />
+    <Parameter Name="FechaNacimiento" Type="date" Mode="In" />
+    <Parameter Name="Edad" Type="varchar(max)" Mode="In" />
+    <Parameter Name="TelefonoCelular" Type="varchar(max)" Mode="In" />
+    <Parameter Name="TelefonoContato" Type="varchar(max)" Mode="In" />
+    <Parameter Name="Direccion" Type="varchar(max)" Mode="In" />
+    <Parameter Name="IdMotivoIngreso" Type="int" Mode="In" />
+    <Parameter Name="IdTipoDocumento" Type="int" Mode="In" />
+    <Parameter Name="IdGenero" Type="int" Mode="In" />
+    <Parameter Name="IdCiudad" Type="int" Mode="In" />
+    <Parameter Name="IdLocalidad" Type="int" Mode="In" />
+    <Parameter Name="IdCarreraEducativa" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spInsertaFuncionario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idLider" Type="int" Mode="In" />
+    <Parameter Name="NombreCompleto" Type="varchar(max)" Mode="In" />
+    <Parameter Name="Cedula" Type="varchar" Mode="In" />
+    <Parameter Name="idProceso" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spInsertaModuloEveris" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Cedula" Type="int" Mode="In" />
+    <Parameter Name="Empresa" Type="int" Mode="In" />
+    <Parameter Name="FecContratacionTemporal" Type="datetime" Mode="In" />
+    <Parameter Name="FecContratacionEveris" Type="datetime" Mode="In" />
+    <Parameter Name="SalarioEveris" Type="varchar(max)" Mode="In" />
+    <Parameter Name="CsrGeco" Type="int" Mode="In" />
+    <Parameter Name="Pais" Type="int" Mode="In" />
+    <Parameter Name="Cliente" Type="int" Mode="In" />
+    <Parameter Name="Proyecto" Type="int" Mode="In" />
+    <Parameter Name="Cargo" Type="int" Mode="In" />
+    <Parameter Name="Categoria" Type="int" Mode="In" />
+    <Parameter Name="Nivel" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spInsertaModuloEverPro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Cedula" Type="int" Mode="In" />
+    <Parameter Name="IdHC" Type="int" Mode="In" />
+    <Parameter Name="IdRol" Type="int" Mode="In" />
+    <Parameter Name="CodigoDeEmpleado" Type="int" Mode="In" />
+    <Parameter Name="CedJefe" Type="int" Mode="In" />
+    <Parameter Name="CedPsl" Type="int" Mode="In" />
+    <Parameter Name="CedPtl" Type="int" Mode="In" />
+    <Parameter Name="CedPsc" Type="int" Mode="In" />
+    <Parameter Name="IdArea" Type="int" Mode="In" />
+    <Parameter Name="IdProceso" Type="int" Mode="In" />
+    <Parameter Name="IdClasificacion" Type="int" Mode="In" />
+    <Parameter Name="IdLugarDeTrabajo" Type="int" Mode="In" />
+    <Parameter Name="IdTurno" Type="int" Mode="In" />
+    <Parameter Name="CedLiderSGD" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spInsertNivelFunc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="identFuncionario" Type="varchar" Mode="In" />
+    <Parameter Name="NivelClasificacion" Type="varchar" Mode="In" />
+    <Parameter Name="proceso" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spLideresAasignar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spListaColas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idProceso" Type="int" Mode="In" />
+    <Parameter Name="idLider" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spListaColas2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idProceso" Type="int" Mode="In" />
+    <Parameter Name="idLider" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spObtenerCasoUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ced" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spObtenerEstadoUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ced" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spObtenerFunColas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="identLider" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spObtenerItemsListaCampo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdCampo" Type="int" Mode="In" />
+    <Parameter Name="IdCampo_Lista" Type="nvarchar" Mode="In" />
+    <Parameter Name="CuotaAnio" Type="nvarchar" Mode="In" />
+    <Parameter Name="Segmento" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spObtenerLideres" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spObtenerlinkyTiempo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ced" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spObtenerMenuHijosPerfil" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdPadre" Type="int" Mode="In" />
+    <Parameter Name="Rol" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spObtenerMenuNietosPerfil" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdHijo" Type="int" Mode="In" />
+    <Parameter Name="Rol" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spObtenerMenuPadre" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Usuario" Type="numeric" Mode="In" />
+  </Function>
+  <Function Name="spObtenerMenuRol" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="RolId" Type="int" Mode="In" />
+    <Parameter Name="Estado" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spObtenerNiveles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idproceso" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spObtenerNombreCaso" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idproceso" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spObtenerNombreLider" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idLider" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spObtenerNombreProceso" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idProcdeso" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spObtenerNombreUsu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Idusuario" Type="numeric" Mode="In" />
+  </Function>
+  <Function Name="spObtenerPersonasPorLiderSGD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Cedula" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spObtenerRoles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Activo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spObtenerSuspendidosAntara" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idLider" Type="int" Mode="In" />
+    <Parameter Name="idProceso" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spObtieneFuncXlider" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="identLider" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spPruebaAsigna" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idProceso" Type="int" Mode="In" />
+    <Parameter Name="identLider" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spRegistrarHoraFinCaso" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ced" Type="varchar(max)" Mode="In" />
+    <Parameter Name="radicado" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spResetearUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idUsuario" Type="numeric" Mode="In" />
+    <Parameter Name="ContrasenaDefault" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sptip_ausentismo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ced" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spUpdateDescRol" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdRol" Type="int" Mode="In" />
+    <Parameter Name="DesRol" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spUpdateRoles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdRol" Type="int" Mode="In" />
+    <Parameter Name="Activo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spUsuariosAplicacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spValidaConexionesFunc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spValidaEstadoCasoSGD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ced" Type="varchar" Mode="In" />
+    <Parameter Name="radicado" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spValidaEstadoCasoSuspendSGD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ced" Type="varchar" Mode="In" />
+    <Parameter Name="radicado" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spValidarUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="usuario" Type="varchar" Mode="In" />
+    <Parameter Name="clave" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spVerCasosEnCola" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idLider" Type="int" Mode="In" />
+    <Parameter Name="proceso" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spVerificaCaso" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Caso" Type="int" Mode="In" />
+  </Function>
+  <Function Name="trazaFuncCasos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="identLider" Type="int" Mode="In" />
+  </Function>
+  <Function Name="trazaFuncCasos2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="identLider" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="Asignador_SGDModelStoreContainer">
+    <EntitySet Name="Auditoria" EntityType="Self.Auditoria" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Campos" EntityType="Self.Campos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Campos_Listas" EntityType="Self.Campos_Listas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CodigosCampo" EntityType="Self.CodigosCampo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Estados" EntityType="Self.Estados" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Formulario_Campos" EntityType="Self.Formulario_Campos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Menu" EntityType="Self.Menu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ModuloEverisRRHH" EntityType="Self.ModuloEverisRRHH" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Parametros" EntityType="Self.Parametros" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProgramacionTurnos" EntityType="Self.ProgramacionTurnos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_Formularios" EntityType="Self.tb_Formularios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbAns" EntityType="Self.tbAns" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbAreas" EntityType="Self.tbAreas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbAuditoriaConexion" EntityType="Self.tbAuditoriaConexion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbFormalizacion" EntityType="Self.tbFormalizacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbHistorial" EntityType="Self.tbHistorial" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbLibranza" EntityType="Self.tbLibranza" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbLiderProductoFile" EntityType="Self.tbLiderProductoFile" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TbMallaTurnos" EntityType="Self.TbMallaTurnos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbParametrosServicio" EntityType="Self.tbParametrosServicio" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbProcesosMasivos" EntityType="Self.tbProcesosMasivos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbProcPorProducto" EntityType="Self.tbProcPorProducto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbProducto" EntityType="Self.tbProducto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbProductos" EntityType="Self.tbProductos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbTipoAusentismo" EntityType="Self.tbTipoAusentismo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbTipologiaConvenio" EntityType="Self.tbTipologiaConvenio" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TiposCampo" EntityType="Self.TiposCampo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ts_Campos" EntityType="Self.ts_Campos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UsuariosBloqueados" EntityType="Self.UsuariosBloqueados" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UsuariosHistorico" EntityType="Self.UsuariosHistorico" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HistDatosPersonalesRRHH" EntityType="Self.HistDatosPersonalesRRHH" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [HistDatosPersonalesRRHH].[FechaActualizacon] AS [FechaActualizacon], 
+    [HistDatosPersonalesRRHH].[Cedula] AS [Cedula], 
+    [HistDatosPersonalesRRHH].[NombreCompleto] AS [NombreCompleto], 
+    [HistDatosPersonalesRRHH].[FechaNacimiento] AS [FechaNacimiento], 
+    [HistDatosPersonalesRRHH].[Edad] AS [Edad], 
+    [HistDatosPersonalesRRHH].[TelefonoCelular] AS [TelefonoCelular], 
+    [HistDatosPersonalesRRHH].[TelefonoContato] AS [TelefonoContato], 
+    [HistDatosPersonalesRRHH].[Direccion] AS [Direccion], 
+    [HistDatosPersonalesRRHH].[IdMotivoIngreso] AS [IdMotivoIngreso], 
+    [HistDatosPersonalesRRHH].[IdTipoDocumento] AS [IdTipoDocumento], 
+    [HistDatosPersonalesRRHH].[IdGenero] AS [IdGenero], 
+    [HistDatosPersonalesRRHH].[IdCiudad] AS [IdCiudad], 
+    [HistDatosPersonalesRRHH].[IdLocalidad] AS [IdLocalidad], 
+    [HistDatosPersonalesRRHH].[IdCarreraEducativa] AS [IdCarreraEducativa]
+    FROM [dbo].[HistDatosPersonalesRRHH] AS [HistDatosPersonalesRRHH]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="HistModuloEverisRRHH" EntityType="Self.HistModuloEverisRRHH" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [HistModuloEverisRRHH].[FechaActualizacon] AS [FechaActualizacon], 
+    [HistModuloEverisRRHH].[Cedula] AS [Cedula], 
+    [HistModuloEverisRRHH].[Empresa] AS [Empresa], 
+    [HistModuloEverisRRHH].[FecContratacionTemporal] AS [FecContratacionTemporal], 
+    [HistModuloEverisRRHH].[FecContratacionEveris] AS [FecContratacionEveris], 
+    [HistModuloEverisRRHH].[SalarioEveris] AS [SalarioEveris], 
+    [HistModuloEverisRRHH].[CsrGeco] AS [CsrGeco], 
+    [HistModuloEverisRRHH].[Pais] AS [Pais], 
+    [HistModuloEverisRRHH].[Cliente] AS [Cliente], 
+    [HistModuloEverisRRHH].[Proyecto] AS [Proyecto], 
+    [HistModuloEverisRRHH].[Cargo] AS [Cargo], 
+    [HistModuloEverisRRHH].[Categoria] AS [Categoria], 
+    [HistModuloEverisRRHH].[Nivel] AS [Nivel]
+    FROM [dbo].[HistModuloEverisRRHH] AS [HistModuloEverisRRHH]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="HistModuloEverProLideresRRHH" EntityType="Self.HistModuloEverProLideresRRHH" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [HistModuloEverProLideresRRHH].[FechaActualizacion] AS [FechaActualizacion], 
+    [HistModuloEverProLideresRRHH].[Cedula] AS [Cedula], 
+    [HistModuloEverProLideresRRHH].[IdHc] AS [IdHc], 
+    [HistModuloEverProLideresRRHH].[IdRol] AS [IdRol], 
+    [HistModuloEverProLideresRRHH].[CodigoDeEmpleado] AS [CodigoDeEmpleado], 
+    [HistModuloEverProLideresRRHH].[CedJefe] AS [CedJefe], 
+    [HistModuloEverProLideresRRHH].[CedPsl] AS [CedPsl], 
+    [HistModuloEverProLideresRRHH].[CedPtl] AS [CedPtl], 
+    [HistModuloEverProLideresRRHH].[CedPsc] AS [CedPsc], 
+    [HistModuloEverProLideresRRHH].[IdArea] AS [IdArea], 
+    [HistModuloEverProLideresRRHH].[IdProceso] AS [IdProceso], 
+    [HistModuloEverProLideresRRHH].[IdClasificacion] AS [IdClasificacion], 
+    [HistModuloEverProLideresRRHH].[IdLugarDeTrabajo] AS [IdLugarDeTrabajo], 
+    [HistModuloEverProLideresRRHH].[IdTurno] AS [IdTurno], 
+    [HistModuloEverProLideresRRHH].[CedLiderSGD] AS [CedLiderSGD]
+    FROM [dbo].[HistModuloEverProLideresRRHH] AS [HistModuloEverProLideresRRHH]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="RolesMenu" EntityType="Self.RolesMenu" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [RolesMenu].[IdRol] AS [IdRol], 
+    [RolesMenu].[IdMenu] AS [IdMenu], 
+    [RolesMenu].[Activo] AS [Activo]
+    FROM [dbo].[RolesMenu] AS [RolesMenu]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbAsignacionCasos" EntityType="Self.tbAsignacionCasos" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tbAsignacionCasos].[idAsigCasos] AS [idAsigCasos], 
+    [tbAsignacionCasos].[identFuncionario] AS [identFuncionario], 
+    [tbAsignacionCasos].[FechaCreacionCaso] AS [FechaCreacionCaso], 
+    [tbAsignacionCasos].[Ncaso] AS [Ncaso], 
+    [tbAsignacionCasos].[NombreCaso] AS [NombreCaso], 
+    [tbAsignacionCasos].[NivelClasif] AS [NivelClasif], 
+    [tbAsignacionCasos].[EstadoCaso] AS [EstadoCaso], 
+    [tbAsignacionCasos].[FechaAsignacionCaso] AS [FechaAsignacionCaso], 
+    [tbAsignacionCasos].[Proceso] AS [Proceso], 
+    [tbAsignacionCasos].[Horainicio] AS [Horainicio], 
+    [tbAsignacionCasos].[HoraFin] AS [HoraFin]
+    FROM [dbo].[tbAsignacionCasos] AS [tbAsignacionCasos]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbClasificaNivFuncionario" EntityType="Self.tbClasificaNivFuncionario" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tbClasificaNivFuncionario].[identFuncionario] AS [identFuncionario], 
+    [tbClasificaNivFuncionario].[NivelClasificacion] AS [NivelClasificacion], 
+    [tbClasificaNivFuncionario].[Proceso] AS [Proceso]
+    FROM [dbo].[tbClasificaNivFuncionario] AS [tbClasificaNivFuncionario]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbLider" EntityType="Self.tbLider" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tbLider].[NombreCompleto] AS [NombreCompleto], 
+    [tbLider].[Cedula] AS [Cedula], 
+    [tbLider].[idArea] AS [idArea]
+    FROM [dbo].[tbLider] AS [tbLider]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbParamNivelConvenio" EntityType="Self.tbParamNivelConvenio" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tbParamNivelConvenio].[Area] AS [Area], 
+    [tbParamNivelConvenio].[Coordinador] AS [Coordinador], 
+    [tbParamNivelConvenio].[Cedula] AS [Cedula], 
+    [tbParamNivelConvenio].[idNivelConvenio] AS [idNivelConvenio]
+    FROM [dbo].[tbParamNivelConvenio] AS [tbParamNivelConvenio]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbUsuariosPorLider" EntityType="Self.tbUsuariosPorLider" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tbUsuariosPorLider].[idLider] AS [idLider], 
+    [tbUsuariosPorLider].[NombreCompleto] AS [NombreCompleto], 
+    [tbUsuariosPorLider].[Cedula] AS [Cedula], 
+    [tbUsuariosPorLider].[Apoyo] AS [Apoyo], 
+    [tbUsuariosPorLider].[Estado] AS [Estado]
+    FROM [dbo].[tbUsuariosPorLider] AS [tbUsuariosPorLider]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__Campos__IdTipoCa__7C6F7215" Association="Self.FK__Campos__IdTipoCa__7C6F7215">
+      <End Role="TiposCampo" EntitySet="TiposCampo" />
+      <End Role="Campos" EntitySet="Campos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Formulari__IdCam__08D548FA" Association="Self.FK__Formulari__IdCam__08D548FA">
+      <End Role="Campos" EntitySet="Campos" />
+      <End Role="Formulario_Campos" EntitySet="Formulario_Campos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Formulari__IdFor__09C96D33" Association="Self.FK__Formulari__IdFor__09C96D33">
+      <End Role="tb_Formularios" EntitySet="tb_Formularios" />
+      <End Role="Formulario_Campos" EntitySet="Formulario_Campos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__RolesMenu__IdMen__3EDC53F0" Association="Self.FK__RolesMenu__IdMen__3EDC53F0">
+      <End Role="Menu" EntitySet="Menu" />
+      <End Role="RolesMenu" EntitySet="RolesMenu" />
+    </AssociationSet>
+    <AssociationSet Name="FK__RolesMenu__IdRol__40C49C62" Association="Self.FK__RolesMenu__IdRol__40C49C62">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="RolesMenu" EntitySet="RolesMenu" />
+    </AssociationSet>
+    <AssociationSet Name="FK__RolesMenu__IdRol__41B8C09B" Association="Self.FK__RolesMenu__IdRol__41B8C09B">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="RolesMenu" EntitySet="RolesMenu" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbLider__idArea__36B12243" Association="Self.FK__tbLider__idArea__36B12243">
+      <End Role="tbAreas" EntitySet="tbAreas" />
+      <End Role="tbLider" EntitySet="tbLider" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbProcPor__idPro__37A5467C" Association="Self.FK__tbProcPor__idPro__37A5467C">
+      <End Role="tbProducto" EntitySet="tbProducto" />
+      <End Role="tbProcPorProducto" EntitySet="tbProcPorProducto" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ts_Campos__idTip__4E88ABD4" Association="Self.FK__ts_Campos__idTip__4E88ABD4">
+      <End Role="TiposCampo" EntitySet="TiposCampo" />
+      <End Role="ts_Campos" EntitySet="ts_Campos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Usuarios__IdRol__42ACE4D4" Association="Self.FK__Usuarios__IdRol__42ACE4D4">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Usuarios" EntitySet="Usuarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Auditoria_Usuarios" Association="Self.FK_Auditoria_Usuarios">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Auditoria" EntitySet="Auditoria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbClasificaNivFuncionario_tbTipologiaConvenio" Association="Self.FK_tbClasificaNivFuncionario_tbTipologiaConvenio">
+      <End Role="tbTipologiaConvenio" EntitySet="tbTipologiaConvenio" />
+      <End Role="tbClasificaNivFuncionario" EntitySet="tbClasificaNivFuncionario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbFormalizacion_Estados1" Association="Self.FK_tbFormalizacion_Estados1">
+      <End Role="Estados" EntitySet="Estados" />
+      <End Role="tbFormalizacion" EntitySet="tbFormalizacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbLibranza_Estados1" Association="Self.FK_tbLibranza_Estados1">
+      <End Role="Estados" EntitySet="Estados" />
+      <End Role="tbLibranza" EntitySet="tbLibranza" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbProcesosMasivos_Estados" Association="Self.FK_tbProcesosMasivos_Estados">
+      <End Role="Estados" EntitySet="Estados" />
+      <End Role="tbProcesosMasivos" EntitySet="tbProcesosMasivos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbUsuariosPorLider_Estados" Association="Self.FK_tbUsuariosPorLider_Estados">
+      <End Role="Estados" EntitySet="Estados" />
+      <End Role="tbUsuariosPorLider" EntitySet="tbUsuariosPorLider" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuariosBloqueados_Usuarios" Association="Self.FK_UsuariosBloqueados_Usuarios">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="UsuariosBloqueados" EntitySet="UsuariosBloqueados" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuariosHistorico_Usuarios" Association="Self.FK_UsuariosHistorico_Usuarios">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="UsuariosHistorico" EntitySet="UsuariosHistorico" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,2257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="EverisProduccionModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <Function Name="aspnet_AnyDataInTables" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TablesToCheck" Type="int" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Applications_CreateApplication" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="ApplicationId" Type="uniqueidentifier" Mode="InOut" />
+        </Function>
+        <Function Name="aspnet_CheckSchemaVersion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Feature" Type="nvarchar" Mode="In" />
+          <Parameter Name="CompatibleSchemaVersion" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Membership_ChangePasswordQuestionAndAnswer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+          <Parameter Name="NewPasswordQuestion" Type="nvarchar" Mode="In" />
+          <Parameter Name="NewPasswordAnswer" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Membership_CreateUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Password" Type="nvarchar" Mode="In" />
+          <Parameter Name="PasswordSalt" Type="nvarchar" Mode="In" />
+          <Parameter Name="Email" Type="nvarchar" Mode="In" />
+          <Parameter Name="PasswordQuestion" Type="nvarchar" Mode="In" />
+          <Parameter Name="PasswordAnswer" Type="nvarchar" Mode="In" />
+          <Parameter Name="IsApproved" Type="bit" Mode="In" />
+          <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+          <Parameter Name="CreateDate" Type="datetime" Mode="In" />
+          <Parameter Name="UniqueEmail" Type="int" Mode="In" />
+          <Parameter Name="PasswordFormat" Type="int" Mode="In" />
+          <Parameter Name="UserId" Type="uniqueidentifier" Mode="InOut" />
+        </Function>
+        <Function Name="aspnet_Membership_FindUsersByEmail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="EmailToMatch" Type="nvarchar" Mode="In" />
+          <Parameter Name="PageIndex" Type="int" Mode="In" />
+          <Parameter Name="PageSize" Type="int" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Membership_FindUsersByName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserNameToMatch" Type="nvarchar" Mode="In" />
+          <Parameter Name="PageIndex" Type="int" Mode="In" />
+          <Parameter Name="PageSize" Type="int" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Membership_GetAllUsers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="PageIndex" Type="int" Mode="In" />
+          <Parameter Name="PageSize" Type="int" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Membership_GetNumberOfUsersOnline" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="MinutesSinceLastInActive" Type="int" Mode="In" />
+          <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Membership_GetPassword" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+          <Parameter Name="MaxInvalidPasswordAttempts" Type="int" Mode="In" />
+          <Parameter Name="PasswordAttemptWindow" Type="int" Mode="In" />
+          <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+          <Parameter Name="PasswordAnswer" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Membership_GetPasswordWithFormat" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+          <Parameter Name="UpdateLastLoginActivityDate" Type="bit" Mode="In" />
+          <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Membership_GetUserByEmail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Email" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Membership_GetUserByName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+          <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+          <Parameter Name="UpdateLastActivity" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Membership_GetUserByUserId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UserId" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+          <Parameter Name="UpdateLastActivity" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Membership_ResetPassword" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+          <Parameter Name="NewPassword" Type="nvarchar" Mode="In" />
+          <Parameter Name="MaxInvalidPasswordAttempts" Type="int" Mode="In" />
+          <Parameter Name="PasswordAttemptWindow" Type="int" Mode="In" />
+          <Parameter Name="PasswordSalt" Type="nvarchar" Mode="In" />
+          <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+          <Parameter Name="PasswordFormat" Type="int" Mode="In" />
+          <Parameter Name="PasswordAnswer" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Membership_SetPassword" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+          <Parameter Name="NewPassword" Type="nvarchar" Mode="In" />
+          <Parameter Name="PasswordSalt" Type="nvarchar" Mode="In" />
+          <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+          <Parameter Name="PasswordFormat" Type="int" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Membership_UnlockUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Membership_UpdateUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Email" Type="nvarchar" Mode="In" />
+          <Parameter Name="Comment" Type="ntext" Mode="In" />
+          <Parameter Name="IsApproved" Type="bit" Mode="In" />
+          <Parameter Name="LastLoginDate" Type="datetime" Mode="In" />
+          <Parameter Name="LastActivityDate" Type="datetime" Mode="In" />
+          <Parameter Name="UniqueEmail" Type="int" Mode="In" />
+          <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Membership_UpdateUserInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+          <Parameter Name="IsPasswordCorrect" Type="bit" Mode="In" />
+          <Parameter Name="UpdateLastLoginActivityDate" Type="bit" Mode="In" />
+          <Parameter Name="MaxInvalidPasswordAttempts" Type="int" Mode="In" />
+          <Parameter Name="PasswordAttemptWindow" Type="int" Mode="In" />
+          <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+          <Parameter Name="LastLoginDate" Type="datetime" Mode="In" />
+          <Parameter Name="LastActivityDate" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Membership_ValidMobilePIN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="NameUser" Type="nvarchar" Mode="In" />
+          <Parameter Name="Pin" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Paths_CreatePath" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationId" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="Path" Type="nvarchar" Mode="In" />
+          <Parameter Name="PathId" Type="uniqueidentifier" Mode="InOut" />
+        </Function>
+        <Function Name="aspnet_Personalization_GetApplicationId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="ApplicationId" Type="uniqueidentifier" Mode="InOut" />
+        </Function>
+        <Function Name="aspnet_PersonalizationAdministration_DeleteAllState" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="AllUsersScope" Type="bit" Mode="In" />
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Count" Type="int" Mode="InOut" />
+        </Function>
+        <Function Name="aspnet_PersonalizationAdministration_FindState" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="AllUsersScope" Type="bit" Mode="In" />
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="PageIndex" Type="int" Mode="In" />
+          <Parameter Name="PageSize" Type="int" Mode="In" />
+          <Parameter Name="Path" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+          <Parameter Name="InactiveSinceDate" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="aspnet_PersonalizationAdministration_GetCountOfState" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Count" Type="int" Mode="InOut" />
+          <Parameter Name="AllUsersScope" Type="bit" Mode="In" />
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Path" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+          <Parameter Name="InactiveSinceDate" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="aspnet_PersonalizationAdministration_ResetSharedState" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Count" Type="int" Mode="InOut" />
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Path" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="aspnet_PersonalizationAdministration_ResetUserState" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Count" Type="int" Mode="InOut" />
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="InactiveSinceDate" Type="datetime" Mode="In" />
+          <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Path" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="aspnet_PersonalizationAllUsers_GetPageSettings" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Path" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="aspnet_PersonalizationAllUsers_ResetPageSettings" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Path" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="aspnet_PersonalizationAllUsers_SetPageSettings" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Path" Type="nvarchar" Mode="In" />
+          <Parameter Name="PageSettings" Type="image" Mode="In" />
+          <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="aspnet_PersonalizationPerUser_GetPageSettings" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Path" Type="nvarchar" Mode="In" />
+          <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="aspnet_PersonalizationPerUser_ResetPageSettings" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Path" Type="nvarchar" Mode="In" />
+          <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="aspnet_PersonalizationPerUser_SetPageSettings" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Path" Type="nvarchar" Mode="In" />
+          <Parameter Name="PageSettings" Type="image" Mode="In" />
+          <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Profile_DeleteInactiveProfiles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="ProfileAuthOptions" Type="int" Mode="In" />
+          <Parameter Name="InactiveSinceDate" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Profile_DeleteProfiles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserNames" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Profile_GetNumberOfInactiveProfiles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="ProfileAuthOptions" Type="int" Mode="In" />
+          <Parameter Name="InactiveSinceDate" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Profile_GetProfiles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="ProfileAuthOptions" Type="int" Mode="In" />
+          <Parameter Name="PageIndex" Type="int" Mode="In" />
+          <Parameter Name="PageSize" Type="int" Mode="In" />
+          <Parameter Name="UserNameToMatch" Type="nvarchar" Mode="In" />
+          <Parameter Name="InactiveSinceDate" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Profile_GetProperties" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+          <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Profile_SetProperties" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="PropertyNames" Type="ntext" Mode="In" />
+          <Parameter Name="PropertyValuesString" Type="ntext" Mode="In" />
+          <Parameter Name="PropertyValuesBinary" Type="image" Mode="In" />
+          <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+          <Parameter Name="IsUserAnonymous" Type="bit" Mode="In" />
+          <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="aspnet_RegisterSchemaVersion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Feature" Type="nvarchar" Mode="In" />
+          <Parameter Name="CompatibleSchemaVersion" Type="nvarchar" Mode="In" />
+          <Parameter Name="IsCurrentVersion" Type="bit" Mode="In" />
+          <Parameter Name="RemoveIncompatibleSchema" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Roles_CreateRole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="RoleName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Roles_DeleteRole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="RoleName" Type="nvarchar" Mode="In" />
+          <Parameter Name="DeleteOnlyIfRoleIsEmpty" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Roles_GetAllRoles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Roles_RoleExists" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="RoleName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Setup_RemoveAllRoleMembers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="name" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Setup_RestorePermissions" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="name" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="aspnet_UnRegisterSchemaVersion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Feature" Type="nvarchar" Mode="In" />
+          <Parameter Name="CompatibleSchemaVersion" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Users_CreateUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationId" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+          <Parameter Name="IsUserAnonymous" Type="bit" Mode="In" />
+          <Parameter Name="LastActivityDate" Type="datetime" Mode="In" />
+          <Parameter Name="UserId" Type="uniqueidentifier" Mode="InOut" />
+        </Function>
+        <Function Name="aspnet_Users_DeleteUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+          <Parameter Name="TablesToDeleteFrom" Type="int" Mode="In" />
+          <Parameter Name="NumTablesDeletedFrom" Type="int" Mode="InOut" />
+        </Function>
+        <Function Name="aspnet_UsersInRoles_AddUsersToRoles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserNames" Type="nvarchar" Mode="In" />
+          <Parameter Name="RoleNames" Type="nvarchar" Mode="In" />
+          <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="aspnet_UsersInRoles_FindUsersInRole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="RoleName" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserNameToMatch" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="aspnet_UsersInRoles_GetRolesForUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="aspnet_UsersInRoles_GetUsersInRoles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="RoleName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="aspnet_UsersInRoles_IsUserInRole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+          <Parameter Name="RoleName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="aspnet_UsersInRoles_RemoveUsersFromRoles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserNames" Type="nvarchar" Mode="In" />
+          <Parameter Name="RoleNames" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="aspnet_WebEvent_LogEvent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="EventId" Type="char" Mode="In" />
+          <Parameter Name="EventTimeUtc" Type="datetime" Mode="In" />
+          <Parameter Name="EventTime" Type="datetime" Mode="In" />
+          <Parameter Name="EventType" Type="nvarchar" Mode="In" />
+          <Parameter Name="EventSequence" Type="decimal" Mode="In" />
+          <Parameter Name="EventOccurrence" Type="decimal" Mode="In" />
+          <Parameter Name="EventCode" Type="int" Mode="In" />
+          <Parameter Name="EventDetailCode" Type="int" Mode="In" />
+          <Parameter Name="Message" Type="nvarchar" Mode="In" />
+          <Parameter Name="ApplicationPath" Type="nvarchar" Mode="In" />
+          <Parameter Name="ApplicationVirtualPath" Type="nvarchar" Mode="In" />
+          <Parameter Name="MachineName" Type="nvarchar" Mode="In" />
+          <Parameter Name="RequestUrl" Type="nvarchar" Mode="In" />
+          <Parameter Name="ExceptionType" Type="nvarchar" Mode="In" />
+          <Parameter Name="Details" Type="ntext" Mode="In" />
+        </Function>
+        <Function Name="CambiarFormatoFecha" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar">
+          <Parameter Name="fechaProduccion" Type="nvarchar" Mode="In" />
+          <Parameter Name="tipoConvercion" Type="int" Mode="In" />
+        </Function>
+        <Function Name="CambioMasivoDeLiderAEmpleados" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PersonalIdAnterior" Type="nvarchar" Mode="In" />
+          <Parameter Name="PersonalIdNuevo" Type="nvarchar" Mode="In" />
+          <Parameter Name="CodigoCampoAModificar" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="ConvertNegativoAPositivo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+          <Parameter Name="Numero" Type="int" Mode="In" />
+        </Function>
+        <Function Name="Desbloqueomasivousuarios" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Desbloqueousuarios" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idusuario" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="diaSemanal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar">
+          <Parameter Name="NumeroDia" Type="int" Mode="In" />
+        </Function>
+        <Function Name="DiferenciaEntreHoras" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="time">
+          <Parameter Name="HoraIni" Type="time" Mode="In" />
+          <Parameter Name="HoraFin" Type="time" Mode="In" />
+        </Function>
+        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+        <Function Name="ListasCampos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+          <Parameter Name="VALOR" Type="varchar" Mode="In" />
+          <Parameter Name="Campo" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_CambioEstadoDiario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_CambioEstadoMensual" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dias_habiles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="fecha_desde" Type="smalldatetime" Mode="In" />
+          <Parameter Name="fecha_hasta" Type="smalldatetime" Mode="In" />
+          <Parameter Name="NumActividad" Type="int" Mode="In" />
+          <Parameter Name="AreaId" Type="bigint" Mode="In" />
+          <Parameter Name="ProcesosId" Type="bigint" Mode="In" />
+          <Parameter Name="ActividadId" Type="bigint" Mode="In" />
+          <Parameter Name="ProductoId" Type="bigint" Mode="In" />
+          <Parameter Name="Productividad" Type="bigint" Mode="In" />
+          <Parameter Name="Tiempo" Type="time" Mode="In" />
+          <Parameter Name="FechaProductiva" Type="date" Mode="In" />
+          <Parameter Name="TipoActividad" Type="int" Mode="In" />
+          <Parameter Name="TipoInactividadId" Type="int" Mode="In" />
+          <Parameter Name="InactividadId" Type="int" Mode="In" />
+          <Parameter Name="PersonaId" Type="bigint" Mode="In" />
+          <Parameter Name="FechaRegistro" Type="datetime" Mode="In" />
+          <Parameter Name="EstadoId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_SabanadeProduccion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_SabanadeProduccion1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_SabanadeRH" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_SabanadeRH_1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="spActualizaInfoPrincipal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="nombreCompleto" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="tipoDoc" Type="bigint" Mode="In" />
+          <Parameter Name="identificacion" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="fechaNacimiento" Type="date" Mode="In" />
+          <Parameter Name="genero" Type="bigint" Mode="In" />
+          <Parameter Name="cargoId" Type="bigint" Mode="In" />
+          <Parameter Name="PersonaId" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="spActualizaMasivo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="campoID" Type="int" Mode="In" />
+          <Parameter Name="valor" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="PersonaId" Type="bigint" Mode="In" />
+          <Parameter Name="nroCaptura" Type="int" Mode="In" />
+          <Parameter Name="UserId" Type="uniqueidentifier" Mode="In" />
+        </Function>
+        <Function Name="spActualizaRetiro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PersonaId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spBuscarPersonal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="empresa" Type="nvarchar" Mode="In" />
+          <Parameter Name="fechaInicio" Type="nvarchar" Mode="In" />
+          <Parameter Name="fechafin" Type="nvarchar" Mode="In" />
+          <Parameter Name="area" Type="nvarchar" Mode="In" />
+          <Parameter Name="PSL" Type="nvarchar" Mode="In" />
+          <Parameter Name="PTL" Type="nvarchar" Mode="In" />
+          <Parameter Name="PSC" Type="nvarchar" Mode="In" />
+          <Parameter Name="Nombre" Type="nvarchar" Mode="In" />
+          <Parameter Name="Cedula" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="spCalcularHorasExtras" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="spCalcularHorasExtrasNv" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="spControlHorasExtras" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PersonaACargo" Type="int" Mode="In" />
+          <Parameter Name="FechaInico" Type="nvarchar" Mode="In" />
+          <Parameter Name="FechaFin" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="spDeshabilitarusuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idusuario" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="spEliminarActividadDiaria" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ActividadDiariaId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spInsertarActividadDiaria" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="NumActividad" Type="int" Mode="In" />
+          <Parameter Name="AreaId" Type="bigint" Mode="In" />
+          <Parameter Name="ProcesosId" Type="bigint" Mode="In" />
+          <Parameter Name="ActividadId" Type="bigint" Mode="In" />
+          <Parameter Name="ProductoId" Type="bigint" Mode="In" />
+          <Parameter Name="Productividad" Type="bigint" Mode="In" />
+          <Parameter Name="Tiempo" Type="time" Mode="In" />
+          <Parameter Name="FechaProductiva" Type="date" Mode="In" />
+          <Parameter Name="TipoActividad" Type="int" Mode="In" />
+          <Parameter Name="TipoInactividadId" Type="int" Mode="In" />
+          <Parameter Name="InactividadId" Type="int" Mode="In" />
+          <Parameter Name="PersonaId" Type="bigint" Mode="In" />
+          <Parameter Name="FechaRegistro" Type="datetime" Mode="In" />
+          <Parameter Name="EstadoId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spInsertarProgramacionLaboral" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PersonaId" Type="bigint" Mode="In" />
+          <Parameter Name="FechaTurno" Type="date" Mode="In" />
+          <Parameter Name="HoraInicio" Type="time" Mode="In" />
+          <Parameter Name="HoraFin" Type="time" Mode="In" />
+          <Parameter Name="PersonaIdRegistro" Type="bigint" Mode="In" />
+          <Parameter Name="FechaRegistro" Type="datetime" Mode="In" />
+          <Parameter Name="TurnoId" Type="int" Mode="In" />
+          <Parameter Name="Activo" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="spInsertExtrasAprobadas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="FechaTurno" Type="nvarchar" Mode="In" />
+          <Parameter Name="PersonaId" Type="bigint" Mode="In" />
+          <Parameter Name="ExtrasAprobadas" Type="time" Mode="In" />
+          <Parameter Name="AprobarExtras" Type="bit" Mode="In" />
+          <Parameter Name="FechaAprobadas" Type="datetime" Mode="In" />
+          <Parameter Name="PerosonaIdAprobador" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="spLiderInsertaInactividad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="fecha_desde" Type="datetime" Mode="In" />
+          <Parameter Name="fecha_hasta" Type="datetime" Mode="In" />
+          <Parameter Name="NumActividad" Type="int" Mode="In" />
+          <Parameter Name="AreaId" Type="bigint" Mode="In" />
+          <Parameter Name="ProcesosId" Type="bigint" Mode="In" />
+          <Parameter Name="ActividadId" Type="bigint" Mode="In" />
+          <Parameter Name="ProductoId" Type="bigint" Mode="In" />
+          <Parameter Name="Productividad" Type="bigint" Mode="In" />
+          <Parameter Name="Tiempo" Type="time" Mode="In" />
+          <Parameter Name="FechaProductiva" Type="date" Mode="In" />
+          <Parameter Name="TipoActividad" Type="int" Mode="In" />
+          <Parameter Name="TipoInactividadId" Type="int" Mode="In" />
+          <Parameter Name="InactividadId" Type="int" Mode="In" />
+          <Parameter Name="PersonaId" Type="bigint" Mode="In" />
+          <Parameter Name="FechaRegistro" Type="datetime" Mode="In" />
+          <Parameter Name="EstadoId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="Split" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="String" Type="varchar(max)" Mode="In" />
+          <Parameter Name="delimiter" Type="varchar" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="Splitcolumn" Type="varchar(max)" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="spLoginUsuarios" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="spObtenerActividadesDiariasPorUsDesHast" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PersonaId" Type="bigint" Mode="In" />
+          <Parameter Name="fechaProduccionDesde" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="fechaProduccionhasta" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="spObtenerActividadesDiariasPorUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PersonaId" Type="bigint" Mode="In" />
+          <Parameter Name="fechaProduccion" Type="date" Mode="In" />
+        </Function>
+        <Function Name="spObtenerCamposFormulario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="FormularioId" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="spObtenerCapturaEventos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PersonaId" Type="int" Mode="In" />
+          <Parameter Name="BarraEventoId" Type="int" Mode="In" />
+          <Parameter Name="FechaRegistro" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="spObtenerClientes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="spObtenerClientesRoles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="cliente" Type="bigint" Mode="In" />
+          <Parameter Name="RoleId" Type="uniqueidentifier" Mode="In" />
+        </Function>
+        <Function Name="spObtenerDatosPersonal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="personaId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spObtenerEstructuras" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="padre" Type="int" Mode="In" />
+          <Parameter Name="cliente" Type="int" Mode="In" />
+          <Parameter Name="edita" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="spObtenerHorasExtras" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="FechaInico" Type="nvarchar" Mode="In" />
+          <Parameter Name="FechaFin" Type="nvarchar" Mode="In" />
+          <Parameter Name="PersonaACargo" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spObtenerInactividadesPorActividad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="numActividad" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spObtenerItemsListaCampos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CampoId" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="spObtenerItemsListaCamposCascada" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CampoId" Type="bigint" Mode="In" />
+          <Parameter Name="PadreId" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="spObtenerMenuHijos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdPadre" Type="int" Mode="In" />
+          <Parameter Name="Usuario" Type="uniqueidentifier" Mode="In" />
+        </Function>
+        <Function Name="spObtenerMenuPadre" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Usuario" Type="uniqueidentifier" Mode="In" />
+        </Function>
+        <Function Name="spObtenerNombreLider" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idLider" Type="varchar(max)" Mode="In" />
+        </Function>
+        <Function Name="spObtenerPersonasCargoEVERIS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="valorItemLista" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="spObtenerPersonasPorLider" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PSC" Type="nvarchar" Mode="In" />
+          <Parameter Name="Cedula" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="spObtenerPersonasPorLiderSGD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Cedula" Type="varchar" Mode="In" />
+          <Parameter Name="idProceso" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spObtenerPersonIdPorUserId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UserId" Type="uniqueidentifier" Mode="In" />
+        </Function>
+        <Function Name="spObtenerProgramcionLaboralPorFecha" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="FechaInico" Type="nvarchar" Mode="In" />
+          <Parameter Name="FechaFin" Type="nvarchar" Mode="In" />
+          <Parameter Name="PersonaACargo" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="spObtenerProgramcionLaboralPorFecha1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="FechaInico" Type="nvarchar" Mode="In" />
+          <Parameter Name="FechaFin" Type="nvarchar" Mode="In" />
+          <Parameter Name="PersonaACargo" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="spObtenerProgramLaboralActualUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PersonaId" Type="bigint" Mode="In" />
+          <Parameter Name="FechaTurno" Type="date" Mode="In" />
+        </Function>
+        <Function Name="spObtenerRolUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idUser" Type="uniqueidentifier" Mode="In" />
+        </Function>
+        <Function Name="spObtenerUserId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="nameUser" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="spObtieneProgramacionLabralPorDia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PersonaId" Type="nvarchar" Mode="In" />
+          <Parameter Name="FechaTurno" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="spOptenerBarraEventos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="spReporteEntradaySalida" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="spReporteEntradaySalida1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="spReporteHorasExtrasConsolidado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="spReporteHorasExtrasPorLider" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PersonalIdACargo" Type="nvarchar" Mode="In" />
+          <Parameter Name="FechaIni" Type="nvarchar" Mode="In" />
+          <Parameter Name="fechaFin" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="spTiempoTotalActividadDiariaPorPersona" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="fechaProductiva" Type="nvarchar" Mode="In" />
+          <Parameter Name="PersonaId" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="spUpdateCapturaBarraEvento" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="fechaRegistro" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="personaId" Type="bigint" Mode="In" />
+          <Parameter Name="eventoBarraId" Type="int" Mode="In" />
+          <Parameter Name="tipoEditar" Type="int" Mode="In" />
+          <Parameter Name="fechaRegistroNueva" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Activo" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="spValidaExisPers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="identificacionID" Type="varchar(max)" Mode="In" />
+        </Function>
+        <Function Name="timeToDecimal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="float">
+          <Parameter Name="timeToConvert" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="udf_FormatoFecha" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+          <Parameter Name="fecha" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="udf_ListasdePSC" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+          <Parameter Name="valor" Type="int" Mode="In" />
+        </Function>
+        <Function Name="udf_RemplazodeVacios" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+          <Parameter Name="Campo" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="udf_UltimoValorCapturado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+          <Parameter Name="personaId" Type="int" Mode="In" />
+          <Parameter Name="FormularioCampoId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="UsersInRoles_AddUserToRole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UserId" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="RoleId" Type="uniqueidentifier" Mode="In" />
+        </Function>
+        <EntityContainer Name="EverisProduccionModelStoreContainer" />
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="EverisProduccionModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <ComplexType Name="Split_Result">
+          <Property Name="Splitcolumn" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </ComplexType>
+        <EntityContainer Name="EverisProduccionEntities" annotation:LazyLoadingEnabled="true">
+          <FunctionImport Name="Split" ReturnType="Collection(EverisProduccionModel.Split_Result)" IsComposable="true">
+            <Parameter Name="String" Mode="In" Type="String" />
+            <Parameter Name="delimiter" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_AnyDataInTables" ReturnType="Collection(String)">
+          <Parameter Name="TablesToCheck" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Applications_CreateApplication">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="ApplicationId" Mode="InOut" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_CheckSchemaVersion">
+            <Parameter Name="Feature" Mode="In" Type="String" />
+            <Parameter Name="CompatibleSchemaVersion" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_ChangePasswordQuestionAndAnswer">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="NewPasswordQuestion" Mode="In" Type="String" />
+            <Parameter Name="NewPasswordAnswer" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_CreateUser">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="Password" Mode="In" Type="String" />
+            <Parameter Name="PasswordSalt" Mode="In" Type="String" />
+            <Parameter Name="Email" Mode="In" Type="String" />
+            <Parameter Name="PasswordQuestion" Mode="In" Type="String" />
+            <Parameter Name="PasswordAnswer" Mode="In" Type="String" />
+            <Parameter Name="IsApproved" Mode="In" Type="Boolean" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+            <Parameter Name="CreateDate" Mode="In" Type="DateTime" />
+            <Parameter Name="UniqueEmail" Mode="In" Type="Int32" />
+            <Parameter Name="PasswordFormat" Mode="In" Type="Int32" />
+            <Parameter Name="UserId" Mode="InOut" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_FindUsersByEmail">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="EmailToMatch" Mode="In" Type="String" />
+            <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+            <Parameter Name="PageSize" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_FindUsersByName">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserNameToMatch" Mode="In" Type="String" />
+            <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+            <Parameter Name="PageSize" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_GetAllUsers">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+            <Parameter Name="PageSize" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_GetNumberOfUsersOnline">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="MinutesSinceLastInActive" Mode="In" Type="Int32" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_GetPassword" ReturnType="Collection(EverisProduccionModel.aspnet_Membership_GetPassword_Result)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="MaxInvalidPasswordAttempts" Mode="In" Type="Int32" />
+            <Parameter Name="PasswordAttemptWindow" Mode="In" Type="Int32" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+            <Parameter Name="PasswordAnswer" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_GetPasswordWithFormat" ReturnType="Collection(EverisProduccionModel.aspnet_Membership_GetPasswordWithFormat_Result)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="UpdateLastLoginActivityDate" Mode="In" Type="Boolean" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_GetUserByEmail" ReturnType="Collection(String)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="Email" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_GetUserByName" ReturnType="Collection(EverisProduccionModel.aspnet_Membership_GetUserByName_Result)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+            <Parameter Name="UpdateLastActivity" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_GetUserByUserId" ReturnType="Collection(EverisProduccionModel.aspnet_Membership_GetUserByUserId_Result)">
+            <Parameter Name="UserId" Mode="In" Type="Guid" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+            <Parameter Name="UpdateLastActivity" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_ResetPassword">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="NewPassword" Mode="In" Type="String" />
+            <Parameter Name="MaxInvalidPasswordAttempts" Mode="In" Type="Int32" />
+            <Parameter Name="PasswordAttemptWindow" Mode="In" Type="Int32" />
+            <Parameter Name="PasswordSalt" Mode="In" Type="String" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+            <Parameter Name="PasswordFormat" Mode="In" Type="Int32" />
+            <Parameter Name="PasswordAnswer" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_SetPassword">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="NewPassword" Mode="In" Type="String" />
+            <Parameter Name="PasswordSalt" Mode="In" Type="String" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+            <Parameter Name="PasswordFormat" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_UnlockUser">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_UpdateUser">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="Email" Mode="In" Type="String" />
+            <Parameter Name="Comment" Mode="In" Type="String" />
+            <Parameter Name="IsApproved" Mode="In" Type="Boolean" />
+            <Parameter Name="LastLoginDate" Mode="In" Type="DateTime" />
+            <Parameter Name="LastActivityDate" Mode="In" Type="DateTime" />
+            <Parameter Name="UniqueEmail" Mode="In" Type="Int32" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_UpdateUserInfo">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="IsPasswordCorrect" Mode="In" Type="Boolean" />
+            <Parameter Name="UpdateLastLoginActivityDate" Mode="In" Type="Boolean" />
+            <Parameter Name="MaxInvalidPasswordAttempts" Mode="In" Type="Int32" />
+            <Parameter Name="PasswordAttemptWindow" Mode="In" Type="Int32" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+            <Parameter Name="LastLoginDate" Mode="In" Type="DateTime" />
+            <Parameter Name="LastActivityDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_ValidMobilePIN" ReturnType="Collection(EverisProduccionModel.aspnet_Membership_ValidMobilePIN_Result)">
+            <Parameter Name="NameUser" Mode="In" Type="String" />
+            <Parameter Name="Pin" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Paths_CreatePath">
+            <Parameter Name="ApplicationId" Mode="In" Type="Guid" />
+            <Parameter Name="Path" Mode="In" Type="String" />
+            <Parameter Name="PathId" Mode="InOut" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Personalization_GetApplicationId">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="ApplicationId" Mode="InOut" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_PersonalizationAdministration_DeleteAllState">
+            <Parameter Name="AllUsersScope" Mode="In" Type="Boolean" />
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="Count" Mode="InOut" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_PersonalizationAdministration_FindState">
+            <Parameter Name="AllUsersScope" Mode="In" Type="Boolean" />
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+            <Parameter Name="PageSize" Mode="In" Type="Int32" />
+            <Parameter Name="Path" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="InactiveSinceDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_PersonalizationAdministration_GetCountOfState">
+            <Parameter Name="Count" Mode="InOut" Type="Int32" />
+            <Parameter Name="AllUsersScope" Mode="In" Type="Boolean" />
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="Path" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="InactiveSinceDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_PersonalizationAdministration_ResetSharedState">
+            <Parameter Name="Count" Mode="InOut" Type="Int32" />
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="Path" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_PersonalizationAdministration_ResetUserState">
+            <Parameter Name="Count" Mode="InOut" Type="Int32" />
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="InactiveSinceDate" Mode="In" Type="DateTime" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="Path" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_PersonalizationAllUsers_GetPageSettings" ReturnType="Collection(Binary)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="Path" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_PersonalizationAllUsers_ResetPageSettings">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="Path" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_PersonalizationAllUsers_SetPageSettings">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="Path" Mode="In" Type="String" />
+            <Parameter Name="PageSettings" Mode="In" Type="Binary" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_PersonalizationPerUser_GetPageSettings" ReturnType="Collection(Binary)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="Path" Mode="In" Type="String" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_PersonalizationPerUser_ResetPageSettings">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="Path" Mode="In" Type="String" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_PersonalizationPerUser_SetPageSettings">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="Path" Mode="In" Type="String" />
+            <Parameter Name="PageSettings" Mode="In" Type="Binary" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Profile_DeleteInactiveProfiles" ReturnType="Collection(Int32)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="ProfileAuthOptions" Mode="In" Type="Int32" />
+            <Parameter Name="InactiveSinceDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Profile_DeleteProfiles" ReturnType="Collection(Int32)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserNames" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Profile_GetNumberOfInactiveProfiles" ReturnType="Collection(Int32)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="ProfileAuthOptions" Mode="In" Type="Int32" />
+            <Parameter Name="InactiveSinceDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Profile_GetProfiles">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="ProfileAuthOptions" Mode="In" Type="Int32" />
+            <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+            <Parameter Name="PageSize" Mode="In" Type="Int32" />
+            <Parameter Name="UserNameToMatch" Mode="In" Type="String" />
+            <Parameter Name="InactiveSinceDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Profile_GetProperties" ReturnType="Collection(EverisProduccionModel.aspnet_Profile_GetProperties_Result)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Profile_SetProperties">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="PropertyNames" Mode="In" Type="String" />
+            <Parameter Name="PropertyValuesString" Mode="In" Type="String" />
+            <Parameter Name="PropertyValuesBinary" Mode="In" Type="Binary" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="IsUserAnonymous" Mode="In" Type="Boolean" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_RegisterSchemaVersion">
+            <Parameter Name="Feature" Mode="In" Type="String" />
+            <Parameter Name="CompatibleSchemaVersion" Mode="In" Type="String" />
+            <Parameter Name="IsCurrentVersion" Mode="In" Type="Boolean" />
+            <Parameter Name="RemoveIncompatibleSchema" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Roles_CreateRole">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="RoleName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Roles_DeleteRole">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="RoleName" Mode="In" Type="String" />
+            <Parameter Name="DeleteOnlyIfRoleIsEmpty" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Roles_GetAllRoles" ReturnType="Collection(String)">
+          <Parameter Name="ApplicationName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Roles_RoleExists">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="RoleName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Setup_RemoveAllRoleMembers">
+          <Parameter Name="name" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Setup_RestorePermissions">
+          <Parameter Name="name" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_UnRegisterSchemaVersion">
+            <Parameter Name="Feature" Mode="In" Type="String" />
+            <Parameter Name="CompatibleSchemaVersion" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Users_CreateUser">
+            <Parameter Name="ApplicationId" Mode="In" Type="Guid" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="IsUserAnonymous" Mode="In" Type="Boolean" />
+            <Parameter Name="LastActivityDate" Mode="In" Type="DateTime" />
+            <Parameter Name="UserId" Mode="InOut" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Users_DeleteUser">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="TablesToDeleteFrom" Mode="In" Type="Int32" />
+            <Parameter Name="NumTablesDeletedFrom" Mode="InOut" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_UsersInRoles_AddUsersToRoles" ReturnType="Collection(String)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserNames" Mode="In" Type="String" />
+            <Parameter Name="RoleNames" Mode="In" Type="String" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_UsersInRoles_FindUsersInRole" ReturnType="Collection(String)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="RoleName" Mode="In" Type="String" />
+            <Parameter Name="UserNameToMatch" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_UsersInRoles_GetRolesForUser" ReturnType="Collection(String)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_UsersInRoles_GetUsersInRoles" ReturnType="Collection(String)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="RoleName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_UsersInRoles_IsUserInRole">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="RoleName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_UsersInRoles_RemoveUsersFromRoles" ReturnType="Collection(EverisProduccionModel.aspnet_UsersInRoles_RemoveUsersFromRoles_Result)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserNames" Mode="In" Type="String" />
+            <Parameter Name="RoleNames" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_WebEvent_LogEvent">
+            <Parameter Name="EventId" Mode="In" Type="String" />
+            <Parameter Name="EventTimeUtc" Mode="In" Type="DateTime" />
+            <Parameter Name="EventTime" Mode="In" Type="DateTime" />
+            <Parameter Name="EventType" Mode="In" Type="String" />
+            <Parameter Name="EventSequence" Mode="In" Type="Decimal" />
+            <Parameter Name="EventOccurrence" Mode="In" Type="Decimal" />
+            <Parameter Name="EventCode" Mode="In" Type="Int32" />
+            <Parameter Name="EventDetailCode" Mode="In" Type="Int32" />
+            <Parameter Name="Message" Mode="In" Type="String" />
+            <Parameter Name="ApplicationPath" Mode="In" Type="String" />
+            <Parameter Name="ApplicationVirtualPath" Mode="In" Type="String" />
+            <Parameter Name="MachineName" Mode="In" Type="String" />
+            <Parameter Name="RequestUrl" Mode="In" Type="String" />
+            <Parameter Name="ExceptionType" Mode="In" Type="String" />
+            <Parameter Name="Details" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="CambioMasivoDeLiderAEmpleados">
+            <Parameter Name="PersonalIdAnterior" Mode="In" Type="String" />
+            <Parameter Name="PersonalIdNuevo" Mode="In" Type="String" />
+            <Parameter Name="CodigoCampoAModificar" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Desbloqueousuarios">
+          <Parameter Name="idusuario" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_CambioEstadoDiario" />
+          <FunctionImport Name="sp_CambioEstadoMensual" />
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dias_habiles" ReturnType="Collection(DateTime)">
+            <Parameter Name="fecha_desde" Mode="In" Type="DateTime" />
+            <Parameter Name="fecha_hasta" Mode="In" Type="DateTime" />
+            <Parameter Name="NumActividad" Mode="In" Type="Int32" />
+            <Parameter Name="AreaId" Mode="In" Type="Int64" />
+            <Parameter Name="ProcesosId" Mode="In" Type="Int64" />
+            <Parameter Name="ActividadId" Mode="In" Type="Int64" />
+            <Parameter Name="ProductoId" Mode="In" Type="Int64" />
+            <Parameter Name="Productividad" Mode="In" Type="Int64" />
+            <Parameter Name="Tiempo" Mode="In" Type="Time" />
+            <Parameter Name="FechaProductiva" Mode="In" Type="DateTime" />
+            <Parameter Name="TipoActividad" Mode="In" Type="Int32" />
+            <Parameter Name="TipoInactividadId" Mode="In" Type="Int32" />
+            <Parameter Name="InactividadId" Mode="In" Type="Int32" />
+            <Parameter Name="PersonaId" Mode="In" Type="Int64" />
+            <Parameter Name="FechaRegistro" Mode="In" Type="DateTime" />
+            <Parameter Name="EstadoId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_SabanadeProduccion" ReturnType="Collection(EverisProduccionModel.sp_SabanadeProduccion_Result)" />
+          <FunctionImport Name="sp_SabanadeProduccion1" />
+          <FunctionImport Name="sp_SabanadeRH" />
+          <FunctionImport Name="sp_SabanadeRH_1" />
+          <FunctionImport Name="sp_upgraddiagrams" />
+          <FunctionImport Name="spActualizaInfoPrincipal">
+            <Parameter Name="nombreCompleto" Mode="In" Type="String" />
+            <Parameter Name="tipoDoc" Mode="In" Type="Int64" />
+            <Parameter Name="identificacion" Mode="In" Type="String" />
+            <Parameter Name="fechaNacimiento" Mode="In" Type="DateTime" />
+            <Parameter Name="genero" Mode="In" Type="Int64" />
+            <Parameter Name="cargoId" Mode="In" Type="Int64" />
+            <Parameter Name="PersonaId" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="spActualizaMasivo">
+            <Parameter Name="campoID" Mode="In" Type="Int32" />
+            <Parameter Name="valor" Mode="In" Type="String" />
+            <Parameter Name="PersonaId" Mode="In" Type="Int64" />
+            <Parameter Name="nroCaptura" Mode="In" Type="Int32" />
+            <Parameter Name="UserId" Mode="In" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="spActualizaRetiro">
+          <Parameter Name="PersonaId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spBuscarPersonal">
+            <Parameter Name="empresa" Mode="In" Type="String" />
+            <Parameter Name="fechaInicio" Mode="In" Type="String" />
+            <Parameter Name="fechafin" Mode="In" Type="String" />
+            <Parameter Name="area" Mode="In" Type="String" />
+            <Parameter Name="PSL" Mode="In" Type="String" />
+            <Parameter Name="PTL" Mode="In" Type="String" />
+            <Parameter Name="PSC" Mode="In" Type="String" />
+            <Parameter Name="Nombre" Mode="In" Type="String" />
+            <Parameter Name="Cedula" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spCalcularHorasExtras" />
+          <FunctionImport Name="spCalcularHorasExtrasNv" ReturnType="Collection(EverisProduccionModel.spCalcularHorasExtrasNv_Result)" />
+          <FunctionImport Name="spControlHorasExtras">
+            <Parameter Name="PersonaACargo" Mode="In" Type="Int32" />
+            <Parameter Name="FechaInico" Mode="In" Type="String" />
+            <Parameter Name="FechaFin" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spDeshabilitarusuario">
+          <Parameter Name="idusuario" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spEliminarActividadDiaria" ReturnType="Collection(Int32)">
+          <Parameter Name="ActividadDiariaId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spInsertarActividadDiaria">
+            <Parameter Name="NumActividad" Mode="In" Type="Int32" />
+            <Parameter Name="AreaId" Mode="In" Type="Int64" />
+            <Parameter Name="ProcesosId" Mode="In" Type="Int64" />
+            <Parameter Name="ActividadId" Mode="In" Type="Int64" />
+            <Parameter Name="ProductoId" Mode="In" Type="Int64" />
+            <Parameter Name="Productividad" Mode="In" Type="Int64" />
+            <Parameter Name="Tiempo" Mode="In" Type="Time" />
+            <Parameter Name="FechaProductiva" Mode="In" Type="DateTime" />
+            <Parameter Name="TipoActividad" Mode="In" Type="Int32" />
+            <Parameter Name="TipoInactividadId" Mode="In" Type="Int32" />
+            <Parameter Name="InactividadId" Mode="In" Type="Int32" />
+            <Parameter Name="PersonaId" Mode="In" Type="Int64" />
+            <Parameter Name="FechaRegistro" Mode="In" Type="DateTime" />
+            <Parameter Name="EstadoId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spInsertarProgramacionLaboral">
+            <Parameter Name="PersonaId" Mode="In" Type="Int64" />
+            <Parameter Name="FechaTurno" Mode="In" Type="DateTime" />
+            <Parameter Name="HoraInicio" Mode="In" Type="Time" />
+            <Parameter Name="HoraFin" Mode="In" Type="Time" />
+            <Parameter Name="PersonaIdRegistro" Mode="In" Type="Int64" />
+            <Parameter Name="FechaRegistro" Mode="In" Type="DateTime" />
+            <Parameter Name="TurnoId" Mode="In" Type="Int32" />
+            <Parameter Name="Activo" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="spInsertExtrasAprobadas">
+            <Parameter Name="FechaTurno" Mode="In" Type="String" />
+            <Parameter Name="PersonaId" Mode="In" Type="Int64" />
+            <Parameter Name="ExtrasAprobadas" Mode="In" Type="Time" />
+            <Parameter Name="AprobarExtras" Mode="In" Type="Boolean" />
+            <Parameter Name="FechaAprobadas" Mode="In" Type="DateTime" />
+            <Parameter Name="PerosonaIdAprobador" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="spLiderInsertaInactividad" ReturnType="Collection(Int32)">
+            <Parameter Name="fecha_desde" Mode="In" Type="DateTime" />
+            <Parameter Name="fecha_hasta" Mode="In" Type="DateTime" />
+            <Parameter Name="NumActividad" Mode="In" Type="Int32" />
+            <Parameter Name="AreaId" Mode="In" Type="Int64" />
+            <Parameter Name="ProcesosId" Mode="In" Type="Int64" />
+            <Parameter Name="ActividadId" Mode="In" Type="Int64" />
+            <Parameter Name="ProductoId" Mode="In" Type="Int64" />
+            <Parameter Name="Productividad" Mode="In" Type="Int64" />
+            <Parameter Name="Tiempo" Mode="In" Type="Time" />
+            <Parameter Name="FechaProductiva" Mode="In" Type="DateTime" />
+            <Parameter Name="TipoActividad" Mode="In" Type="Int32" />
+            <Parameter Name="TipoInactividadId" Mode="In" Type="Int32" />
+            <Parameter Name="InactividadId" Mode="In" Type="Int32" />
+            <Parameter Name="PersonaId" Mode="In" Type="Int64" />
+            <Parameter Name="FechaRegistro" Mode="In" Type="DateTime" />
+            <Parameter Name="EstadoId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spLoginUsuarios" />
+          <FunctionImport Name="spObtenerActividadesDiariasPorUsDesHast" ReturnType="Collection(EverisProduccionModel.spObtenerActividadesDiariasPorUsDesHast_Result)">
+            <Parameter Name="PersonaId" Mode="In" Type="Int64" />
+            <Parameter Name="fechaProduccionDesde" Mode="In" Type="String" />
+            <Parameter Name="fechaProduccionhasta" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spObtenerActividadesDiariasPorUsuario" ReturnType="Collection(EverisProduccionModel.spObtenerActividadesDiariasPorUsuario_Result)">
+            <Parameter Name="PersonaId" Mode="In" Type="Int64" />
+            <Parameter Name="fechaProduccion" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="spObtenerCamposFormulario" ReturnType="Collection(EverisProduccionModel.spObtenerCamposFormulario_Result)">
+          <Parameter Name="FormularioId" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="spObtenerCapturaEventos" ReturnType="Collection(EverisProduccionModel.spObtenerCapturaEventos_Result)">
+            <Parameter Name="PersonaId" Mode="In" Type="Int32" />
+            <Parameter Name="BarraEventoId" Mode="In" Type="Int32" />
+            <Parameter Name="FechaRegistro" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spObtenerClientes" ReturnType="Collection(EverisProduccionModel.spObtenerClientes_Result)" />
+          <FunctionImport Name="spObtenerClientesRoles" ReturnType="Collection(EverisProduccionModel.spObtenerClientesRoles_Result)">
+            <Parameter Name="cliente" Mode="In" Type="Int64" />
+            <Parameter Name="RoleId" Mode="In" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="spObtenerDatosPersonal" ReturnType="Collection(EverisProduccionModel.spObtenerDatosPersonal_Result)">
+          <Parameter Name="personaId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spObtenerEstructuras" ReturnType="Collection(EverisProduccionModel.spObtenerEstructuras_Result)">
+            <Parameter Name="padre" Mode="In" Type="Int32" />
+            <Parameter Name="cliente" Mode="In" Type="Int32" />
+            <Parameter Name="edita" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="spObtenerHorasExtras" ReturnType="Collection(EverisProduccionModel.spObtenerHorasExtras_Result)">
+            <Parameter Name="FechaInico" Mode="In" Type="String" />
+            <Parameter Name="FechaFin" Mode="In" Type="String" />
+            <Parameter Name="PersonaACargo" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spObtenerInactividadesPorActividad" ReturnType="Collection(EverisProduccionModel.spObtenerInactividadesPorActividad_Result)">
+          <Parameter Name="numActividad" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spObtenerItemsListaCampos" ReturnType="Collection(EverisProduccionModel.spObtenerItemsListaCampos_Result)">
+          <Parameter Name="CampoId" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="spObtenerItemsListaCamposCascada" ReturnType="Collection(EverisProduccionModel.spObtenerItemsListaCamposCascada_Result)">
+            <Parameter Name="CampoId" Mode="In" Type="Int64" />
+            <Parameter Name="PadreId" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="spObtenerMenuHijos">
+            <Parameter Name="IdPadre" Mode="In" Type="Int32" />
+            <Parameter Name="Usuario" Mode="In" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="spObtenerMenuPadre">
+          <Parameter Name="Usuario" Mode="In" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="spObtenerPersonasCargoEVERIS" ReturnType="Collection(EverisProduccionModel.spObtenerPersonasCargoEVERIS_Result)">
+          <Parameter Name="valorItemLista" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spObtenerPersonasPorLider">
+            <Parameter Name="PSC" Mode="In" Type="String" />
+            <Parameter Name="Cedula" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spObtenerPersonIdPorUserId" ReturnType="Collection(EverisProduccionModel.spObtenerPersonIdPorUserId_Result)">
+          <Parameter Name="UserId" Mode="In" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="spObtenerProgramcionLaboralPorFecha">
+            <Parameter Name="FechaInico" Mode="In" Type="String" />
+            <Parameter Name="FechaFin" Mode="In" Type="String" />
+            <Parameter Name="PersonaACargo" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="spObtenerProgramcionLaboralPorFecha1" ReturnType="Collection(EverisProduccionModel.spObtenerProgramcionLaboralPorFecha1_Result)">
+            <Parameter Name="FechaInico" Mode="In" Type="String" />
+            <Parameter Name="FechaFin" Mode="In" Type="String" />
+            <Parameter Name="PersonaACargo" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="spObtenerProgramLaboralActualUser" ReturnType="Collection(EverisProduccionModel.spObtenerProgramLaboralActualUser_Result)">
+            <Parameter Name="PersonaId" Mode="In" Type="Int64" />
+            <Parameter Name="FechaTurno" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="spObtenerRolUser" ReturnType="Collection(Guid)">
+          <Parameter Name="idUser" Mode="In" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="spObtenerUserId" ReturnType="Collection(EverisProduccionModel.spObtenerUserId_Result)">
+          <Parameter Name="nameUser" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spObtieneProgramacionLabralPorDia" ReturnType="Collection(EverisProduccionModel.spObtieneProgramacionLabralPorDia_Result)">
+            <Parameter Name="PersonaId" Mode="In" Type="String" />
+            <Parameter Name="FechaTurno" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spOptenerBarraEventos" ReturnType="Collection(EverisProduccionModel.spOptenerBarraEventos_Result)" />
+          <FunctionImport Name="spReporteEntradaySalida" ReturnType="Collection(EverisProduccionModel.spReporteEntradaySalida_Result)" />
+          <FunctionImport Name="spReporteEntradaySalida1" ReturnType="Collection(EverisProduccionModel.spReporteEntradaySalida1_Result)" />
+          <FunctionImport Name="spReporteHorasExtrasConsolidado" ReturnType="Collection(EverisProduccionModel.spReporteHorasExtrasConsolidado_Result)" />
+          <FunctionImport Name="spReporteHorasExtrasPorLider" ReturnType="Collection(EverisProduccionModel.spReporteHorasExtrasPorLider_Result)">
+            <Parameter Name="PersonalIdACargo" Mode="In" Type="String" />
+            <Parameter Name="FechaIni" Mode="In" Type="String" />
+            <Parameter Name="fechaFin" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spTiempoTotalActividadDiariaPorPersona" ReturnType="Collection(EverisProduccionModel.spTiempoTotalActividadDiariaPorPersona_Result)">
+            <Parameter Name="fechaProductiva" Mode="In" Type="String" />
+            <Parameter Name="PersonaId" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="spUpdateCapturaBarraEvento">
+            <Parameter Name="fechaRegistro" Mode="In" Type="String" />
+            <Parameter Name="personaId" Mode="In" Type="Int64" />
+            <Parameter Name="eventoBarraId" Mode="In" Type="Int32" />
+            <Parameter Name="tipoEditar" Mode="In" Type="Int32" />
+            <Parameter Name="fechaRegistroNueva" Mode="In" Type="String" />
+            <Parameter Name="Activo" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="spValidaExisPers" ReturnType="Collection(EverisProduccionModel.spValidaExisPers_Result)">
+          <Parameter Name="identificacionID" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="UsersInRoles_AddUserToRole">
+            <Parameter Name="UserId" Mode="In" Type="Guid" />
+            <Parameter Name="RoleId" Mode="In" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="spActualizaEstadoSabanaProduccion">
+          <Parameter Name="procesado" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="spObtenerNombreLider" ReturnType="Collection(String)">
+          <Parameter Name="idLider" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spObtenerPersonasPorLiderSGD" ReturnType="Collection(EverisProduccionModel.spObtenerPersonasPorLiderSGD_Result)">
+            <Parameter Name="Cedula" Mode="In" Type="String" />
+            <Parameter Name="idProceso" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Desbloqueomasivousuarios" />
+          <FunctionImport Name="Desbloqueousuarios1">
+            <Parameter Name="idusuario" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dias_habiles1" ReturnType="Collection(DateTime)">
+            <Parameter Name="fecha_desde" Mode="In" Type="DateTime" />
+            <Parameter Name="fecha_hasta" Mode="In" Type="DateTime" />
+            <Parameter Name="NumActividad" Mode="In" Type="Int32" />
+            <Parameter Name="AreaId" Mode="In" Type="Int64" />
+            <Parameter Name="ProcesosId" Mode="In" Type="Int64" />
+            <Parameter Name="ActividadId" Mode="In" Type="Int64" />
+            <Parameter Name="ProductoId" Mode="In" Type="Int64" />
+            <Parameter Name="Productividad" Mode="In" Type="Int64" />
+            <Parameter Name="Tiempo" Mode="In" Type="Time" />
+            <Parameter Name="FechaProductiva" Mode="In" Type="DateTime" />
+            <Parameter Name="TipoActividad" Mode="In" Type="Int32" />
+            <Parameter Name="TipoInactividadId" Mode="In" Type="Int32" />
+            <Parameter Name="InactividadId" Mode="In" Type="Int32" />
+            <Parameter Name="PersonaId" Mode="In" Type="Int64" />
+            <Parameter Name="FechaRegistro" Mode="In" Type="DateTime" />
+            <Parameter Name="EstadoId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spDeshabilitarusuario1">
+            <Parameter Name="idusuario" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="aspnet_Membership_GetPassword_Result">
+          <Property Type="String" Name="Column1" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="Column2" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="aspnet_Membership_GetPasswordWithFormat_Result">
+          <Property Type="String" Name="Column1" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="Column2" Nullable="true" />
+          <Property Type="String" Name="Column3" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="Column4" Nullable="true" />
+          <Property Type="Int32" Name="Column5" Nullable="true" />
+          <Property Type="Boolean" Name="Column6" Nullable="true" />
+          <Property Type="DateTime" Name="Column7" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="Column8" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="aspnet_Membership_GetUserByName_Result">
+          <Property Type="String" Name="Email" Nullable="true" MaxLength="256" />
+          <Property Type="String" Name="PasswordQuestion" Nullable="true" MaxLength="256" />
+          <Property Type="String" Name="Comment" Nullable="true" MaxLength="Max" />
+          <Property Type="Boolean" Name="IsApproved" Nullable="false" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="LastLoginDate" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="LastActivityDate" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="LastPasswordChangedDate" Nullable="false" Precision="23" />
+          <Property Type="Guid" Name="UserId" Nullable="false" />
+          <Property Type="Boolean" Name="IsLockedOut" Nullable="false" />
+          <Property Type="DateTime" Name="LastLockoutDate" Nullable="false" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="aspnet_Membership_GetUserByUserId_Result">
+          <Property Type="String" Name="Email" Nullable="true" MaxLength="256" />
+          <Property Type="String" Name="PasswordQuestion" Nullable="true" MaxLength="256" />
+          <Property Type="String" Name="Comment" Nullable="true" MaxLength="Max" />
+          <Property Type="Boolean" Name="IsApproved" Nullable="false" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="LastLoginDate" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="LastActivityDate" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="LastPasswordChangedDate" Nullable="false" Precision="23" />
+          <Property Type="String" Name="UserName" Nullable="false" MaxLength="256" />
+          <Property Type="Boolean" Name="IsLockedOut" Nullable="false" />
+          <Property Type="DateTime" Name="LastLockoutDate" Nullable="false" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="aspnet_Membership_ValidMobilePIN_Result">
+          <Property Type="Int32" Name="Id" Nullable="true" />
+          <Property Type="Int32" Name="resultado" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="aspnet_Profile_GetProperties_Result">
+          <Property Type="String" Name="PropertyNames" Nullable="false" MaxLength="Max" />
+          <Property Type="String" Name="PropertyValuesString" Nullable="false" MaxLength="Max" />
+          <Property Type="Binary" Name="PropertyValuesBinary" Nullable="false" MaxLength="Max" />
+        </ComplexType>
+        <ComplexType Name="aspnet_UsersInRoles_RemoveUsersFromRoles_Result">
+          <Property Type="String" Name="Column1" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="256" />
+        </ComplexType>
+        <ComplexType Name="sp_SabanadeProduccion_Result">
+          <Property Type="String" Name="Column1" Nullable="true" />
+          <Property Type="String" Name="Column2" Nullable="true" />
+          <Property Type="String" Name="Column3" Nullable="true" />
+          <Property Type="String" Name="Column4" Nullable="true" />
+          <Property Type="String" Name="Column5" Nullable="true" />
+          <Property Type="String" Name="Column6" Nullable="true" />
+          <Property Type="String" Name="Column7" Nullable="true" />
+          <Property Type="String" Name="Column8" Nullable="true" />
+          <Property Type="String" Name="Column9" Nullable="true" />
+          <Property Type="String" Name="Column10" Nullable="true" />
+          <Property Type="String" Name="Column11" Nullable="true" />
+          <Property Type="String" Name="Column12" Nullable="true" />
+          <Property Type="String" Name="Column13" Nullable="true" />
+          <Property Type="String" Name="Column14" Nullable="true" />
+          <Property Type="String" Name="Column15" Nullable="true" />
+          <Property Type="String" Name="Column16" Nullable="true" />
+          <Property Type="String" Name="Column17" Nullable="true" />
+          <Property Type="String" Name="Column18" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="spCalcularHorasExtrasNv_Result">
+          <Property Type="Int64" Name="ProgramacionLaboralId" Nullable="false" />
+          <Property Type="Int64" Name="PersonaId" Nullable="true" />
+          <Property Type="Time" Name="Column1" Nullable="true" />
+          <Property Type="Time" Name="Column2" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="spObtenerActividadesDiariasPorUsDesHast_Result">
+          <Property Type="Int32" Name="ActividadDiariaId" Nullable="false" />
+          <Property Type="Int32" Name="numActividad" Nullable="false" />
+          <Property Type="String" Name="Area" Nullable="true" />
+          <Property Type="String" Name="Procesos" Nullable="true" />
+          <Property Type="String" Name="Actividad" Nullable="true" />
+          <Property Type="String" Name="Producto" Nullable="true" />
+          <Property Type="Time" Name="Tiempo" Nullable="true" />
+          <Property Type="Int64" Name="Productividad" Nullable="true" />
+          <Property Type="Time" Name="tiempoInactividad" Nullable="true" />
+          <Property Type="Int32" Name="EstadoId" Nullable="true" />
+          <Property Type="DateTime" Name="fechaproductiva" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="spObtenerActividadesDiariasPorUsuario_Result">
+          <Property Type="Int32" Name="ActividadDiariaId" Nullable="false" />
+          <Property Type="Int32" Name="numActividad" Nullable="false" />
+          <Property Type="String" Name="Area" Nullable="true" />
+          <Property Type="String" Name="Procesos" Nullable="true" />
+          <Property Type="String" Name="Actividad" Nullable="true" />
+          <Property Type="String" Name="Producto" Nullable="true" />
+          <Property Type="Time" Name="Tiempo" Nullable="true" />
+          <Property Type="Int64" Name="Productividad" Nullable="true" />
+          <Property Type="Time" Name="tiempoInactividad" Nullable="true" />
+          <Property Type="Int32" Name="EstadoId" Nullable="true" />
+          <Property Type="DateTime" Name="fechaproductiva" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="spObtenerCamposFormulario_Result">
+          <Property Type="Int64" Name="FormularioCampoId" Nullable="false" />
+          <Property Type="Int64" Name="FormularioId" Nullable="true" />
+          <Property Type="Int64" Name="CampoId" Nullable="true" />
+          <Property Type="Int32" Name="Orden" Nullable="true" />
+          <Property Type="Boolean" Name="Editable" Nullable="true" />
+          <Property Type="Boolean" Name="Obligatorio" Nullable="true" />
+          <Property Type="Int64" Name="TipoCampoId" Nullable="true" />
+          <Property Type="Int64" Name="PadreId" Nullable="true" />
+          <Property Type="Int64" Name="CampoIdDependiente" Nullable="true" />
+          <Property Type="Boolean" Name="DobleCaptura" Nullable="true" />
+          <Property Type="String" Name="Evento" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Funcion" Nullable="true" MaxLength="120" />
+          <Property Type="String" Name="FuenteOrigen" Nullable="true" MaxLength="120" />
+          <Property Type="Boolean" Name="FuenteParametros" Nullable="true" />
+          <Property Type="String" Name="Mensaje" Nullable="true" MaxLength="50" />
+          <Property Type="Boolean" Name="Activo" Nullable="true" />
+          <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="DimensionAlto" Nullable="true" />
+          <Property Type="Int32" Name="DimensionAncho" Nullable="true" />
+          <Property Type="Int32" Name="LongMin" Nullable="true" />
+          <Property Type="Int32" Name="LongMax" Nullable="true" />
+          <Property Type="Guid" Name="UserId" Nullable="true" />
+          <Property Type="DateTime" Name="FechaCreacion" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="spObtenerCapturaEventos_Result">
+          <Property Type="Int32" Name="CapturaEventoId" Nullable="false" />
+          <Property Type="Int64" Name="PersonaId" Nullable="true" />
+          <Property Type="Int32" Name="BarraEventoId" Nullable="true" />
+          <Property Type="DateTime" Name="FechaRegistro" Nullable="true" Precision="23" />
+          <Property Type="Boolean" Name="Activo" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="spObtenerClientes_Result">
+          <Property Type="Int64" Name="value" Nullable="false" />
+          <Property Type="String" Name="text" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="spObtenerClientesRoles_Result">
+          <Property Type="Guid" Name="ApplicationId" Nullable="false" />
+          <Property Type="Guid" Name="RoleId" Nullable="false" />
+          <Property Type="String" Name="RoleName" Nullable="false" MaxLength="256" />
+          <Property Type="String" Name="LoweredRoleName" Nullable="false" MaxLength="256" />
+          <Property Type="String" Name="Description" Nullable="true" MaxLength="256" />
+          <Property Type="Int64" Name="ClienteId" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="spObtenerDatosPersonal_Result">
+          <Property Type="Int64" Name="DetallePersonaId" Nullable="false" />
+          <Property Type="Int64" Name="PersonaId" Nullable="true" />
+          <Property Type="Int64" Name="FormularioCampoId" Nullable="true" />
+          <Property Type="String" Name="VALOR" Nullable="true" />
+          <Property Type="Int32" Name="NoCaptura" Nullable="true" />
+          <Property Type="Guid" Name="UserId" Nullable="true" />
+          <Property Type="DateTime" Name="FechaRegistro" Nullable="true" Precision="23" />
+          <Property Type="Int64" Name="TipoCampoId" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="spObtenerEstructuras_Result">
+          <Property Type="Int64" Name="value" Nullable="false" />
+          <Property Type="String" Name="text" Nullable="true" />
+          <Property Type="String" Name="Codigo" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="spObtenerHorasExtras_Result">
+          <Property Type="String" Name="PersonaId" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Nombre" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Lunes" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Martes" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Miercoles" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Jueves" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Viernes" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Sabado" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Domingo" Nullable="true" MaxLength="20" />
+        </ComplexType>
+        <ComplexType Name="spObtenerInactividadesPorActividad_Result">
+          <Property Type="Int32" Name="ActividadDiariaId" Nullable="false" />
+          <Property Type="Int32" Name="NumActividad" Nullable="false" />
+          <Property Type="String" Name="TipoInactividad" Nullable="true" MaxLength="70" />
+          <Property Type="String" Name="Inactividad" Nullable="true" MaxLength="70" />
+          <Property Type="Time" Name="Tiempo" Nullable="true" />
+          <Property Type="Int32" Name="EstadoId" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="spObtenerItemsListaCampos_Result">
+          <Property Type="Int64" Name="ListaCampoId" Nullable="false" />
+          <Property Type="Int64" Name="CampoId" Nullable="true" />
+          <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="70" />
+          <Property Type="String" Name="Codigo" Nullable="true" MaxLength="50" />
+          <Property Type="Int64" Name="PadreId" Nullable="true" />
+          <Property Type="Int32" Name="Orden" Nullable="true" />
+          <Property Type="Guid" Name="UserId" Nullable="true" />
+          <Property Type="DateTime" Name="FechaRegistro" Nullable="true" Precision="23" />
+          <Property Type="Boolean" Name="Activo" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="spObtenerItemsListaCamposCascada_Result">
+          <Property Type="Int64" Name="ListaCampoId" Nullable="false" />
+          <Property Type="Int64" Name="CampoId" Nullable="true" />
+          <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="70" />
+          <Property Type="String" Name="Codigo" Nullable="true" MaxLength="50" />
+          <Property Type="Int64" Name="PadreId" Nullable="true" />
+          <Property Type="Int32" Name="Orden" Nullable="true" />
+          <Property Type="Guid" Name="UserId" Nullable="true" />
+          <Property Type="DateTime" Name="FechaRegistro" Nullable="true" Precision="23" />
+          <Property Type="Boolean" Name="Activo" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="spObtenerPersonasCargoEVERIS_Result">
+          <Property Type="Int64" Name="PersonaId" Nullable="false" />
+          <Property Type="String" Name="NombreCompleto" Nullable="true" MaxLength="150" />
+        </ComplexType>
+        <ComplexType Name="spObtenerPersonIdPorUserId_Result">
+          <Property Type="Int64" Name="PersonaId" Nullable="false" />
+          <Property Type="Guid" Name="UserId" Nullable="false" />
+          <Property Type="Int64" Name="TipoDocumentoId" Nullable="true" />
+          <Property Type="String" Name="Identificacion" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="NombreCompleto" Nullable="true" MaxLength="150" />
+          <Property Type="DateTime" Name="FechaNacimiento" Nullable="true" />
+          <Property Type="Int64" Name="Genero" Nullable="true" />
+          <Property Type="Int64" Name="CargoId" Nullable="true" />
+          <Property Type="Guid" Name="UserIdRegistro" Nullable="true" />
+          <Property Type="DateTime" Name="FechaRegistro" Nullable="true" Precision="23" />
+          <Property Type="Boolean" Name="Activo" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="spObtenerProgramcionLaboralPorFecha1_Result">
+          <Property Type="Int64" Name="ProgramacionLaboralId" Nullable="false" />
+          <Property Type="Int64" Name="PersonaId" Nullable="true" />
+          <Property Type="DateTime" Name="FechaTurno" Nullable="true" />
+          <Property Type="Time" Name="HoraInicio" Nullable="true" />
+          <Property Type="Time" Name="HoraFin" Nullable="true" />
+          <Property Type="Int64" Name="PersonaIdRegistro" Nullable="true" />
+          <Property Type="DateTime" Name="FechaRegistro" Nullable="true" Precision="23" />
+          <Property Type="Time" Name="HExtrasAprobadas" Nullable="true" />
+          <Property Type="Boolean" Name="AprobarExtras" Nullable="true" />
+          <Property Type="DateTime" Name="FechaAprobacion" Nullable="true" Precision="23" />
+          <Property Type="Int64" Name="PersonaIdAprobador" Nullable="true" />
+          <Property Type="Boolean" Name="Activo" Nullable="true" />
+          <Property Type="Int32" Name="TurnoId" Nullable="true" />
+          <Property Type="String" Name="HorasExtras" Nullable="true" />
+          <Property Type="Int32" Name="PERSONAID1" Nullable="true" />
+          <Property Type="Int32" Name="LIDER" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="spObtenerProgramLaboralActualUser_Result">
+          <Property Type="Int64" Name="ProgramacionLaboralId" Nullable="false" />
+          <Property Type="Int64" Name="PersonaId" Nullable="true" />
+          <Property Type="DateTime" Name="FechaTurno" Nullable="true" />
+          <Property Type="Time" Name="HoraInicio" Nullable="true" />
+          <Property Type="Time" Name="HoraFin" Nullable="true" />
+          <Property Type="Int64" Name="PersonaIdRegistro" Nullable="true" />
+          <Property Type="DateTime" Name="FechaRegistro" Nullable="true" Precision="23" />
+          <Property Type="Time" Name="HExtrasAprobadas" Nullable="true" />
+          <Property Type="Boolean" Name="AprobarExtras" Nullable="true" />
+          <Property Type="DateTime" Name="FechaAprobacion" Nullable="true" Precision="23" />
+          <Property Type="Int64" Name="PersonaIdAprobador" Nullable="true" />
+          <Property Type="Boolean" Name="Activo" Nullable="true" />
+          <Property Type="Int32" Name="TurnoId" Nullable="true" />
+          <Property Type="String" Name="HorasExtras" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="spObtenerUserId_Result">
+          <Property Type="Guid" Name="ApplicationId" Nullable="false" />
+          <Property Type="Guid" Name="UserId" Nullable="false" />
+          <Property Type="String" Name="UserName" Nullable="false" MaxLength="256" />
+          <Property Type="String" Name="LoweredUserName" Nullable="false" MaxLength="256" />
+          <Property Type="String" Name="MobileAlias" Nullable="true" MaxLength="16" />
+          <Property Type="Boolean" Name="IsAnonymous" Nullable="false" />
+          <Property Type="DateTime" Name="LastActivityDate" Nullable="false" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="spObtieneProgramacionLabralPorDia_Result">
+          <Property Type="Int64" Name="ProgramacionLaboralId" Nullable="false" />
+          <Property Type="Int64" Name="PersonaId" Nullable="true" />
+          <Property Type="DateTime" Name="FechaTurno" Nullable="true" />
+          <Property Type="Time" Name="HoraInicio" Nullable="true" />
+          <Property Type="Time" Name="HoraFin" Nullable="true" />
+          <Property Type="Int64" Name="PersonaIdRegistro" Nullable="true" />
+          <Property Type="DateTime" Name="FechaRegistro" Nullable="true" Precision="23" />
+          <Property Type="Time" Name="HExtrasAprobadas" Nullable="true" />
+          <Property Type="Boolean" Name="AprobarExtras" Nullable="true" />
+          <Property Type="DateTime" Name="FechaAprobacion" Nullable="true" Precision="23" />
+          <Property Type="Int64" Name="PersonaIdAprobador" Nullable="true" />
+          <Property Type="Boolean" Name="Activo" Nullable="true" />
+          <Property Type="Int32" Name="TurnoId" Nullable="true" />
+          <Property Type="String" Name="HorasExtras" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="spOptenerBarraEventos_Result">
+          <Property Type="Int32" Name="BarraEventoId" Nullable="false" />
+          <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="EventoDependiente" Nullable="true" />
+          <Property Type="Guid" Name="UserId" Nullable="true" />
+          <Property Type="DateTime" Name="FechaRegistro" Nullable="true" Precision="23" />
+          <Property Type="Boolean" Name="Activo" Nullable="true" />
+          <Property Type="String" Name="UrlImagen" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="spReporteEntradaySalida_Result">
+          <Property Type="String" Name="Column1" Nullable="true" />
+          <Property Type="String" Name="Column2" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="Column3" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="Column4" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="spReporteEntradaySalida1_Result">
+          <Property Type="String" Name="Column1" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Column2" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="Column3" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Column4" Nullable="true" MaxLength="12" />
+          <Property Type="String" Name="Column5" Nullable="true" MaxLength="12" />
+          <Property Type="String" Name="Column6" Nullable="false" MaxLength="500" />
+        </ComplexType>
+        <ComplexType Name="spReporteHorasExtrasConsolidado_Result">
+          <Property Type="String" Name="Column1" Nullable="true" />
+          <Property Type="String" Name="Column2" Nullable="true" />
+          <Property Type="String" Name="Column3" Nullable="true" />
+          <Property Type="String" Name="Column4" Nullable="true" />
+          <Property Type="String" Name="Column5" Nullable="true" />
+          <Property Type="String" Name="Column6" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="spReporteHorasExtrasPorLider_Result">
+          <Property Type="Int64" Name="PersonaId" Nullable="true" />
+          <Property Type="String" Name="Identificacion" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Nombre" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Area" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Empresa" Nullable="true" MaxLength="50" />
+          <Property Type="Double" Name="HorasExtras" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="spTiempoTotalActividadDiariaPorPersona_Result">
+          <Property Type="Int64" Name="PersonaId" Nullable="true" />
+          <Property Type="DateTime" Name="FechaProductiva" Nullable="true" />
+          <Property Type="Time" Name="Tiempo_Sumado" Nullable="true" />
+          <Property Type="Time" Name="TiempoCapturaEvento" Nullable="true" />
+          <Property Type="Int32" Name="Validacion" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="spValidaExisPers_Result">
+          <Property Type="String" Name="Identificacion" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="NombreCompleto" Nullable="true" MaxLength="150" />
+        </ComplexType>
+        <ComplexType Name="spObtenerPersonasPorLiderSGD_Result">
+          <Property Type="String" Name="Cedula" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="NombreCompleto" Nullable="false" MaxLength="200" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="EverisProduccionModelStoreContainer" CdmEntityContainer="EverisProduccionEntities">
+          <FunctionImportMapping FunctionName="EverisProduccionModel.Store.Split" FunctionImportName="Split">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EverisProduccionModel.Split_Result">
+                <ScalarProperty Name="Splitcolumn" ColumnName="Splitcolumn" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="aspnet_AnyDataInTables" FunctionName="EverisProduccionModel.Store.aspnet_AnyDataInTables" />
+          <FunctionImportMapping FunctionImportName="aspnet_Applications_CreateApplication" FunctionName="EverisProduccionModel.Store.aspnet_Applications_CreateApplication" />
+          <FunctionImportMapping FunctionImportName="aspnet_CheckSchemaVersion" FunctionName="EverisProduccionModel.Store.aspnet_CheckSchemaVersion" />
+          <FunctionImportMapping FunctionImportName="aspnet_Membership_ChangePasswordQuestionAndAnswer" FunctionName="EverisProduccionModel.Store.aspnet_Membership_ChangePasswordQuestionAndAnswer" />
+          <FunctionImportMapping FunctionImportName="aspnet_Membership_CreateUser" FunctionName="EverisProduccionModel.Store.aspnet_Membership_CreateUser" />
+          <FunctionImportMapping FunctionImportName="aspnet_Membership_FindUsersByEmail" FunctionName="EverisProduccionModel.Store.aspnet_Membership_FindUsersByEmail" />
+          <FunctionImportMapping FunctionImportName="aspnet_Membership_FindUsersByName" FunctionName="EverisProduccionModel.Store.aspnet_Membership_FindUsersByName" />
+          <FunctionImportMapping FunctionImportName="aspnet_Membership_GetAllUsers" FunctionName="EverisProduccionModel.Store.aspnet_Membership_GetAllUsers" />
+          <FunctionImportMapping FunctionImportName="aspnet_Membership_GetNumberOfUsersOnline" FunctionName="EverisProduccionModel.Store.aspnet_Membership_GetNumberOfUsersOnline" />
+          <FunctionImportMapping FunctionImportName="aspnet_Membership_GetPassword" FunctionName="EverisProduccionModel.Store.aspnet_Membership_GetPassword">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EverisProduccionModel.aspnet_Membership_GetPassword_Result">
+                <ScalarProperty Name="Column1" ColumnName="Column1" />
+                <ScalarProperty Name="Column2" ColumnName="Column2" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="aspnet_Membership_GetPasswordWithFormat" FunctionName="EverisProduccionModel.Store.aspnet_Membership_GetPasswordWithFormat">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EverisProduccionModel.aspnet_Membership_GetPasswordWithFormat_Result">
+                <ScalarProperty Name="Column1" ColumnName="Column1" />
+                <ScalarProperty Name="Column2" ColumnName="Column2" />
+                <ScalarProperty Name="Column3" ColumnName="Column3" />
+                <ScalarProperty Name="Column4" ColumnName="Column4" />
+                <ScalarProperty Name="Column5" ColumnName="Column5" />
+                <ScalarProperty Name="Column6" ColumnName="Column6" />
+                <ScalarProperty Name="Column7" ColumnName="Column7" />
+                <ScalarProperty Name="Column8" ColumnName="Column8" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="aspnet_Membership_GetUserByEmail" FunctionName="EverisProduccionModel.Store.aspnet_Membership_GetUserByEmail" />
+          <FunctionImportMapping FunctionImportName="aspnet_Membership_GetUserByName" FunctionName="EverisProduccionModel.Store.aspnet_Membership_GetUserByName">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EverisProduccionModel.aspnet_Membership_GetUserByName_Result">
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="PasswordQuestion" ColumnName="PasswordQuestion" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+                <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+                <ScalarProperty Name="LastPasswordChangedDate" ColumnName="LastPasswordChangedDate" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="IsLockedOut" ColumnName="IsLockedOut" />
+                <ScalarProperty Name="LastLockoutDate" ColumnName="LastLockoutDate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="aspnet_Membership_GetUserByUserId" FunctionName="EverisProduccionModel.Store.aspnet_Membership_GetUserByUserId">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EverisProduccionModel.aspnet_Membership_GetUserByUserId_Result">
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="PasswordQuestion" ColumnName="PasswordQuestion" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+                <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+                <ScalarProperty Name="LastPasswordChangedDate" ColumnName="LastPasswordChangedDate" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="IsLockedOut" ColumnName="IsLockedOut" />
+                <ScalarProperty Name="LastLockoutDate" ColumnName="LastLockoutDate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="aspnet_Membership_ResetPassword" FunctionName="EverisProduccionModel.Store.aspnet_Membership_ResetPassword" />
+          <FunctionImportMapping FunctionImportName="aspnet_Membership_SetPassword" FunctionName="EverisProduccionModel.Store.aspnet_Membership_SetPassword" />
+          <FunctionImportMapping FunctionImportName="aspnet_Membership_UnlockUser" FunctionName="EverisProduccionModel.Store.aspnet_Membership_UnlockUser" />
+          <FunctionImportMapping FunctionImportName="aspnet_Membership_UpdateUser" FunctionName="EverisProduccionModel.Store.aspnet_Membership_UpdateUser" />
+          <FunctionImportMapping FunctionImportName="aspnet_Membership_UpdateUserInfo" FunctionName="EverisProduccionModel.Store.aspnet_Membership_UpdateUserInfo" />
+          <FunctionImportMapping FunctionImportName="aspnet_Membership_ValidMobilePIN" FunctionName="EverisProduccionModel.Store.aspnet_Membership_ValidMobilePIN">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EverisProduccionModel.aspnet_Membership_ValidMobilePIN_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="resultado" ColumnName="resultado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="aspnet_Paths_CreatePath" FunctionName="EverisProduccionModel.Store.aspnet_Paths_CreatePath" />
+          <FunctionImportMapping FunctionImportName="aspnet_Personalization_GetApplicationId" FunctionName="EverisProduccionModel.Store.aspnet_Personalization_GetApplicationId" />
+          <FunctionImportMapping FunctionImportName="aspnet_PersonalizationAdministration_DeleteAllState" FunctionName="EverisProduccionModel.Store.aspnet_PersonalizationAdministration_DeleteAllState" />
+          <FunctionImportMapping FunctionImportName="aspnet_PersonalizationAdministration_FindState" FunctionName="EverisProduccionModel.Store.aspnet_PersonalizationAdministration_FindState" />
+          <FunctionImportMapping FunctionImportName="aspnet_PersonalizationAdministration_GetCountOfState" FunctionName="EverisProduccionModel.Store.aspnet_PersonalizationAdministration_GetCountOfState" />
+          <FunctionImportMapping FunctionImportName="aspnet_PersonalizationAdministration_ResetSharedState" FunctionName="EverisProduccionModel.Store.aspnet_PersonalizationAdministration_ResetSharedState" />
+          <FunctionImportMapping FunctionImportName="aspnet_PersonalizationAdministration_ResetUserState" FunctionName="EverisProduccionModel.Store.aspnet_PersonalizationAdministration_ResetUserState" />
+          <FunctionImportMapping FunctionImportName="aspnet_PersonalizationAllUsers_GetPageSettings" FunctionName="EverisProduccionModel.Store.aspnet_PersonalizationAllUsers_GetPageSettings" />
+          <FunctionImportMapping FunctionImportName="aspnet_PersonalizationAllUsers_ResetPageSettings" FunctionName="EverisProduccionModel.Store.aspnet_PersonalizationAllUsers_ResetPageSettings" />
+          <FunctionImportMapping FunctionImportName="aspnet_PersonalizationAllUsers_SetPageSettings" FunctionName="EverisProduccionModel.Store.aspnet_PersonalizationAllUsers_SetPageSettings" />
+          <FunctionImportMapping FunctionImportName="aspnet_PersonalizationPerUser_GetPageSettings" FunctionName="EverisProduccionModel.Store.aspnet_PersonalizationPerUser_GetPageSettings" />
+          <FunctionImportMapping FunctionImportName="aspnet_PersonalizationPerUser_ResetPageSettings" FunctionName="EverisProduccionModel.Store.aspnet_PersonalizationPerUser_ResetPageSettings" />
+          <FunctionImportMapping FunctionImportName="aspnet_PersonalizationPerUser_SetPageSettings" FunctionName="EverisProduccionModel.Store.aspnet_PersonalizationPerUser_SetPageSettings" />
+          <FunctionImportMapping FunctionImportName="aspnet_Profile_DeleteInactiveProfiles" FunctionName="EverisProduccionModel.Store.aspnet_Profile_DeleteInactiveProfiles" />
+          <FunctionImportMapping FunctionImportName="aspnet_Profile_DeleteProfiles" FunctionName="EverisProduccionModel.Store.aspnet_Profile_DeleteProfiles" />
+          <FunctionImportMapping FunctionImportName="aspnet_Profile_GetNumberOfInactiveProfiles" FunctionName="EverisProduccionModel.Store.aspnet_Profile_GetNumberOfInactiveProfiles" />
+          <FunctionImportMapping FunctionImportName="aspnet_Profile_GetProfiles" FunctionName="EverisProduccionModel.Store.aspnet_Profile_GetProfiles" />
+          <FunctionImportMapping FunctionImportName="aspnet_Profile_GetProperties" FunctionName="EverisProduccionModel.Store.aspnet_Profile_GetProperties">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EverisProduccionModel.aspnet_Profile_GetProperties_Result">
+                <ScalarProperty Name="PropertyNames" ColumnName="PropertyNames" />
+                <ScalarProperty Name="PropertyValuesString" ColumnName="PropertyValuesString" />
+                <ScalarProperty Name="PropertyValuesBinary" ColumnName="PropertyValuesBinary" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="aspnet_Profile_SetProperties" FunctionName="EverisProduccionModel.Store.aspnet_Profile_SetProperties" />
+          <FunctionImportMapping FunctionImportName="aspnet_RegisterSchemaVersion" FunctionName="EverisProduccionModel.Store.aspnet_RegisterSchemaVersion" />
+          <FunctionImportMapping FunctionImportName="aspnet_Roles_CreateRole" FunctionName="EverisProduccionModel.Store.aspnet_Roles_CreateRole" />
+          <FunctionImportMapping FunctionImportName="aspnet_Roles_DeleteRole" FunctionName="EverisProduccionModel.Store.aspnet_Roles_DeleteRole" />
+          <FunctionImportMapping FunctionImportName="aspnet_Roles_GetAllRoles" FunctionName="EverisProduccionModel.Store.aspnet_Roles_GetAllRoles" />
+          <FunctionImportMapping FunctionImportName="aspnet_Roles_RoleExists" FunctionName="EverisProduccionModel.Store.aspnet_Roles_RoleExists" />
+          <FunctionImportMapping FunctionImportName="aspnet_Setup_RemoveAllRoleMembers" FunctionName="EverisProduccionModel.Store.aspnet_Setup_RemoveAllRoleMembers" />
+          <FunctionImportMapping FunctionImportName="aspnet_Setup_RestorePermissions" FunctionName="EverisProduccionModel.Store.aspnet_Setup_RestorePermissions" />
+          <FunctionImportMapping FunctionImportName="aspnet_UnRegisterSchemaVersion" FunctionName="EverisProduccionModel.Store.aspnet_UnRegisterSchemaVersion" />
+          <FunctionImportMapping FunctionImportName="aspnet_Users_CreateUser" FunctionName="EverisProduccionModel.Store.aspnet_Users_CreateUser" />
+          <FunctionImportMapping FunctionImportName="aspnet_Users_DeleteUser" FunctionName="EverisProduccionModel.Store.aspnet_Users_DeleteUser" />
+          <FunctionImportMapping FunctionImportName="aspnet_UsersInRoles_AddUsersToRoles" FunctionName="EverisProduccionModel.Store.aspnet_UsersInRoles_AddUsersToRoles" />
+          <FunctionImportMapping FunctionImportName="aspnet_UsersInRoles_FindUsersInRole" FunctionName="EverisProduccionModel.Store.aspnet_UsersInRoles_FindUsersInRole" />
+          <FunctionImportMapping FunctionImportName="aspnet_UsersInRoles_GetRolesForUser" FunctionName="EverisProduccionModel.Store.aspnet_UsersInRoles_GetRolesForUser" />
+          <FunctionImportMapping FunctionImportName="aspnet_UsersInRoles_GetUsersInRoles" FunctionName="EverisProduccionModel.Store.aspnet_UsersInRoles_GetUsersInRoles" />
+          <FunctionImportMapping FunctionImportName="aspnet_UsersInRoles_IsUserInRole" FunctionName="EverisProduccionModel.Store.aspnet_UsersInRoles_IsUserInRole" />
+          <FunctionImportMapping FunctionImportName="aspnet_UsersInRoles_RemoveUsersFromRoles" FunctionName="EverisProduccionModel.Store.aspnet_UsersInRoles_RemoveUsersFromRoles">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EverisProduccionModel.aspnet_UsersInRoles_RemoveUsersFromRoles_Result">
+                <ScalarProperty Name="Column1" ColumnName="Column1" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="aspnet_WebEvent_LogEvent" FunctionName="EverisProduccionModel.Store.aspnet_WebEvent_LogEvent" />
+          <FunctionImportMapping FunctionImportName="CambioMasivoDeLiderAEmpleados" FunctionName="EverisProduccionModel.Store.CambioMasivoDeLiderAEmpleados" />
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="EverisProduccionModel.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_CambioEstadoDiario" FunctionName="EverisProduccionModel.Store.sp_CambioEstadoDiario" />
+          <FunctionImportMapping FunctionImportName="sp_CambioEstadoMensual" FunctionName="EverisProduccionModel.Store.sp_CambioEstadoMensual" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="EverisProduccionModel.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="EverisProduccionModel.Store.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="EverisProduccionModel.Store.sp_helpdiagramdefinition" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="EverisProduccionModel.Store.sp_helpdiagrams" />
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="EverisProduccionModel.Store.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_SabanadeProduccion" FunctionName="EverisProduccionModel.Store.sp_SabanadeProduccion">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EverisProduccionModel.sp_SabanadeProduccion_Result">
+                <ScalarProperty Name="Column1" ColumnName="Column1" />
+                <ScalarProperty Name="Column2" ColumnName="Column2" />
+                <ScalarProperty Name="Column3" ColumnName="Column3" />
+                <ScalarProperty Name="Column4" ColumnName="Column4" />
+                <ScalarProperty Name="Column5" ColumnName="Column5" />
+                <ScalarProperty Name="Column6" ColumnName="Column6" />
+                <ScalarProperty Name="Column7" ColumnName="Column7" />
+                <ScalarProperty Name="Column8" ColumnName="Column8" />
+                <ScalarProperty Name="Column9" ColumnName="Column9" />
+                <ScalarProperty Name="Column10" ColumnName="Column10" />
+                <ScalarProperty Name="Column11" ColumnName="Column11" />
+                <ScalarProperty Name="Column12" ColumnName="Column12" />
+                <ScalarProperty Name="Column13" ColumnName="Column13" />
+                <ScalarProperty Name="Column14" ColumnName="Column14" />
+                <ScalarProperty Name="Column15" ColumnName="Column15" />
+                <ScalarProperty Name="Column16" ColumnName="Column16" />
+                <ScalarProperty Name="Column17" ColumnName="Column17" />
+                <ScalarProperty Name="Column18" ColumnName="Column18" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_SabanadeProduccion1" FunctionName="EverisProduccionModel.Store.sp_SabanadeProduccion1" />
+          <FunctionImportMapping FunctionImportName="sp_SabanadeRH" FunctionName="EverisProduccionModel.Store.sp_SabanadeRH" />
+          <FunctionImportMapping FunctionImportName="sp_SabanadeRH_1" FunctionName="EverisProduccionModel.Store.sp_SabanadeRH_1" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="EverisProduccionModel.Store.sp_upgraddiagrams" />
+          <FunctionImportMapping FunctionImportName="spActualizaInfoPrincipal" FunctionName="EverisProduccionModel.Store.spActualizaInfoPrincipal" />
+          <FunctionImportMapping FunctionImportName="spActualizaMasivo" FunctionName="EverisProduccionModel.Store.spActualizaMasivo" />
+          <FunctionImportMapping FunctionImportName="spActualizaRetiro" FunctionName="EverisProduccionModel.Store.spActualizaRetiro" />
+          <FunctionImportMapping FunctionImportName="spBuscarPersonal" FunctionName="EverisProduccionModel.Store.spBuscarPersonal" />
+          <FunctionImportMapping FunctionImportName="spCalcularHorasExtras" FunctionName="EverisProduccionModel.Store.spCalcularHorasExtras" />
+          <FunctionImportMapping FunctionImportName="spCalcularHorasExtrasNv" FunctionName="EverisProduccionModel.Store.spCalcularHorasExtrasNv">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EverisProduccionModel.spCalcularHorasExtrasNv_Result">
+                <ScalarProperty Name="ProgramacionLaboralId" ColumnName="ProgramacionLaboralId" />
+                <ScalarProperty Name="PersonaId" ColumnName="PersonaId" />
+                <ScalarProperty Name="Column1" ColumnName="Column1" />
+                <ScalarProperty Name="Column2" ColumnName="Column2" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spControlHorasExtras" FunctionName="EverisProduccionModel.Store.spControlHorasExtras" />
+          <FunctionImportMapping FunctionImportName="spEliminarActividadDiaria" FunctionName="EverisProduccionModel.Store.spEliminarActividadDiaria" />
+          <FunctionImportMapping FunctionImportName="spInsertarActividadDiaria" FunctionName="EverisProduccionModel.Store.spInsertarActividadDiaria" />
+          <FunctionImportMapping FunctionImportName="spInsertarProgramacionLaboral" FunctionName="EverisProduccionModel.Store.spInsertarProgramacionLaboral" />
+          <FunctionImportMapping FunctionImportName="spInsertExtrasAprobadas" FunctionName="EverisProduccionModel.Store.spInsertExtrasAprobadas" />
+          <FunctionImportMapping FunctionImportName="spLiderInsertaInactividad" FunctionName="EverisProduccionModel.Store.spLiderInsertaInactividad" />
+          <FunctionImportMapping FunctionImportName="spLoginUsuarios" FunctionName="EverisProduccionModel.Store.spLoginUsuarios" />
+          <FunctionImportMapping FunctionImportName="spObtenerActividadesDiariasPorUsDesHast" FunctionName="EverisProduccionModel.Store.spObtenerActividadesDiariasPorUsDesHast">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EverisProduccionModel.spObtenerActividadesDiariasPorUsDesHast_Result">
+                <ScalarProperty Name="ActividadDiariaId" ColumnName="ActividadDiariaId" />
+                <ScalarProperty Name="numActividad" ColumnName="numActividad" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="Procesos" ColumnName="Procesos" />
+                <ScalarProperty Name="Actividad" ColumnName="Actividad" />
+                <ScalarProperty Name="Producto" ColumnName="Producto" />
+                <ScalarProperty Name="Tiempo" ColumnName="Tiempo" />
+                <ScalarProperty Name="Productividad" ColumnName="Productividad" />
+                <ScalarProperty Name="tiempoInactividad" ColumnName="tiempoInactividad" />
+                <ScalarProperty Name="EstadoId" ColumnName="EstadoId" />
+                <ScalarProperty Name="fechaproductiva" ColumnName="fechaproductiva" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spObtenerActividadesDiariasPorUsuario" FunctionName="EverisProduccionModel.Store.spObtenerActividadesDiariasPorUsuario">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EverisProduccionModel.spObtenerActividadesDiariasPorUsuario_Result">
+                <ScalarProperty Name="ActividadDiariaId" ColumnName="ActividadDiariaId" />
+                <ScalarProperty Name="numActividad" ColumnName="numActividad" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="Procesos" ColumnName="Procesos" />
+                <ScalarProperty Name="Actividad" ColumnName="Actividad" />
+                <ScalarProperty Name="Producto" ColumnName="Producto" />
+                <ScalarProperty Name="Tiempo" ColumnName="Tiempo" />
+                <ScalarProperty Name="Productividad" ColumnName="Productividad" />
+                <ScalarProperty Name="tiempoInactividad" ColumnName="tiempoInactividad" />
+                <ScalarProperty Name="EstadoId" ColumnName="EstadoId" />
+                <ScalarProperty Name="fechaproductiva" ColumnName="fechaproductiva" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spObtenerCamposFormulario" FunctionName="EverisProduccionModel.Store.spObtenerCamposFormulario">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EverisProduccionModel.spObtenerCamposFormulario_Result">
+                <ScalarProperty Name="FormularioCampoId" ColumnName="FormularioCampoId" />
+                <ScalarProperty Name="FormularioId" ColumnName="FormularioId" />
+                <ScalarProperty Name="CampoId" ColumnName="CampoId" />
+                <ScalarProperty Name="Orden" ColumnName="Orden" />
+                <ScalarProperty Name="Editable" ColumnName="Editable" />
+                <ScalarProperty Name="Obligatorio" ColumnName="Obligatorio" />
+                <ScalarProperty Name="TipoCampoId" ColumnName="TipoCampoId" />
+                <ScalarProperty Name="PadreId" ColumnName="PadreId" />
+                <ScalarProperty Name="CampoIdDependiente" ColumnName="CampoIdDependiente" />
+                <ScalarProperty Name="DobleCaptura" ColumnName="DobleCaptura" />
+                <ScalarProperty Name="Evento" ColumnName="Evento" />
+                <ScalarProperty Name="Funcion" ColumnName="Funcion" />
+                <ScalarProperty Name="FuenteOrigen" ColumnName="FuenteOrigen" />
+                <ScalarProperty Name="FuenteParametros" ColumnName="FuenteParametros" />
+                <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="DimensionAlto" ColumnName="DimensionAlto" />
+                <ScalarProperty Name="DimensionAncho" ColumnName="DimensionAncho" />
+                <ScalarProperty Name="LongMin" ColumnName="LongMin" />
+                <ScalarProperty Name="LongMax" ColumnName="LongMax" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spObtenerCapturaEventos" FunctionName="EverisProduccionModel.Store.spObtenerCapturaEventos">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EverisProduccionModel.spObtenerCapturaEventos_Result">
+                <ScalarProperty Name="CapturaEventoId" ColumnName="CapturaEventoId" />
+                <ScalarProperty Name="PersonaId" ColumnName="PersonaId" />
+                <ScalarProperty Name="BarraEventoId" ColumnName="BarraEventoId" />
+                <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spObtenerClientes" FunctionName="EverisProduccionModel.Store.spObtenerClientes">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EverisProduccionModel.spObtenerClientes_Result">
+                <ScalarProperty Name="value" ColumnName="value" />
+                <ScalarProperty Name="text" ColumnName="text" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spObtenerClientesRoles" FunctionName="EverisProduccionModel.Store.spObtenerClientesRoles">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EverisProduccionModel.spObtenerClientesRoles_Result">
+                <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+                <ScalarProperty Name="LoweredRoleName" ColumnName="LoweredRoleName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ClienteId" ColumnName="ClienteId" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spObtenerDatosPersonal" FunctionName="EverisProduccionModel.Store.spObtenerDatosPersonal">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EverisProduccionModel.spObtenerDatosPersonal_Result">
+                <ScalarProperty Name="DetallePersonaId" ColumnName="DetallePersonaId" />
+                <ScalarProperty Name="PersonaId" ColumnName="PersonaId" />
+                <ScalarProperty Name="FormularioCampoId" ColumnName="FormularioCampoId" />
+                <ScalarProperty Name="VALOR" ColumnName="VALOR" />
+                <ScalarProperty Name="NoCaptura" ColumnName="NoCaptura" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+                <ScalarProperty Name="TipoCampoId" ColumnName="TipoCampoId" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spObtenerEstructuras" FunctionName="EverisProduccionModel.Store.spObtenerEstructuras">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EverisProduccionModel.spObtenerEstructuras_Result">
+                <ScalarProperty Name="value" ColumnName="value" />
+                <ScalarProperty Name="text" ColumnName="text" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spObtenerHorasExtras" FunctionName="EverisProduccionModel.Store.spObtenerHorasExtras">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EverisProduccionModel.spObtenerHorasExtras_Result">
+                <ScalarProperty Name="PersonaId" ColumnName="PersonaId" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Lunes" ColumnName="Lunes" />
+                <ScalarProperty Name="Martes" ColumnName="Martes" />
+                <ScalarProperty Name="Miercoles" ColumnName="Miercoles" />
+                <ScalarProperty Name="Jueves" ColumnName="Jueves" />
+                <ScalarProperty Name="Viernes" ColumnName="Viernes" />
+                <ScalarProperty Name="Sabado" ColumnName="Sabado" />
+                <ScalarProperty Name="Domingo" ColumnName="Domingo" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spObtenerInactividadesPorActividad" FunctionName="EverisProduccionModel.Store.spObtenerInactividadesPorActividad">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EverisProduccionModel.spObtenerInactividadesPorActividad_Result">
+                <ScalarProperty Name="ActividadDiariaId" ColumnName="ActividadDiariaId" />
+                <ScalarProperty Name="NumActividad" ColumnName="NumActividad" />
+                <ScalarProperty Name="TipoInactividad" ColumnName="TipoInactividad" />
+                <ScalarProperty Name="Inactividad" ColumnName="Inactividad" />
+                <ScalarProperty Name="Tiempo" ColumnName="Tiempo" />
+                <ScalarProperty Name="EstadoId" ColumnName="EstadoId" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spObtenerItemsListaCampos" FunctionName="EverisProduccionModel.Store.spObtenerItemsListaCampos">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EverisProduccionModel.spObtenerItemsListaCampos_Result">
+                <ScalarProperty Name="ListaCampoId" ColumnName="ListaCampoId" />
+                <ScalarProperty Name="CampoId" ColumnName="CampoId" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="PadreId" ColumnName="PadreId" />
+                <ScalarProperty Name="Orden" ColumnName="Orden" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spObtenerItemsListaCamposCascada" FunctionName="EverisProduccionModel.Store.spObtenerItemsListaCamposCascada">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EverisProduccionModel.spObtenerItemsListaCamposCascada_Result">
+                <ScalarProperty Name="ListaCampoId" ColumnName="ListaCampoId" />
+                <ScalarProperty Name="CampoId" ColumnName="CampoId" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="PadreId" ColumnName="PadreId" />
+                <ScalarProperty Name="Orden" ColumnName="Orden" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spObtenerMenuHijos" FunctionName="EverisProduccionModel.Store.spObtenerMenuHijos" />
+          <FunctionImportMapping FunctionImportName="spObtenerMenuPadre" FunctionName="EverisProduccionModel.Store.spObtenerMenuPadre" />
+          <FunctionImportMapping FunctionImportName="spObtenerPersonasCargoEVERIS" FunctionName="EverisProduccionModel.Store.spObtenerPersonasCargoEVERIS">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EverisProduccionModel.spObtenerPersonasCargoEVERIS_Result">
+                <ScalarProperty Name="PersonaId" ColumnName="PersonaId" />
+                <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spObtenerPersonasPorLider" FunctionName="EverisProduccionModel.Store.spObtenerPersonasPorLider" />
+          <FunctionImportMapping FunctionImportName="spObtenerPersonIdPorUserId" FunctionName="EverisProduccionModel.Store.spObtenerPersonIdPorUserId">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EverisProduccionModel.spObtenerPersonIdPorUserId_Result">
+                <ScalarProperty Name="PersonaId" ColumnName="PersonaId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="TipoDocumentoId" ColumnName="TipoDocumentoId" />
+                <ScalarProperty Name="Identificacion" ColumnName="Identificacion" />
+                <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+                <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+                <ScalarProperty Name="Genero" ColumnName="Genero" />
+                <ScalarProperty Name="CargoId" ColumnName="CargoId" />
+                <ScalarProperty Name="UserIdRegistro" ColumnName="UserIdRegistro" />
+                <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spObtenerProgramcionLaboralPorFecha" FunctionName="EverisProduccionModel.Store.spObtenerProgramcionLaboralPorFecha" />
+          <FunctionImportMapping FunctionImportName="spObtenerProgramcionLaboralPorFecha1" FunctionName="EverisProduccionModel.Store.spObtenerProgramcionLaboralPorFecha1">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EverisProduccionModel.spObtenerProgramcionLaboralPorFecha1_Result">
+                <ScalarProperty Name="ProgramacionLaboralId" ColumnName="ProgramacionLaboralId" />
+                <ScalarProperty Name="PersonaId" ColumnName="PersonaId" />
+                <ScalarProperty Name="FechaTurno" ColumnName="FechaTurno" />
+                <ScalarProperty Name="HoraInicio" ColumnName="HoraInicio" />
+                <ScalarProperty Name="HoraFin" ColumnName="HoraFin" />
+                <ScalarProperty Name="PersonaIdRegistro" ColumnName="PersonaIdRegistro" />
+                <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+                <ScalarProperty Name="HExtrasAprobadas" ColumnName="HExtrasAprobadas" />
+                <ScalarProperty Name="AprobarExtras" ColumnName="AprobarExtras" />
+                <ScalarProperty Name="FechaAprobacion" ColumnName="FechaAprobacion" />
+                <ScalarProperty Name="PersonaIdAprobador" ColumnName="PersonaIdAprobador" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+                <ScalarProperty Name="TurnoId" ColumnName="TurnoId" />
+                <ScalarProperty Name="HorasExtras" ColumnName="HorasExtras" />
+                <ScalarProperty Name="PERSONAID1" ColumnName="PERSONAID1" />
+                <ScalarProperty Name="LIDER" ColumnName="LIDER" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spObtenerProgramLaboralActualUser" FunctionName="EverisProduccionModel.Store.spObtenerProgramLaboralActualUser">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EverisProduccionModel.spObtenerProgramLaboralActualUser_Result">
+                <ScalarProperty Name="ProgramacionLaboralId" ColumnName="ProgramacionLaboralId" />
+                <ScalarProperty Name="PersonaId" ColumnName="PersonaId" />
+                <ScalarProperty Name="FechaTurno" ColumnName="FechaTurno" />
+                <ScalarProperty Name="HoraInicio" ColumnName="HoraInicio" />
+                <ScalarProperty Name="HoraFin" ColumnName="HoraFin" />
+                <ScalarProperty Name="PersonaIdRegistro" ColumnName="PersonaIdRegistro" />
+                <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+                <ScalarProperty Name="HExtrasAprobadas" ColumnName="HExtrasAprobadas" />
+                <ScalarProperty Name="AprobarExtras" ColumnName="AprobarExtras" />
+                <ScalarProperty Name="FechaAprobacion" ColumnName="FechaAprobacion" />
+                <ScalarProperty Name="PersonaIdAprobador" ColumnName="PersonaIdAprobador" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+                <ScalarProperty Name="TurnoId" ColumnName="TurnoId" />
+                <ScalarProperty Name="HorasExtras" ColumnName="HorasExtras" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spObtenerRolUser" FunctionName="EverisProduccionModel.Store.spObtenerRolUser" />
+          <FunctionImportMapping FunctionImportName="spObtenerUserId" FunctionName="EverisProduccionModel.Store.spObtenerUserId">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EverisProduccionModel.spObtenerUserId_Result">
+                <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="LoweredUserName" ColumnName="LoweredUserName" />
+                <ScalarProperty Name="MobileAlias" ColumnName="MobileAlias" />
+                <ScalarProperty Name="IsAnonymous" ColumnName="IsAnonymous" />
+                <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spObtieneProgramacionLabralPorDia" FunctionName="EverisProduccionModel.Store.spObtieneProgramacionLabralPorDia">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EverisProduccionModel.spObtieneProgramacionLabralPorDia_Result">
+                <ScalarProperty Name="ProgramacionLaboralId" ColumnName="ProgramacionLaboralId" />
+                <ScalarProperty Name="PersonaId" ColumnName="PersonaId" />
+                <ScalarProperty Name="FechaTurno" ColumnName="FechaTurno" />
+                <ScalarProperty Name="HoraInicio" ColumnName="HoraInicio" />
+                <ScalarProperty Name="HoraFin" ColumnName="HoraFin" />
+                <ScalarProperty Name="PersonaIdRegistro" ColumnName="PersonaIdRegistro" />
+                <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+                <ScalarProperty Name="HExtrasAprobadas" ColumnName="HExtrasAprobadas" />
+                <ScalarProperty Name="AprobarExtras" ColumnName="AprobarExtras" />
+                <ScalarProperty Name="FechaAprobacion" ColumnName="FechaAprobacion" />
+                <ScalarProperty Name="PersonaIdAprobador" ColumnName="PersonaIdAprobador" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+                <ScalarProperty Name="TurnoId" ColumnName="TurnoId" />
+                <ScalarProperty Name="HorasExtras" ColumnName="HorasExtras" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spOptenerBarraEventos" FunctionName="EverisProduccionModel.Store.spOptenerBarraEventos">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EverisProduccionModel.spOptenerBarraEventos_Result">
+                <ScalarProperty Name="BarraEventoId" ColumnName="BarraEventoId" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="EventoDependiente" ColumnName="EventoDependiente" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+                <ScalarProperty Name="UrlImagen" ColumnName="UrlImagen" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spReporteEntradaySalida" FunctionName="EverisProduccionModel.Store.spReporteEntradaySalida">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EverisProduccionModel.spReporteEntradaySalida_Result">
+                <ScalarProperty Name="Column1" ColumnName="Column1" />
+                <ScalarProperty Name="Column2" ColumnName="Column2" />
+                <ScalarProperty Name="Column3" ColumnName="Column3" />
+                <ScalarProperty Name="Column4" ColumnName="Column4" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spReporteEntradaySalida1" FunctionName="EverisProduccionModel.Store.spReporteEntradaySalida1">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EverisProduccionModel.spReporteEntradaySalida1_Result">
+                <ScalarProperty Name="Column1" ColumnName="Column1" />
+                <ScalarProperty Name="Column2" ColumnName="Column2" />
+                <ScalarProperty Name="Column3" ColumnName="Column3" />
+                <ScalarProperty Name="Column4" ColumnName="Column4" />
+                <ScalarProperty Name="Column5" ColumnName="Column5" />
+                <ScalarProperty Name="Column6" ColumnName="Column6" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spReporteHorasExtrasConsolidado" FunctionName="EverisProduccionModel.Store.spReporteHorasExtrasConsolidado">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EverisProduccionModel.spReporteHorasExtrasConsolidado_Result">
+                <ScalarProperty Name="Column1" ColumnName="Column1" />
+                <ScalarProperty Name="Column2" ColumnName="Column2" />
+                <ScalarProperty Name="Column3" ColumnName="Column3" />
+                <ScalarProperty Name="Column4" ColumnName="Column4" />
+                <ScalarProperty Name="Column5" ColumnName="Column5" />
+                <ScalarProperty Name="Column6" ColumnName="Column6" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spReporteHorasExtrasPorLider" FunctionName="EverisProduccionModel.Store.spReporteHorasExtrasPorLider">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EverisProduccionModel.spReporteHorasExtrasPorLider_Result">
+                <ScalarProperty Name="PersonaId" ColumnName="PersonaId" />
+                <ScalarProperty Name="Identificacion" ColumnName="Identificacion" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="Empresa" ColumnName="Empresa" />
+                <ScalarProperty Name="HorasExtras" ColumnName="HorasExtras" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spTiempoTotalActividadDiariaPorPersona" FunctionName="EverisProduccionModel.Store.spTiempoTotalActividadDiariaPorPersona">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EverisProduccionModel.spTiempoTotalActividadDiariaPorPersona_Result">
+                <ScalarProperty Name="PersonaId" ColumnName="PersonaId" />
+                <ScalarProperty Name="FechaProductiva" ColumnName="FechaProductiva" />
+                <ScalarProperty Name="Tiempo_Sumado" ColumnName="Tiempo_Sumado" />
+                <ScalarProperty Name="TiempoCapturaEvento" ColumnName="TiempoCapturaEvento" />
+                <ScalarProperty Name="Validacion" ColumnName="Validacion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spUpdateCapturaBarraEvento" FunctionName="EverisProduccionModel.Store.spUpdateCapturaBarraEvento" />
+          <FunctionImportMapping FunctionImportName="spValidaExisPers" FunctionName="EverisProduccionModel.Store.spValidaExisPers">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EverisProduccionModel.spValidaExisPers_Result">
+                <ScalarProperty Name="Identificacion" ColumnName="Identificacion" />
+                <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="UsersInRoles_AddUserToRole" FunctionName="EverisProduccionModel.Store.UsersInRoles_AddUserToRole" />
+          <FunctionImportMapping FunctionImportName="spObtenerNombreLider" FunctionName="EverisProduccionModel.Store.spObtenerNombreLider" />
+          <FunctionImportMapping FunctionImportName="spObtenerPersonasPorLiderSGD" FunctionName="EverisProduccionModel.Store.spObtenerPersonasPorLiderSGD">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EverisProduccionModel.spObtenerPersonasPorLiderSGD_Result">
+                <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+                <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Desbloqueomasivousuarios" FunctionName="EverisProduccionModel.Store.Desbloqueomasivousuarios" />
+          <FunctionImportMapping FunctionImportName="Desbloqueousuarios1" FunctionName="EverisProduccionModel.Store.Desbloqueousuarios" />
+          <FunctionImportMapping FunctionImportName="sp_dias_habiles1" FunctionName="EverisProduccionModel.Store.sp_dias_habiles" />
+          <FunctionImportMapping FunctionImportName="spDeshabilitarusuario1" FunctionName="EverisProduccionModel.Store.spDeshabilitarusuario" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

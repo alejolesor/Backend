@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Wcf_IntegrationBBVA.Models" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Wcf_IntegrationBBVA.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfsp_ConsultarSeccion2_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="sp_ConsultarSeccion2_Result" nillable="true" type="tns:sp_ConsultarSeccion2_Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfsp_ConsultarSeccion2_Result" nillable="true" type="tns:ArrayOfsp_ConsultarSeccion2_Result" />
+  <xs:complexType name="sp_ConsultarSeccion2_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="NombreCampo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumCaptura" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="valor" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="sp_ConsultarSeccion2_Result" nillable="true" type="tns:sp_ConsultarSeccion2_Result" />
+  <xs:complexType name="ArrayOfsp_ConsultarObservacionesCheckList_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="sp_ConsultarObservacionesCheckList_Result" nillable="true" type="tns:sp_ConsultarObservacionesCheckList_Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfsp_ConsultarObservacionesCheckList_Result" nillable="true" type="tns:ArrayOfsp_ConsultarObservacionesCheckList_Result" />
+  <xs:complexType name="sp_ConsultarObservacionesCheckList_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdArea" type="xs:int" />
+      <xs:element minOccurs="0" name="IdEstado" type="xs:int" />
+      <xs:element minOccurs="0" name="Observaciones" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="sp_ConsultarObservacionesCheckList_Result" nillable="true" type="tns:sp_ConsultarObservacionesCheckList_Result" />
+  <xs:complexType name="ArrayOfsp_ConsultarOficinas_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="sp_ConsultarOficinas_Result" nillable="true" type="tns:sp_ConsultarOficinas_Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfsp_ConsultarOficinas_Result" nillable="true" type="tns:ArrayOfsp_ConsultarOficinas_Result" />
+  <xs:complexType name="sp_ConsultarOficinas_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodDescripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="codId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="sp_ConsultarOficinas_Result" nillable="true" type="tns:sp_ConsultarOficinas_Result" />
+  <xs:complexType name="ArrayOfspCalculosSimuladorDesembolsoLib_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="spCalculosSimuladorDesembolsoLib_Result" nillable="true" type="tns:spCalculosSimuladorDesembolsoLib_Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfspCalculosSimuladorDesembolsoLib_Result" nillable="true" type="tns:ArrayOfspCalculosSimuladorDesembolsoLib_Result" />
+  <xs:complexType name="spCalculosSimuladorDesembolsoLib_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Llave" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="spCalculosSimuladorDesembolsoLib_Result" nillable="true" type="tns:spCalculosSimuladorDesembolsoLib_Result" />
+  <xs:complexType name="ArrayOfsp_ConsultarCamposCheckL_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="sp_ConsultarCamposCheckL_Result" nillable="true" type="tns:sp_ConsultarCamposCheckL_Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfsp_ConsultarCamposCheckL_Result" nillable="true" type="tns:ArrayOfsp_ConsultarCamposCheckL_Result" />
+  <xs:complexType name="sp_ConsultarCamposCheckL_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdCampo" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdCapturaCheckList" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IndiceGrilla" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="valor" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="sp_ConsultarCamposCheckL_Result" nillable="true" type="tns:sp_ConsultarCamposCheckL_Result" />
+  <xs:complexType name="ArrayOfsp_ConsultarCamposAnlisisLib_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="sp_ConsultarCamposAnlisisLib_Result" nillable="true" type="tns:sp_ConsultarCamposAnlisisLib_Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfsp_ConsultarCamposAnlisisLib_Result" nillable="true" type="tns:ArrayOfsp_ConsultarCamposAnlisisLib_Result" />
+  <xs:complexType name="sp_ConsultarCamposAnlisisLib_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdCampo" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdCapturaAnalisisLib" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IndiceGrilla" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="valor" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="sp_ConsultarCamposAnlisisLib_Result" nillable="true" type="tns:sp_ConsultarCamposAnlisisLib_Result" />
+  <xs:complexType name="ArrayOfsp_ConsultarMinisabanas_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="sp_ConsultarMinisabanas_Result" nillable="true" type="tns:sp_ConsultarMinisabanas_Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfsp_ConsultarMinisabanas_Result" nillable="true" type="tns:ArrayOfsp_ConsultarMinisabanas_Result" />
+  <xs:complexType name="sp_ConsultarMinisabanas_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdCampo" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdCapturaAnalisisLib" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IndiceGrilla" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="valor" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="sp_ConsultarMinisabanas_Result" nillable="true" type="tns:sp_ConsultarMinisabanas_Result" />
+  <xs:complexType name="ArrayOfsp_ConsultarCamposAnlisisCon_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="sp_ConsultarCamposAnlisisCon_Result" nillable="true" type="tns:sp_ConsultarCamposAnlisisCon_Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfsp_ConsultarCamposAnlisisCon_Result" nillable="true" type="tns:ArrayOfsp_ConsultarCamposAnlisisCon_Result" />
+  <xs:complexType name="sp_ConsultarCamposAnlisisCon_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdCampo" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdCapturaAnalisisCon" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IndiceGrilla" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="valor" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="sp_ConsultarCamposAnlisisCon_Result" nillable="true" type="tns:sp_ConsultarCamposAnlisisCon_Result" />
+  <xs:complexType name="ArrayOfsp_ConsultarCamposAnlisisVeh_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="sp_ConsultarCamposAnlisisVeh_Result" nillable="true" type="tns:sp_ConsultarCamposAnlisisVeh_Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfsp_ConsultarCamposAnlisisVeh_Result" nillable="true" type="tns:ArrayOfsp_ConsultarCamposAnlisisVeh_Result" />
+  <xs:complexType name="sp_ConsultarCamposAnlisisVeh_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdCampo" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdCapturaAnalisisVeh" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IndiceGrilla" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="NoTitular" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="valor" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="sp_ConsultarCamposAnlisisVeh_Result" nillable="true" type="tns:sp_ConsultarCamposAnlisisVeh_Result" />
+  <xs:complexType name="ArrayOfConsultarCamposAutoSave_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ConsultarCamposAutoSave_Result" nillable="true" type="tns:ConsultarCamposAutoSave_Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfConsultarCamposAutoSave_Result" nillable="true" type="tns:ArrayOfConsultarCamposAutoSave_Result" />
+  <xs:complexType name="ConsultarCamposAutoSave_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdCampo" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdCapturaAutoSave" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IndiceGrilla" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="NoTitular" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="valor" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultarCamposAutoSave_Result" nillable="true" type="tns:ConsultarCamposAutoSave_Result" />
+  <xs:complexType name="ArrayOfsp_ConsultarCamposActualizacionclientes_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="sp_ConsultarCamposActualizacionclientes_Result" nillable="true" type="tns:sp_ConsultarCamposActualizacionclientes_Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfsp_ConsultarCamposActualizacionclientes_Result" nillable="true" type="tns:ArrayOfsp_ConsultarCamposActualizacionclientes_Result" />
+  <xs:complexType name="sp_ConsultarCamposActualizacionclientes_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdActualizacionClientes" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdCampo" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IndiceGrilla" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="valor" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="sp_ConsultarCamposActualizacionclientes_Result" nillable="true" type="tns:sp_ConsultarCamposActualizacionclientes_Result" />
+  <xs:complexType name="ArrayOfsp_ConsultarEnviosDesemsolsos_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="sp_ConsultarEnviosDesemsolsos_Result" nillable="true" type="tns:sp_ConsultarEnviosDesemsolsos_Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfsp_ConsultarEnviosDesemsolsos_Result" nillable="true" type="tns:ArrayOfsp_ConsultarEnviosDesemsolsos_Result" />
+  <xs:complexType name="sp_ConsultarEnviosDesemsolsos_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Destino" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaEnvio" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="GruiIdProducto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdUsuario" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Observaciones" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Origen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Respuesta" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="idRadicadoBonita" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="sp_ConsultarEnviosDesemsolsos_Result" nillable="true" type="tns:sp_ConsultarEnviosDesemsolsos_Result" />
+  <xs:complexType name="ArrayOfspHipoConsultarRadicado_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="spHipoConsultarRadicado_Result" nillable="true" type="tns:spHipoConsultarRadicado_Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfspHipoConsultarRadicado_Result" nillable="true" type="tns:ArrayOfspHipoConsultarRadicado_Result" />
+  <xs:complexType name="spHipoConsultarRadicado_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdCampo" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdCapturaHipoScoring" type="xs:int" />
+      <xs:element minOccurs="0" name="IndiceGrilla" type="xs:int" />
+      <xs:element minOccurs="0" name="NoTitular" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="valor" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="spHipoConsultarRadicado_Result" nillable="true" type="tns:spHipoConsultarRadicado_Result" />
+</xs:schema>

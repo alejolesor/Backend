@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.100.120.8:90/AntaraService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Wcf_IntegrationBBVA.Models" />
+  <xs:import schemaLocation="http://10.100.120.8:90/AntaraService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Wcf_IntegrationBBVA" />
+  <xs:element name="LoadFormVCD">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ListCampos" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadFormVCDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Wcf_IntegrationBBVA.Models" minOccurs="0" name="LoadFormVCDResult" nillable="true" type="q1:ArrayOfsp_ConsultarSeccion2_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadFormVCDObserva">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ListCamposs" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadFormVCDObservaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Wcf_IntegrationBBVA.Models" minOccurs="0" name="LoadFormVCDObservaResult" nillable="true" type="q2:ArrayOfsp_ConsultarObservacionesCheckList_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadOficinas">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadOficinasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Wcf_IntegrationBBVA.Models" minOccurs="0" name="LoadOficinasResult" nillable="true" type="q3:ArrayOfsp_ConsultarOficinas_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalcularSim_DesembolsoLib">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="montoSolicitado" type="xs:decimal" />
+        <xs:element minOccurs="0" name="compraDeCartera" type="xs:decimal" />
+        <xs:element minOccurs="0" name="plazoSolicitado" type="xs:decimal" />
+        <xs:element minOccurs="0" name="numeroCheques" type="xs:int" />
+        <xs:element minOccurs="0" name="tasaInteres" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="conProyeccion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fechaDesembolso" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fechaSinProyeccion" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="diaInicioRestriccion" type="xs:int" />
+        <xs:element minOccurs="0" name="diaFinRestriccion" type="xs:int" />
+        <xs:element minOccurs="0" name="claseDesembolso" type="xs:int" />
+        <xs:element minOccurs="0" name="diasVencimiento" type="xs:int" />
+        <xs:element minOccurs="0" name="diasPeriodoGracia" type="xs:int" />
+        <xs:element minOccurs="0" name="cuotasRetenidas" type="xs:int" />
+        <xs:element minOccurs="0" name="subproducto" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalcularSim_DesembolsoLibResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Wcf_IntegrationBBVA.Models" minOccurs="0" name="CalcularSim_DesembolsoLibResult" nillable="true" type="q4:ArrayOfspCalculosSimuladorDesembolsoLib_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="spConsultarCamposCheckL">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idRadicadoBonita" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="spConsultarCamposCheckLResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Wcf_IntegrationBBVA.Models" minOccurs="0" name="spConsultarCamposCheckLResult" nillable="true" type="q5:ArrayOfsp_ConsultarCamposCheckL_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="spConsultarCamposAnalisisLib">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idRadicadoBonita" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="spConsultarCamposAnalisisLibResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Wcf_IntegrationBBVA.Models" minOccurs="0" name="spConsultarCamposAnalisisLibResult" nillable="true" type="q6:ArrayOfsp_ConsultarCamposAnlisisLib_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HerenciaMinisabanaLibranzas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idRadicadoBonita" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HerenciaMinisabanaLibranzasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Wcf_IntegrationBBVA.Models" minOccurs="0" name="HerenciaMinisabanaLibranzasResult" nillable="true" type="q7:ArrayOfsp_ConsultarMinisabanas_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="spConsultarCamposAnalisisCon">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idRadicadoBonita" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="spConsultarCamposAnalisisConResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Wcf_IntegrationBBVA.Models" minOccurs="0" name="spConsultarCamposAnalisisConResult" nillable="true" type="q8:ArrayOfsp_ConsultarCamposAnlisisCon_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="spConsultarCamposAnalisisVeh">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idRadicadoBonita" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="spConsultarCamposAnalisisVehResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Wcf_IntegrationBBVA.Models" minOccurs="0" name="spConsultarCamposAnalisisVehResult" nillable="true" type="q9:ArrayOfsp_ConsultarCamposAnlisisVeh_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="spConsultarCamposAutoSave">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idRadicadoBonita" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="spConsultarCamposAutoSaveResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Wcf_IntegrationBBVA.Models" minOccurs="0" name="spConsultarCamposAutoSaveResult" nillable="true" type="q10:ArrayOfConsultarCamposAutoSave_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="spConsultarCamposActualizacionclientes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idRadicadoBonita" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="spConsultarCamposActualizacionclientesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Wcf_IntegrationBBVA.Models" minOccurs="0" name="spConsultarCamposActualizacionclientesResult" nillable="true" type="q11:ArrayOfsp_ConsultarCamposActualizacionclientes_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="spConsultarEnviosDesembolsos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="area" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="spConsultarEnviosDesembolsosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Wcf_IntegrationBBVA.Models" minOccurs="0" name="spConsultarEnviosDesembolsosResult" nillable="true" type="q12:ArrayOfsp_ConsultarEnviosDesemsolsos_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="spConsultarPendientes">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="spConsultarPendientesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Wcf_IntegrationBBVA" minOccurs="0" name="spConsultarPendientesResult" nillable="true" type="q13:ArrayOfclasesResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="spConsultarCamposHipotecario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idRadicadoBonita" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="spConsultarCamposHipotecarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Wcf_IntegrationBBVA.Models" minOccurs="0" name="spConsultarCamposHipotecarioResult" nillable="true" type="q14:ArrayOfspHipoConsultarRadicado_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

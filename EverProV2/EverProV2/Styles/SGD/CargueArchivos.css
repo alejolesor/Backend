@@ -1,0 +1,51 @@
+﻿.divCargueArchivos {
+    width: 31% !important;
+    float: left;
+    height: 30px !important;
+    margin: -1% 1% 5% 2%;
+}
+
+.custom-combobox, .custom-combobox-input {
+    width: 286px;
+    height: 35px !important;
+}
+
+.anchoFile {
+    width: 36% !important;
+}
+
+#btnCargar {
+    width: auto;
+    margin-left: -246px;
+    margin-top: -136px;
+}
+
+
+.divContentSGD {
+    width: 100% !important;
+    height: 55px !important;
+    /*float: left;
+    height: 30px !important;
+    margin: -1% 1% 5% 2%;*/
+}
+
+.divContentLeft {
+    width: 45% !important;
+    height: 55px !important;
+    margin: 1% -1% 7% 0%;
+}
+
+.tamanocampos{
+    width: 80% !important;
+}
+
+.divContentSGDinfo {
+    width: 100% !important;
+    height: 55px !important;
+    /*float: left;
+    height: 30px !important;*/
+    /*margin: -1% 1% 5% 2%;*/
+}
+.fileset{
+        height: 300px;
+}

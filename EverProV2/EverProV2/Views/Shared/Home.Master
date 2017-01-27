@@ -1,0 +1,273 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head id="Head1" runat="server">
+    <meta name="viewport" content="width=device-width" />
+    <title>
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
+    </title>
+
+
+    <link href="../../Scripts/Tooltipster/tooltipster-light.css" rel="stylesheet" />
+    <link href="../../Styles/dataTables.bootstrap.min.css" rel="stylesheet" />
+    <link href="../../Styles/BootsTrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="../../Styles/BootsTrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../Styles/BootsTrap/css/bootstrap-theme.css" rel="stylesheet" type="text/css" />
+    <link href="../../Styles/BootsTrap/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../Styles/BootsTrap/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="../../Styles/jquery-ui.css" rel="stylesheet" />
+    <link href="../../Styles/page.css" rel="stylesheet" type="text/css" />
+    <link href="../../Styles/Default.css" rel="stylesheet" type="text/css" />
+    <link href="../../Styles/alertify.core.css" rel="stylesheet" />
+    <link href="../../Styles/alertify.default.css" rel="stylesheet" />
+    <link href="../../Styles/main.css" rel="stylesheet" />
+    <link href="../../Styles/normalize.css" rel="stylesheet" />
+    <link href="../../Styles/jquery-ui.css" rel="stylesheet" />
+    <link href="../../Styles/tooltipster.css" rel="stylesheet" />
+    <link href="../../Styles/formularios.css" rel="stylesheet" />
+    <link href="../../Styles/default.css" rel="stylesheet" />
+    <link rel="Shortcut Icon" href="../../images/Icono.ico" />
+    <link href="../../Scripts/dist/sweetalert.css" rel="stylesheet" />
+    <%----%>
+    <script src="../../Scripts/dist/sweetalert.min.js"></script>
+    <script src="../../Scripts/jquery-1.12.0.js"></script>
+    <script src="../../Styles/BootsTrap/js/bootstrap.js"></script>
+    <script src="../../Styles/BootsTrap/js/bootstrap.min.js"></script>
+    <script src="../../Styles/BootsTrap/js/bootbox.js"></script>
+    <script src="../../Scripts/jquery-ui.js"></script>
+    <script src="../../Scripts/alertify.js"></script>
+    <script src="/Scripts/Validaciones/Reestricciones.js" type="text/javascript"></script>
+    <script src="/Scripts/jquery.maskedinput.min.js" type="text/javascript"></script>
+    <script src="/Scripts/jquery.maskedinput.js" type="text/javascript"></script>
+    <script src="/Scripts/jquery.maskMoney.js" type="text/javascript"></script>
+    <script src="/Scripts/ajax.js" type="text/javascript"></script>
+    <script src="/Scripts/_fx.js" type="text/javascript"></script>
+    <script src="/Scripts/_ui.js" type="text/javascript"></script>
+  <script src="/Scripts/eventsStaticUi.js" type="text/javascript"></script>
+         <script src="../../Scripts/Tooltipster/jquery.tooltipster.min.js"></script>
+   <%-- <script src="../../Scripts/_uiStatic.js"></script>--%>
+    <script src="/Scripts/Validaciones/ReglasNegocio.js" type="text/javascript"></script>
+    <script src="/Scripts/jquery.dataTables.min.js"></script>
+    <script src="/Scripts/dataTables.bootstrap.min.js"></script>
+    <script src="../../Scripts/FormValidation.js"></script>
+    <script src="../../Scripts/businessRules.js"></script>
+       <script src="../../Scripts/accounting.js-master/accounting.js"></script>
+    <script src="../../Scripts/accounting.js-master/accounting.min.js"></script>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        /*body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }*/
+
+        body { /*avi*/
+            background-image: url("../Images/fondo.png");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: 20% 5%;
+            background-size: 100%;
+        }
+
+        #navigationMenu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #navigationMenu img {
+            width: 40px;
+            margin-left: 5px;
+        }
+
+        #ulMenu {
+            margin-left: -12% !important;
+            margin-top: 6% !important;
+            margin-top: 5px;
+        }
+
+        .staticItem { /*avi*/
+            font-family: Calibri !important;
+            color: White;
+            font-weight: bold;
+            padding-left: 20px;
+            padding-top: 10px;
+            font-size: 15px;
+            background-image: url(../../images/IconosMenu/Boton.png) !important;
+            background-repeat: no-repeat;
+            background-position: right center;
+            padding-right: 14px;
+            width: 198px;
+            display: block;
+            height: 50px;
+            text-align: initial;
+        }
+
+            .staticItem:Hover {
+                font-family: Calibri !important;
+                color: Black;
+            }
+
+        .itemSelect {
+            font-family: Calibri !important;
+            background-color: #9AAE04;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            padding-top: 2px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            width: 110%;
+            cursor: pointer;
+            /*border-radius: 5px;*/
+            white-space: nowrap;
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.8);
+            display: block;
+        }
+
+            .itemSelect:Hover { /*avi*/
+                font-family: Calibri !important;
+                color: Black;
+                background-color: #6785C1;
+                width: 115%;
+            }
+
+        .itemNietosSelected {
+            font-family: Calibri !important;
+            background-color: #9AAD01;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            padding-top: 2px;
+            padding-bottom: 6px;
+            padding-left: 10px;
+            width: 110%;
+            cursor: pointer;
+            border-radius: 5px;
+            white-space: nowrap;
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.8);
+            display: block;
+        }
+
+            .itemNietosSelected:Hover {
+                font-family: Calibri !important;
+                color: Black;
+                background-color: #6785C1;
+                width: 130%;
+            }
+
+        .boxMenu {
+            font-family: Calibri !important;
+            border-radius: 5px;
+            width: 84%;
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.8);
+            margin-left: 11%;
+        }
+
+        #navigationMenu {
+            float: left;
+        }
+
+            #NavigationMenu img {
+                border-style: none;
+                vertical-align: middle;
+                color: White;
+            }
+    </style>
+    <script>
+        (function () {
+            var _default = {
+
+                loagPage: function () {
+                },
+
+                init: function () {
+                    var usu = '<%=Session["USUARIO_LOGUEADO"]%>';
+                    transact.ajaxGET("/Menu/ObtenerPadresMvc1?Usuarios=" + usu, null, _default.success, _default.error);
+                },
+
+                success: function (data) {
+                    _ui.crearMenuMaster(data, $("#ulMenu"));
+                },
+
+                error: function (error) {
+                    console.log(error);
+                }
+            }
+
+            _default.init();
+            _default.loagPage();
+        })();
+    </script>
+    <meta name="description" content="The description of my page" />
+</head>
+<body>  <%--avi--%>
+    <form id="form1" runat="server">
+
+        <div id="LoadingOficina" style="text-align: center;">
+            <img src="../../Images/cargando.gif">
+            <div style='text-align:center;margin-top: -4%;'><strong>Cargando, un momento por favor...</strong></div>
+        </div>
+            <%-- <div class="navbar-fixed-top" style="background-image: url(../../images/barra.png); background-size: cover; background-repeat: no-repeat;">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+     
+                  <img id="LogoAntara" alt="everis" style="margin-left: 15px ; margin-top: 10px ; width: 160px; height:91px;" src="../../Images/Login/Antara.png" height="78"/> 
+                  <img id="ctl00_Img1" alt="everis" style="margin-left: 1000px ; margin-top: 10px ; width: 140px;" src="../../images/logon_everis.png" />
+                </div>
+            </div>
+        </div>  --%>
+       <%-- <div class="div" style="margin-top: 23px !important;">
+            <span id="separacion"></span>
+            <asp:LinkButton ID="btnSalir" runat="server" CausesValidation="False" PostBackUrl="/Seguridad/Logout"
+                Font-Size="medium" ClientIDMode="Static" style="text-decoration: none; color: #339966; margin-left: 10px ; margin-top: 40px ">Cerrar sesión</asp:LinkButton>
+        </div>--%>
+        <label id="Proceso_Lider" style="position: absolute; margin-left: 1%; margin-top: 1%;"></label>
+       <%-- <div class="div">            
+            <label id="lblNombreUsuario" style="margin-right: 70px ; margin-top: 10px "; >
+            Bienvenido(a)
+            :
+            <%=Session["NombreUsuario"]%> - <%=Session["IdUsuario"]%></label>
+        </div>
+        <hr id="divisionHr" />--%>
+    </form>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span3">
+                <!--
+            *************************
+            MENU PRINCIPAL PARA EL USUARIO
+            ES IMPORTANTE USAR EL Session["USUARIO_LOGUEADO"] DESDE ESTE LUGAR DEBIDO A QUE EN CONTROLADOR
+            SE ESTA PERDIENDO LA SESSION
+            *************************
+            -->
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+                <br />
+
+                <div>
+                    <div id="navigationMenu" class="boxMenu">
+                        <ul id="ulMenu">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="span9">
+            <div class="hero-unit">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                    <br />
+                    <asp:TreeView ID="TreeView1" runat="server" ImageSet="Arrows">
+                        <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
+                        <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" HorizontalPadding="5px" NodeSpacing="0px" VerticalPadding="0px" />
+                        <ParentNodeStyle Font-Bold="False" />
+                        <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="0px" VerticalPadding="0px" />
+                    </asp:TreeView>
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <br />
+    </div>
+</body>
+</html>

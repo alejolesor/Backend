@@ -1,0 +1,359 @@
+﻿/*ESTILO DE LOS FORMULARIOS DINAMICOS PASO 1,  PASO 5.2, PASO 5*/
+.divContentLeft {
+    float: left;
+    width: 47%;
+    height: 7%;
+    margin: 5px 8px 5px 15px;
+}
+
+.divContentLeftLibrazas {
+    float: left;
+    width: 47%;
+    height: 7%;
+    margin: 10px 10px 5px 15px;
+}
+
+.divContentLeftPrint {
+    float: left;
+    width: 45%;
+    height: 10%;
+    margin: 5px 10px 5px 15px;
+}
+
+label {
+    padding: 2px 3px 2px 3px;
+    margin: 5px 10px 5px 0px;
+    display: inherit;
+    font-size: 12px;
+}
+
+.bs-example {
+    margin: 20px;
+}
+
+fieldset.scheduler-border {
+    background-color: white; /*avi*/
+    border: 1px groove #339966 !important; /*avi*/
+    padding: 0 1.4em 1.4em 1.4em !important;
+    margin: 0 0 1.5em 0 !important;
+    -webkit-box-shadow: 0px 0px 0px 0px #000 !important;
+    box-shadow: 0px 0px 0px 0px #000 !important;
+    border-top: none !important;
+}
+
+legend.scheduler-border {
+    font-size: 1.2em !important;
+    font-weight: bold !important;
+    text-align: left !important;
+}
+
+.custom-combobox {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.custom-combobox-toggle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-left: -1px;
+    padding: 0;
+    /* support: IE7 */
+    *height: 1.7em;
+    *top: 0.1em;
+}
+
+.custom-combobox-input {
+    margin: 0;
+    padding: 0.3em;
+    width: 85%;
+}
+
+.ui-autocomplete {
+    max-height: 400px;
+    overflow-y: auto; /* prevent horizontal scrollbar */
+    overflow-x: hidden; /* add padding to account for vertical scrollbar */
+    z-index: 1000 !important;
+}
+
+th {
+    text-align: center;
+    width: 1%;
+    background-color: rgb(230, 233, 220);
+    border: solid 1px;
+}
+
+#tbodyTr tr td {
+    border: solid 1px;
+}
+
+input[type=""], .numero {
+    margin-left: 50%;
+}
+
+.texto {
+    margin-left: 5%;
+}
+
+.error {
+    color: red;
+}
+
+.ocultarElemento {
+    display: none;
+}
+
+.editar {
+    /* background-size:contain;*/
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    margin-top: 2px;
+    z-index: 100;
+    margin-left: 27.7%;
+}
+
+    .editar:hover {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        margin-top: 2px;
+        z-index: 100;
+        margin-left: 27.7%;
+    }
+
+#CAPACIDADDEDESCUENTO, #CUOTAPROYECTADA {
+    border: solid 2px #9aae04;
+}
+
+#btnBuscar {
+    z-index: 100;
+    position: absolute;
+    margin-left: -2.5%;
+    margin-top: 2.8%;
+}
+
+    #btnBuscar:hover {
+        z-index: 100;
+        position: absolute;
+        margin-left: -2.5%;
+        margin-top: 2.8%;
+        width: 28px;
+    }
+
+#btnBuscarHipotecario {
+    z-index: 100;
+    position: absolute;
+    margin-left: -1.5%;
+    margin-top: 0px;
+    width: 22px;
+    background-image: url("/images/search.png");
+    background-size: contain;
+}
+
+#divContentCampo_Form1_30 #btnBuscar {
+    z-index: 100;
+    position: absolute;
+    margin-left: -1.5%;
+    margin-top: 0px;
+    width: 22px;
+    background-image: url("/images/search.png");
+    background-size: contain;
+}
+
+#divContentCampo_Form15_23 #btnBuscar {
+    z-index: 100;
+    position: absolute;
+    margin-left: -1.5%;
+    margin-top: 0px;
+    width: 22px;
+    background-image: url("/images/search.png");
+    background-size: contain;
+}
+
+.textArea {
+    width: 50%;
+    height: 15%;
+}
+
+#contentTable #divCampos2 #divCampos3 {
+    width: 100%;
+}
+
+
+#imgCalculadoraHipote {
+    float: left;
+    position: absolute;
+    margin-top: -5%;
+    margin-left: 14%;
+}
+
+#btnBuscarVehiculo {
+    z-index: 100;
+    position: absolute;
+    margin-left: -1.5%;
+    margin-top: 0px;
+    width: 22px;
+    background-image: url("/images/search.png");
+    background-size: contain;
+}
+
+#btnBuscarFiltroVehiculo {
+    z-index: 100;
+    position: absolute;
+    margin-left: 0.5%;
+    margin-top: 0px;
+    width: 22px;
+    background-color: transparent;
+    background-image: url("/images/searchByFilter.png");
+    background-size: contain;
+}
+
+/*_________________________________  Administracion de Usuarios   ____________________*/
+
+#content_tableHTML {
+    margin-left: 4%;
+}
+
+.divCrearUsers {
+    float: left;
+    width: 296px;
+    margin-left: 169px;
+}
+
+.divBotones {
+    width: 42%;
+    margin-left: 220px;
+    margin-top: 61px;
+}
+
+#btnBuscarUsuario {
+    z-index: 100;
+    position: absolute;
+    margin-left: 268px;
+    margin-top: -30px;
+    width: 26px;
+    background-image: url("/images/search.png");
+    background-size: contain;
+}
+
+#estadoUsuario {
+    float: left;
+    position: fixed;
+    margin-left: 62px;
+    margin-top: 12px;
+}
+
+#cambiarClave {
+    margin-left: 37px;
+    background-image: url("/images/reset_pass.gif");
+    background-size: contain;
+    width: 104px;
+    height: 127px;
+    background-repeat: no-repeat;
+    border: 1px solid transparent;
+    background-color: transparent;
+    box-shadow: 4px 5px 25px 2px #ACB091;
+}
+
+/*_________________----Paso 1 libranzas Oficina y Comer ---______________________--*/
+
+table span.custom-combobox {
+    width: 80%;
+}
+
+#divContentCampo_Form1_9 {
+    height: auto;
+}
+
+#divContentCampo_Form15_5 {
+    height: auto;
+}
+
+/*_____________________Administracion de las listas___________________*/
+
+.divAdminListas {
+    float: left;
+    width: 30%;
+    margin-left: 30px;
+}
+
+#DivformularioAdminListas {
+    margin-left: 97px;
+}
+
+#divFiltroAdminlistas .custom-combobox-input {
+    width: 38%;
+}
+
+.divBotonesAdminListas {
+    float: left;
+    width: 70%;
+    display: flex;
+    margin-left: 21%;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+    .divBotonesAdminListas input {
+        margin: 5px 5px 5px 5px;
+    }
+
+/*____________________ notificaciones ________________________*/
+
+.divAdminNotificaciones {
+    float: left;
+    width: 40%;
+    margin-left: 30px;
+}
+
+/* ______________________ Cambio de contraseña _______________________ */
+
+#datosFieldset {
+    width: 51%;
+    margin-left: 19% !important;
+}
+
+.passwordMal {
+    background-color: red;
+    font-size: 15px;
+    color: white;
+}
+
+.passwordMedio {
+    background-color: #E7A122;
+    font-size: 15px;
+    color: white;
+}
+
+.passwordFuerte {
+    background-color: #6785C1;
+    font-size: 15px;
+    color: white;
+}
+
+.passwordSegura {
+    background-color: #9AAE04;
+    font-size: 15px;
+    color: white;
+}
+
+/*____________________*/
+
+#datosCambioContraseñalogin {
+    width: 40%;
+    margin-left: 30% !important;
+    margin-top: 11% !important;
+}
+
+/*___________*/
+#alertaReglas {
+    float: left;
+    position: absolute;
+    margin-top: -30%;
+    margin-left: 22%;
+    width: 341px;
+    height: 80px;
+    display: none;
+}

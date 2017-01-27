@@ -1,0 +1,223 @@
+﻿h5 {
+    color: lightgreen;
+    font-style: oblique;
+    font-weight: bold;
+}
+
+@import "compass/css3";
+
+
+div {
+    margin: 0 0 0.0em 0;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+    input[type="radio"] + label {
+        color: #292321;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+    }
+
+        input[type="radio"] + label span {
+            display: inline-block;
+            width: 19px;
+            height: 19px;
+            margin: -1px 4px 0 0;
+            vertical-align: middle;
+            cursor: pointer;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+        }
+
+#rad1 input[type="radio"] + label span {
+    background-color: gray;
+}
+
+#rad2 input[type="radio"] + label span {
+    background-color: gray;
+}
+
+#rad1 input[type="radio"]:checked + label span {
+    background-color: green;
+}
+
+#rad2 input[type="radio"]:checked + label span {
+    background-color: red;
+}
+
+
+input[type=date] {
+    line-height: 20px;
+}
+
+input[type="radio"] + label span,
+input[type="radio"]:checked + label span {
+    -webkit-transition: background-color 0.4s linear;
+    -o-transition: background-color 0.4s linear;
+    -moz-transition: background-color 0.4s linear;
+    transition: background-color 0.4s linear;
+}
+
+.consultar {
+    width: 50%;
+}
+
+#Div1 {
+    /*position: relative;
+                            top: 40px;
+                             left: 25px;*/
+    float: left;
+    clear: both;
+}
+
+#Div2 {
+    /*position: relative;
+                            top: 40px;
+                             left: 25px;*/
+    float: right;
+    clear: both;
+}
+
+#txtObservaciones {
+    line-height: 30px;
+    height: 70px;
+    width: 565px;
+    float: left;
+    padding: 5px;
+    overflow-y: auto;
+}
+
+#nav {
+    line-height: 30px;
+    background-color: #eeeeee;
+    height: 150px;
+    width: 700px;
+    float: left;
+    padding: 5px;
+    overflow-y: auto;
+}
+
+.estilotextarea {
+    width: 250px;
+    height: 50px;
+    border: 2px solid groove;
+}
+
+.btn {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-image: none;
+    border-radius: 4px 4px 4px 4px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 0;
+    padding: 4px 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.btn-info {
+    background-color: #49AFCD;
+    /*background-image: linear-gradient(to bottom, #5BC0DE, #2F96B4);*/
+    background-repeat: repeat-x;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    color: #FFFFFF;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+
+
+
+.btn:hover {
+    color: #333;
+    text-decoration: none;
+    background-position: 0 -15px;
+    -webkit-transition: background-position .1s linear;
+    -moz-transition: background-position .1s linear;
+    -o-transition: background-position .1s linear;
+    transition: background-position .1s linear;
+}
+
+.btn-info:hover {
+    color: #fff;
+    background-color: #2f96b4;
+}
+
+#contenedor {
+    margin-top: 15px;
+}
+
+.added {
+    float: left;
+    margin-right: 10px;
+}
+
+.eliminar {
+    margin: auto;
+    background: url(../../../Images/Delete.png) no-repeat;
+    padding: 4px 12px;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#header {
+    margin: auto;
+    width: 500px;
+    font-family: "Lucida Grande", Lucida, Verdana, sans-serif;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+.nav > li {
+    float: left;
+}
+
+.nav li a {
+    /*color del fondo del menu*/
+    background-color: #2d8c97;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 10px 12px;
+    display: block;
+}
+    /*estas son la acciones cuando se pasa el click sobre el menu*/
+    .nav li a:hover {
+        /*color al poner el click sobre el menu*/
+        background: #61a15c;
+        color: black;
+        text-decoration: underline;
+    }
+
+.nav li ul {
+    display: none;
+    position: absolute;
+    min-width: 140px;
+}
+
+.nav li:hover > ul {
+    display: block;
+}
+
+.nav li ul li {
+    position: relative;
+}
+
+    .nav li ul li ul {
+        right: -140px;
+        top: 0px;
+    }

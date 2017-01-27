@@ -1,0 +1,28 @@
+﻿input[type="search"] {
+    height: 10%;
+}
+
+dataTables_filter {
+    width: 30%;
+}
+
+#ListFuncionariosXlider_wrapper{
+    margin-left: 2%;
+}
+
+.reestruct2 {
+    float: left;
+    width: 48%;
+    margin-left: 0px;
+}
+
+.custom-combobox-input {
+    margin: 0;
+    padding: 0.7em;
+    width: 90%;
+}
+
+.ui-autocomplete
+{
+    z-index: 1050 !important;
+}
