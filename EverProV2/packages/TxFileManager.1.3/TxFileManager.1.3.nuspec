@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>TxFileManager</id>
+    <version>1.3</version>
+    <title>.NET Transactional File Manager</title>
+    <authors>chinhdo</authors>
+    <owners>chinhdo</owners>
+    <licenseUrl>http://transactionalfilemgr.codeplex.com/license</licenseUrl>
+    <projectUrl>http://transactionalfilemgr.codeplex.com/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Transactional File Manager is a .NET API that supports including file system operations such as file copy, move, delete, append, etc. in a transaction. It's an implementation of System.Transaction.IEnlistmentNotification (works with System.Transactions.TransactionScope).</description>
+    <tags>TransactionScope File Directory Transaction</tags>
+  </metadata>
+</package>
